@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Frontier Game Setup</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #1a1a2e;
+      --card: #16213e;
+      --accent: #e94560;
+      --gold: #f5a623;
+      --text: #eaeaea;
+      --muted: #8892a4;
+      --radius: 16px;
+
+      --red:    #e74c3c;
+      --blue:   #3498db;
+      --green:  #2ecc71;
+      --yellow: #f1c40f;
+      --purple: #9b59b6;
+      --orange: #e67e22;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Nunito', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px 60px;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(233,69,96,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(52,152,219,0.08) 0%, transparent 50%);
+    }
+
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 20px rgba(245,166,35,0.3);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius);
+      padding: 32px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    /* Step 1 */
+    #step1 { margin-bottom: 0; }
+
+    .step-label {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .player-count-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .count-btn {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      font-size: 1.6rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+      line-height: 1;
+    }
+    .count-btn:hover { background: var(--accent); color: white; transform: scale(1.1); }
+    .count-btn:disabled { opacity: 0.3; cursor: default; transform: none; }
+
+    #count-display {
+      font-family: 'Fredoka One', cursive;
+      font-size: 3rem;
+      color: var(--text);
+      min-width: 60px;
+      text-align: center;
+    }
+
+    /* Name inputs */
+    #name-fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+
+    .name-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: slideIn 0.25s ease both;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .player-dot {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--muted);
+      flex-shrink: 0;
+    }
+
+    .name-input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .name-input:focus {
+      border-color: var(--gold);
+      background: rgba(255,255,255,0.08);
+    }
+    .name-input::placeholder { color: var(--muted); }
+
+    /* Big action button */
+    .btn-primary {
+      width: 100%;
+      padding: 16px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 20px rgba(233,69,96,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(233,69,96,0.5); }
+    .btn-primary:active { transform: scale(0.98); }
+
+    /* Results */
+    #results { display: none; }
+
+    .results-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.4rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .player-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .color-swatch {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 16px currentColor;
+    }
+
+    .player-info { flex: 1; }
+    .player-name { font-weight: 700; font-size: 1.1rem; }
+    .color-name {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .color-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    .btn-secondary {
+      width: 100%;
+      padding: 14px;
+      background: transparent;
+      color: var(--muted);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: all 0.15s;
+    }
+    .btn-secondary:hover { color: var(--text); border-color: rgba(255,255,255,0.35); }
+
+    .color-dots-preview {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .preview-dot {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 24px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 High Frontier</h1>
+  <p class="subtitle">Game Setup — Assign colors to your players</p>
+
+  <div class="color-dots-preview">
+    <div class="preview-dot" style="background:#f0f0f0"></div>
+    <div class="preview-dot" style="background:#95a5a6"></div>
+    <div class="preview-dot" style="background:#f1c40f"></div>
+    <div class="preview-dot" style="background:#e74c3c"></div>
+    <div class="preview-dot" style="background:#2ecc71"></div>
+    <div class="preview-dot" style="background:#9b59b6"></div>
+  </div>
+
+  <!-- Step 1: Setup -->
+  <div class="card" id="step1">
+    <div class="step-label">How many players?</div>
+
+    <div class="player-count-row">
+      <button class="count-btn" id="btn-minus" onclick="changeCount(-1)" disabled>−</button>
+      <div id="count-display">2</div>
+      <button class="count-btn" id="btn-plus" onclick="changeCount(1)">+</button>
+    </div>
+
+    <div class="step-label">Enter player names</div>
+    <div id="name-fields"></div>
+
+    <button class="btn-primary" onclick="assignColors()">🎨 Assign Colors!</button>
+  </div>
+
+  <!-- Results -->
+  <div class="card" id="results">
+    <div class="results-title">✨ Colors Assigned!</div>
+    <div id="player-list"></div>
+    <div class="divider"></div>
+    <button class="btn-secondary" onclick="resetApp()">↩ Start Over</button>
+  </div>
+
+  <script>
+    const COLORS = [
+      { name: 'White',  hex: '#f0f0f0', shadow: 'rgba(240,240,240,0.5)' },
+      { name: 'Grey',   hex: '#95a5a6', shadow: 'rgba(149,165,166,0.5)' },
+      { name: 'Yellow', hex: '#f1c40f', shadow: 'rgba(241,196,15,0.5)' },
+      { name: 'Red',    hex: '#e74c3c', shadow: 'rgba(231,76,60,0.5)' },
+      { name: 'Green',  hex: '#2ecc71', shadow: 'rgba(46,204,113,0.5)' },
+      { name: 'Purple', hex: '#9b59b6', shadow: 'rgba(155,89,182,0.5)' },
+    ];
+
+    let playerCount = 2;
+
+    function changeCount(delta) {
+      playerCount = Math.max(1, Math.min(6, playerCount + delta));
+      document.getElementById('count-display').textContent = playerCount;
+      document.getElementById('btn-minus').disabled = playerCount <= 1;
+      document.getElementById('btn-plus').disabled  = playerCount >= 6;
+      renderNameFields();
+    }
+
+    function renderNameFields() {
+      const container = document.getElementById('name-fields');
+      const existing = [...container.querySelectorAll('.name-input')].map(i => i.value);
+      container.innerHTML = '';
+
+      for (let i = 0; i < playerCount; i++) {
+        const wrap = document.createElement('div');
+        wrap.className = 'name-input-wrap';
+        wrap.style.animationDelay = (i * 0.05) + 's';
+
+        const dot = document.createElement('div');
+        dot.className = 'player-dot';
+
+        const input = document.createElement('input');
+        input.className = 'name-input';
+        input.type = 'text';
+        input.placeholder = 'Player ' + (i + 1);
+        input.value = existing[i] || '';
+        input.maxLength = 20;
+
+        wrap.appendChild(dot);
+        wrap.appendChild(input);
+        container.appendChild(wrap);
+      }
+    }
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function assignColors() {
+      const inputs = document.querySelectorAll('.name-input');
+      const names = [...inputs].map((inp, i) => inp.value.trim() || 'Player ' + (i + 1));
+
+      const shuffledColors = shuffle(COLORS).slice(0, playerCount);
+
+      const list = document.getElementById('player-list');
+      list.innerHTML = '';
+
+      names.forEach((name, i) => {
+        const color = shuffledColors[i];
+        const card = document.createElement('div');
+        card.className = 'player-card';
+        card.style.background = `${color.hex}18`;
+        card.style.border = `1.5px solid ${color.hex}55`;
+        card.style.animationDelay = (i * 0.08) + 's';
+
+        card.innerHTML = `
+          <div class="color-swatch" style="background:${color.hex}; color:${color.hex}; box-shadow:0 0 18px ${color.shadow}"></div>
+          <div class="player-info">
+            <div class="player-name">${escapeHtml(name)}</div>
+            <div class="color-name">${color.name}</div>
+          </div>
+          <div class="color-badge" style="background:${color.hex}">${color.name}</div>
+        `;
+
+        list.appendChild(card);
+      });
+
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('results').style.display = 'block';
+    }
+
+    function resetApp() {
+      document.getElementById('step1').style.display = 'block';
+      document.getElementById('results').style.display = 'none';
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    // Init
+    renderNameFields();
+  </script>
+</body>
+</html>
