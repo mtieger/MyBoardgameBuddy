@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HF4A — Dev Backlog</title>
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --bg-0: #0B0D10;
+      --bg-1: #14171C;
+      --bg-2: #1B2028;
+      --text-0: #F2F2F2;
+      --text-1: #B8C0CC;
+      --text-2: #7E8794;
+      --line-0: #1F242C;
+      --line-1: #2B313B;
+      --accent-blue: #0B3D91;
+      --accent-blue-bright: #1a52c4;
+      --accent-red: #FC3D21;
+      --ok: #2FBF71;
+      --caution: #F2C94C;
+      --font-ui: Inter, system-ui, -apple-system, sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+      --r-1: 2px;
+      --r-2: 6px;
+      --shadow-0: 0 6px 20px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: var(--bg-0);
+      color: var(--text-0);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ── */
+    .shell {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line-0);
+    }
+
+    .header__eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-blue-bright);
+      margin-bottom: 6px;
+      font-family: var(--font-mono);
+    }
+
+    .header__title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-0);
+      letter-spacing: -0.02em;
+    }
+
+    .header__sub {
+      font-size: 13px;
+      color: var(--text-2);
+      margin-top: 4px;
+    }
+
+    .counter {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .counter__num {
+      font-family: var(--font-mono);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-0);
+      line-height: 1;
+    }
+
+    .counter__label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-2);
+    }
+
+    /* ── ITEMS ── */
+    .item {
+      margin-bottom: 12px;
+      border: 1px solid var(--line-0);
+      border-radius: var(--r-2);
+      overflow: hidden;
+      transition: border-color 160ms ease;
+    }
+
+    .item:hover {
+      border-color: var(--line-1);
+    }
+
+    .item--done {
+      opacity: 0.4;
+    }
+
+    /* COPY/PASTE CARD */
+    .item--task .item__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: var(--bg-1);
+      cursor: pointer;
+      user-select: none;
+      gap: 12px;
+    }
+
+    .item__left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .item__num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--accent-blue-bright);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      background: rgba(11,61,145,0.2);
+      border: 1px solid rgba(11,61,145,0.4);
+      border-radius: var(--r-1);
+      padding: 3px 7px;
+    }
+
+    .item__title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-0);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .item__desc {
+      font-size: 12px;
+      color: var(--text-2);
+      white-space: nowrap;
+    }
+
+    .item__actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .btn-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--accent-blue);
+      color: var(--text-0);
+      border: 1px solid transparent;
+      border-radius: var(--r-1);
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 140ms ease;
+      white-space: nowrap;
+    }
+
+    .btn-copy:hover {
+      background: var(--accent-blue-bright);
+    }
+
+    .btn-copy.copied {
+      background: var(--ok);
+      color: #000;
+    }
+
+    .btn-done {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      background: transparent;
+      color: var(--text-2);
+      border: 1px solid var(--line-1);
+      border-radius: var(--r-1);
+      font-size: 11px;
+      cursor: pointer;
+      transition: all 140ms ease;
+      white-space: nowrap;
+    }
+
+    .btn-done:hover {
+      color: var(--ok);
+      border-color: var(--ok);
+    }
+
+    .item__body {
+      display: none;
+      padding: 0 16px 16px;
+      background: var(--bg-1);
+      border-top: 1px solid var(--line-0);
+    }
+
+    .item__body.open {
+      display: block;
+    }
+
+    .prompt-box {
+      margin-top: 14px;
+      background: var(--bg-0);
+      border: 1px solid var(--line-1);
+      border-radius: var(--r-1);
+      padding: 14px 16px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-1);
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+
+    /* DONT FORGET CARD */
+    .item--warning {
+      border-color: rgba(242,201,76,0.3);
+      background: rgba(242,201,76,0.04);
+    }
+
+    .item--warning .item__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      background: transparent;
+    }
+
+    .warning-icon {
+      font-size: 16px;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .warning-content {}
+
+    .warning-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--caution);
+      margin-bottom: 3px;
+    }
+
+    .warning-text {
+      font-size: 13px;
+      color: var(--text-1);
+      line-height: 1.5;
+    }
+
+    /* CHEVRON */
+    .chevron {
+      width: 16px;
+      height: 16px;
+      color: var(--text-2);
+      flex-shrink: 0;
+      transition: transform 200ms ease;
+    }
+
+    .chevron.open {
+      transform: rotate(180deg);
+    }
+
+    /* SECTION DIVIDER */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 28px 0 16px;
+    }
+
+    .divider__line {
+      flex: 1;
+      height: 1px;
+      background: var(--line-0);
+    }
+
+    .divider__label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      white-space: nowrap;
+      font-family: var(--font-mono);
+    }
+
+    /* PROGRESS BAR */
+    .progress-bar {
+      width: 100%;
+      height: 3px;
+      background: var(--line-0);
+      border-radius: 2px;
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+
+    .progress-bar__fill {
+      height: 100%;
+      background: var(--accent-blue-bright);
+      border-radius: 2px;
+      transition: width 400ms ease;
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--ok);
+      color: #000;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: var(--r-1);
+      transition: transform 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="header__eyebrow">High Frontier 4 All</div>
+      <div class="header__title">Dev Backlog</div>
+      <div class="header__sub">Setup Assistant — VS Code Prompt Queue</div>
+    </div>
+    <div class="counter">
+      <div class="counter__num" id="remaining-count">7</div>
+      <div class="counter__label">Remaining</div>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-bar">
+    <div class="progress-bar__fill" id="progress-fill" style="width: 0%"></div>
+  </div>
+
+  <!-- ── BACKLOG ITEMS ── -->
+
+  <!-- DON'T FORGET: Add files to project -->
+  <div class="item item--warning" id="item-w1">
+    <div class="item__header">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <div class="warning-label">Don't Forget — Before You Start</div>
+        <div class="warning-text">Download <strong>styles.css</strong> and <strong>backlog.html</strong> from this chat and place both files in the same folder as your <strong>index.html</strong> in VS Code.
+      <button class="btn-done" style="flex-shrink:0;align-self:center;" onclick="markDoneWarning(event, 'w1')">✓ Done</button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider__line"></div><div class="divider__label">UI & Scenarios</div><div class="divider__line"></div></div>
+
+  <!-- TASK 1 -->
+  <div class="item item--task" id="item-1">
+    <div class="item__header" onclick="toggleItem(1)">
+      <div class="item__left">
+        <span class="item__num">CP 01</span>
+        <div>
+          <div class="item__title">Enable M5 and add scenarios</div>
+          <div class="item__desc">Unlock Module 5 button · add all missing scenarios</div>
+        </div>
+      </div>
+      <div class="item__actions">
+        <button class="btn-copy" onclick="copyPrompt(event, 1)">Copy</button>
+        <button class="btn-done" onclick="markDone(event, 1)">✓ Done</button>
+        <svg class="chevron" id="chevron-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item__body" id="body-1">
+      <div class="prompt-box" id="prompt-1">In index.html, on the module selection page, find the Module 5 button and remove whatever is making it disabled or non-functional. It should work exactly like the other module buttons. Also on the scenario selection page, update the list to include all scenarios from all active modules, organized by module. Reference the existing scenario data structure and add any that are missing. Don't change anything else.</div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider__line"></div><div class="divider__label">Visual Style</div><div class="divider__line"></div></div>
+
+  <!-- DON'T FORGET: styles.css must exist -->
+  <div class="item item--warning" id="item-w2">
+    <div class="item__header">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <div class="warning-label">Don't Forget — Before Copy/Paste 2</div>
+        <div class="warning-text">Confirm <strong>styles.css</strong> is already in your project folder before running this prompt.
+      <button class="btn-done" style="flex-shrink:0;align-self:center;" onclick="markDoneWarning(event, 'w2')">✓ Done</button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!-- TASK 2 -->
+  <div class="item item--task" id="item-2">
+    <div class="item__header" onclick="toggleItem(2)">
+      <div class="item__left">
+        <span class="item__num">CP 02</span>
+        <div>
+          <div class="item__title">Extract and apply NASA styles</div>
+          <div class="item__desc">Move all styles to styles.css · apply design tokens</div>
+        </div>
+      </div>
+      <div class="item__actions">
+        <button class="btn-copy" onclick="copyPrompt(event, 2)">Copy</button>
+        <button class="btn-done" onclick="markDone(event, 2)">✓ Done</button>
+        <svg class="chevron" id="chevron-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item__body" id="body-2">
+      <div class="prompt-box" id="prompt-2">Move all inline styles and any &lt;style&gt; blocks from index.html into the existing styles.css file. Then ensure &lt;link rel='stylesheet' href='styles.css'&gt; is in the head of index.html and remove the style blocks. Once moved, rewrite styles.css to use the NASA-inspired design tokens already defined in the file — map all existing class names and component styles to the CSS variables for color, spacing, typography, and shape. Don't change any visual logic or app functionality.</div>
+    </div>
+  </div>
+
+  <!-- DON'T FORGET: visual check -->
+  <div class="item item--warning" id="item-w3">
+    <div class="item__header">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <div class="warning-label">Don't Forget — After Copy/Paste 2</div>
+        <div class="warning-text">Open <strong>index.html</strong> in your browser and verify nothing visually broke before moving on.
+      <button class="btn-done" style="flex-shrink:0;align-self:center;" onclick="markDoneWarning(event, 'w3')">✓ Done</button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider__line"></div><div class="divider__label">Rules Engine</div><div class="divider__line"></div></div>
+
+  <!-- TASK 3 -->
+  <div class="item item--task" id="item-3">
+    <div class="item__header" onclick="toggleItem(3)">
+      <div class="item__left">
+        <span class="item__num">CP 03</span>
+        <div>
+          <div class="item__title">Create rules database file</div>
+          <div class="item__desc">Build rules.js with tagged rule objects</div>
+        </div>
+      </div>
+      <div class="item__actions">
+        <button class="btn-copy" onclick="copyPrompt(event, 3)">Copy</button>
+        <button class="btn-done" onclick="markDone(event, 3)">✓ Done</button>
+        <svg class="chevron" id="chevron-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item__body" id="body-3">
+      <div class="prompt-box" id="prompt-3">Create a new file called rules.js in the same directory as index.html. This will be the rules database. Structure every rule as an object with these fields: id, section, title, text, modules (array of module numbers that activate this rule), scenarios (array of scenario names or "all"), variants (array of variant names required, or empty array), and supersedes (id of the rule this replaces, or null). Start with 10-15 core Module 0 rules as a proof of concept. Don't connect it to anything yet. Don't change index.html.</div>
+    </div>
+  </div>
+
+  <!-- DON'T FORGET: verify rules.js created -->
+  <div class="item item--warning" id="item-w4">
+    <div class="item__header">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <div class="warning-label">Don't Forget — After Copy/Paste 3</div>
+        <div class="warning-text">Check that <strong>rules.js</strong> appears in your VS Code file explorer in the same folder as index.html before moving on.
+      <button class="btn-done" style="flex-shrink:0;align-self:center;" onclick="markDoneWarning(event, 'w4')">✓ Done</button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!-- TASK 4 -->
+  <div class="item item--task" id="item-4">
+    <div class="item__header" onclick="toggleItem(4)">
+      <div class="item__left">
+        <span class="item__num">CP 04</span>
+        <div>
+          <div class="item__title">Build the filter engine</div>
+          <div class="item__desc">Add buildSessionRulebook() function to rules.js</div>
+        </div>
+      </div>
+      <div class="item__actions">
+        <button class="btn-copy" onclick="copyPrompt(event, 4)">Copy</button>
+        <button class="btn-done" onclick="markDone(event, 4)">✓ Done</button>
+        <svg class="chevron" id="chevron-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item__body" id="body-4">
+      <div class="prompt-box" id="prompt-4">In rules.js, add a function called buildSessionRulebook(gameConfig) that accepts an object with modules (array), scenario (string), and variants (array). The function should filter all rules to only those matching the active modules, scenario, and variants. Then remove any rules whose id appears in another active rule's supersedes field. Return the filtered array. Don't change index.html.</div>
+    </div>
+  </div>
+
+  <!-- TASK 5 -->
+  <div class="item item--task" id="item-5">
+    <div class="item__header" onclick="toggleItem(5)">
+      <div class="item__left">
+        <span class="item__num">CP 05</span>
+        <div>
+          <div class="item__title">Verify filter engine works</div>
+          <div class="item__desc">Add temporary test button · check console output</div>
+        </div>
+      </div>
+      <div class="item__actions">
+        <button class="btn-copy" onclick="copyPrompt(event, 5)">Copy</button>
+        <button class="btn-done" onclick="markDone(event, 5)">✓ Done</button>
+        <svg class="chevron" id="chevron-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item__body" id="body-5">
+      <div class="prompt-box" id="prompt-5">In index.html, add a temporary button somewhere visible called "Test Rulebook". When clicked it should call buildSessionRulebook() with a hardcoded test config (modules: [0,1], scenario: "all", variants: []) and log the result to the console. This is just for testing. Don't change anything else.</div>
+    </div>
+  </div>
+
+  <!-- DON'T FORGET: test in browser -->
+  <div class="item item--warning" id="item-w5">
+    <div class="item__header">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <div class="warning-label">Don't Forget — After Copy/Paste 5</div>
+        <div class="warning-text">Open index.html in your browser, click the Test Rulebook button, and open the console (F12) to verify rules are being returned correctly before moving on.
+      <button class="btn-done" style="flex-shrink:0;align-self:center;" onclick="markDoneWarning(event, 'w5')">✓ Done</button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!-- DON'T FORGET: remove test button -->
+  <div class="item item--warning" id="item-w6">
+    <div class="item__header">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <div class="warning-label">Don't Forget — Remove Test Button</div>
+        <div class="warning-text">Once the filter engine is confirmed working, ask Claude: <em>"Remove the temporary Test Rulebook button from index.html. Don't change anything else."</em>
+      <button class="btn-done" style="flex-shrink:0;align-self:center;" onclick="markDoneWarning(event, 'w6')">✓ Done</button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+  <!-- TASK 6 -->
+  <div class="item item--task" id="item-6">
+    <div class="item__header" onclick="toggleItem(6)">
+      <div class="item__left">
+        <span class="item__num">CP 06</span>
+        <div>
+          <div class="item__title">Add in-game rulebook screen</div>
+          <div class="item__desc">Build session-rulebook screen with search</div>
+        </div>
+      </div>
+      <div class="item__actions">
+        <button class="btn-copy" onclick="copyPrompt(event, 6)">Copy</button>
+        <button class="btn-done" onclick="markDone(event, 6)">✓ Done</button>
+        <svg class="chevron" id="chevron-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item__body" id="body-6">
+      <div class="prompt-box" id="prompt-6">In index.html, create a new screen called "session-rulebook". It should call buildSessionRulebook() using the actual current game session config and display the filtered rules organized by section. Each rule should show its title and text. Include a search bar that filters rules by keyword. At the top show a banner displaying the active modules, scenario, and variants. Include a Back button. Match the existing visual style. Don't change anything else.</div>
+    </div>
+  </div>
+
+  <!-- TASK 7 -->
+  <div class="item item--task" id="item-7">
+    <div class="item__header" onclick="toggleItem(7)">
+      <div class="item__left">
+        <span class="item__num">CP 07</span>
+        <div>
+          <div class="item__title">Wire up rulebook entry points</div>
+          <div class="item__desc">Add My Rulebook button · update Rules nav</div>
+        </div>
+      </div>
+      <div class="item__actions">
+        <button class="btn-copy" onclick="copyPrompt(event, 7)">Copy</button>
+        <button class="btn-done" onclick="markDone(event, 7)">✓ Done</button>
+        <svg class="chevron" id="chevron-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+    <div class="item__body" id="body-7">
+      <div class="prompt-box" id="prompt-7">In index.html, add a "My Rulebook" button to the in-game screen that navigates to the session-rulebook screen. Also update the existing "Rules" button on the home screen to navigate to the same screen but call buildSessionRulebook() with all modules and no filters so it shows the complete unfiltered rulebook. Don't change anything else.</div>
+    </div>
+  </div>
+
+  <!-- DON'T FORGET: end to end test -->
+  <div class="item item--warning" id="item-w7">
+    <div class="item__header">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <div class="warning-label">Don't Forget — Final End-to-End Test</div>
+        <div class="warning-text">Run through the full app flow: home screen → game setup → rulebook. Verify both the filtered session rulebook and the full unfiltered rulebook are working correctly.
+      <button class="btn-done" style="flex-shrink:0;align-self:center;" onclick="markDoneWarning(event, 'w7')">✓ Done</button>
+    </div>
+  </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Copied to clipboard</div>
+
+<script>
+  const TOTAL_TASKS = 7;
+  const TOTAL_WARNINGS = 7;
+  const TOTAL = TOTAL_TASKS + TOTAL_WARNINGS;
+  const done = new Set();
+
+  function toggleItem(id) {
+    const body = document.getElementById('body-' + id);
+    const chevron = document.getElementById('chevron-' + id);
+    body.classList.toggle('open');
+    chevron.classList.toggle('open');
+  }
+
+  function copyPrompt(e, id) {
+    e.stopPropagation();
+    const promptEl = document.getElementById('prompt-' + id);
+    const text = promptEl.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = e.target;
+      btn.textContent = '✓ Copied';
+      btn.classList.add('copied');
+      showToast();
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  function markDone(e, id) {
+    e.stopPropagation();
+    const item = document.getElementById('item-' + id);
+    if (done.has(id)) {
+      done.delete(id);
+      item.classList.remove('item--done');
+    } else {
+      done.add(id);
+      item.classList.add('item--done');
+      // close if open
+      document.getElementById('body-' + id).classList.remove('open');
+      document.getElementById('chevron-' + id).classList.remove('open');
+    }
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const remaining = TOTAL - done.size;
+    document.getElementById('remaining-count').textContent = remaining;
+    const pct = (done.size / TOTAL) * 100;
+    document.getElementById('progress-fill').style.width = pct + '%';
+  }
+
+  function showToast() {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  }
+
+  function markDoneWarning(e, id) {
+    e.stopPropagation();
+    const item = document.getElementById('item-' + id);
+    if (done.has(id)) {
+      done.delete(id);
+      item.classList.remove('item--done');
+    } else {
+      done.add(id);
+      item.classList.add('item--done');
+    }
+    updateProgress();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Frontier 4 All — Rules Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #0d0f14;
+    --surface:  #13161e;
+    --raised:   #1a1e2a;
+    --border:   #252b3b;
+    --gold:     #c9a84c;
+    --gold-dim: #7a6230;
+    --amber:    #e8913a;
+    --blue:     #4a8fd4;
+    --green:    #5aad7a;
+    --purple:   #9b72cf;
+    --red:      #d45a5a;
+    --text:     #d4ccbb;
+    --text-dim: #7a7565;
+    --text-mid: #a09880;
+    --nav-w:    260px;
+    --hdr-h:    54px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Crimson Pro', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ─────────────────────────────────────── */
+  header {
+    height: var(--hdr-h);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    gap: 16px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 20;
+  }
+  .logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: .06em;
+    white-space: nowrap;
+  }
+  .logo span { color: var(--text-dim); font-weight: 400; font-size: 0.8rem; margin-left: 6px; }
+
+  .search-wrap {
+    flex: 1;
+    max-width: 440px;
+    position: relative;
+  }
+  #search {
+    width: 100%;
+    background: var(--raised);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    padding: 6px 10px 6px 32px;
+    outline: none;
+    transition: border-color .15s;
+  }
+  #search:focus { border-color: var(--gold-dim); }
+  #search::placeholder { color: var(--text-dim); }
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    pointer-events: none;
+  }
+  #search-count {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-dim);
+  }
+
+  .version-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    white-space: nowrap;
+    margin-left: auto;
+  }
+
+  /* ── LAYOUT ──────────────────────────────────────── */
+  .layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* ── SIDEBAR ─────────────────────────────────────── */
+  nav {
+    width: var(--nav-w);
+    min-width: var(--nav-w);
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .module-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 8px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .tab-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    padding: 3px 7px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all .12s;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--text); border-color: var(--text-dim); }
+  .tab-btn.active { background: var(--gold); color: var(--bg); border-color: var(--gold); font-weight: 500; }
+
+  .nav-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 6px 0 12px;
+  }
+  .nav-group-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding: 10px 12px 4px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 12px 3px 14px;
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    cursor: pointer;
+    border-left: 2px solid transparent;
+    transition: all .1s;
+    line-height: 1.3;
+  }
+  .nav-item:hover { color: var(--text); background: var(--raised); border-left-color: var(--gold-dim); }
+  .nav-item.active { color: var(--gold); border-left-color: var(--gold); background: var(--raised); }
+  .nav-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-dim);
+    flex-shrink: 0;
+    min-width: 28px;
+  }
+  .nav-item.active .nav-id { color: var(--gold-dim); }
+
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  /* ── MAIN CONTENT ────────────────────────────────── */
+  main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px 40px 60px;
+  }
+
+  /* Module header banner */
+  .module-banner {
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+  }
+  .module-banner h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: .04em;
+  }
+  .module-banner p {
+    font-size: 0.88rem;
+    color: var(--text-dim);
+    margin-top: 4px;
+    font-style: italic;
+  }
+  .module-meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .module-meta span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    background: var(--raised);
+    padding: 2px 7px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  /* Content sections */
+  .content-section {
+    margin-bottom: 24px;
+    scroll-margin-top: 16px;
+  }
+
+  .section-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .section-card.highlight {
+    border-color: var(--gold-dim);
+  }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: var(--raised);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .section-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold-dim);
+    background: var(--bg);
+    padding: 1px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.88rem;
+    color: var(--text);
+    font-weight: 600;
+    flex: 1;
+  }
+  .type-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    padding: 2px 7px;
+    border-radius: 10px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .badge-variant   { color: var(--blue);   border-color: var(--blue);   background: #4a8fd410; }
+  .badge-scenario  { color: var(--green);  border-color: var(--green);  background: #5aad7a10; }
+  .badge-optional  { color: var(--purple); border-color: var(--purple); background: #9b72cf10; }
+
+  .section-body {
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text);
+  }
+  .section-body p { margin-bottom: 0.6em; }
+
+  /* Text formatting within sections */
+  .rule-line {
+    display: block;
+    margin: 2px 0;
+  }
+  .rule-line.sub-a { padding-left: 0; }
+  .rule-line.sub-bullet { padding-left: 1.4em; color: var(--text-mid); }
+  .rule-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold-dim);
+    margin-right: 4px;
+  }
+  .example-block {
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: var(--bg);
+    border-left: 2px solid var(--blue);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.83rem;
+    color: #8ab4d8;
+    font-style: italic;
+  }
+  .example-block .ex-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    font-size: 0.68rem;
+    color: var(--blue);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  /* Glossary specific */
+  .gloss-entry {
+    display: grid;
+    grid-template-columns: minmax(160px, 220px) 1fr;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .gloss-entry:last-child { border-bottom: none; }
+  .gloss-term {
+    padding: 10px 14px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    color: var(--gold);
+    font-weight: 600;
+    background: var(--raised);
+    border-right: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.4;
+  }
+  .gloss-def {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  /* Page view (m1-m4) */
+  .page-view {
+    margin-bottom: 24px;
+    scroll-margin-top: 16px;
+  }
+  .page-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    padding-left: 2px;
+  }
+  .page-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    font-size: 0.87rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    font-family: 'Crimson Pro', serif;
+    color: var(--text);
+  }
+  .page-card.empty {
+    color: var(--text-dim);
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  /* Search results */
+  .search-hit { background: #c9a84c28; border-radius: 2px; }
+
+  /* Empty / loading states */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+  .empty-state .big { font-size: 2rem; margin-bottom: 8px; }
+
+  /* Author tag in appendix */
+  .section-author {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-left: auto;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    nav { width: 200px; min-width: 200px; }
+    main { padding: 16px 16px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">High Frontier 4 All <span>Rules Reference</span></div>
+  <div class="search-wrap">
+    <span class="search-icon">⌕</span>
+    <input id="search" type="text" placeholder="Search rules, terms, sections…" autocomplete="off">
+    <span id="search-count"></span>
+  </div>
+  <div class="version-badge" id="version-info">Loading…</div>
+</header>
+
+<div class="layout">
+  <nav>
+    <div class="module-tabs" id="module-tabs"></div>
+    <div class="nav-list" id="nav-list"></div>
+  </nav>
+  <main id="main-content">
+    <div class="empty-state"><div class="big">⚙</div>Loading rules…</div>
+  </main>
+</div>
+
+<script>
+// ── DATA REGISTRY ─────────────────────────────────────────────────────────────
+const MODULES = [
+  { key: 'core_rules',       label: 'Core',   file: 'rules/core_rules.json',       color: '#c9a84c' },
+  { key: 'glossary',         label: 'Gloss',  file: 'rules/glossary.json',         color: '#9b72cf' },
+  { key: 'm1_terawatt',      label: 'M1',     file: 'rules/m1_terawatt.json',      color: '#4a8fd4' },
+  { key: 'm2_colonization',  label: 'M2',     file: 'rules/m2_colonization.json',  color: '#5aad7a' },
+  { key: 'm3_conflict',      label: 'M3',     file: 'rules/m3_conflict.json',      color: '#d45a5a' },
+  { key: 'm4_exodus',        label: 'M4',     file: 'rules/m4_exodus.json',        color: '#e8913a' },
+  { key: 'm5_economy',       label: 'M5',     file: 'rules/m5_economy.json',       color: '#c9a84c' },
+  { key: 'appendix',         label: 'App',    file: 'rules/appendix.json',         color: '#5aad7a' },
+];
+
+// Cache loaded data
+const cache = {};
+let currentKey = 'core_rules';
+let searchTimer = null;
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+function init() {
+  buildTabs();
+  loadModule('core_rules');
+
+  document.getElementById('search').addEventListener('input', e => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => applySearch(e.target.value.trim()), 180);
+  });
+}
+
+// ── TABS ──────────────────────────────────────────────────────────────────────
+function buildTabs() {
+  const container = document.getElementById('module-tabs');
+  MODULES.forEach(m => {
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn';
+    btn.textContent = m.label;
+    btn.dataset.key = m.key;
+    btn.style.setProperty('--c', m.color);
+    btn.addEventListener('click', () => loadModule(m.key));
+    container.appendChild(btn);
+  });
+}
+
+function setActiveTab(key) {
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.key === key);
+  });
+}
+
+// ── LOAD MODULE ───────────────────────────────────────────────────────────────
+async function loadModule(key) {
+  currentKey = key;
+  setActiveTab(key);
+  document.getElementById('search').value = '';
+  document.getElementById('search-count').textContent = '';
+
+  const mod = MODULES.find(m => m.key === key);
+  if (!mod) return;
+
+  // Show loading
+  document.getElementById('main-content').innerHTML =
+    '<div class="empty-state"><div class="big">⌛</div>Loading…</div>';
+  document.getElementById('nav-list').innerHTML = '';
+
+  let data;
+  if (cache[key]) {
+    data = cache[key];
+  } else {
+    try {
+      const res = await fetch(mod.file);
+      data = await res.json();
+      cache[key] = data;
+    } catch(e) {
+      document.getElementById('main-content').innerHTML =
+        `<div class="empty-state"><div class="big">✗</div>Could not load ${mod.file}<br><small>Make sure the JSON files are in the same directory as this HTML file.</small></div>`;
+      return;
+    }
+  }
+
+  // Update version badge
+  document.getElementById('version-info').textContent =
+    `v${data.version || '?'} · ${data.last_updated || ''}`;
+
+  // Render based on structure type
+  if (key === 'glossary') {
+    renderGlossary(data, mod);
+  } else if (data.sections) {
+    renderSections(data, mod);
+  } else if (data.pages) {
+    renderPages(data, mod);
+  }
+}
+
+// ── RENDER: SECTIONS (core_rules, m5, appendix) ───────────────────────────────
+function renderSections(data, mod) {
+  const nav = document.getElementById('nav-list');
+  const main = document.getElementById('main-content');
+
+  // Determine top-level vs sub-sections for nav grouping (core_rules has A, A1, A2 etc.)
+  const sections = data.sections;
+
+  // Group nav by top-level letter/prefix
+  let currentGroup = null;
+  let navHTML = '';
+  sections.forEach(s => {
+    const isTop = /^[A-Z][0-9]?$/.test(s.id) || /^[A-Z][0-9]{0,1}$/.test(s.id);
+    // For appendix: group by type
+    if (s.type) {
+      const groupName = { variant: '🎲 Variants', scenario: '🚀 Scenarios', optional_rule: '⚙️ Optional Rules' }[s.type] || '';
+      if (groupName !== currentGroup) {
+        currentGroup = groupName;
+        navHTML += `<div class="nav-group-label">${groupName}</div>`;
+      }
+    } else {
+      // Group by first letter of ID
+      const prefix = s.id.replace(/[0-9]/g, '').slice(0, 1);
+      if (prefix !== currentGroup) {
+        currentGroup = prefix;
+        navHTML += `<div class="nav-group-label" style="color:${mod.color}88">${prefix}</div>`;
+      }
+    }
+    const truncTitle = s.title.length > 28 ? s.title.slice(0, 27) + '…' : s.title;
+    navHTML += `<div class="nav-item" data-id="${s.id}" onclick="scrollTo('sec-${s.id}', this)">
+      <span class="nav-id">${s.id}</span><span>${truncTitle}</span></div>`;
+  });
+  nav.innerHTML = navHTML;
+
+  // Build banner
+  let bannerHTML = `<div class="module-banner">
+    <h1>${data.title}</h1>
+    <p>${data.description || ''}</p>
+    <div class="module-meta">
+      <span>v${data.version}</span>
+      <span>${data.last_updated}</span>
+      <span>${sections.length} sections</span>
+    </div>
+  </div>`;
+
+  // Build sections
+  let sectionsHTML = '';
+  sections.forEach(s => {
+    const typeLabel = s.type ? `<span class="type-badge badge-${s.type === 'optional_rule' ? 'optional' : s.type}">${
+      s.type === 'optional_rule' ? '⚙ Optional' : s.type === 'variant' ? '🎲 Variant' : '🚀 Scenario'
+    }</span>` : '';
+    const authorTag = s.author ? `<span class="section-author">✍ ${s.author}</span>` : '';
+
+    const bodyHTML = formatText(s.text || '');
+
+    sectionsHTML += `<div class="content-section" id="sec-${s.id}">
+      <div class="section-card" style="border-left:3px solid ${mod.color}40">
+        <div class="section-head">
+          <span class="section-id">${s.id}</span>
+          <span class="section-title">${s.title}</span>
+          ${typeLabel}${authorTag}
+        </div>
+        <div class="section-body">${bodyHTML}</div>
+      </div>
+    </div>`;
+  });
+
+  main.innerHTML = bannerHTML + sectionsHTML;
+}
+
+// ── RENDER: PAGES (m1, m2, m3, m4) ────────────────────────────────────────────
+function renderPages(data, mod) {
+  const nav = document.getElementById('nav-list');
+  const main = document.getElementById('main-content');
+
+  const pages = data.pages;
+
+  // Build nav - show pages with substantial text content
+  let navHTML = `<div class="nav-group-label" style="color:${mod.color}88">Pages</div>`;
+  pages.forEach(p => {
+    const txt = (p.text || '').trim();
+    if (!txt) return;
+    // Try to extract a section heading from the text
+    const headMatch = txt.match(/\n([0-9A-Z]{2,5}[0-9A-Z.]?\s+[A-Z][^\n]{0,50})/);
+    const label = headMatch
+      ? headMatch[1].trim().slice(0, 35)
+      : `Page ${p.page}`;
+    navHTML += `<div class="nav-item" data-id="p${p.page}" onclick="scrollTo('page-${p.page}', this)">
+      <span class="nav-id">p${p.page}</span><span>${label}</span></div>`;
+  });
+  nav.innerHTML = navHTML;
+
+  let bannerHTML = `<div class="module-banner">
+    <h1>${data.title}</h1>
+    <p>${data.description || ''}</p>
+    <div class="module-meta">
+      <span>v${data.version}</span>
+      <span>${data.last_updated}</span>
+      <span>${data.total_pages} pages</span>
+      <span style="color:${mod.color};border-color:${mod.color}">Module ${data.module}</span>
+    </div>
+  </div>`;
+
+  let pagesHTML = '';
+  pages.forEach(p => {
+    const txt = (p.text || '').trim();
+    pagesHTML += `<div class="page-view" id="page-${p.page}">
+      <div class="page-label">— PAGE ${p.page} —</div>
+      <div class="page-card ${txt ? '' : 'empty'}">${
+        txt ? escapeHtml(txt) : '(image only)'
+      }</div>
+    </div>`;
+  });
+
+  main.innerHTML = bannerHTML + pagesHTML;
+}
+
+// ── RENDER: GLOSSARY ──────────────────────────────────────────────────────────
+function renderGlossary(data, mod) {
+  const nav = document.getElementById('nav-list');
+  const main = document.getElementById('main-content');
+
+  const entries = data.entries;
+
+  // Nav: alphabetical groups
+  let currentLetter = null;
+  let navHTML = '';
+  entries.forEach(e => {
+    const letter = e.term[0].toUpperCase();
+    if (letter !== currentLetter) {
+      currentLetter = letter;
+      navHTML += `<div class="nav-group-label" style="color:${mod.color}88">${letter}</div>`;
+    }
+    const slug = termSlug(e.term);
+    const truncTerm = e.term.length > 28 ? e.term.slice(0, 27) + '…' : e.term;
+    navHTML += `<div class="nav-item" onclick="scrollTo('gloss-${slug}', this)">
+      <span>${truncTerm}</span></div>`;
+  });
+  nav.innerHTML = navHTML;
+
+  let bannerHTML = `<div class="module-banner">
+    <h1>${data.title}</h1>
+    <p>${data.description || ''}</p>
+    <div class="module-meta">
+      <span>v${data.version}</span>
+      <span>${data.last_updated}</span>
+      <span>${entries.length} terms</span>
+    </div>
+  </div>`;
+
+  // Group by letter
+  let glossHTML = '';
+  let lastLetter = null;
+  entries.forEach(e => {
+    const letter = e.term[0].toUpperCase();
+    if (letter !== lastLetter) {
+      if (lastLetter !== null) glossHTML += '</div></div></div>';
+      lastLetter = letter;
+      glossHTML += `<div class="content-section" id="gloss-letter-${letter}">
+        <div class="section-card" style="border-left:3px solid ${mod.color}40">
+          <div class="section-head">
+            <span class="section-title" style="font-size:1rem;color:${mod.color}">${letter}</span>
+          </div>
+          <div>`;
+    }
+    const slug = termSlug(e.term);
+    const defHTML = formatText(e.definition);
+    glossHTML += `<div class="gloss-entry" id="gloss-${slug}">
+      <div class="gloss-term">${escapeHtml(e.term)}</div>
+      <div class="gloss-def">${defHTML}</div>
+    </div>`;
+  });
+  if (lastLetter) glossHTML += '</div></div></div>';
+
+  main.innerHTML = bannerHTML + glossHTML;
+}
+
+// ── UTILITIES ─────────────────────────────────────────────────────────────────
+function termSlug(term) {
+  return term.replace(/[^a-zA-Z0-9]/g, '-').replace(/-+/g, '-').toLowerCase();
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function formatText(text) {
+  if (!text) return '';
+  const escaped = escapeHtml(text);
+  const lines = escaped.split('\n');
+  let html = '';
+  let inExample = false;
+
+  lines.forEach(line => {
+    const t = line.trim();
+    if (!t) {
+      if (inExample) { html += '</div>'; inExample = false; }
+      return;
+    }
+
+    // Detect EXAMPLE blocks
+    if (t.startsWith('EXAMPLE')) {
+      if (inExample) html += '</div>';
+      const exText = t.replace(/^EXAMPLE\s*(\[[^\]]+\])?\s*/, '');
+      const refMatch = t.match(/\[([^\]]+)\]/);
+      html += `<div class="example-block"><span class="ex-label">EXAMPLE ${refMatch ? refMatch[0] : ''}</span>${exText}`;
+      inExample = true;
+      return;
+    }
+    if (inExample) {
+      html += ' ' + t;
+      return;
+    }
+
+    // Sub-bullet lines starting with •
+    if (t.startsWith('•')) {
+      html += `<span class="rule-line sub-bullet">${t}</span>`;
+      return;
+    }
+
+    // Lettered sub-rules: a. b. c. etc.
+    const letterMatch = t.match(/^([a-z])\.\s+(.+)$/);
+    if (letterMatch) {
+      html += `<span class="rule-line sub-a"><span class="rule-label">${letterMatch[1]}.</span>${letterMatch[2]}</span>`;
+      return;
+    }
+
+    // Numbered sub-items: 1. 2. etc.
+    const numMatch = t.match(/^(\d+)\.\s+(.+)$/);
+    if (numMatch) {
+      html += `<span class="rule-line sub-a"><span class="rule-label">${numMatch[1]}.</span>${numMatch[2]}</span>`;
+      return;
+    }
+
+    html += `<span class="rule-line">${t}</span>`;
+  });
+
+  if (inExample) html += '</div>';
+
+  // Highlight rule references like (H2), (I5a), [K2b], etc.
+  html = html.replace(/(\(([A-Z][0-9a-z.]+)\))/g,
+    '<span style="font-family:\'JetBrains Mono\',monospace;font-size:0.75em;color:#7a6230">$1</span>');
+
+  return html;
+}
+
+function scrollTo(id, navEl) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    el.querySelector?.('.section-card')?.classList.add('highlight');
+    setTimeout(() => el.querySelector?.('.section-card')?.classList.remove('highlight'), 1200);
+  }
+  if (navEl) {
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    navEl.classList.add('active');
+  }
+}
+
+// ── SEARCH ────────────────────────────────────────────────────────────────────
+function applySearch(query) {
+  const countEl = document.getElementById('search-count');
+
+  // Remove previous highlights
+  document.querySelectorAll('.search-hit').forEach(el => {
+    el.outerHTML = el.textContent;
+  });
+
+  if (!query || query.length < 2) {
+    countEl.textContent = '';
+    // Show all nav items
+    document.querySelectorAll('.nav-item').forEach(n => n.style.display = '');
+    document.querySelectorAll('.content-section, .page-view').forEach(s => s.style.display = '');
+    return;
+  }
+
+  const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'), 'gi');
+  let hitCount = 0;
+
+  // For sections/pages: show only those with matches
+  const allSections = document.querySelectorAll('.content-section, .page-view');
+  const navItems = document.querySelectorAll('.nav-item');
+
+  const matchingIds = new Set();
+
+  allSections.forEach(section => {
+    const text = section.textContent;
+    if (re.test(text)) {
+      re.lastIndex = 0;
+      section.style.display = '';
+      hitCount++;
+      matchingIds.add(section.id);
+
+      // Highlight matches in text nodes
+      highlightInElement(section, re);
+    } else {
+      section.style.display = 'none';
+    }
+    re.lastIndex = 0;
+  });
+
+  // Sync nav visibility
+  navItems.forEach(item => {
+    const targetId = item.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+    if (targetId) {
+      const sectionId = targetId;
+      const isVisible = [...matchingIds].some(id => `sec-${item.dataset.id}` === id ||
+        targetId.replace('sec-','') === item.dataset.id ||
+        document.getElementById(targetId)?.style.display !== 'none');
+      item.style.display = isVisible || !targetId ? '' : 'none';
+    }
+  });
+
+  countEl.textContent = hitCount > 0 ? `${hitCount}` : '0';
+}
+
+function highlightInElement(el, re) {
+  const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  let node;
+  while (node = walker.nextNode()) nodes.push(node);
+
+  nodes.forEach(textNode => {
+    const parent = textNode.parentNode;
+    if (parent.classList?.contains('search-hit')) return;
+    const text = textNode.textContent;
+    re.lastIndex = 0;
+    if (!re.test(text)) return;
+    re.lastIndex = 0;
+
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    let m;
+    while ((m = re.exec(text)) !== null) {
+      frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      const mark = document.createElement('mark');
+      mark.className = 'search-hit';
+      mark.textContent = m[0];
+      frag.appendChild(mark);
+      last = m.index + m[0].length;
+    }
+    frag.appendChild(document.createTextNode(text.slice(last)));
+    parent.replaceChild(frag, textNode);
+  });
+}
+
+// ── START ─────────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>

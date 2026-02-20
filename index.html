@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>High Frontier 4 All Game Setup</title>
+  <title>🚀 High Frontier — Game Setup</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -14,13 +14,6 @@
       --text: #eaeaea;
       --muted: #8892a4;
       --radius: 16px;
-
-      --red:    #e74c3c;
-      --blue:   #3498db;
-      --green:  #2ecc71;
-      --yellow: #f1c40f;
-      --purple: #9b59b6;
-      --orange: #e67e22;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,7 +26,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px 60px;
+      padding: 40px 20px 80px;
       background-image:
         radial-gradient(circle at 20% 20%, rgba(233,69,96,0.08) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(52,152,219,0.08) 0%, transparent 50%);
@@ -53,8 +46,65 @@
       color: var(--muted);
       font-size: 1rem;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
+
+    .color-dots-preview {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .preview-dot {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    /* ── Progress ── */
+    .progress-wrap {
+      width: 100%;
+      max-width: 540px;
+      margin-bottom: 16px;
+    }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .progress-label .step-name { color: var(--gold); font-weight: 700; }
+    .progress-bar-track {
+      height: 4px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      border-radius: 4px;
+      transition: width 0.4s ease;
+    }
+
+    /* ── Card / Steps ── */
+    .step-wrap {
+      width: 100%;
+      max-width: 540px;
+    }
+    .step-wrap.hidden { display: none; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .anim-forward { animation: fadeInUp  0.28s ease both; }
+    .anim-back    { animation: fadeInDown 0.28s ease both; }
 
     .card {
       background: var(--card);
@@ -62,22 +112,246 @@
       border-radius: var(--radius);
       padding: 32px;
       width: 100%;
-      max-width: 520px;
       box-shadow: 0 8px 40px rgba(0,0,0,0.4);
     }
 
-    /* Step 1 */
-    #step1 { margin-bottom: 0; }
-
-    .step-label {
+    .step-heading {
       font-family: 'Fredoka One', cursive;
-      font-size: 1rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
+      font-size: 1.35rem;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .step-subheading {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 22px;
     }
 
+    /* ── Module checkboxes ── */
+    .module-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+    .module-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 13px 15px;
+      background: rgba(255,255,255,0.03);
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      user-select: none;
+    }
+    .module-item:hover:not(.is-disabled):not(.is-coming-soon) {
+      border-color: rgba(233,69,96,0.4);
+      background: rgba(233,69,96,0.05);
+    }
+    .module-item.is-checked {
+      border-color: rgba(233,69,96,0.5);
+      background: rgba(233,69,96,0.08);
+    }
+    .module-item.is-disabled { opacity: 0.5; cursor: default; }
+    .module-item.is-coming-soon { opacity: 0.4; cursor: default; }
+
+    .mod-checkbox {
+      width: 20px; height: 20px;
+      border-radius: 6px;
+      border: 2px solid var(--muted);
+      background: transparent;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+      margin-top: 1px;
+    }
+    .is-checked .mod-checkbox {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    .mod-checkbox-inner {
+      width: 5px; height: 9px;
+      border: 2px solid white;
+      border-top: none; border-left: none;
+      transform: rotate(45deg) translateY(-1px);
+      display: none;
+    }
+    .is-checked .mod-checkbox-inner { display: block; }
+
+    .mod-text { flex: 1; min-width: 0; }
+    .mod-name-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .mod-name {
+      font-weight: 700;
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+    .mod-desc {
+      font-size: 0.81rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .mod-badge {
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .badge-core        { background: rgba(245,166,35,0.2);  color: var(--gold); }
+    .badge-coming-soon { background: rgba(136,146,164,0.2); color: var(--muted); }
+
+    /* ── Scenario cards ── */
+    .scenario-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 24px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .scenario-grid::-webkit-scrollbar { width: 4px; }
+    .scenario-grid::-webkit-scrollbar-track { background: rgba(255,255,255,0.04); border-radius: 4px; }
+    .scenario-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
+
+    .scenario-card {
+      padding: 13px 15px;
+      background: rgba(255,255,255,0.03);
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      user-select: none;
+    }
+    .scenario-card:hover {
+      border-color: rgba(233,69,96,0.4);
+      background: rgba(233,69,96,0.05);
+    }
+    .scenario-card.is-selected {
+      border-color: var(--accent);
+      background: rgba(233,69,96,0.1);
+    }
+    .sc-radio {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--muted);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.15s;
+    }
+    .scenario-card.is-selected .sc-radio { border-color: var(--accent); }
+    .sc-radio-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: none;
+    }
+    .scenario-card.is-selected .sc-radio-dot { display: block; }
+
+    .sc-text { flex: 1; min-width: 0; }
+    .sc-name {
+      font-weight: 700;
+      font-size: 0.93rem;
+      color: var(--text);
+    }
+    .sc-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .sc-tag {
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .tag-Beginner     { background: rgba(46,204,113,0.18);  color: #2ecc71; }
+    .tag-Introductory { background: rgba(52,152,219,0.18);  color: #3498db; }
+    .tag-Standard     { background: rgba(245,166,35,0.18);  color: var(--gold); }
+    .tag-Variant      { background: rgba(233,69,96,0.18);   color: var(--accent); }
+    .tag-Solo         { background: rgba(155,89,182,0.18);  color: #9b59b6; }
+    .tag-SoloCoop     { background: rgba(155,89,182,0.14);  color: #b07cd8; }
+    .tag-Campaign     { background: rgba(230,126,34,0.18);  color: #e67e22; }
+    .tag-Wargame      { background: rgba(192,57,43,0.18);   color: #e74c3c; }
+    .tag-Module5      { background: rgba(26,188,156,0.18);  color: #1abc9c; }
+
+    /* ── Scenario group headers ── */
+    .sc-group-header {
+      font-family: 'Fredoka One', cursive;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      padding: 14px 2px 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 2px;
+    }
+    .sc-group-header:first-child { padding-top: 2px; }
+
+    /* ── Sub-options ── */
+    .suboption-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .suboption-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      user-select: none;
+    }
+    .suboption-item:hover {
+      border-color: rgba(233,69,96,0.4);
+      background: rgba(233,69,96,0.05);
+    }
+    .suboption-item.is-selected {
+      border-color: var(--accent);
+      background: rgba(233,69,96,0.1);
+    }
+    .sub-radio {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--muted);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+      transition: border-color 0.15s;
+    }
+    .suboption-item.is-selected .sub-radio { border-color: var(--accent); }
+    .sub-radio-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: none;
+    }
+    .suboption-item.is-selected .sub-radio-dot { display: block; }
+    .sub-label { font-weight: 700; font-size: 0.95rem; color: var(--text); }
+    .sub-desc  { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── Player count ── */
     .player-count-row {
       display: flex;
       align-items: center;
@@ -85,51 +359,68 @@
       justify-content: center;
       margin-bottom: 28px;
     }
-
     .count-btn {
-      width: 48px; height: 48px;
+      width: 52px; height: 52px;
       border-radius: 50%;
       border: 2px solid var(--accent);
       background: transparent;
       color: var(--accent);
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       cursor: pointer;
       display: flex; align-items: center; justify-content: center;
       transition: all 0.15s;
       line-height: 1;
     }
-    .count-btn:hover { background: var(--accent); color: white; transform: scale(1.1); }
+    .count-btn:hover:not(:disabled) { background: var(--accent); color: white; transform: scale(1.1); }
     .count-btn:disabled { opacity: 0.3; cursor: default; transform: none; }
-
     #count-display {
       font-family: 'Fredoka One', cursive;
-      font-size: 3rem;
+      font-size: 3.2rem;
       color: var(--text);
-      min-width: 60px;
+      min-width: 64px;
       text-align: center;
     }
+    .count-locked-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 28px;
+      padding: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+    }
+    .count-locked-num {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2.4rem;
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
 
-    /* Name inputs */
-    #name-fields { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-
+    /* ── Name inputs ── */
+    #name-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
     .name-input-wrap {
       display: flex;
       align-items: center;
       gap: 12px;
-      animation: slideIn 0.25s ease both;
+      animation: slideIn 0.22s ease both;
     }
     @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-8px); }
+      from { opacity: 0; transform: translateY(-6px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
     .player-dot {
       width: 14px; height: 14px;
       border-radius: 50%;
       background: var(--muted);
       flex-shrink: 0;
     }
-
     .name-input {
       flex: 1;
       background: rgba(255,255,255,0.05);
@@ -148,35 +439,21 @@
     }
     .name-input::placeholder { color: var(--muted); }
 
-    /* Big action button */
-    .btn-primary {
-      width: 100%;
-      padding: 16px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 4px 20px rgba(233,69,96,0.4);
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(233,69,96,0.5); }
-    .btn-primary:active { transform: scale(0.98); }
-
-    /* Results */
-    #results { display: none; }
-
+    /* ── Results ── */
     .results-title {
       font-family: 'Fredoka One', cursive;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: var(--gold);
       text-align: center;
-      margin-bottom: 24px;
+      margin-bottom: 6px;
     }
-
+    .results-summary {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
     .player-card {
       display: flex;
       align-items: center;
@@ -187,75 +464,208 @@
       animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
     }
     @keyframes popIn {
-      from { opacity: 0; transform: scale(0.8); }
+      from { opacity: 0; transform: scale(0.82); }
       to   { opacity: 1; transform: scale(1); }
     }
-
     .color-swatch {
       width: 44px; height: 44px;
       border-radius: 50%;
       flex-shrink: 0;
-      box-shadow: 0 0 16px currentColor;
     }
-
     .player-info { flex: 1; }
-    .player-name { font-weight: 700; font-size: 1.1rem; }
-    .color-name {
-      font-size: 0.85rem;
-      opacity: 0.75;
+    .player-name { font-weight: 700; font-size: 1.05rem; }
+    .color-name  {
+      font-size: 0.82rem;
+      opacity: 0.7;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
     .color-badge {
       padding: 4px 12px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: white;
     }
+    .player-card-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .btn-crew-cards {
+      padding: 5px 11px;
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      border-radius: 8px;
+      color: var(--muted);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+      letter-spacing: 0.2px;
+    }
+    .btn-crew-cards:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.28);
+      color: var(--text);
+    }
+
+    /* ── Crew Cards screen ── */
+    .crew-screen-head {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .crew-screen-sub {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 22px;
+    }
+    .crew-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+    .crew-img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .crew-img:hover { transform: scale(1.04); box-shadow: 0 8px 32px rgba(0,0,0,0.65); }
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 24px 0;
+    }
+
+    /* ── Navigation ── */
+    .nav-row {
+      display: flex;
+      gap: 12px;
+    }
+    .btn-primary {
+      flex: 1;
+      padding: 15px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+      box-shadow: 0 4px 20px rgba(233,69,96,0.4);
+    }
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(233,69,96,0.5);
+    }
+    .btn-primary:active:not(:disabled) { transform: scale(0.98); }
+    .btn-primary:disabled { opacity: 0.35; cursor: default; box-shadow: none; }
+
+    .btn-back {
+      padding: 15px 20px;
+      background: transparent;
+      color: var(--muted);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .btn-back:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
 
     .btn-secondary {
       width: 100%;
       padding: 14px;
       background: transparent;
       color: var(--muted);
-      border: 1.5px solid rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.13);
       border-radius: var(--radius);
       font-family: 'Nunito', sans-serif;
       font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 4px;
       transition: all 0.15s;
     }
     .btn-secondary:hover { color: var(--text); border-color: rgba(255,255,255,0.35); }
 
-    .color-dots-preview {
+    /* ── Home Screen ── */
+    .home-card {
+      text-align: center;
+      padding: 44px 32px 40px;
+    }
+    .home-btn-group {
       display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 32px;
+      flex-direction: column;
+      gap: 14px;
     }
-    .preview-dot {
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      opacity: 0.7;
+    .btn-home-primary {
+      width: 100%;
+      padding: 22px 24px 18px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.35rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 24px rgba(233,69,96,0.4);
     }
-
-    .divider {
-      height: 1px;
-      background: rgba(255,255,255,0.08);
-      margin: 24px 0;
+    .btn-home-primary:hover  { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(233,69,96,0.55); }
+    .btn-home-primary:active { transform: scale(0.98); }
+    .btn-home-secondary {
+      width: 100%;
+      padding: 20px 24px 16px;
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.35rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: transform 0.15s, background 0.15s, border-color 0.15s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-home-secondary:hover  { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); transform: translateY(-2px); }
+    .btn-home-secondary:active { transform: scale(0.98); }
+    .home-btn-sub {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      opacity: 0.72;
+      letter-spacing: 0;
     }
   </style>
 </head>
 <body>
 
   <h1>🚀 High Frontier</h1>
-  <p class="subtitle">Game Setup — Assign colors to your players</p>
+  <p class="subtitle">Game Setup — High Frontier 4 All</p>
 
   <div class="color-dots-preview">
     <div class="preview-dot" style="background:#f0f0f0"></div>
@@ -266,75 +676,835 @@
     <div class="preview-dot" style="background:#9b59b6"></div>
   </div>
 
-  <!-- Step 1: Setup -->
-  <div class="card" id="step1">
-    <div class="step-label">How many players?</div>
-
-    <div class="player-count-row">
-      <button class="count-btn" id="btn-minus" onclick="changeCount(-1)" disabled>−</button>
-      <div id="count-display">2</div>
-      <button class="count-btn" id="btn-plus" onclick="changeCount(1)">+</button>
+  <!-- ─── HOME SCREEN ─── -->
+  <div class="step-wrap anim-forward" id="screen-home">
+    <div class="card home-card">
+      <div class="home-btn-group">
+        <button class="btn-home-primary" onclick="startGameSetup()">
+          ⚙️ Game Setup
+          <span class="home-btn-sub">Modules · Scenario · Players · Color Assignment</span>
+        </button>
+        <button class="btn-home-secondary" onclick="window.location.href='rules.html'">
+          📖 Rules Reference
+          <span class="home-btn-sub">Browse rules, glossary &amp; card reference</span>
+        </button>
+      </div>
     </div>
-
-    <div class="step-label">Enter player names</div>
-    <div id="name-fields"></div>
-
-    <button class="btn-primary" onclick="assignColors()">🎨 Assign Colors!</button>
   </div>
 
-  <!-- Results -->
-  <div class="card" id="results">
-    <div class="results-title">✨ Colors Assigned!</div>
-    <div id="player-list"></div>
-    <div class="divider"></div>
-    <button class="btn-secondary" onclick="resetApp()">↩ Start Over</button>
+  <!-- Progress indicator -->
+  <div class="progress-wrap hidden" id="progress-wrap">
+    <div class="progress-label">
+      <span>Step <span id="prog-num">1</span> of <span id="prog-total">6</span></span>
+      <span class="step-name" id="prog-name">Module Selection</span>
+    </div>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="prog-fill" style="width:16.67%"></div>
+    </div>
+  </div>
+
+  <!-- ─── STEP 1: Module Selection ─── -->
+  <div class="step-wrap hidden" id="step-1">
+    <div class="card">
+      <div class="step-heading">Select Modules</div>
+      <div class="step-subheading">Choose which expansion modules to include in your game.</div>
+      <div class="module-list" id="module-list"></div>
+      <div class="nav-row">
+        <button class="btn-primary" onclick="goNext()">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STEP 2: Scenario ─── -->
+  <div class="step-wrap hidden" id="step-2">
+    <div class="card">
+      <div class="step-heading">Choose a Scenario</div>
+      <div class="step-subheading">Only scenarios compatible with your selected modules are shown.</div>
+      <div class="scenario-grid" id="scenario-grid"></div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="goBack()">← Back</button>
+        <button class="btn-primary" id="next-2" onclick="goNext()" disabled>Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STEP 3: Sub-options ─── -->
+  <div class="step-wrap hidden" id="step-3">
+    <div class="card">
+      <div class="step-heading" id="sub-heading">Scenario Options</div>
+      <div class="step-subheading">Choose a variant for this scenario.</div>
+      <div class="suboption-list" id="suboption-list"></div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="goBack()">← Back</button>
+        <button class="btn-primary" id="next-3" onclick="goNext()" disabled>Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STEP 7: Variants ─── -->
+  <div class="step-wrap hidden" id="step-7">
+    <div class="card">
+      <div class="step-heading">Optional Variants</div>
+      <div class="step-subheading">Toggle optional rules to customise your game. All are off by default — any combination is valid.</div>
+      <div class="module-list" id="variant-list"></div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="goBack()">← Back</button>
+        <button class="btn-primary" onclick="goNext()">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STEP 4: Player Count ─── -->
+  <div class="step-wrap hidden" id="step-4">
+    <div class="card">
+      <div class="step-heading">How Many Players?</div>
+      <div class="step-subheading" id="count-subheading">Choose the number of players.</div>
+      <div id="count-ui"></div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="goBack()">← Back</button>
+        <button class="btn-primary" onclick="goNext()">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STEP 5: Player Names ─── -->
+  <div class="step-wrap hidden" id="step-5">
+    <div class="card">
+      <div class="step-heading">Player Names</div>
+      <div class="step-subheading">Enter a name for each player, or leave blank for the default.</div>
+      <div id="name-fields"></div>
+      <div class="nav-row">
+        <button class="btn-back" onclick="goBack()">← Back</button>
+        <button class="btn-primary" onclick="goNext()">Assign Colors →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STEP 6: Results ─── -->
+  <div class="step-wrap hidden" id="step-6">
+    <div class="card">
+      <div class="results-title">✨ Ready to Play!</div>
+      <div class="results-summary" id="game-summary"></div>
+      <div id="player-list"></div>
+      <div class="divider"></div>
+      <button class="btn-secondary" onclick="resetApp()">↩ Start Over</button>
+    </div>
+  </div>
+
+  <!-- ─── CREW CARDS SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-crew-cards">
+    <div class="card">
+      <div class="crew-screen-head" id="crew-cards-heading">Crew Cards</div>
+      <div class="crew-screen-sub" id="crew-cards-sub">Choose which side of your Crew card to play as your faction.</div>
+      <div class="crew-grid" id="crew-grid"></div>
+      <div class="nav-row" style="margin-top:20px">
+        <button class="btn-back" onclick="closeCrewCards()">← Back to Ready</button>
+      </div>
+    </div>
   </div>
 
   <script>
-    const COLORS = [
-      { name: 'White',  hex: '#f0f0f0', shadow: 'rgba(240,240,240,0.5)' },
-      { name: 'Grey',   hex: '#95a5a6', shadow: 'rgba(149,165,166,0.5)' },
-      { name: 'Yellow', hex: '#f1c40f', shadow: 'rgba(241,196,15,0.5)' },
-      { name: 'Red',    hex: '#e74c3c', shadow: 'rgba(231,76,60,0.5)' },
-      { name: 'Green',  hex: '#2ecc71', shadow: 'rgba(46,204,113,0.5)' },
-      { name: 'Purple', hex: '#9b59b6', shadow: 'rgba(155,89,182,0.5)' },
+    // ─── DATA ────────────────────────────────────────────────────────────────
+
+    const MODULES = [
+      { id: 'core', label: 'Core',                      desc: 'Base game (always on)',                                                     alwaysOn: true  },
+      { id: 'm0',   label: 'Module 0: Politics',         desc: 'Political board, laws, and faction agendas'                                                 },
+      { id: 'm1',   label: 'Module 1: Terawatt & Futures', desc: 'Freighters, GW/TW thrusters, and Futures projects'                                       },
+      { id: 'm2',   label: 'Module 2: Colonization',    desc: 'Bernals (orbital space stations) and Colonists'                                              },
+      { id: 'm3',   label: 'Module 3: Conflict',         desc: 'Combat, War, and Anarchy rules'                                                             },
+      { id: 'm4',   label: 'Module 4: Exodus',           desc: 'Contracts, Isobank, cybernetic implants, interstellar Exodus ship'                          },
+      { id: 'm5',   label: 'Module 5: Economy',          desc: 'Corporate finance and stock market' },
     ];
 
-    let playerCount = 2;
+    // Compatibility helpers
+    const coreOnly      = mods => !['m0','m1','m2','m3','m4','m5'].some(m => mods.has(m));
+    const noM0          = mods => !mods.has('m0');
+    const always        = ()   => true;
+    const needsM1M2     = mods => mods.has('m1') && mods.has('m2');
+    const needsM3M4     = mods => mods.has('m3') && mods.has('m4');
+    const needsM0M1M2M5 = mods => mods.has('m0') && mods.has('m1') && mods.has('m2') && mods.has('m5');
+    const needsM0M5     = mods => mods.has('m0') && mods.has('m5');
 
-    function changeCount(delta) {
-      playerCount = Math.max(1, Math.min(6, playerCount + delta));
-      document.getElementById('count-display').textContent = playerCount;
-      document.getElementById('btn-minus').disabled = playerCount <= 1;
-      document.getElementById('btn-plus').disabled  = playerCount >= 6;
-      renderNameFields();
+    const SCENARIOS = [
+      // ── Core ──────────────────────────────────────────────────────────────
+      {
+        id: 'space-diamonds', name: 'Space Diamonds', tag: 'Beginner', group: 'Core',
+        desc: 'Lightweight family-friendly race through the solar system.',
+        compat: coreOnly, subOptions: null, minPlayers: 1, maxPlayers: 6,
+      },
+      {
+        id: 'race-for-glory', name: 'Race for Glory', tag: 'Introductory', group: 'Core',
+        desc: 'Streamlined rules with a step-by-step walkthrough.',
+        compat: coreOnly,
+        subOptions: [
+          { id: 'mars', label: 'Race to Mars',    desc: 'Shorter — Mars corridor only' },
+          { id: 'top',  label: 'Race to the Top', desc: 'Full map, 48 turns'           },
+        ],
+        minPlayers: 1, maxPlayers: 6,
+      },
+      {
+        id: 'standard', name: 'Standard Game', tag: 'Standard', group: 'Core',
+        desc: 'The full High Frontier experience with any modules.',
+        compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
+      },
+
+      // ── Competitive Variants ──────────────────────────────────────────────
+      {
+        id: 'quick-start', name: 'Quick Start (V1)', tag: 'Variant', group: 'Competitive Variants',
+        desc: 'Accelerated early game — 0 starting Aqua, 12-year card-draw phase. Recommended for 4+ players.',
+        compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
+      },
+      {
+        id: 'race-to-saturn', name: 'Race to Saturn (V2)', tag: 'Variant', group: 'Competitive Variants',
+        desc: 'First to land a Crew on Titan and return to LEO wins.',
+        compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+      },
+      {
+        id: 'grand-tour', name: 'Grand Tour (V3)', tag: 'Variant', group: 'Competitive Variants',
+        desc: 'Short game — 2 Seniority Disks, score only Claims and glory.',
+        compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+      },
+      {
+        id: 'red-giant', name: 'Red Giant (V10)', tag: 'Variant', group: 'Competitive Variants',
+        desc: 'Sol is going red giant. Inner solar system desiccates; only outer-system VP counts.',
+        compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+      },
+      {
+        id: 'diamonds-4-all', name: 'Diamonds 4 All (V11)', tag: 'Variant', group: 'Competitive Variants',
+        desc: 'Place discovery chits on Sites. Humans explore them for bonus VP and Abilities.',
+        compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
+      },
+      {
+        id: 'panspermia', name: 'Panspermia (V12)', tag: 'Variant', group: 'Competitive Variants',
+        desc: 'Multiple alien species (Earthlings, Martians, Venusians, Sirens, Oceanians, Tholians, Nuclei) race the solar system.',
+        compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+      },
+
+      // ── Solo & Cooperative ────────────────────────────────────────────────
+      {
+        id: 'altruism', name: 'Altruism (V4)', tag: 'SoloCoop', group: 'Solo & Cooperative',
+        desc: 'Solo or cooperative. Reach a VP threshold to win.',
+        compat: always,
+        subOptions: [
+          { id: 'solo', label: 'Solo',        desc: 'Single-player challenge'           },
+          { id: 'coop', label: 'Cooperative', desc: 'Team up to reach the VP threshold' },
+        ],
+        minPlayers: 1, maxPlayers: 6,
+      },
+      {
+        id: 'hermes-fall', name: 'Hermes Fall (V5)', tag: 'Solo', group: 'Solo & Cooperative',
+        desc: 'Solo. Industrialize both Hermes sites before time runs out to deflect an asteroid.',
+        compat: always, subOptions: null, minPlayers: 1, maxPlayers: 1,
+      },
+      {
+        id: 'ceo', name: 'CEO (V6)', tag: 'Solo', group: 'Solo & Cooperative',
+        desc: "Solo. Meet the Board's KPI at each Solar Cycle board meeting.",
+        compat: always,
+        subOptions: [
+          { id: 'standard', label: 'Standard',     desc: 'Classic CEO challenge'        },
+          { id: 'futures',  label: 'With Futures', desc: 'Requires Module 1 + Module 2' },
+        ],
+        minPlayers: 1, maxPlayers: 1,
+      },
+
+      // ── Campaign ──────────────────────────────────────────────────────────
+      {
+        id: 'bios-earth', name: 'Bios:Earth (V7)', tag: 'Campaign', group: 'Campaign',
+        desc: 'Campaign continuation from the Bios trilogy — your Bios:Origins end-state determines starting conditions.',
+        compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
+      },
+      {
+        id: 'bios-venus-mars', name: 'Bios:Venus / Bios:Mars (V8)', tag: 'Campaign', group: 'Campaign',
+        desc: 'Start civilisation on Venus or Mars, then expand to the solar system.',
+        compat: noM0,
+        subOptions: [
+          { id: 'venus', label: 'Venus', desc: 'Start the campaign on Venus' },
+          { id: 'mars',  label: 'Mars',  desc: 'Start the campaign on Mars'  },
+        ],
+        minPlayers: 1, maxPlayers: 6,
+      },
+      {
+        id: 'sirens', name: 'The Sirens (V9)', tag: 'Campaign', group: 'Campaign',
+        desc: 'Carbon-based alien factions from Uranus explore the solar system.',
+        compat: noM0, subOptions: null, minPlayers: 1, maxPlayers: 6,
+      },
+
+      // ── Modules 1 & 2 ────────────────────────────────────────────────────
+      {
+        id: 'wernersstar', name: "Werner's Star (M1 Solo)", tag: 'Solo', group: 'Modules 1 & 2',
+        desc: "Solo. Werner dreams of the stars — win by completing a TW thruster Future before he dies of old age.",
+        compat: needsM1M2, subOptions: null, minPlayers: 1, maxPlayers: 1,
+      },
+
+      // ── Modules 3 & 4 ────────────────────────────────────────────────────
+      {
+        id: 'exodus-scenarios', name: 'Exodus Scenarios (M3+M4)', tag: 'Wargame', group: 'Modules 3 & 4',
+        desc: 'Total war between two factions. The losers are motivated to build a starship and escape the solar system.',
+        compat: needsM3M4,
+        subOptions: [
+          { id: 'conventional', label: 'Conventional War', desc: 'Standard Module 3 conflict plus Exodus scoring' },
+          { id: 'union',        label: 'Union War',        desc: 'Robots gain consciousness and join the Independence faction' },
+        ],
+        minPlayers: 2, maxPlayers: 6,
+      },
+
+      // ── Module 5 ──────────────────────────────────────────────────────────
+      {
+        id: 'iso-dawn', name: 'Iso Dawn (M5)', tag: 'Module5', group: 'Module 5',
+        desc: 'Start immediately after the stock market flips to isotope monetization. Requires Modules 0, 1, 2 & 5.',
+        compat: needsM0M1M2M5, subOptions: null, minPlayers: 2, maxPlayers: 6,
+      },
+      {
+        id: 'taurus', name: "Roger's Taurus (M5 Solo)", tag: 'Solo', group: 'Module 5',
+        desc: 'Solo/2-player. An NPC "Taurus" competes to chair every company. Requires Modules 0 & 5.',
+        compat: needsM0M5, subOptions: null, minPlayers: 1, maxPlayers: 2,
+      },
+    ];
+
+    // ─── VARIANTS ────────────────────────────────────────────────────────────
+
+    const VARIANTS = [
+      {
+        id: 'rapid-start',
+        label: 'Rapid Start',
+        desc: "4 rounds of patent auctions replace the first solar cycle. Start with 9 Aqua. Roger Lund's alternative to Quick Start. Works with any modules.",
+        requires: always,
+      },
+      {
+        id: 'diamonds-overlay',
+        label: 'Diamonds 4 All Overlay',
+        desc: 'Place discovery chits on Sites with special icons. Humans explore them during play for bonus VP and Abilities.',
+        requires: always,
+      },
+      {
+        id: 'asteroid-jormungandr',
+        label: 'Asteroid Jormungandr',
+        desc: 'Place this optional asteroid tile anywhere in the Mars zone. Prospecting it with a Colonist grants a free augmentation chit.',
+        requires: mods => mods.has('m4') || mods.has('m5'),
+      },
+      {
+        id: 'habitable-venus',
+        label: 'Habitable Venus Overlay',
+        desc: 'Use the Habitable Venus overlay card for an alternate Venus experience — relevant for Bios:Venus/Mars (V8).',
+        requires: always,
+      },
+      {
+        id: 'alt-solitaire-politics',
+        label: 'Alternative Solitaire Political Diagram',
+        desc: 'Revised laws designed to reduce randomness in solo play. All ideologies become viable. Requires Modules 0 & 4.',
+        requires: mods => mods.has('m0') && mods.has('m4'),
+      },
+      {
+        id: 'm5-short',
+        label: 'Module 5: Short Game (1–2 Seniority Disks)',
+        desc: 'Use only 1–2 Seniority Disks instead of the default 3–4 for a faster Module 5 game.',
+        requires: mods => mods.has('m5'),
+      },
+      {
+        id: 'm5-jumpstart',
+        label: 'Module 5: Jump Start',
+        desc: 'Begin with pre-built starting Factories and Bernals per the Iso Dawn faction table. Recommended for experienced groups.',
+        requires: mods => mods.has('m5'),
+      },
+    ];
+
+    const COLORS = [
+      { name: 'White',  hex: '#f0f0f0', shadow: 'rgba(240,240,240,0.5)', dark: true  },
+      { name: 'Grey',   hex: '#95a5a6', shadow: 'rgba(149,165,166,0.5)', dark: false },
+      { name: 'Yellow', hex: '#f1c40f', shadow: 'rgba(241,196,15,0.5)',  dark: true  },
+      { name: 'Red',    hex: '#e74c3c', shadow: 'rgba(231,76,60,0.5)',   dark: false },
+      { name: 'Green',  hex: '#2ecc71', shadow: 'rgba(46,204,113,0.5)',  dark: false },
+      { name: 'Purple', hex: '#9b59b6', shadow: 'rgba(155,89,182,0.5)', dark: false },
+    ];
+
+    const STEP_NAMES = {
+      1: 'Module Selection',
+      2: 'Scenario',
+      3: 'Scenario Options',
+      7: 'Variants',
+      4: 'Player Count',
+      5: 'Player Names',
+      6: 'Color Assignment',
+    };
+
+    // ─── HOME ────────────────────────────────────────────────────────────────
+
+    function startGameSetup() {
+      const home = document.getElementById('screen-home');
+      home.classList.add('hidden');
+      home.classList.remove('anim-forward', 'anim-back');
+
+      document.getElementById('progress-wrap').classList.remove('hidden');
+
+      const s1 = document.getElementById('step-1');
+      s1.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void s1.offsetWidth;
+      s1.classList.add('anim-forward');
+
+      st.step = 1;
+      st.dir = 'forward';
+      updateProgress();
+      onEnter(1);
     }
 
-    function renderNameFields() {
-      const container = document.getElementById('name-fields');
-      const existing = [...container.querySelectorAll('.name-input')].map(i => i.value);
-      container.innerHTML = '';
+    // ─── STATE ───────────────────────────────────────────────────────────────
 
-      for (let i = 0; i < playerCount; i++) {
-        const wrap = document.createElement('div');
+    let st = {
+      step: 1,
+      modules: new Set(['core']),
+      scenario: null,
+      subOption: null,
+      variants: new Set(),
+      playerCount: 2,
+      savedNames: [],
+      assignedColors: null,
+      dir: 'forward',
+    };
+
+    // ─── STEP SEQUENCE ───────────────────────────────────────────────────────
+
+    function stepSeq() {
+      const s = [1, 2];
+      if (st.scenario && st.scenario.subOptions) s.push(3);
+      s.push(7, 4, 5, 6);
+      return s;
+    }
+
+    function nextStep() {
+      const s = stepSeq(), i = s.indexOf(st.step);
+      return i < s.length - 1 ? s[i + 1] : null;
+    }
+
+    function prevStep() {
+      const s = stepSeq(), i = s.indexOf(st.step);
+      return i > 0 ? s[i - 1] : null;
+    }
+
+    // ─── NAVIGATION ──────────────────────────────────────────────────────────
+
+    function goNext() {
+      if (!validate(st.step)) return;
+      if (st.step === 5) collectNames();
+      const n = nextStep();
+      if (n === null) return;
+      st.dir = 'forward';
+      showStep(n);
+    }
+
+    function goBack() {
+      const p = prevStep();
+      if (p === null) return;
+      st.dir = 'back';
+      showStep(p);
+    }
+
+    function showStep(to) {
+      const from = document.getElementById('step-' + st.step);
+      const dest = document.getElementById('step-' + to);
+      from.classList.add('hidden');
+      from.classList.remove('anim-forward', 'anim-back');
+      st.step = to;
+      dest.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void dest.offsetWidth; // reflow
+      dest.classList.add(st.dir === 'forward' ? 'anim-forward' : 'anim-back');
+      updateProgress();
+      onEnter(to);
+    }
+
+    function updateProgress() {
+      const seq   = stepSeq();
+      const pos   = seq.indexOf(st.step) + 1;
+      const total = seq.length;
+      document.getElementById('prog-num').textContent   = pos;
+      document.getElementById('prog-total').textContent = total;
+      document.getElementById('prog-name').textContent  = STEP_NAMES[st.step];
+      document.getElementById('prog-fill').style.width  = ((pos / total) * 100) + '%';
+    }
+
+    function onEnter(step) {
+      if (step === 1) renderModules();
+      if (step === 2) renderScenarios();
+      if (step === 3) renderSubOptions();
+      if (step === 7) renderVariants();
+      if (step === 4) setupCount();
+      if (step === 5) renderNames();
+      if (step === 6) renderResults();
+    }
+
+    // ─── VALIDATION ──────────────────────────────────────────────────────────
+
+    function validate(step) {
+      if (step === 2 && !st.scenario)  { alert('Please select a scenario to continue.'); return false; }
+      if (step === 3 && !st.subOption) { alert('Please choose an option to continue.');  return false; }
+      return true;
+    }
+
+    // ─── STEP 1: MODULES ─────────────────────────────────────────────────────
+
+    function renderModules() {
+      const el = document.getElementById('module-list');
+      el.innerHTML = '';
+      MODULES.forEach(mod => {
+        const checked     = st.modules.has(mod.id);
+        const isDisabled  = !!mod.alwaysOn;
+        const isComingSoon = !!mod.comingSoon;
+
+        const item = document.createElement('div');
+        item.className = 'module-item'
+          + (checked      ? ' is-checked'     : '')
+          + (isDisabled   ? ' is-disabled'    : '')
+          + (isComingSoon ? ' is-coming-soon' : '');
+
+        if (!isDisabled && !isComingSoon) {
+          item.addEventListener('click', () => toggleModule(mod.id));
+        }
+
+        let badge = '';
+        if (isDisabled)   badge = '<span class="mod-badge badge-core">Always On</span>';
+        if (isComingSoon) badge = '<span class="mod-badge badge-coming-soon">Coming Soon</span>';
+
+        item.innerHTML = `
+          <div class="mod-checkbox"><div class="mod-checkbox-inner"></div></div>
+          <div class="mod-text">
+            <div class="mod-name-row">
+              <span class="mod-name">${mod.label}</span>${badge}
+            </div>
+            <div class="mod-desc">${mod.desc}</div>
+          </div>`;
+        el.appendChild(item);
+      });
+    }
+
+    function toggleModule(id) {
+      if (st.modules.has(id)) {
+        st.modules.delete(id);
+      } else {
+        st.modules.add(id);
+      }
+      // Invalidate scenario if it's no longer compatible
+      if (st.scenario && !st.scenario.compat(st.modules)) {
+        st.scenario  = null;
+        st.subOption = null;
+      }
+      renderModules();
+    }
+
+    // ─── STEP 2: SCENARIOS ───────────────────────────────────────────────────
+
+    function renderScenarios() {
+      const grid = document.getElementById('scenario-grid');
+      grid.innerHTML = '';
+
+      const compatible = SCENARIOS.filter(s => s.compat(st.modules));
+
+      // Build ordered group list preserving first-seen order
+      const groupOrder = [];
+      const groups = {};
+      compatible.forEach(sc => {
+        const g = sc.group || 'Other';
+        if (!groups[g]) { groups[g] = []; groupOrder.push(g); }
+        groups[g].push(sc);
+      });
+
+      groupOrder.forEach(groupName => {
+        const hdr = document.createElement('div');
+        hdr.className = 'sc-group-header';
+        hdr.textContent = groupName;
+        grid.appendChild(hdr);
+
+        groups[groupName].forEach(scenario => {
+          const sel  = st.scenario && st.scenario.id === scenario.id;
+          const card = document.createElement('div');
+          card.className = 'scenario-card' + (sel ? ' is-selected' : '');
+          card.addEventListener('click', () => selectScenario(scenario));
+
+          const tagLabel = scenario.tag === 'SoloCoop' ? 'Solo/Coop'
+                         : scenario.tag === 'Module5'  ? 'Module 5'
+                         : scenario.tag;
+          card.innerHTML = `
+            <div class="sc-radio"><div class="sc-radio-dot"></div></div>
+            <div class="sc-text">
+              <div class="sc-name">${scenario.name}</div>
+              <div class="sc-desc">${scenario.desc}</div>
+            </div>
+            <div class="sc-tag tag-${scenario.tag}">${tagLabel}</div>`;
+          grid.appendChild(card);
+        });
+      });
+
+      document.getElementById('next-2').disabled = !st.scenario;
+    }
+
+    function selectScenario(scenario) {
+      if (!st.scenario || st.scenario.id !== scenario.id) st.subOption = null;
+      st.scenario = scenario;
+      renderScenarios();
+    }
+
+    // ─── STEP 3: SUB-OPTIONS ─────────────────────────────────────────────────
+
+    function renderSubOptions() {
+      if (!st.scenario || !st.scenario.subOptions) return;
+      document.getElementById('sub-heading').textContent = st.scenario.name + ' — Options';
+
+      const list = document.getElementById('suboption-list');
+      list.innerHTML = '';
+
+      st.scenario.subOptions.forEach(opt => {
+        const sel  = st.subOption === opt.id;
+        const item = document.createElement('div');
+        item.className = 'suboption-item' + (sel ? ' is-selected' : '');
+        item.addEventListener('click', () => {
+          st.subOption = opt.id;
+          renderSubOptions();
+        });
+        item.innerHTML = `
+          <div class="sub-radio"><div class="sub-radio-dot"></div></div>
+          <div class="sub-text">
+            <div class="sub-label">${opt.label}</div>
+            <div class="sub-desc">${opt.desc}</div>
+          </div>`;
+        list.appendChild(item);
+      });
+
+      document.getElementById('next-3').disabled = !st.subOption;
+    }
+
+    // ─── STEP 7: VARIANTS ────────────────────────────────────────────────────
+
+    function renderVariants() {
+      const list = document.getElementById('variant-list');
+      list.innerHTML = '';
+
+      const applicable = VARIANTS.filter(v => v.requires(st.modules));
+
+      if (applicable.length === 0) {
+        const msg = document.createElement('p');
+        msg.style.cssText = 'color:var(--muted);font-size:0.9rem;text-align:center;padding:20px 0';
+        msg.textContent = 'No optional variants apply to your current module selection.';
+        list.appendChild(msg);
+        return;
+      }
+
+      applicable.forEach(variant => {
+        const checked = st.variants.has(variant.id);
+        const item    = document.createElement('div');
+        item.className = 'module-item' + (checked ? ' is-checked' : '');
+        item.addEventListener('click', () => toggleVariant(variant.id));
+        item.innerHTML = `
+          <div class="mod-checkbox"><div class="mod-checkbox-inner"></div></div>
+          <div class="mod-text">
+            <div class="mod-name-row">
+              <span class="mod-name">${variant.label}</span>
+            </div>
+            <div class="mod-desc">${variant.desc}</div>
+          </div>`;
+        list.appendChild(item);
+      });
+    }
+
+    function toggleVariant(id) {
+      if (st.variants.has(id)) {
+        st.variants.delete(id);
+      } else {
+        st.variants.add(id);
+      }
+      renderVariants();
+    }
+
+    // ─── STEP 4: PLAYER COUNT ────────────────────────────────────────────────
+
+    function setupCount() {
+      const minP = st.scenario ? st.scenario.minPlayers : 1;
+      const maxP = st.scenario ? st.scenario.maxPlayers : 6;
+      st.playerCount = Math.max(minP, Math.min(maxP, st.playerCount));
+
+      const sub = document.getElementById('count-subheading');
+      const ui  = document.getElementById('count-ui');
+
+      if (minP === maxP) {
+        sub.textContent = minP === 1 ? 'This is a solo scenario.' : `This scenario is for exactly ${minP} players.`;
+        ui.innerHTML = `
+          <div class="count-locked-note">
+            <span class="count-locked-num">${minP}</span>
+            ${minP === 1 ? 'Solo only' : `${minP} players required`}
+          </div>`;
+      } else {
+        sub.textContent = `Choose between ${minP} and ${maxP} players.`;
+        ui.innerHTML = `
+          <div class="player-count-row">
+            <button class="count-btn" id="btn-minus" onclick="changeCount(-1)">−</button>
+            <div id="count-display">${st.playerCount}</div>
+            <button class="count-btn" id="btn-plus"  onclick="changeCount(1)">+</button>
+          </div>`;
+        syncCountBtns(minP, maxP);
+      }
+    }
+
+    function changeCount(delta) {
+      const minP = st.scenario ? st.scenario.minPlayers : 1;
+      const maxP = st.scenario ? st.scenario.maxPlayers : 6;
+      st.playerCount = Math.max(minP, Math.min(maxP, st.playerCount + delta));
+      document.getElementById('count-display').textContent = st.playerCount;
+      syncCountBtns(minP, maxP);
+    }
+
+    function syncCountBtns(minP, maxP) {
+      const m = document.getElementById('btn-minus');
+      const p = document.getElementById('btn-plus');
+      if (m) m.disabled = st.playerCount <= minP;
+      if (p) p.disabled = st.playerCount >= maxP;
+    }
+
+    // ─── STEP 5: PLAYER NAMES ────────────────────────────────────────────────
+
+    function renderNames() {
+      const container = document.getElementById('name-fields');
+      container.innerHTML = '';
+      for (let i = 0; i < st.playerCount; i++) {
+        const wrap  = document.createElement('div');
         wrap.className = 'name-input-wrap';
         wrap.style.animationDelay = (i * 0.05) + 's';
 
-        const dot = document.createElement('div');
+        const dot   = document.createElement('div');
         dot.className = 'player-dot';
 
         const input = document.createElement('input');
-        input.className = 'name-input';
-        input.type = 'text';
+        input.className   = 'name-input';
+        input.type        = 'text';
         input.placeholder = 'Player ' + (i + 1);
-        input.value = existing[i] || '';
-        input.maxLength = 20;
+        input.value       = st.savedNames[i] || '';
+        input.maxLength   = 20;
 
         wrap.appendChild(dot);
         wrap.appendChild(input);
         container.appendChild(wrap);
       }
     }
+
+    function collectNames() {
+      st.savedNames = [...document.querySelectorAll('#name-fields .name-input')]
+        .map((inp, i) => inp.value.trim() || 'Player ' + (i + 1));
+    }
+
+    // ─── STEP 6: RESULTS ─────────────────────────────────────────────────────
+
+    function renderResults() {
+      // Build summary line
+      const parts = [st.scenario.name];
+      if (st.subOption) {
+        const opt = st.scenario.subOptions.find(o => o.id === st.subOption);
+        if (opt) parts.push(opt.label);
+      }
+      const modLabels = [...st.modules]
+        .filter(m => m !== 'core')
+        .map(m => MODULES.find(mod => mod.id === m)?.label)
+        .filter(Boolean);
+      if (modLabels.length) parts.push(modLabels.join(', '));
+      parts.push(st.playerCount + ' player' + (st.playerCount !== 1 ? 's' : ''));
+      document.getElementById('game-summary').textContent = parts.join(' · ');
+
+      // Assign colors — shuffle once per visit; store so viewCrewCards() can reuse
+      if (!st.assignedColors || st.assignedColors.length !== st.playerCount) {
+        st.assignedColors = shuffle(COLORS).slice(0, st.playerCount);
+      }
+      const list = document.getElementById('player-list');
+      list.innerHTML = '';
+
+      st.savedNames.forEach((name, i) => {
+        const color = st.assignedColors[i];
+        const card  = document.createElement('div');
+        card.className = 'player-card';
+        card.style.cssText = `background:${color.hex}18; border:1.5px solid ${color.hex}55; animation-delay:${i * 0.08}s`;
+
+        const textColor = color.dark ? '#1a1a2e' : 'white';
+        card.innerHTML = `
+          <div class="color-swatch" style="background:${color.hex}; box-shadow:0 0 18px ${color.shadow}"></div>
+          <div class="player-info">
+            <div class="player-name">${esc(name)}</div>
+            <div class="color-name">${color.name}</div>
+          </div>
+          <div class="player-card-right">
+            <div class="color-badge" style="background:${color.hex}; color:${textColor}">${color.name}</div>
+            <button class="btn-crew-cards" onclick="viewCrewCards('${color.name}')">🃏 Crew Cards</button>
+          </div>`;
+        list.appendChild(card);
+      });
+    }
+
+    // ─── CREW CARDS ──────────────────────────────────────────────────────────
+
+    // Exact card counts per color, from rules/images/Crew Cards/
+    const CREW_CARD_COUNTS = { White: 5, Yellow: 5, Green: 4, Grey: 4, Red: 4, Purple: 4 };
+
+    function viewCrewCards(colorName) {
+      // Hide step-6 and the progress bar; show the crew cards screen
+      document.getElementById('step-6').classList.add('hidden');
+      document.getElementById('progress-wrap').classList.add('hidden');
+
+      document.getElementById('crew-cards-heading').textContent = colorName + ' — Crew Cards';
+      document.getElementById('crew-cards-sub').textContent =
+        'Review your ' + colorName + ' faction crew cards, then choose which side to play.';
+
+      const grid = document.getElementById('crew-grid');
+      grid.innerHTML = '';
+      const count = CREW_CARD_COUNTS[colorName] || 4;
+      for (let i = 1; i <= count; i++) {
+        const img = document.createElement('img');
+        img.className = 'crew-img';
+        img.src = 'rules/images/Crew Cards/' + colorName + i + '.png';
+        img.alt  = colorName + ' Crew Card ' + i;
+        img.loading = 'lazy';
+        grid.appendChild(img);
+      }
+
+      const screen = document.getElementById('screen-crew-cards');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+    }
+
+    function closeCrewCards() {
+      const screen = document.getElementById('screen-crew-cards');
+      screen.classList.add('hidden');
+      screen.classList.remove('anim-forward', 'anim-back');
+
+      document.getElementById('progress-wrap').classList.remove('hidden');
+
+      const step6 = document.getElementById('step-6');
+      step6.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void step6.offsetWidth;
+      step6.classList.add('anim-back');
+    }
+
+    // ─── RESET ───────────────────────────────────────────────────────────────
+
+    function resetApp() {
+      const from = document.getElementById('step-' + st.step);
+      from.classList.add('hidden');
+      from.classList.remove('anim-forward', 'anim-back');
+
+      document.getElementById('progress-wrap').classList.add('hidden');
+
+      st = {
+        step: 1,
+        modules: new Set(['core']),
+        scenario: null,
+        subOption: null,
+        variants: new Set(),
+        playerCount: 2,
+        savedNames: [],
+        assignedColors: null,
+        dir: 'forward',
+      };
+
+      const home = document.getElementById('screen-home');
+      home.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void home.offsetWidth;
+      home.classList.add('anim-back');
+    }
+
+    // ─── UTILITIES ───────────────────────────────────────────────────────────
 
     function shuffle(arr) {
       const a = [...arr];
@@ -345,50 +1515,12 @@
       return a;
     }
 
-    function assignColors() {
-      const inputs = document.querySelectorAll('.name-input');
-      const names = [...inputs].map((inp, i) => inp.value.trim() || 'Player ' + (i + 1));
-
-      const shuffledColors = shuffle(COLORS).slice(0, playerCount);
-
-      const list = document.getElementById('player-list');
-      list.innerHTML = '';
-
-      names.forEach((name, i) => {
-        const color = shuffledColors[i];
-        const card = document.createElement('div');
-        card.className = 'player-card';
-        card.style.background = `${color.hex}18`;
-        card.style.border = `1.5px solid ${color.hex}55`;
-        card.style.animationDelay = (i * 0.08) + 's';
-
-        card.innerHTML = `
-          <div class="color-swatch" style="background:${color.hex}; color:${color.hex}; box-shadow:0 0 18px ${color.shadow}"></div>
-          <div class="player-info">
-            <div class="player-name">${escapeHtml(name)}</div>
-            <div class="color-name">${color.name}</div>
-          </div>
-          <div class="color-badge" style="background:${color.hex}">${color.name}</div>
-        `;
-
-        list.appendChild(card);
-      });
-
-      document.getElementById('step1').style.display = 'none';
-      document.getElementById('results').style.display = 'block';
-    }
-
-    function resetApp() {
-      document.getElementById('step1').style.display = 'block';
-      document.getElementById('results').style.display = 'none';
-    }
-
-    function escapeHtml(str) {
+    function esc(str) {
       return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
 
-    // Init
-    renderNameFields();
+    // ─── INIT ────────────────────────────────────────────────────────────────
+    // Start on the home screen; game setup begins when the user taps "Game Setup"
   </script>
 </body>
 </html>

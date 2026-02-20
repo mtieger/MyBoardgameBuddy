@@ -1,0 +1,477 @@
+/* ======================================================
+   NASA-INSPIRED UI STYLE GUIDE
+   High Frontier 4 All — Setup Assistant
+   Version 1.0
+   ====================================================== */
+
+:root {
+  /* ========================
+     COLOR TOKENS
+     ======================== */
+
+  /* Backgrounds */
+  --bg-0: #0B0D10;
+  --bg-1: #14171C;
+  --bg-2: #1B2028;
+
+  /* Text */
+  --text-0: #F2F2F2;
+  --text-1: #B8C0CC;
+  --text-2: #7E8794;
+
+  /* Lines */
+  --line-0: #1F242C;
+  --line-1: #2B313B;
+
+  /* Accents */
+  --accent-blue: #0B3D91;
+  --accent-red: #FC3D21;
+
+  /* Status */
+  --ok: #2FBF71;
+  --caution: #F2C94C;
+  --critical: #FC3D21;
+  --info: #2D9CDB;
+
+  /* ========================
+     TYPOGRAPHY
+     ======================== */
+
+  --font-ui: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-0: 12px;
+  --fs-1: 14px;
+  --fs-2: 16px;
+  --fs-3: 20px;
+  --fs-4: 24px;
+  --fs-5: 32px;
+
+  /* ========================
+     SPACING
+     ======================== */
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+
+  /* ========================
+     SHAPE
+     ======================== */
+
+  --r-0: 0px;
+  --r-1: 2px;
+  --r-2: 6px;
+
+  /* Effects */
+  --shadow-0: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ======================================================
+   BASE RESET & DEFAULTS
+   ====================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-0);
+  color: var(--text-0);
+  font-family: var(--font-ui);
+  font-size: var(--fs-2);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 var(--s-3) 0;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 var(--s-4) 0;
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line-0);
+  margin: var(--s-4) 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ======================================================
+   LAYOUT HELPERS
+   ====================================================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--s-6);
+}
+
+.grid {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gap-2 { gap: var(--s-2); }
+.gap-3 { gap: var(--s-3); }
+.gap-4 { gap: var(--s-4); }
+
+/* ======================================================
+   PANELS
+   ====================================================== */
+
+.panel {
+  background: var(--bg-1);
+  border: 1px solid var(--line-0);
+  border-radius: var(--r-1);
+  padding: var(--s-5);
+}
+
+.panel__title {
+  font-size: var(--fs-3);
+  font-weight: 600;
+  margin: 0 0 var(--s-3) 0;
+}
+
+.panel__sub {
+  margin: 0 0 var(--s-4) 0;
+  color: var(--text-1);
+  font-size: var(--fs-1);
+}
+
+/* ======================================================
+   BUTTONS
+   ====================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: 10px 16px;
+  border-radius: var(--r-1);
+  border: 1px solid transparent;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: var(--fs-1);
+  cursor: pointer;
+  transition: all 140ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Primary */
+.btn--primary {
+  background: var(--accent-blue);
+  color: var(--text-0);
+  border-color: var(--accent-blue);
+}
+
+.btn--primary:hover {
+  background: #0d47a8;
+  border-color: var(--line-1);
+}
+
+/* Danger */
+.btn--danger {
+  background: var(--accent-red);
+  color: #ffffff;
+  border-color: var(--accent-red);
+}
+
+.btn--danger:hover {
+  background: #e03419;
+}
+
+/* Secondary */
+.btn--secondary {
+  background: transparent;
+  color: var(--text-0);
+  border-color: var(--line-1);
+}
+
+.btn--secondary:hover {
+  background: var(--bg-2);
+}
+
+/* Ghost */
+.btn--ghost {
+  background: transparent;
+  color: var(--text-1);
+  border-color: transparent;
+}
+
+.btn--ghost:hover {
+  color: var(--text-0);
+  background: var(--bg-2);
+}
+
+/* ======================================================
+   TELEMETRY (KEY / VALUE PAIRS)
+   ====================================================== */
+
+.kv {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--s-3);
+  padding: var(--s-2) 0;
+  border-bottom: 1px solid var(--line-0);
+}
+
+.kv:last-child {
+  border-bottom: none;
+}
+
+.kv__k {
+  font-size: var(--fs-0);
+  color: var(--text-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kv__v {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2);
+  color: var(--text-0);
+}
+
+/* ======================================================
+   BADGES
+   ====================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: var(--r-1);
+  font-size: var(--fs-0);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--line-1);
+}
+
+.badge--ok {
+  background: rgba(47, 191, 113, 0.12);
+  color: var(--ok);
+  border-color: rgba(47, 191, 113, 0.35);
+}
+
+.badge--caution {
+  background: rgba(242, 201, 76, 0.12);
+  color: var(--caution);
+  border-color: rgba(242, 201, 76, 0.35);
+}
+
+.badge--critical {
+  background: rgba(252, 61, 33, 0.12);
+  color: var(--critical);
+  border-color: rgba(252, 61, 33, 0.35);
+}
+
+.badge--info {
+  background: rgba(45, 156, 219, 0.12);
+  color: var(--info);
+  border-color: rgba(45, 156, 219, 0.35);
+}
+
+/* ======================================================
+   FORMS
+   ====================================================== */
+
+label {
+  display: block;
+  margin-bottom: var(--s-2);
+  font-size: var(--fs-0);
+  color: var(--text-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: var(--bg-0);
+  color: var(--text-0);
+  border: 1px solid var(--line-1);
+  border-radius: var(--r-1);
+  padding: 10px 12px;
+  font-family: var(--font-ui);
+  font-size: var(--fs-1);
+  transition: outline 100ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Toggle / Checkbox */
+input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--accent-blue);
+  cursor: pointer;
+}
+
+/* ======================================================
+   TABLES
+   ====================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-1);
+}
+
+th,
+td {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--line-0);
+  text-align: left;
+}
+
+th {
+  font-size: var(--fs-0);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-1);
+  font-weight: 600;
+}
+
+td.numeric {
+  font-family: var(--font-mono);
+  text-align: right;
+}
+
+tbody tr:hover {
+  background: var(--bg-2);
+}
+
+/* ======================================================
+   UTILITY CLASSES
+   ====================================================== */
+
+.text-0 { color: var(--text-0); }
+.text-1 { color: var(--text-1); }
+.text-2 { color: var(--text-2); }
+.text-ok { color: var(--ok); }
+.text-caution { color: var(--caution); }
+.text-critical { color: var(--critical); }
+.text-info { color: var(--info); }
+
+.text-mono { font-family: var(--font-mono); }
+.text-upper { text-transform: uppercase; letter-spacing: 0.08em; }
+.text-sm { font-size: var(--fs-1); }
+.text-xs { font-size: var(--fs-0); }
+
+.mt-2 { margin-top: var(--s-2); }
+.mt-3 { margin-top: var(--s-3); }
+.mt-4 { margin-top: var(--s-4); }
+.mt-5 { margin-top: var(--s-5); }
+
+.mb-2 { margin-bottom: var(--s-2); }
+.mb-3 { margin-bottom: var(--s-3); }
+.mb-4 { margin-bottom: var(--s-4); }
+.mb-5 { margin-bottom: var(--s-5); }
+
+.w-full { width: 100%; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ======================================================
+   RESPONSIVE
+   ====================================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--s-4);
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

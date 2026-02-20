@@ -1,0 +1,561 @@
+{
+  "id": "glossary",
+  "title": "Glossary",
+  "version": "1.0.0",
+  "last_updated": "2026-02-19",
+  "description": "Definitions of capitalized terms in the Core rules and Modules.",
+  "entries": [
+    {
+      "term": "1st Player",
+      "definition": "The player who owns the Sunspot Cube, and thereby becomes the Sol secretary-general. He starts each player turn phase (D1) after events and completes the sunspot cycle phase (D2) at the end of each year. The 1st Player is determined during setup by the Crew with the best clout (C8). Prospecting Luna requires the permission of the 1st Player."
+    },
+    {
+      "term": "Ability",
+      "definition": "Printed in the colored band of certain cards (J2e). It includes restrictions. It applies only if the card is Operational (J3). You can declare a card non-operational for the Turn if you wish to shut down its ability. A Factory on a Site with the push icon yields the Powersat Ability. If a card is promoted (2A3), any abilities on the unpromoted side are lost. Abilities on unpromoted Bernals require the Bernal to be Anchored (2A5)."
+    },
+    {
+      "term": "Active Law",
+      "definition": "In Module 0, as soon as the gold star token enters an Ideology, it makes the Law associated with that Ideology active (O3) while there is no Anarchy/War."
+    },
+    {
+      "term": "Active Thrust Triangle",
+      "definition": "In a moving Spacecraft stack, one Operational card with a thrust triangle is chosen to provide thrust for its move (H2). It is suggested that this card go on top of the stack."
+    },
+    {
+      "term": "Adjacent",
+      "definition": "A Space is adjacent to another Space if you can trace a route from one to the other (along the lines of the map) without passing through another Space. Ignore any Space with a Crash Hazard (including Crash Hazard Burns but not including Aerobrakes) and lander burn Spaces when determining adjacency (since these represent abstractions, not distance). Adjacency is relevant for e.g. rayguns and Dirtsides."
+    },
+    {
+      "term": "Buggy Roads",
+      "definition": "Spaces connected by yellow dashed lines are never adjacent to each other (since the horizon blocks line-of-sight)."
+    },
+    {
+      "term": "Aerobrake Hazard",
+      "definition": "A Space marked with the parachute icon . Entering it represents flying into the atmosphere to decelerate for landing, orbital adjustment, or scooping.\na. Aerobrake Hazard Roll. When entering an aerobrake hazard, make a\nHazard Roll unless using FINAO (H7e). The Ability of certain cards, if\nOperational, allows the stack they are in to forgo this roll.\nb. Air-Eater Operation (I5c) is performed on an aerobrake hazard if you have an Operational card with the pac-man icon. Each Turn of refuel requires either a Hazard Roll or FINAO.\nc. One Way. A Spacecraft cannot move against the arrow's direction on an aerobrake path (B7e).\nd. Ballistic Re-entry. You may use coasting (H2b) to follow an aerobrake path (B7e).\ne. Solar Sails (photon heliogyro, electric sail, photon kite sail, mag sail, etc.) are involuntarily decommissioned if their stack enters an aerobrake hazard, even if they are not activated."
+    },
+    {
+      "term": "Anarchy",
+      "definition": "Can happen during season blue, as an event (K2e). Because this danger is periodic, think of it as representing a divisive election year. During anarchy, all players lose their listed faction privileges (B6a), but gain the Felonious faction privilege. (Module 0) Anarchy has 2 additional effects: it inactivates the effects of the Active Law (which can still be lobbied), and also makes a 1d6 Purge Roll, which removes one delegate of each Faction in the Ideology of the number rolled. Anarchy ends when the Sunspot Cube exits season blue."
+    },
+    {
+      "term": "Anchored",
+      "definition": "A Bernal that has undergone the anchoring operation (2A5), meaning local materials have been employed to provide it with a habitable atmosphere and radiation shields. Place a dome on the Bernal Figure to indicate that it is now an anchored orbiting colony. Anchoring has special requirements (2A5a,b,c,d) and special effects (2A5e,f,g,h,i). Anchoring in a Home Orbit also has special effects (2B3, 2B4)."
+    },
+    {
+      "term": "Aqua",
+      "definition": "The name given to blue beads (water FTs) stored in your Bank. Each represents an orbiting 40-tonne water tank used as currency for auctions, paying off programmers, etc. They may also be used as Water FTs for fueling."
+    },
+    {
+      "term": "Astrobiology Site",
+      "definition": "A Site with the green leaf icon. Because this Site may contain the original condensate from the protostellar nebula in \"cosmic\" abundances, a Colony here is worth an additional victory point (M2b)."
+    },
+    {
+      "term": "Atmospheric Site",
+      "definition": "One in which the cloud icon appears in the Site hex. This is relevant in liftoffs (H6c), in raygun prospecting (I6a) and air-eater refueling (I5c). It is also relevant in some Futures. All atmospheric sites have nearby Aerobrake Hazards. Except for Mars, all Atmospheric Sites have aerostats. Atmospheric Sites include:\n• Venus: Venus aerostat-xity.\n• Mars: Arsia mons caves, north pole, hellas basin buried glaciers.\n• Jupiter: Although atmospheric, Jupiter's gravity well is too steep and too radioactive to have a Site.\n• Saturn: Saturn aerostat.\n• Titan (Moon of Saturn): Titan aerostat, ontario lacus, kraken mare.\n• Uranus: Uranus aerostat.\n• Neptune: Neptune aerostat.\n• Triton & Pluto are not atmospheric sites, although their deep thin vapors allow aerobraking where indicated."
+    },
+    {
+      "term": "Bank (3A3j)",
+      "definition": "The single Space on the map where your Aquas are considered to be stored, which is normally LEO. Your Bank shifts to your Home Bernal (2B3a), or your ET Home Bernal (3F), whichever is furthest from Earth."
+    },
+    {
+      "term": "Belt Roll (H10)",
+      "definition": "This roll is made if entering a Radiation Belt, and is not made if suffering a flare (K2d). Roll one die (1d6) and subtract your Spacecraft's net thrust (H3). Add 2 if the Sunspot is in season red. Compare the result to the rad-hardness of each card in the Spacecraft's Stack (B2j). Any card with a rad-hardness less than the result is involuntarily decommissioned."
+    },
+    {
+      "term": "Bernal",
+      "definition": "A large orbital habitat, boosted from Earth and delivered as an empty shell to its destination, where its atmosphere and radiation shielding, constituting the vast majority of its mass, are added using local materials. Each player can have up to two. Its purpose is to maintain an Earth normal environment, either in a Home Orbit to service Earth, or at a distant world so workers can tele-operate mining activities from orbit. It is represented by a Token in your player color which designates the location of your Bernal and your Bernal Stack.\na. As a Spacecraft, if Operational it can activate its thrust triangle and use the gray Fuel Strip with its own Wet and Dry Mass\nChits. It can also be carried by a Rocket.\nb. Once Anchored by the anchoring operation (2A5), a Bernal becomes immobile, Human, and converts all Adjacent Factories into\nDirtsides. You instantly gain a Colonist by exomigration (2A6).\nDirtside factory fuel (2A7d), and ET products (2A7e) can be delivered there. Place a Colony dome on top of the Bernal Figure to indicate that it is Anchored.\nc. If Anchored In Any Home Orbit, your faction privilege (B6a) is unlocked, you gain 1 Aqua per Turn profit, all your Aquas are stored there, cards stored there are immune to events, and you may boost cards from Earth directly to the Bernal, at double the normal boost costs (2B3e). Home Orbits are indicated by 7-pointed stars.\nd. If Anchored At Its Promotion Colony (1A5a), a Bernal card can be promoted to its Purple-Side, which activates its Abilities (2B4) and makes it into a Lab (1A5b)."
+    },
+    {
+      "term": "Black-Side Card",
+      "definition": "A patent card (B2) built in space, see B2a. It cannot ever be boosted (I4a)."
+    },
+    {
+      "term": "Blink Telescope",
+      "definition": "With this faction privilege (B6a), for each prospecting attempt using a raygun platform, you are allowed a single re-roll for the first Site prospected in the Operation if you fail its size roll (I6.3)."
+    },
+    {
+      "term": "Bonus Burn",
+      "definition": "A Burn which a Spacecraft can use without spending fuel and without counting towards the Spacecraft's burn limit (H5c). A Spacecraft gains them during flybys (H8). A bonus burn can be used anytime a Spacecraft would normally require a Burn other than afterburning (H3a) and lander burns (H5e). If you have both bonus burns and non-bonus burns remaining, you may choose the order you use them in. They cannot be saved for the next Turn, however."
+    },
+    {
+      "term": "Bonus Pivot",
+      "definition": "Indicated by the ballerina icon. Each ballerina on an activated thruster or other card indicates an extra Pivot a Spacecraft can make in a single move without spending fuel and without counting towards its burn limit (H5c). Bonus pivots are listed on Sails, some promoted thrusters, and on certain Freighters (1B4a) and one bonus pivot is conferred to pushable Spacecraft by the collimator Bernal, a Bernal Ability (2B4d)."
+    },
+    {
+      "term": "Burn",
+      "definition": "Spending a number of fuel steps on the Fuel Strip, following the black line, equal to a Spacecraft's fuel consumption (B2d). This can occur either by entering a Burn Space on the map or by making a Pivot."
+    },
+    {
+      "term": "Burn Space",
+      "definition": "A magenta-colored Space, either Lagrange burn or lander burn (H5). Normally, entering counts against your burn limit (H5c), and expends a number of fuel steps equal to Spacecraft's fuel consumption (B2d). You may not halt on a lander burn (H5e)."
+    },
+    {
+      "term": "Busted",
+      "definition": "A Site covered by a translucent red disk, to indicate that there is no chance of placing Claims or Factories there. It still may be used for ISRU refueling (I5a). Busting can occur during a failed size roll (I6.5)."
+    },
+    {
+      "term": "Cargo",
+      "definition": "Cards, FTs, Freighter cubes, Mobile Factories, and Bernals carried in a Spacecraft Stack. Their combined Mass is called Dry Mass. If Operational, their Abilities are active."
+    },
+    {
+      "term": "Claim",
+      "definition": "A disk of a player's color on a Site showing that they have successfully prospected and mined it. Each claim is worth 1 VP."
+    },
+    {
+      "term": "Claim Jump",
+      "definition": "See G4, 1B9b, 1D1c."
+    },
+    {
+      "term": "CME Roll",
+      "definition": "Abbreviation of \"coronal mass ejection\". This is a single 1d6 roll made if a flare event occurs (K2d). This roll can't be avoided by FINAO, and indicates the flare's severity which is compared to the rad-hardness of every unshielded Stack Card on the map. This severity, ranging from 1 (a meek L1 flare) to 6 (Carrington X95 flare), is modified according to the Heliocentric Zone modifier each Stack Card is in. Any card with a rad-hardness (B2j) less than the result suffers involuntarily decommission unless shielded:\na. Van Allen Shielding. Cards located in the LEO or Cycler Spaces are immune to this event.\nb. Magnetic Field Shielding. Cards located on a Radiation Belt (H10), with the exception of the 14 belts surrounding Sol, are immune to this event.\nc. Bunker Shielding. Cards on Sites and Anchored Bernals are immune to this event."
+    },
+    {
+      "term": "Colocated",
+      "definition": "Occupying the same Space. A Space, all Figures/outpost chits on that Space, and cards in stacks represented by those Figures/outpost chits are all colocated."
+    },
+    {
+      "term": "Colonist",
+      "definition": "A type of non-patent card (2C) introduced to the game via exomigration (2A6). It can either be Human or Robot. You normally have as many colonists as you have Anchored Bernals. If carried to a Site, a colonist does work for you according to its Profession (2C1)."
+    },
+    {
+      "term": "Colony",
+      "definition": "An industrialized Claim or Bernal with its cube topped with a dome, with a maximum of one dome per Factory or Bernal. In the core game, the dome is added as a free action by Decommissioning a Human at a Factory (G3). A colony dome can also be added to an industrialized claim by homesteading (2A4). In either case, a non- Bernal colony is permanent (G6b), always contains Humans, and is worth endgame VP (M2c). Colonies can be Promotion Colonies (1A5a), Submarines, or Dirtsides."
+    },
+    {
+      "term": "Component Limits",
+      "definition": "See G4a (disks), I7f (cubes)."
+    },
+    {
+      "term": "Core",
+      "definition": "Refers to these rules, and the components that come in the box, which form the basis for tutorials, Modules, and grand campaigns."
+    },
+    {
+      "term": "Crash Hazard",
+      "definition": "A Space marked with the white skull icon. When entering a crash hazard, make a Hazard Roll unless using FINAO (H7e)."
+    },
+    {
+      "term": "Crew",
+      "definition": "This card has Mass, ISRU platform, rad-hardness, and usually a thrust triangle. It is Human, and so is useful to defend against Felonies and fix Glitches. It cannot be traded, sold, or Discarded, and always occupies a Stack, never going into your Hand. Except during Anarchy (K2e) (or your Home Bernal if using Module 2), its listed faction privileges (B6a) are active, regardless of the crew's location. If Decommissioned, crew goes into LEO (or your Bank if using Module 2)."
+    },
+    {
+      "term": "Decommission",
+      "definition": "Returns a card to your Hand (E7), Crew to LEO/Bank (B6a), FTs to the Pool, and Colonists to the bottom of the queue (2C2, but see Murder/Suicide for an exception). If a decommissioned Human was carrying a glory chit, move it to your playmat with the lowest VP side up. Decommissions can either be voluntary: Murder/ Suicide, jettison (G1g), Phileas Fogg (G2c), build colony (G3), and industrialize (I7), or involuntary: Glitch Rolls, Hazard Rolls (H7), Belt Rolls, CME Rolls, or pad explosions (K2c). Decommission is special for heavy radiators (see Orientation). Crew or Colonists can only be voluntarily decommissioned in the following instances:\na. Founding Settlement. To build a Colony (G3) or (2A4b,\n2A7b).\nb. Crew Only. If you have the Felonious faction privilege allowing\nMurder/Suicide.\nc. Colonist Only. See homesteading (2A4), unanchoring (2B6), and Murder/Suicide (2C2a)."
+    },
+    {
+      "term": "Dharma Refuel",
+      "definition": "With this faction privilege (B6a), your Crew enjoys double yield from site refuel when carrying a glory chit."
+    },
+    {
+      "term": "Dirtside (2Ba)",
+      "definition": "A Factory Adjacent to an Anchored Bernal (see Adjacent in the glossary). The Hydration of its Site counts towards your dirtside hydration (2B5) for endgame scoring. Your Factory Adjacent to an opponent's Bernal counts towards their dirtside hydration. You may specify dirt refuel (G1c), factory-refueled FTs (I5b, 2A7e) or ET factory products (I8, 2A7f) built at a Dirtside to appear at the Bernal instead."
+    },
+    {
+      "term": "Discard",
+      "definition": "Return a patent card (B2) from your Hand to the bottom of its corresponding patent deck, or return a token to the Pool or Reserves.\na. Cards can be discarded as a free action (G6), free market operation (I3b), or the budget cuts event (K2f).\nb. Loyalty. Your Crew or non-robotic Colonists may never be discarded. Discard Robots to the colonist deck.\nc. Tokens can be discarded when a Stack is disbanded (E2e), or glitch repair (G7).\nd. Discarding a Card (goes to the bottom of its patent deck) is distinct from Decommissioning a card (goes to your Hand, or into your\nBank if Crew)."
+    },
+    {
+      "term": "Dry Mass",
+      "definition": "Your Spacecraft Mass assuming its fuel tanks are \"dry\" (empty). Thus it includes just the mass of its FTs, cards, and Mobile Factories. It is indicated on the Fuel Strip with a Dry Mass Chit."
+    },
+    {
+      "term": "Dry Mass Chit",
+      "definition": "The token on the Fuel Strip indicating the mass of a Spacecraft, not counting its fuel. Find the Dry Mass by adding the masses of all the Cargo (i.e. cards, FT, and cubes) in the Rocket or Bernal Stack. You have 2 Dry Mass Chits, one for your Rocket and one for your Bernal. If it changes, see F2.\na. Min & Max. The minimum Dry Mass of a Spacecraft is one. If the mass of the cards is less than one, treat it as one. The maximum Dry Mass allowed is 23."
+    },
+    {
+      "term": "Epic Hazard Roll (1A6a)",
+      "definition": "When building a Space Elevator (1B9) or attempting a Future (1D1), either pay FINAO or roll 1d6. If a \"1\" is rolled, the attempt fails and the Freighter or Human involved suffers involuntary Decommission."
+    },
+    {
+      "term": "ET",
+      "definition": "Short for extraterrestrial, meaning \"not from the Earth\"."
+    },
+    {
+      "term": "Event Roll (1d6)",
+      "definition": "Each time the Sunspot Cube is moved across a threshold labeled \"event\": 1 or 2 = inspiration, 3 = Glitch, 4 = pad explosion/space debris, 5 or 6 = a season-dependent event (K2)."
+    },
+    {
+      "term": "Exoglobalization",
+      "definition": "The elimination of government-enforced restrictions on exchanges across the Earth and extended to extraterrestrial resources and facilities, creating an interglobal marketplace."
+    },
+    {
+      "term": "Exploitation Tracks",
+      "definition": "record the factory stock price (M2b) of each Spectral Type, considering how many Factories of each type exist. The more of a particular type, the lower its stock price. Update this as Factories (totaling all players) are created (through industrialization or moving a Mobile Factory onto a Claim) or destroyed (through Decommission or moving a Mobile Factory off of a Claim). The maximum stock price is 10 and the minimum stock price is 4. Stock prices are used during a free market operation (I3b) and endgame scoring (M2b)."
+    },
+    {
+      "term": "Faction",
+      "definition": "One of the 5 player colors. Each represents a \"basal societal unit\" (BSU): global regulation (yellow), national government (white), socialist regime (purple), worker union (green), or private entrepreneur (red). Each faction has a faction privilege (B6a)."
+    },
+    {
+      "term": "Factory",
+      "definition": "A cube sitting on a Claim. This indicates the Site is industrialized, with the factory cube created by the industrialize operation (I7). Factories provide VP and many other benefits. If you Promote a Freighter (1Bc), all your Factory cubes become Mobile Factories. A Factory Adjacent to an Anchored Bernal is called a Dirtside (2Ba). A Factory on a Site with the push icon grants the Powersat Ability (H3d)."
+    },
+    {
+      "term": "Factory-Assist Hazard",
+      "definition": "Using factory-assist (H6c) incurs a Hazard Roll unless it is colonized or you have Powersat."
+    },
+    {
+      "term": "Factory Hijack",
+      "definition": "A Felony allowing you to use an opponent's Factory to perform a factory-assisted landing/ liftoff (H6c), factory-refuel operation (I5b), ET production operation (N6a), or promotion (2A3) without the owner's permission. Hijacking cannot be performed if an enemy Human is Colocated."
+    },
+    {
+      "term": "Factory Loading Only",
+      "definition": "A Freighter labeled as such may only receive Cargo when located at a Factory or your non-Home Anchored Bernal.\na. Cargo Load/Unload, It may never receive Cargo in\nLEO or at your Home Bernal. It may give Cargo anywhere."
+    },
+    {
+      "term": "Felonious",
+      "definition": "As free actions during your Turn, this faction privilege (B6a) allows you to perform Felonies: Claim Jumping (G4), Murder/Suicide, and Factory Hijacking."
+    },
+    {
+      "term": "Felony",
+      "definition": "An activity which is prohibited except in season blue after an anarchy event (K2e) or for those with the Felonious faction privilege. Your Human must be Colocated to commit a felony. Felonies include Murder, Suicide, Claim Jump (including prospecting Luna without permission), and Factory Hijack."
+    },
+    {
+      "term": "Figure",
+      "definition": "Any component placed onto a Space on the map. In the core game these include Figures that represent a stack's location (Rocket tokens or outpost chits) as well as your Claims (I6), Factories (I7), and Colonies (G3)."
+    },
+    {
+      "term": "FINAO (Failure Is Not An Option)",
+      "definition": "Before making a Hazard Roll, you may pay 4 Aquas before rolling to automatically succeed. This represents paying programmers for a fail-safe fix.\na. You may not use \"FINAO\" when making any other type of roll, such as Glitch, CME, or Belt Rolls."
+    },
+    {
+      "term": "Freighter",
+      "definition": "A stack of cards on your playmat extension, with a location indicated on the map with your big cube. You may only have one freighter at a time. See (1B1a) for production, and (1B4) for movement."
+    },
+    {
+      "term": "FT (Fuel Tank)",
+      "definition": "1 mass unit's worth of fuel, represented by a bead on the map or in a stack. Each FT has a mass of 1. In the core game, only water FTs are used.\na. Creation. FTs are created by the internal tankage free action (G2), income operation (I1), or factory-refuel operation (I5b). Water FTs are also considered Aquas if residing in LEO/Bank.\nb. Colors. FTs come in 2 colors: blue (water grade) and gold (isotope grade). Your gold FTs are always your domestic Spectral Type (1C1c). These fuel grades are important in mixing fuel (F4d), internal tankage (G2b), and in site refuel operations (I5)."
+    },
+    {
+      "term": "Fuel",
+      "definition": "See Wet Mass Fuel. This technically represents, not fuel (which stores energy), but propellant (which stores reaction mass). In the core game, fuel can be either dirt or water."
+    },
+    {
+      "term": "Fuel Strip",
+      "definition": "The upper part of your playmat, which uses Wet and Dry Mass Chits to track Spacecraft and fuel mass."
+    },
+    {
+      "term": "Futures (1D)",
+      "definition": "Optional quests (1A2b) that are available when you Promote a card to its Purple-Side. If you fulfill the listed requirements, you get extra VP as listed. You need a longer game if playing with futures, so place 7 Seniority Disks for an 84-year game."
+    },
+    {
+      "term": "Glitch",
+      "definition": "A red disk placed on a Stack if it suffers the glitch event (K2b). As a result of this event, each player must glitch his stack with the most cards, not counting those with Humans (including LEO) or those already glitched. If a glitched stack performs a Glitch Trigger, then make a Glitch Roll.\na. Glitch Removal. A Glitch can be removed only through a glitch repair free action (G7), or if the stack is Decommissioned or removed."
+    },
+    {
+      "term": "Glitch Roll",
+      "definition": "Roll one dice (1d6). All cards in your Stacks, which are colocated with your Glitch and which have a rad-hardness (B2j) exactly equal to the dice roll (if any), suffer involuntary decommission. If a heavy radiator is glitched, instead of Decommission rotate it to its light Orientation. Whatever the result, the Glitch is retained."
+    },
+    {
+      "term": "Glitch Triggers",
+      "definition": "Make a Glitch Roll immediately before a glitched stack performs any of the following. For c to g below, this still counts as your Turn's Operation even if you fail to complete it because of the Glitch:\na. Enters A Flyby (H8).\nb. Cargo Transfer Free Action (G1).\nc. Site Refuel Operation (I5).\nd. Prospect Operation (I6).\ne. Industrialize Operation (I7).\nf. Delivery Operation (I9).\ng. Anchoring Operation (2A5)."
+    },
+    {
+      "term": "GW",
+      "definition": "Short for \"gigawatt\", or a billion watts. Thrusters are rated to approximately how many watts of power they are rated for. The core game uses megawatt thrusters, and Module 1 introduces gigawatt thrusters, which become starship-class terawatt (trillion watt) thrusters if Promoted."
+    },
+    {
+      "term": "Hand",
+      "definition": "A set of patent cards set to the right of your playmat. They are added during research auctions (I2), when cards (except Crew) are Decommissioned, and when Robot Colonists are exomigrated or Decommissioned. Cards are taken out of your Hand during the operations free market (I3a) or boost (I4). There is no hand limit, however see E1a."
+    },
+    {
+      "term": "Hazard",
+      "definition": "A Space that forces a Hazard Roll when entered. See Aerobrake Hazard, Crash Hazard, Epic Hazard Op, and Factory-Assist Hazard."
+    },
+    {
+      "term": "Hazard Roll",
+      "definition": "Roll one dice (1d6) for the Spacecraft. If you roll a '1', each card, FT, and cube in its Stack is involuntarily decommissioned. You can avoid the risk if, before rolling, you pay for FINAO."
+    },
+    {
+      "term": "Heliocentric Zone",
+      "definition": "One of a series of concentric zones on the map centered on Sol identified by the astronomical symbols Mercury (D), Venus (C), Earth (M), Mars (E), Ceres (K), Jupiter (F), Saturn (G), Uranus (H), and Neptune (J). Each has a positive or negative number that affects stacks within that zone, affecting both the thrust of activated thrust triangles that use Solar-Power (J5b) and the severity of solar flares (K2d). In the Neptune heliocentric zone, which is furthest out from Sol, Solar-Powered cards become non-operational (J3a) unless pushed by a Powersat."
+    },
+    {
+      "term": "Hohmann",
+      "definition": "A Space where two routes either intersect or make a corner, unmarked by a circle or other icon (B7b). Changing direction mid-move in a Hohmann requires a Pivot (H4c). If routes cross without touching, this is not a Space and Pivots are not allowed."
+    },
+    {
+      "term": "Home Orbits",
+      "definition": "Spaces near Earth marked with a 7-pointed star, see 2Bb."
+    },
+    {
+      "term": "Home Bernal",
+      "definition": "A Bernal anchored in a Home Orbit (2B3, 2B4)."
+    },
+    {
+      "term": "Human",
+      "definition": "Cards that contain humans (or conscious transhumans), as signified by the orange \"humans on board\" triangle (e.g. Crew & Colonist cards). Colonies (domes), cards in LEO, Anchored Bernal Figures are also human. If the uplift future (1D5n) is completed by anybody, Robots become Human. Humans can prevent or cause Felonies, and can repair Glitches (G7)."
+    },
+    {
+      "term": "Hydration",
+      "definition": "Water availability on a Site, as denoted by the number of waterdrops listed (between zero and four, see (B7a)). If the number of waterdrops is less than the ISRU rating of a robonaut or Human card, then ISRU refueling (I5a) and prospecting (I6.2) operations are impossible. Dirtside hydration is used for victory points in Module 2 (2B5)."
+    },
+    {
+      "term": "Ideology",
+      "definition": "One of the 7 regions in the assembly (Module 0). Six of them are associated with player colors."
+    },
+    {
+      "term": "Isotope Fuel",
+      "definition": "GW Thrusters require special fuel, as represented by either gold FTs or a gold Wet Mass Chit. During factory-refueling (I5b), the refueling rate for isotope fuel is limited to 1 isotope tank (gold bead) per site refuel operation. The Spectral Type of the Site where the fuel is obtained must match the Spectral Type of your GW thruster. Spectral Type D is boron-11 fusion fuel, H is helium-3 fusion fuel, M is curium-245 fission fuel, S is uranium-235 fission fuel, and V is lithium-6 fusion fuel."
+    },
+    {
+      "term": "ISRU",
+      "definition": "Cards able to prospect or dig for water have an \"In Situ Resource Utilization\" rating (B2c), ranging from zero (the best) to four (the worst). In order for a unit to be able to ISRU refuel (I5a) or prospect (I6) at a Site, it must have an ISRU number less than, or equal to, the Hydration of the Site.\n1)  Check Site Hydration and robonaut/Human ISRU on the table below to see if prospecting is possible.\n2)  2) Roll less than or equal to Site Size on 1d6 to establish a Claim (Size \\> 5 = automatic success).\n[ISRU table: see rules section I5/I6 for full matrix]\n[ISRU table: see rules section I5/I6 for full matrix]\n[ISRU table: see rules section I5/I6 for full matrix]\n[ISRU table: see rules section I5/I6 for full matrix]\n[ISRU table: see rules section I5/I6 for full matrix]"
+    },
+    {
+      "term": "ISRU Refuel",
+      "definition": "Operation: Refuel \\# of Water FT equal to number in parentheses above based on ISRU/Hydration. ----------------- ----------- ----------- ----------- ----------- -----------"
+    },
+    {
+      "term": "Jettison",
+      "definition": "As a free action (G1g), you may Decommission unwanted stack cards to your Hand and or Discard unwanted FTs to the Pool. Make a dry and wet mass adjustment (F2, F3) on the Fuel Strip. If Wet Mass Fuel (F1) is jettisoned (G1f), move its Wet Mass Chit to the left along the black line."
+    },
+    {
+      "term": "Lab",
+      "definition": "A Promoted and Anchored Bernal, where Colonist, Freighter, and GW thruster cards can be promoted (2A3) to their Purple-Side , regardless of their promotion colony type."
+    },
+    {
+      "term": "Lagrange Point",
+      "definition": "Any intersection marked with a circle, either filled (Lagrange Burn) or unfilled (Lagrange intersection), is a junction where you can turn for no movement or fuel cost. (In a Lagrange Point, the gravity gradient is flat due to the canceling gravitational effects of 2 massive bodies such as Sol or planets. This allows for effortless course corrections. Note however that many of the \"Lagrange Points\" in the game are not true Lagranges.)"
+    },
+    {
+      "term": "Launch Fees",
+      "definition": "This faction privilege (B6a) gives you a 1 Aqua bonus from the Pool after any player (including yourself ) boosts one or more cards."
+    },
+    {
+      "term": "Laws",
+      "definition": "See O5."
+    },
+    {
+      "term": "LEO",
+      "definition": "Low Earth Orbit, and the closest Space to Earth. Cards in your LEO Stack and your Aquas are located in LEO. Cards at LEO, including in your Rocket Stack and your LEO Stack, are vulnerable to pad explosions/space debris (K2c). LEO always contains Humans. Cards can be added to the LEO stack by the boost operation (I4), and Black-Side Cards in LEO can be sold by the free market operation (I3)."
+    },
+    {
+      "term": "Load Limit",
+      "definition": "A number listed on a Freighter card indicating how much Mass a Freighter can carry, adding together the Mass of all the cards, FTs, and cubes in the Freighter Stack other than the Freighter card itself (1B3a)."
+    },
+    {
+      "term": "Marketeer",
+      "definition": "With this faction privilege (B6a), you always win auction ties (I2e), even if you are not the initiator."
+    },
+    {
+      "term": "Mass",
+      "definition": "A number indicating how heavy cards and fuel are, where each mass is 40 tonnes. This number is found in the upper left corner of cards, and also is the number indicated on the Fuel Strip."
+    },
+    {
+      "term": "Mishap Insurance (O5g)",
+      "definition": "During a pad explosion/space debris event (K2c), gain Aquas equal to the mass of your decommissioned card, if you have a centrist delegate."
+    },
+    {
+      "term": "Mobile Factory (1B6)",
+      "definition": "Once you Promote your Freighter Card, all your Factory cubes become mobile factories, able to move with the same capacities as your promoted Freighter Card. This allows them to uproot and fly to new Claims. They are only considered a Factory while on a Claim, however."
+    },
+    {
+      "term": "Module",
+      "definition": "A set of rules that reference the core rules. You can add or subtract a module to tailor your High Frontier experience."
+    },
+    {
+      "term": "Mooncable",
+      "definition": "With this faction privilege (B6a), as a once-per-turn free action you may refuel an activated dirt thruster at LEO/Home Orbit with 7 tanks (non-crew thruster) or 1 tank (Crew thruster)."
+    },
+    {
+      "term": "Murder/Suicide",
+      "definition": "A Felony allowing you to voluntarily decommission Humans under your control, limited to once per Turn. Suicide is the same as murder except another Human does not need to be present. Build colony (G3), and industrialize (I7) Decommission your Crew without being considered murder/suicide. If a Colonist is murdered/suicided, its card goes into LEO or your Bank (without generating exomigration (2A6), in a similar manner to Decommissioned Crew)."
+    },
+    {
+      "term": "MW",
+      "definition": "Short for \"megawatt\", or a million watts of power. The core game thrusters are in the MW range, while Module 1 introduces thrusters in the gigawatt range (see \"GW\" for comparison)."
+    },
+    {
+      "term": "On-Board Nuclear Support",
+      "definition": "Certain Freighter and Colonist cards contain an \"On-board Nuclear\" icon, either reactor or generator (1B5, 2C4). If reactor, it can act as a reactor support with a subtype (J1a) of stationary , burst plasma , or exotic x, as specified. If generator, it can act as a generator support, either pulsed or electric , as specified."
+    },
+    {
+      "term": "On-Site Operation",
+      "definition": "Any operation that is conducted on a Site, and includes site refuel (I5), prospect (I6), industrialize (I7), ET production (I8), promotion (2A3), and anchoring (2A5). This is important in negotiation (N6) and War."
+    },
+    {
+      "term": "Open Source FINAO",
+      "definition": "With this faction privilege (B6a), FINAO only costs 3 Aqua."
+    },
+    {
+      "term": "Operation",
+      "definition": "A game process. In the core game, you are allowed one operation per Turn, chosen from the 9 kinds (I). Additional operation choices are introduced in Modules 0, 1, and 2: fundraise, promotion, homesteading, anchoring, and epic hazard operations."
+    },
+    {
+      "term": "Operational",
+      "definition": "A patent card (B2) is optionally Operational if it is in the same stack as all of its required support cards (if any), which themselves are Operational. Solar-Powered Cards ( ) are non-operational in the Neptune J Heliocentric Zone or farther. You may declare an operational card to be non-operational."
+    },
+    {
+      "term": "Orientation",
+      "definition": "Radiator cards have two orientations: heavy or light as listed on the top and bottom half of the card. You must decide on the orientation when it enters a stack due to a boost or ET production operation. It may change orientation in 3 ways:\na. Ablation. If a heavy radiator is Decommissioned by a Hazard Roll,\nGlitch Trigger or bad Belt Roll, instead of Discarding it, reorient it into its light orientation. Other involuntary Decommissions discard the radiator entirely.\nb. Jettison. You can convert a heavy radiator into its light orientation by using the jettison free action (G1g) or Phileas\nFogg refueling (G2c). This involves a dry and wet mass adjustment (F2b, F3b) equal to the difference in mass between the heavy and light orientation.\nc. Heatsink Fountain Radiators. Both the White-Side and Black-Side of this radiator starts on its heavy orientation, but is reoriented to its light orientation the first time it provides a Therm of cooling (as it uses up its cooling salts). Thus the heavy side is not useful for thrusters or Bernals that need cooling for multiple Turns."
+    },
+    {
+      "term": "Outpost Stack",
+      "definition": "A Stack of cards located on the map where one of your two outpost chits (#1 or #2) is placed. It can be created by the cargo transfer free action (G1d), the factory-refuel operation (I5b), or the ET production operation (I8).\na. Limit. You may only have two outpost stacks at the end of your\nTurn.\nb. Actions. An outpost cannot move but it can be converted into a\nSpacecraft stack as a free action (G1d,e) or transfer any number of their cards to a Colocated Stack (G1).\nc. Creation Methods & Locations. See E6."
+    },
+    {
+      "term": "Phileas Fogg Refuel",
+      "definition": "Inspired by \"Around the World in 80 Days\" by Jules Verne. See (G2c)."
+    },
+    {
+      "term": "Pivot",
+      "definition": "A change in direction during a move at a Hohmann (B7b). If a Spacecraft performs a pivot, it must make two Burns. A Pivot is a measure of distance, and each is 2 AU (16.7 light minutes)."
+    },
+    {
+      "term": "Pool",
+      "definition": "The pile of Aqua, red disks, and other tokens not belonging to any player (i.e., the general supply)."
+    },
+    {
+      "term": "Powersat",
+      "definition": "A faction privilege (B6a) or Ability used when calculating a Spacecraft's net thrust (H3d). It only works on Spacecraft with the push icon . It gives its \"+1 push\" at any range.\na. Single Push. It has no effect if the Spacecraft is already being pushed (H3d).\nb. Negotiation. A push can be negotiated outside of your Turn (N4a).\nc. Push Factory. A Factory on a Site with the push icon yields the\nPowersat Ability.\nd. Ability. Some cards (e.g. ionosphere lasing refinery) allow you to permanently gain the Powersat Ability.\ne. Safe Factory-Assist. Allows factory-assist (H6c) without a\nHazard Roll.\nf. Freighters (Module 1) can move 2 if pushed with a powersat.\ng. Bernals (Module 2). When anchoring a Bernal, Solar-Powered supports do not work in the Jupiter zone or beyond unless you get a push from a powersat.\nh. Anarchy/War cancels the Powersat faction privilege, but not the\nPowersat Ability conferred by cards or Push Factories/Colonies."
+    },
+    {
+      "term": "Profession",
+      "definition": "One of 4 jobs that each Colonist specializes in: miner, prospector, industrialist, or engineer. Each profession has a specialty (2C1), that makes on-site refueling, prospecting/promoting, industrializing/ anchoring/nanofacturing, or ET production much faster."
+    },
+    {
+      "term": "Promote",
+      "definition": "This Operation is part of Module 1 (1A5) and Module 2 (2A3). It permanently flips a card to its Purple-Side when the card is at its promotion colony (1A5a), unlocking Abilities and optionally Futures."
+    },
+    {
+      "term": "Purple-Side Card",
+      "definition": "The Promoted side of certain patent (B2) and Colonist cards. The promote operation is part of Module 1 (1A5) and Module 2 (2A3)."
+    },
+    {
+      "term": "Purge Roll",
+      "definition": "(K2e)."
+    },
+    {
+      "term": "Push Colony (1A5a)",
+      "definition": "A dome at a Site marked with the push icon (Io, plus most Sites within the Heliocentric Zones of Mercury (D), Venus (C), or Earth (M)."
+    },
+    {
+      "term": "Radiation Belt (H10)",
+      "definition": "A Space marked with the radiation icon. A Spacecraft that enters it must immediately make a Belt Roll for damage."
+    },
+    {
+      "term": "Reserves",
+      "definition": "The tokens of a player currently not in play, placed next to his playmat. The number of components in the reserve during setup is specified in (C3). Token limits are as specified in (B8)."
+    },
+    {
+      "term": "Robot",
+      "definition": "A type of Colonist (2C2a). It is not Human (and thus cannot repair Glitches, etc.) unless emancipated (2A6b). If in your Hand, it is treated as a patent card (2C2b)."
+    },
+    {
+      "term": "Rocket",
+      "definition": "A stack of cards on your playmat, with a location indicated on the map with your rocket figure. You may only have one Rocket at a time. See (E5) for creation, and (H) for movement."
+    },
+    {
+      "term": "Sails",
+      "definition": "Thruster cards representing huge gossamer films propelled by Sol (solar photons, solar wind, or solar magnetic field). Although technically not rockets, they act as rocket thrust triangles with a fuel consumption of zero. Sails include: photon kite sail, mag sail, photon heliogyro, and electric sail. Certain Colonists are also sails: calypso-2 seed sail, and wet-nano seed sail.\na. Aerobrake Burnup. Sails are Decommissioned immediately upon entering an aerobrake hazard, regardless if activated or not.\nb. Bonus Pivot. Sails enjoy one Bonus Pivot, as indicated by the ballerina icon.\nc. Mag Sail Bonus. If activated, the Mag Sail (H8f) receives one\nBonus Burn in the same manner as a flyby (H8b) for each Radiation\nBelt entered. However, each Radiation Belt can boost a Sail only once per Turn, in the case where a Sail circles and re-enters the same point.\nEXAMPLE: A Sail with a mass of 1 takes on Cargo with a mass of 6. Set both the Wet Mass Chit and the Dry Mass Chit on 7 (this indicates it is flying \"dry\"with no fuel)."
+    },
+    {
+      "term": "Scale",
+      "definition": "a. Every Round of player Turns is one Earth year. Each year is half movement, half operations.\nb. Each Mass is a quadecaton (40 tonnes, or 40,000 kg). A tonne is roughly equal to the US or UK ton.\nc. Each Human Mass is a six-man crew with life-support.\nd. Fuel Consumption is inversely proportional to a rocket's specific impulse (Isp) in seconds, as follows: 8 = 4.6 km/sec (0.46 ks Isp, where \"ks\" = 1000 seconds), 4 = 10 km/sec (1 ks Isp), 2 = 20 km/sec (2 ks\nIsp), 1 = 40 km/sec (4 ks Isp), ½ = 80 km/sec (8 ks Isp), ¼ = 160 km/sec (16 ks Isp), 0 ≥ 0.4% lightspeed (121,000 km/sec).\ne. A Thrust of one is 0.75 kN (750 Newtons, or 169 lbs, the weight of the game designer on Earth!). Each additional point doubles this. For instance, a 100 kN thrust is a thrust of 8.\nf. A Net Thrust (more accurately called acceleration) of 0 is 0.3 milligees or 0.3 cm/sec2, and each step more than doubles this. A net thrust of 0 can, in 6 months of continuous thrusting, move 2.4 AU, about\n1 Pivot.\ng. Size One Worlds have a surface gravity of 0.75 milligees, and each additional step doubles this. Size 1 worlds have the following diameters based upon density: comet nucleus 52 km (only Centaur comets approach this size), S-type asteroid 22 km, M-type asteroid 14 km.\nh. Hydration 4 Sites are icy or permafrost bodies. Hydration 3 has small amounts of surface or subsurface ice. The Sahara Desert is\nHydration 3. At Hydration 2, trace amounts of water can be extracted from kilotons of regolith. At Hydration 1, concrete would be considered a good source of water. At Hydration 0, oxides and hydrides are the only alternatives.\ni. Reactors produce 650--2000 MWth of thermal power, either in heat, neutrons, pions, or plasma jets. Assuming +0 net thrust, a generator converts this into 60 MWe of electricity (Subscript e = electricity, th\n= thermal).\nj. Beamed Power from a GEO solar-power satellite emits a laser beam of 60 MW or more. A push factory on Mercury, Venus, or Io emits a 450 MW laser or mass beam with a 500m filled aperture beaming optics.\nk. Each Radiator Therm rejects 120 MWth of heat at 1200 K when used to cool MW rockets, 240 MWth at 1427 K when used to cool GW rockets, and\n960 MWth at 2000 K for TW rockets. These increases simulate the higher-temperature alloys and higher operating temperatures available to the higher-powered rockets.\nl. Each Lagrange Burn or Lander Burn requires a delta-v (velocity change) of 2.5 km/sec. A half lander burn (found on worlds with a surface gravity around 24 milligees) is 1.25 km/sec. Each Pivot (brachistochrone maneuver) is 5 km/sec and a distance of about 2 AU (16.7 light minutes).\nm. A Solar Flare Event with a die roll of 1 is an L1 flare with an\nX-ray power density of 10-5 Watts/m2. Each point more is 4 times this amount. Thus, a die roll of 6 is a X95 (Carrington-class) flare with a power density of 10-2 Watts/m2.\nn. Equipment with a Rad-Hardness of 1 can withstand a total ionizing dose of 4 X 10-7 rad (Si) without failing. Each additional point is 1000 times this amount. For example, equipment with a rad-hardness of 6 can survive 400 Mrad of dosage. This is the scale used by the industry. Note that 100 rad = 1 Gy.\no. Solar Insolation is 1.38 kW/m2 at 1 AU (1 AU = Earth-Sol average distance). Maximum sailing thrust is 12.2 N/km2 from photon pressure at\n1 AU, or 0.002 N/km2 (2 nPa) from solar wind dynamic pressure. These values are in the Earth zone. Each zone closer to Sol doubles them.\np. Each Fuel Tank (FT) of water is a 40-tonne bag with a diameter of\n4.25 meters. For rockets that use hydrogen as propellant, 40-tonnes of\nLH2 or slush hydrogen is held in a cryotank cylinder 7.5 meters in diameter and 16 meters long, including active refrigeration for zero boil-off (ZBO).\nq. The Boost Cost to LEO is 2 million USD/tonne to LEO using the\nFalcon Heavy by SpaceX, or about \\$80 million USD/Mass."
+    },
+    {
+      "term": "Scrum Troubleshooters",
+      "definition": "With this faction privilege (B6a), repair any Glitch anywhere. This is negotiable (N4d)."
+    },
+    {
+      "term": "Secretary-General",
+      "definition": "With this faction privilege (B6a), start the game with two extra Aqua."
+    },
+    {
+      "term": "Seniority Disks (C1)",
+      "definition": "Translucent red disks in the center of the Sunspot Cycle (over the Sol icon) count the game's Solar Cycles. One disk is removed each time the Sunspot Cube crosses the indicated seniority threshold, indicating the completion of one 12-year cycle. If there are no more disks to take, the game ends per M1."
+    },
+    {
+      "term": "Skunkworks",
+      "definition": "This faction privilege (B6a) allows you to ignore the academia hand limit (I2a), so that you can participate in a research auction operation (I2) regardless of your hand size. It applies to both starting and bidding in auctions."
+    },
+    {
+      "term": "Site",
+      "definition": "These hexagonal Spaces are worlds where a Spacecraft can land. Sites have a Size (the number), a Spectral Type (the letter), an amount of Hydration (0-4 water droplets), and sometimes other icons, see B7a."
+    },
+    {
+      "term": "Size",
+      "definition": "The first number on a Site represents the magnitude of its surface gravity. It is used for a size roll (I6.3) during prospecting and during powered landing/liftoff (H6a)."
+    },
+    {
+      "term": "Sol",
+      "definition": "The name of our star. Its gravity dominates the Heliocentric Zones, and most of the Spaces on the map are in a solar orbit. Its radiation provides energy for Solar-Powered cards and Sails (as well as terrestrial life). It has a 12- year Sunspot Cycle, and during season red it can give off dangerous flares."
+    },
+    {
+      "term": "Solar-Powered Card",
+      "definition": "One with the solar icon (B2e). If a thruster or thruster support is solar-powered, the thrust is modified per H3c. Solar-powered cards are non-operational in the Neptune J Heliocentric Zone (labeled \"NO SOLAR POWER\") unless getting a push from a Powersat (-6 thrust). Solar-powered cards cannot be used in the Jupiter zone or beyond when anchoring a Bernal (2A5), unless getting a push from a Powersat."
+    },
+    {
+      "term": "Space",
+      "definition": "A position on the map accessible along route lines, sometimes referred to as \"location\". Spaces include Hohmanns (both intersections and corners), Site hexes, Burn Spaces, Hazards of any sort, and any open circle with a symbol inside it. Some intersections are \"bridged\" as indicated by a gap in the route, and these are not Spaces."
+    },
+    {
+      "term": "Spacecraft",
+      "definition": "The Rocket, Freighter, Mobile Factory, and Bernal Figures, as defined by the cards, FTs, and cubes in their associated Stacks. They are capable of movement, and each can be moved once per Turn. Rockets and Bernals track fuel during movement, and thus use the Fuel Strip."
+    },
+    {
+      "term": "Space Elevator (1B9)",
+      "definition": "A structure connecting 2 Spaces on the map as indicated by a special icon, allowing connected Factory owners to move Cargo or Humans. To build a space elevator, one of the Spaces must be industrialized, and you must have a cube (Factory, Freighter or Mobile Factory) at the other. Then you must perform an epic hazard operation (1A6), and if its roll is successful place a wooden elevator stick over the map icon. The Space Elevator at Earth is exceptional, and is automatically built by anchoring the GEO Elevator Home Bernal (Module 2, 2B4i)."
+    },
+    {
+      "term": "Spectral Type",
+      "definition": "Each Site has a letter indicating its resource type: C = carbon, S = stone, M = metal, V = vestoid, D = dark, and H = helium-3. Factories on a Site may only ET produce Black-Side Cards of the Site's Spectral Type."
+    },
+    {
+      "term": "Stack",
+      "definition": "A collection of cards and/or FTs that are tied to a particular location on the map. Normally this location is determined by a Figure, but for the LEO stack there is no Figure and the location is always the LEO Space on the map. With exceptions, cards can be moved between Colocated Stacks and even new stacks can be created using various free actions: LEO (E4), Rocket (E5), and Outpost (E6)."
+    },
+    {
+      "term": "Submarine",
+      "definition": "A Colony on a waves icon (B7a). This indicates an underwater military and science base worth extra VP (M2b)."
+    },
+    {
+      "term": "Sunspot Cube",
+      "definition": "A cube in the color of the 1st player that tracks the Sunspot Cycle. It is advanced just before the 1st player starts his Turn (D2)."
+    },
+    {
+      "term": "Sunspot Cycle",
+      "definition": "This diagram tracks the years, where each spot is one year, and the entire cycle is twelve years (about the solar sunspot cycle length). The Sunspot Cycle is divided into three seasons: red, blue, and yellow. Each time the Sunspot Cube crosses an indicated event threshold, roll for an event per K2. If it passes the indicated seniority threshold, remove a Seniority Disk from the center (D2b)."
+    },
+    {
+      "term": "Synodic Comet Site",
+      "definition": "A Site with a red, blue, or yellow border represents a comet whose extreme orbit causes it to become inaccessible during certain portions of the Sunspot Cycle. These Sites are subject to the following:\na. Landing/Liftoff. Both the site and Adjacent colored space(s) cannot be entered or exited (H6) by a Spacecraft unless the Sunspot\nCube is in the matching-colored season ( K1). Exception for\nRockets with activated TW thrusters (1C3b), which can enter or exit in any season. Travel between a Synodic Comet and a similarly-colored Adjacent colored space or between colored spaces is allowed.\nb. Kreutz Sungrazer. This is a special synodic comet in the Saturn\nHeliocentric Zone. Prospecting is automatically successful, however\nDecommission all cards, cubes, and FTs on this Site when the Sunspot\nCube leaves season yellow ( K1) of the Sunspot Cycle. It is a\nFelony to establish a Colony on this Site."
+    },
+    {
+      "term": "Taxes",
+      "definition": "This faction privilege (B6a) gives you a 1 Aqua bonus from the Pool for each Claim or Factory established by any player (including yourself ). No tax bonus for Claim Jumping."
+    },
+    {
+      "term": "Therm",
+      "definition": "A unit of cooling, either supply (J4a) or demand (J4b), as denoted by the Thermometer icon."
+    },
+    {
+      "term": "Token VP",
+      "definition": "Victory points obtained for having wood or plastic tokens of your color at the endgame. On the map, this includes disks, cubes, domes, Rockets, Freighters, Bernals (M2a). Note that domes may be worth additional VP (M2b). (Module 0) Token VP is also awarded for each delegate (M2a) in the assembly."
+    },
+    {
+      "term": "Turn",
+      "definition": "Each player takes a turn during the player turn phase (D1). On your turn, you may perform one Operation, any number of free actions, and move each of your Spacecraft. Then go to the next player clockwise. Turns last one earth-year for that player."
+    },
+    {
+      "term": "War of Independence",
+      "definition": "Can occur as a result of certain Futures (Module 1) or during Module 3 (Conflict). This war is between the Independents, the space factions who want independence from Earth, and the Loyalists, those who want to remain national colonies dependent on Earth. Unless playing Module 3, players completing a casus belli future (1D2c) are automatically Independents and the other players are Loyalists. Unless playing with Module 3, War creates the following effects for all players:\na. Home Bernals. For the Independents, Home Bernals must unanchor at their first opportunity for the duration of the War. For the loyalists,\nBernal profits (2B3d) are canceled.\nb. No Earth Operations. Income/fundraising, research auctions, free market, boost, and delivery operations are not allowed.\nExomigration (2A6) is allowed. Lobbying (O4) is allowed for\nLoyalists only. Homesteading (2A4) is allowed for Independents only.\nc. Research Auctions are replaced by a new operation called war grants, in which a player takes the top card of any patent deck without bonus supports. Since it can't be boosted, only the Black-Side is useful. On-Site Operations are allowed.\nd. Glory. Ticker tape parades (La) are not allowed, although pre-war glory stored on your playmat still counts.\ne. Felonies. All players lose their listed faction privileges (B6a), but gain the Felonious faction privilege (similar to\nAnarchy (K2e).\nf. End Of War. Unless playing Module 3, war ends when the Sunspot\nCube exits the current season (similar to Anarchy (K2e)). War can only happen once.\ng. FINAO. Paying for FINAO is not allowed.\nh. Scoring. Unless playing solo, if the game ends in War, Factory stock prices (M2b) are reduced to 2 each and Politics VP (M2c) doesn't score."
+    },
+    {
+      "term": "Wet Mass",
+      "definition": "Your Spacecraft's total Mass, including its Dry Mass plus the mass of the fuel onboard (F1a)."
+    },
+    {
+      "term": "Wet Mass Chit",
+      "definition": "The token indicating the total mass of a Spacecraft including its fuel. The Wet Mass is the Dry Mass plus one for each fuel tank carried. The number of steps between the Wet Mass Chit position and the Dry Mass Chit position is the number of steps of fuel you have. The game provides 3 double-sided chits per player: blue/gray, blue/gray, and blue/gold, with the color indicating its grade (F4b)."
+    },
+    {
+      "term": "Wet Mass Fuel",
+      "definition": "Tracked on your Fuel Strip using a Wet Mass Chit (F1a). This chit is placed during rocket stack creation (E5d), and adjusted via cargo transfer (G1b), internal tankage (G2), or site refuel operations (I5). The chit\\'s color indicates its grade: dirt (gray), water (blue), or isotope (gold)."
+    },
+    {
+      "term": "White-Side Card",
+      "definition": "A patent card built on Earth, see B2a."
+    }
+  ]
+}
