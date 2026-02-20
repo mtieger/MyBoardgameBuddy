@@ -660,6 +660,85 @@
       opacity: 0.72;
       letter-spacing: 0;
     }
+
+    /* ── Session Rulebook Screen ── */
+    #screen-rulebook { width: 100%; max-width: 700px; }
+    .rulebook-banner {
+      background: rgba(245,166,35,0.07);
+      border: 1px solid rgba(245,166,35,0.25);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+    }
+    .rulebook-banner-title {
+      font-family: 'Fredoka One', cursive;
+      color: var(--gold);
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .rulebook-banner-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .rulebook-tag {
+      background: rgba(245,166,35,0.12);
+      color: var(--gold);
+      border: 1px solid rgba(245,166,35,0.3);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+    }
+    .rulebook-search {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    .rulebook-search:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .rulebook-section-heading {
+      font-family: 'Fredoka One', cursive;
+      color: var(--gold);
+      font-size: 1rem;
+      margin: 18px 0 8px;
+      letter-spacing: 0.5px;
+    }
+    .rule-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+    .rule-card-id {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 3px;
+    }
+    .rule-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .rule-card-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.65;
+      white-space: pre-wrap;
+    }
+    .rulebook-empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 40px 0;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
@@ -684,9 +763,13 @@
           ⚙️ Game Setup
           <span class="home-btn-sub">Modules · Scenario · Players · Color Assignment</span>
         </button>
-        <button class="btn-home-secondary" onclick="window.location.href='rules.html'">
+        <button class="btn-home-secondary" onclick="openFullRulebook()">
           📖 Rules Reference
           <span class="home-btn-sub">Browse rules, glossary &amp; card reference</span>
+        </button>
+        <button class="btn-home-secondary" onclick="openRulebook()">
+          📋 My Session Rulebook
+          <span class="home-btn-sub">Rules filtered for your active game config</span>
         </button>
       </div>
     </div>
@@ -787,7 +870,27 @@
       <div class="results-summary" id="game-summary"></div>
       <div id="player-list"></div>
       <div class="divider"></div>
+      <button class="btn-secondary" onclick="openRulebookFromGame()">📋 My Rulebook</button>
       <button class="btn-secondary" onclick="resetApp()">↩ Start Over</button>
+    </div>
+  </div>
+
+  <!-- ─── SESSION RULEBOOK SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-rulebook">
+    <div class="card">
+      <div class="nav-row" style="margin-bottom:14px">
+        <button class="btn-back" onclick="closeRulebook()">← Back</button>
+        <div class="step-heading" style="margin:0">Session Rulebook</div>
+      </div>
+      <div id="rulebook-banner" class="rulebook-banner"></div>
+      <input
+        type="search"
+        id="rulebook-search"
+        class="rulebook-search"
+        placeholder="Search rules by keyword…"
+        oninput="filterRulebook(this.value)"
+      >
+      <div id="rulebook-list"></div>
     </div>
   </div>
 
@@ -1519,8 +1622,135 @@
       return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
 
+    // ─── SESSION RULEBOOK ────────────────────────────────────────────────────
+
+    let _rulebookRules    = [];
+    let _rulebookCameFrom = 'home'; // 'home' | 'step-6'
+
+    function _showRulebookScreen(rules, bannerFn) {
+      _rulebookRules = rules;
+      bannerFn();
+      document.getElementById('rulebook-search').value = '';
+      renderRulebookList(_rulebookRules);
+      const screen = document.getElementById('screen-rulebook');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+    }
+
+    function openRulebook() {
+      _rulebookCameFrom = 'home';
+      const moduleMap  = { m0:0, m1:1, m2:2, m3:3, m4:4, m5:5 };
+      const moduleNums = [...st.modules].filter(m => m !== 'core').map(m => moduleMap[m]).filter(n => n !== undefined);
+      const scenarioName = (st.scenario && st.scenario.name) ? st.scenario.name : 'all';
+      const variantList  = [...st.variants];
+      document.getElementById('screen-home').classList.add('hidden');
+      _showRulebookScreen(
+        buildSessionRulebook({ modules: moduleNums, scenario: scenarioName, variants: variantList }),
+        () => renderRulebookBanner(moduleNums, scenarioName, variantList)
+      );
+    }
+
+    function openFullRulebook() {
+      _rulebookCameFrom = 'home';
+      document.getElementById('screen-home').classList.add('hidden');
+      _showRulebookScreen(
+        buildSessionRulebook({ modules: [0,1,2,3,4,5], scenario: '', variants: [] }),
+        () => {
+          document.getElementById('rulebook-banner').innerHTML =
+            '<div class="rulebook-banner-title">COMPLETE RULEBOOK</div>' +
+            '<div class="rulebook-banner-tags">' +
+              '<span class="rulebook-tag">All Modules</span>' +
+              '<span class="rulebook-tag">All Scenarios</span>' +
+            '</div>';
+        }
+      );
+    }
+
+    function openRulebookFromGame() {
+      _rulebookCameFrom = 'step-6';
+      const moduleMap  = { m0:0, m1:1, m2:2, m3:3, m4:4, m5:5 };
+      const moduleNums = [...st.modules].filter(m => m !== 'core').map(m => moduleMap[m]).filter(n => n !== undefined);
+      const scenarioName = (st.scenario && st.scenario.name) ? st.scenario.name : 'all';
+      const variantList  = [...st.variants];
+      document.getElementById('step-6').classList.add('hidden');
+      document.getElementById('progress-wrap').classList.add('hidden');
+      _showRulebookScreen(
+        buildSessionRulebook({ modules: moduleNums, scenario: scenarioName, variants: variantList }),
+        () => renderRulebookBanner(moduleNums, scenarioName, variantList)
+      );
+    }
+
+    function closeRulebook() {
+      document.getElementById('screen-rulebook').classList.add('hidden');
+      if (_rulebookCameFrom === 'step-6') {
+        document.getElementById('progress-wrap').classList.remove('hidden');
+        const step6 = document.getElementById('step-6');
+        step6.classList.remove('hidden', 'anim-forward', 'anim-back');
+        void step6.offsetWidth;
+        step6.classList.add('anim-back');
+      } else {
+        const home = document.getElementById('screen-home');
+        home.classList.remove('hidden', 'anim-forward', 'anim-back');
+        void home.offsetWidth;
+        home.classList.add('anim-back');
+      }
+    }
+
+    function renderRulebookBanner(moduleNums, scenarioName, variantList) {
+      const moduleLabels = { 0:'Module 0', 1:'Module 1', 2:'Module 2', 3:'Module 3', 4:'Module 4', 5:'Module 5' };
+      const tags = ['Core Game'];
+      moduleNums.forEach(n => tags.push(moduleLabels[n] || 'Module ' + n));
+      if (scenarioName && scenarioName !== 'all') tags.push('Scenario: ' + scenarioName);
+      variantList.forEach(v => tags.push('Variant: ' + v));
+      document.getElementById('rulebook-banner').innerHTML =
+        '<div class="rulebook-banner-title">ACTIVE CONFIGURATION</div>' +
+        '<div class="rulebook-banner-tags">' +
+          tags.map(t => '<span class="rulebook-tag">' + esc(t) + '</span>').join('') +
+        '</div>';
+    }
+
+    function filterRulebook(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) { renderRulebookList(_rulebookRules); return; }
+      const filtered = _rulebookRules.filter(r =>
+        r.id.toLowerCase().includes(q) ||
+        r.title.toLowerCase().includes(q) ||
+        r.text.toLowerCase().includes(q)
+      );
+      renderRulebookList(filtered);
+    }
+
+    function renderRulebookList(rules) {
+      const container = document.getElementById('rulebook-list');
+      if (!rules.length) {
+        container.innerHTML = '<p class="rulebook-empty">No rules match your search.</p>';
+        return;
+      }
+      // Group by module origin
+      const sections = [];
+      const groups   = new Map();
+      rules.forEach(r => {
+        const key = r.modules.length === 0 ? 'Core Rules' : 'Module ' + r.modules[0];
+        if (!groups.has(key)) { groups.set(key, []); sections.push(key); }
+        groups.get(key).push(r);
+      });
+      container.innerHTML = sections.map(key =>
+        '<div class="rulebook-section-heading">' + esc(key) + '</div>' +
+        groups.get(key).map(r =>
+          '<div class="rule-card">' +
+            '<div class="rule-card-id">' + esc(r.id) + '</div>' +
+            '<div class="rule-card-title">' + esc(r.title) + '</div>' +
+            '<div class="rule-card-text">' + esc(r.text) + '</div>' +
+          '</div>'
+        ).join('')
+      ).join('');
+    }
+
     // ─── INIT ────────────────────────────────────────────────────────────────
     // Start on the home screen; game setup begins when the user taps "Game Setup"
   </script>
+
+  <script src="rules.js"></script>
 </body>
 </html>
