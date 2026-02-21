@@ -402,75 +402,105 @@
     ];
 
     // ─── VARIANTS ────────────────────────────────────────────────────────────
-    // forScenario: scenario id this variant only applies to (null = all scenarios)
-    // group: used for color-coding on the Optional Rules page
+    // group:       used for grouping on Optional Rules page
+    // forScenario: array of scenario IDs this applies to (null = all)
+    // exclusive:   group name — only one variant in this group can be active at once
+    // ruleIds:     section IDs to pull from JSON for the rules modal
 
     const VARIANTS = [
-      // ── Quick Start (shown on Variant Scenarios page) ─────────────────────
+      // ── Crew Cards — mutually exclusive, default is standard ──────────────
+      {
+        id: 'crew-standard',
+        label: 'Standard Crew Cards',
+        desc: 'Use the official faction Crew cards included with the game. Recommended for all players.',
+        requires: always,
+        group: 'crew',
+        exclusive: 'crew-cards',
+        forScenario: null,
+        ruleIds: [],
+        default: true,
+      },
+      {
+        id: 'crew-variant',
+        label: 'Variant Crew Cards',
+        desc: 'Use community-designed alternate Crew cards. These are not part of the original game and may alter faction balance.',
+        requires: always,
+        group: 'crew',
+        exclusive: 'crew-cards',
+        forScenario: null,
+        ruleIds: [],
+      },
+
+      // ── Game Start & Auctions — mutually exclusive ────────────────────────
       {
         id: 'quick-start',
         label: 'Quick Start',
         desc: 'Accelerated early game — 0 starting Aqua, 12-year card-draw phase. Recommended for 4+ players.',
         requires: always,
-        group: 'quick-start',
+        group: 'auction',
+        exclusive: 'game-start',
         forScenario: null,
         ruleIds: ['V1'],
       },
-
-      // ── Auction / Card Market rules ───────────────────────────────────────
       {
         id: 'rapid-start',
         label: 'Rapid Start',
         desc: "4 rounds of patent auctions replace the first solar cycle. Start with 9 Aqua. Roger Lund's alternative to Quick Start.",
         requires: always,
         group: 'auction',
+        exclusive: 'game-start',
         forScenario: null,
         ruleIds: ['OPT-RapidStart', '5K'],
       },
       {
-        id: 'open-cycle-generators',
-        label: 'Open-Cycle Generators',
-        desc: 'Dirt thrusters with an ISRU ≥ 5 can also function as generators. Adds a water-production option on any Site.',
-        requires: mods => mods.has('m2'),
-        group: 'auction',
-        forScenario: null,
-        ruleIds: ['2X1'],
-      },
-      {
-        id: 'batteries',
-        label: 'Batteries',
-        desc: 'Any thruster can store energy as a battery charge to boost a future burn. Adds tactical resource management.',
-        requires: mods => mods.has('m2'),
-        group: 'auction',
-        forScenario: null,
-        ruleIds: ['2X2'],
-      },
-      {
         id: 'm4-contract-auctions',
         label: 'Contract Auctions Modifications',
-        desc: 'Modifies how contracts are auctioned — see 4G1 for details.',
+        desc: 'Modifies how M4 contracts are auctioned in competitive play.',
         requires: mods => mods.has('m4'),
         group: 'auction',
+        exclusive: null,
         forScenario: null,
         ruleIds: ['4G1'],
       },
       {
         id: 'm4-solitaire-contract-skip',
         label: 'Contract Auction Skipped',
-        desc: 'In solitaire/cooperative, skip the contract auction step entirely.',
+        desc: 'In solitaire/cooperative Exodus play, skip the contract auction step entirely.',
         requires: mods => mods.has('m4'),
         group: 'auction',
-        forScenario: 'exodus-scenarios',
-        ruleIds: ['OPT-M4Solitairec'],
+        exclusive: null,
+        forScenario: ['exodus-scenarios'],
+        ruleIds: ['OPT-M4Solitairec', '4G2c'],
       },
 
-      // ── General optional rules ────────────────────────────────────────────
+      // ── Module 2 physics variants ─────────────────────────────────────────
+      {
+        id: 'open-cycle-generators',
+        label: 'Open-Cycle Generators',
+        desc: 'Dirt thrusters with ISRU ≥ 5 can also function as generators, adding a water-production option on any Site.',
+        requires: mods => mods.has('m2'),
+        group: 'm2',
+        exclusive: null,
+        forScenario: null,
+        ruleIds: ['2X1'],
+      },
+      {
+        id: 'batteries',
+        label: 'Batteries',
+        desc: 'Any thruster can store energy as a battery charge to boost a future burn.',
+        requires: mods => mods.has('m2'),
+        group: 'm2',
+        exclusive: null,
+        forScenario: null,
+        ruleIds: ['2X2'],
+      },
       {
         id: 'realistic-solar-flux',
         label: 'Realistic Solar Flux',
-        desc: 'Solar power varies with distance from the Sun. Cards with solar power icons produce less power in the outer solar system.',
+        desc: 'Solar power varies with distance from the Sun — cards with solar power icons produce less power in the outer system.',
         requires: mods => mods.has('m2'),
-        group: 'general',
+        group: 'm2',
+        exclusive: null,
         forScenario: null,
         ruleIds: ['2X3'],
       },
@@ -479,7 +509,8 @@
         label: 'Risky Oberth Flybys',
         desc: 'Performing an Oberth flyby now risks a hazard roll. High reward, higher risk.',
         requires: mods => mods.has('m2'),
-        group: 'general',
+        group: 'm2',
+        exclusive: null,
         forScenario: null,
         ruleIds: ['2X4'],
       },
@@ -488,92 +519,106 @@
         label: 'Torchship Travel',
         desc: 'Spacecraft with sufficiently powerful thrusters can burn continuously, reaching any destination in one turn.',
         requires: mods => mods.has('m2'),
-        group: 'general',
+        group: 'm2',
+        exclusive: null,
         forScenario: null,
         ruleIds: ['2X5'],
       },
-      {
-        id: 'diamonds-overlay',
-        label: 'Diamonds 4 All Overlay',
-        desc: 'Place discovery chits on Sites with special icons. Humans explore them during play for bonus VP and Abilities.',
-        requires: always,
-        group: 'general',
-        forScenario: null,
-        ruleIds: ['V11'],
-      },
-      {
-        id: 'asteroid-jormungandr',
-        label: 'Asteroid Jormungandr',
-        desc: 'Place this optional asteroid tile anywhere in the Mars zone. Prospecting it with a Colonist grants a free augmentation chit.',
-        requires: mods => mods.has('m4') || mods.has('m5'),
-        group: 'general',
-        forScenario: null,
-        ruleIds: [],
-      },
-      {
-        id: 'habitable-venus',
-        label: 'Habitable Venus Overlay',
-        desc: 'Use the Habitable Venus overlay card for an alternate Venus experience — relevant for Bios:Venus/Mars.',
-        requires: always,
-        group: 'general',
-        forScenario: null,
-        ruleIds: ['V8b'],
-      },
+
+      // ── Module 3 combat variants ──────────────────────────────────────────
       {
         id: 'piracy',
         label: 'Age of Piracy',
         desc: 'Experience combat without a full War of Independence. Felonies are freely permitted; no War/Anarchy outbreak needed.',
         requires: mods => mods.has('m3'),
-        group: 'general',
+        group: 'm3',
+        exclusive: null,
         forScenario: null,
         ruleIds: ['3Ac', '3Ad'],
       },
       {
         id: 'modified-future-wars',
         label: 'Modified Future Wars',
-        desc: 'Adjusts how Future-triggered wars escalate. Reduces snowball effects from early war outbreaks.',
+        desc: 'Adjusts how Future-triggered wars escalate, reducing snowball effects from early war outbreaks.',
         requires: mods => mods.has('m3'),
-        group: 'general',
+        group: 'm3',
+        exclusive: null,
         forScenario: null,
         ruleIds: ['3Ae'],
       },
 
-      // ── Solitaire / specific-scenario variants ────────────────────────────
+      // ── Module 4 solitaire/cooperative ────────────────────────────────────
       {
         id: 'alt-solitaire-politics',
         label: 'Alternative Solitaire Political Diagram',
         desc: 'Revised laws designed to reduce randomness in solo play. All ideologies become viable.',
         requires: mods => mods.has('m0') && mods.has('m4'),
-        group: 'solitaire',
-        forScenario: 'exodus-scenarios',
+        group: 'm4',
+        exclusive: null,
+        forScenario: ['exodus-scenarios'],
         ruleIds: ['4G3', 'OPT-M4Solitaire'],
       },
       {
         id: 'm4-solitaire-vp',
-        label: 'Module 4 Solitaire VP Threshold',
+        label: 'Solitaire VP Threshold',
         desc: 'Sets the VP threshold required to win in solitaire/cooperative Exodus play.',
         requires: mods => mods.has('m4'),
-        group: 'solitaire',
-        forScenario: 'exodus-scenarios',
-        ruleIds: ['OPT-M4Solitaired'],
+        group: 'm4',
+        exclusive: null,
+        forScenario: ['exodus-scenarios'],
+        ruleIds: ['OPT-M4Solitaired', '4G2d'],
       },
 
-      // ── Module 5 variants ─────────────────────────────────────────────────
+      // ── Map & component overlays ──────────────────────────────────────────
+      {
+        id: 'diamonds-overlay',
+        label: 'Diamonds 4 All Overlay',
+        desc: 'Place discovery chits on Sites with special icons. Humans explore them for bonus VP and Abilities.',
+        requires: always,
+        group: 'overlays',
+        exclusive: null,
+        forScenario: null,
+        ruleIds: ['V11'],
+      },
+      {
+        id: 'habitable-venus',
+        label: 'Habitable Venus Overlay',
+        desc: 'Use the Habitable Venus overlay card for an alternate Venus experience.',
+        requires: always,
+        group: 'overlays',
+        exclusive: null,
+        forScenario: ['bios-venus-mars', 'sirens', 'panspermia'],
+        ruleIds: ['V8b'],
+      },
+      {
+        id: 'asteroid-jormungandr',
+        label: 'Asteroid Jormungandr',
+        desc: 'Place this optional asteroid tile anywhere in the Mars zone. Prospecting it with a Colonist grants a free augmentation chit.',
+        requires: mods => mods.has('m4') || mods.has('m5'),
+        group: 'overlays',
+        exclusive: null,
+        forScenario: null,
+        ruleIds: [],
+      },
+
+      // ── Module 5 ──────────────────────────────────────────────────────────
       {
         id: 'm5-short',
-        label: 'Module 5: Short Game (1–2 Seniority Disks)',
+        label: 'Short Game (1–2 Seniority Disks)',
         desc: 'Use only 1–2 Seniority Disks instead of the default 3–4 for a faster Module 5 game.',
         requires: mods => mods.has('m5'),
         group: 'm5',
+        exclusive: null,
         forScenario: null,
         ruleIds: [],
       },
       {
         id: 'm5-jumpstart',
-        label: 'Module 5: Jump Start',
+        label: 'Jump Start',
         desc: 'Begin with pre-built starting Factories and Bernals per the Iso Dawn faction table. Recommended for experienced groups.',
         requires: mods => mods.has('m5'),
         group: 'm5',
+        exclusive: null,
         forScenario: null,
         ruleIds: [],
       },
@@ -642,7 +687,7 @@
       modules: new Set(['core']),
       scenario: null,
       subOption: null,
-      variants: new Set(),
+      variants: new Set(['crew-standard']),
       playerCount: 2,
       savedNames: [],
       assignedColors: null,
@@ -1289,17 +1334,76 @@
       screen.classList.add('anim-forward');
     }
 
+    function _buildSessionRulebookFromJSON(onReady) {
+      const activeFiles = _getActiveModuleFiles();
+      // Always include glossary
+      const allFiles = [...activeFiles, { file: 'rules/glossary.json', label: 'Glossary' }];
+
+      // Get active scenario ruleIds and variant ruleIds to also include appendix entries
+      const scenarioRuleIds = (st.scenario && st.scenario.ruleIds) ? st.scenario.ruleIds : [];
+      const variantRuleIds  = [...st.variants].flatMap(vid => {
+        const v = VARIANTS.find(x => x.id === vid);
+        return (v && v.ruleIds) ? v.ruleIds : [];
+      });
+      const extraIds = [...scenarioRuleIds, ...variantRuleIds];
+
+      // Also fetch appendix if we have scenario/variant rule IDs that live there
+      const needsAppendix = extraIds.some(id =>
+        id.startsWith('V') || id.startsWith('S-') || id.startsWith('OPT-')
+      );
+      if (needsAppendix && !allFiles.find(f => f.file === 'rules/appendix.json')) {
+        allFiles.push({ file: 'rules/appendix.json', label: 'Appendix' });
+      }
+
+      Promise.all(allFiles.map(f =>
+        fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))
+      )).then(results => {
+        const rules = [];
+        results.forEach(({ label, data }) => {
+          if (Array.isArray(data.sections)) {
+            data.sections.forEach(s => {
+              // Skip strategy/cut sections
+              if (s.type === 'strategy') return;
+              // Skip scenario/variant sections unless they match the active selection
+              if (s.type === 'scenario' || s.type === 'variant') {
+                const isActive = extraIds.some(id => s.id === id || s.id.startsWith(id));
+                if (!isActive) return;
+              }
+              rules.push({ id: s.id, title: s.title, text: s.text, _group: label });
+            });
+          } else if (Array.isArray(data.entries)) {
+            data.entries.forEach(e => rules.push({
+              id: e.term, title: e.term, text: e.definition, _group: label
+            }));
+          }
+        });
+        onReady(rules);
+      }).catch(() => {
+        document.getElementById('rulebook-list').innerHTML =
+          '<p class="rulebook-empty">Failed to load rules. Ensure the app is served over HTTP.</p>';
+      });
+    }
+
     function openRulebook() {
       _rulebookCameFrom = 'home';
-      const moduleMap  = { m0:0, m1:1, m2:2, m3:3, m4:4, m5:5 };
-      const moduleNums = [...st.modules].filter(m => m !== 'core').map(m => moduleMap[m]).filter(n => n !== undefined);
-      const scenarioName = (st.scenario && st.scenario.name) ? st.scenario.name : 'all';
-      const variantList  = [...st.variants];
       document.getElementById('screen-home').classList.add('hidden');
-      _showRulebookScreen(
-        buildSessionRulebook({ modules: moduleNums, scenario: scenarioName, variants: variantList }),
-        () => renderRulebookBanner(moduleNums, scenarioName, variantList)
-      );
+      document.getElementById('rulebook-banner').innerHTML = '<div class="rulebook-banner-title">ACTIVE CONFIGURATION</div>';
+      document.getElementById('rulebook-search').value = '';
+      document.getElementById('rulebook-list').innerHTML = '<p class="rulebook-empty">Loading…</p>';
+      const screen = document.getElementById('screen-rulebook');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+
+      _buildSessionRulebookFromJSON(rules => {
+        _rulebookRules = rules;
+        const moduleMap = { m0:0, m1:1, m2:2, m3:3, m4:4, m5:5 };
+        const moduleNums = [...st.modules].filter(m => m !== 'core').map(m => moduleMap[m]).filter(n => n !== undefined);
+        const scenarioName = (st.scenario && st.scenario.name) ? st.scenario.name : 'all';
+        const variantList = [...st.variants];
+        renderRulebookBanner(moduleNums, scenarioName, variantList);
+        renderRulebookList(rules);
+      });
     }
 
     function openFullRulebook() {
@@ -1352,16 +1456,25 @@
 
     function openRulebookFromGame() {
       _rulebookCameFrom = 'step-6';
-      const moduleMap  = { m0:0, m1:1, m2:2, m3:3, m4:4, m5:5 };
-      const moduleNums = [...st.modules].filter(m => m !== 'core').map(m => moduleMap[m]).filter(n => n !== undefined);
-      const scenarioName = (st.scenario && st.scenario.name) ? st.scenario.name : 'all';
-      const variantList  = [...st.variants];
       document.getElementById('step-6').classList.add('hidden');
       document.getElementById('progress-wrap').classList.add('hidden');
-      _showRulebookScreen(
-        buildSessionRulebook({ modules: moduleNums, scenario: scenarioName, variants: variantList }),
-        () => renderRulebookBanner(moduleNums, scenarioName, variantList)
-      );
+      document.getElementById('rulebook-banner').innerHTML = '<div class="rulebook-banner-title">ACTIVE CONFIGURATION</div>';
+      document.getElementById('rulebook-search').value = '';
+      document.getElementById('rulebook-list').innerHTML = '<p class="rulebook-empty">Loading…</p>';
+      const screen = document.getElementById('screen-rulebook');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+
+      _buildSessionRulebookFromJSON(rules => {
+        _rulebookRules = rules;
+        const moduleMap = { m0:0, m1:1, m2:2, m3:3, m4:4, m5:5 };
+        const moduleNums = [...st.modules].filter(m => m !== 'core').map(m => moduleMap[m]).filter(n => n !== undefined);
+        const scenarioName = (st.scenario && st.scenario.name) ? st.scenario.name : 'all';
+        const variantList = [...st.variants];
+        renderRulebookBanner(moduleNums, scenarioName, variantList);
+        renderRulebookList(rules);
+      });
     }
 
     function closeRulebook() {
@@ -1487,62 +1600,92 @@
 
       const activeScenarioId = st.scenario ? st.scenario.id : null;
 
-      // Group definitions with display labels and accent colors
       const GROUP_META = {
-        'auction':   { label: '🃏 Card Auctions & Market',        color: '#e8f4fd', border: '#3498db' },
-        'quick-start': { label: '⚡ Quick Start',                 color: '#fef9e7', border: '#f1c40f' },
-        'general':   { label: '⚙️ General Optional Rules',        color: '#f9f9f9', border: '#bdc3c7' },
-        'solitaire': { label: '🎯 Solitaire / Cooperative',        color: '#f0faf4', border: '#2ecc71' },
-        'm5':        { label: '📈 Module 5 — Economy',             color: '#fdf2fb', border: '#9b59b6' },
+        'crew':      { label: 'Crew Cards',                   accent: '#e67e22' },
+        'auction':   { label: 'Game Start & Auctions',        accent: 'var(--app-accent)' },
+        'm2':        { label: 'Module 2 — Physics Variants',  accent: '#3498db' },
+        'm3':        { label: 'Module 3 — Combat Variants',   accent: '#e74c3c' },
+        'm4':        { label: 'Module 4 — Solitaire / Coop',  accent: '#f39c12' },
+        'overlays':  { label: 'Map & Component Overlays',     accent: '#2ecc71' },
+        'm5':        { label: 'Module 5 — Economy',           accent: '#9b59b6' },
       };
 
-      // Determine which variants to show
       const visibleVariants = VARIANTS.filter(v => {
         if (!v.requires(st.modules)) return false;
-        // Scenario-specific variants: only show if that scenario is selected
-        if (v.forScenario && v.forScenario !== activeScenarioId) return false;
+        if (v.forScenario) {
+          const allowed = Array.isArray(v.forScenario) ? v.forScenario : [v.forScenario];
+          if (!allowed.includes(activeScenarioId)) return false;
+        }
         return true;
       });
 
       if (visibleVariants.length === 0) {
-        el.innerHTML = '<p class="rulebook-empty">No optional rules available for your current module selection.</p>';
+        el.innerHTML = '<p class="rulebook-empty">No optional rules available for your current selection.</p>';
         return;
       }
 
-      // Render by group, auction group first
-      const groupOrder = ['auction', 'quick-start', 'general', 'solitaire', 'm5'];
+      const groupOrder = ['crew', 'auction', 'm2', 'm3', 'm4', 'overlays', 'm5'];
       groupOrder.forEach(groupKey => {
         const groupVariants = visibleVariants.filter(v => v.group === groupKey);
         if (groupVariants.length === 0) return;
 
-        const meta = GROUP_META[groupKey] || { label: groupKey, color: '#f9f9f9', border: '#bdc3c7' };
+        const meta = GROUP_META[groupKey] || { label: groupKey, accent: 'var(--app-muted)' };
 
         const groupEl = document.createElement('div');
-        groupEl.className = 'variant-group';
-        groupEl.style.cssText = `margin-bottom:18px; border-left:3px solid ${meta.border}; padding-left:12px;`;
+        groupEl.style.cssText = 'margin-bottom:20px;';
 
         const groupHdr = document.createElement('div');
-        groupHdr.className = 'variant-group-label';
-        groupHdr.style.cssText = `font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:#666; margin-bottom:8px;`;
-        groupHdr.textContent = meta.label;
+        groupHdr.className = 'sc-group-header';
+        groupHdr.style.cssText = `border-left:3px solid ${meta.accent}; padding-left:10px; margin-bottom:8px;`;
+        groupHdr.textContent = meta.label.toUpperCase();
         groupEl.appendChild(groupHdr);
+
+        // Check if this group has an exclusive constraint
+        const exclusiveKeys = [...new Set(groupVariants.map(v => v.exclusive).filter(Boolean))];
+        const activeExclusive = {};
+        exclusiveKeys.forEach(key => {
+          activeExclusive[key] = groupVariants.find(v => v.exclusive === key && st.variants.has(v.id));
+        });
 
         groupVariants.forEach(v => {
           const checked = st.variants.has(v.id);
+
+          // Is this variant blocked because another in its exclusive group is selected?
+          const isBlocked = v.exclusive &&
+            activeExclusive[v.exclusive] &&
+            activeExclusive[v.exclusive].id !== v.id;
+
           const item = document.createElement('div');
-          item.className = 'module-item' + (checked ? ' is-checked' : '');
-          item.style.cssText = `background:${checked ? meta.color : '#fff'}; border-color:${checked ? meta.border : '#e5e7eb'};`;
-          item.addEventListener('click', () => {
-            if (st.variants.has(v.id)) st.variants.delete(v.id);
-            else st.variants.add(v.id);
-            renderVariants();
-          });
+          item.className = 'module-item' + (checked ? ' is-checked' : '') + (isBlocked ? ' is-disabled' : '');
+
+          if (!isBlocked) {
+            item.addEventListener('click', () => {
+              if (st.variants.has(v.id)) {
+                st.variants.delete(v.id);
+              } else {
+                // Deselect any exclusive sibling
+                if (v.exclusive) {
+                  VARIANTS.forEach(other => {
+                    if (other.exclusive === v.exclusive && other.id !== v.id) {
+                      st.variants.delete(other.id);
+                    }
+                  });
+                }
+                st.variants.add(v.id);
+              }
+              renderVariants();
+            });
+          }
+
+          let badges = '';
+          if (v.forScenario) badges += '<span class="mod-badge badge-coming-soon">Scenario only</span>';
+          if (v.exclusive)   badges += '<span class="mod-badge badge-core">Pick one</span>';
+
           item.innerHTML = `
             <div class="mod-checkbox"><div class="mod-checkbox-inner"></div></div>
             <div class="mod-text">
               <div class="mod-name-row">
-                <span class="mod-name">${v.label}</span>
-                ${v.forScenario ? '<span class="mod-badge badge-core" style="background:#ffeaa7;color:#856404">Scenario-specific</span>' : ''}
+                <span class="mod-name">${v.label}</span>${badges}
               </div>
               <div class="mod-desc">${v.desc}</div>
             </div>`;
@@ -1553,7 +1696,21 @@
       });
     }
 
-    
+    let _allRulesCache = null;
+
+    function _loadAllRules() {
+      if (_allRulesCache) return Promise.resolve(_allRulesCache);
+
+      const FILES = [
+        { file: 'rules/core_rules.json',      label: 'Core Rules' },
+        { file: 'rules/m1_terawatt.json',     label: 'Module 1 — Terawatt & Futures' },
+        { file: 'rules/m2_colonization.json', label: 'Module 2 — Colonization' },
+        { file: 'rules/m3_conflict.json',     label: 'Module 3 — Conflict' },
+        { file: 'rules/m4_exodus.json',       label: 'Module 4 — Exodus' },
+        { file: 'rules/m5_economy.json',      label: 'Module 5 — Economy' },
+        { file: 'rules/glossary.json',        label: 'Glossary' },
+        { file: 'rules/appendix.json',        label: 'Appendix' },
+      ];
 
       return Promise.all(FILES.map(f =>
         fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))

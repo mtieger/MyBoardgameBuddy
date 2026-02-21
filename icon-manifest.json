@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "High Frontier 4 All icon registry. Maps game concepts to icon files at multiple sizes.",
+    "basePath": "images/icons/",
+    "availableSizes": [32, 64, 128, 256, 512],
+    "defaultSize": 32
+  },
+  "icons": {
+    "aqua": {
+      "label": "Aqua",
+      "description": "Water currency and fuel. Fuel Tanks in LEO are called Aquas.",
+      "category": "resource",
+      "files": {
+        "32": "water_drop_32.png",
+        "64": "water_drop_64.png",
+        "128": "water_drop_128.png",
+        "256": "water_drop_icon_256.png",
+        "512": "water_drop_icon_512.png"
+      }
+    },
+    "isotope": {
+      "label": "Isotope",
+      "description": "Gold bead fuel for GW/TW thrusters. Worth 10 Aqua at your Bank.",
+      "category": "resource",
+      "files": {}
+    },
+    "fuel_tank": {
+      "label": "Fuel Tank (FT)",
+      "description": "Unit of fuel. Blue = water, Gray = dirt.",
+      "category": "resource",
+      "files": {}
+    },
+    "thrust": {
+      "label": "Thrust",
+      "description": "Base thrust value. Max number of Burns per Turn and landing/liftoff limit.",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "fuel_consumption": {
+      "label": "Fuel Consumption",
+      "description": "Number of fuel steps expended per Burn.",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "solar_power": {
+      "label": "Solar-Powered",
+      "description": "Heliocentric Zone modifiers apply to this spacecraft or support.",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "pushable": {
+      "label": "Pushable",
+      "description": "Can use beamed power modifier (+1 net thrust with Powersat).",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "afterburn": {
+      "label": "Afterburn",
+      "description": "Spend X fuel steps for +1 net thrust (once per Turn).",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "mass": {
+      "label": "Mass",
+      "description": "Card or component mass value.",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "dry_mass": {
+      "label": "Dry Mass",
+      "description": "Total mass of all Rocket components and cargo (no fuel).",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "wet_mass": {
+      "label": "Wet Mass",
+      "description": "Dry Mass plus fuel. Cannot be less than Dry Mass.",
+      "category": "spacecraft",
+      "files": {}
+    },
+    "burn": {
+      "label": "Burn",
+      "description": "A propulsive maneuver expending fuel equal to fuel consumption.",
+      "category": "movement",
+      "files": {}
+    },
+    "pivot": {
+      "label": "Pivot",
+      "description": "Changing direction at a Hohmann intersection (costs 2 Burns).",
+      "category": "movement",
+      "files": {}
+    },
+    "coast": {
+      "label": "Coast",
+      "description": "Free movement after Burns are spent for the Turn.",
+      "category": "movement",
+      "files": {}
+    },
+    "landing": {
+      "label": "Landing",
+      "description": "Landing on a Site. Net thrust must exceed Site size.",
+      "category": "movement",
+      "files": {}
+    },
+    "liftoff": {
+      "label": "Liftoff",
+      "description": "Lifting off from a Site. Net thrust must exceed Site size.",
+      "category": "movement",
+      "files": {}
+    },
+    "aerobrake": {
+      "label": "Aerobrake",
+      "description": "Landing via atmospheric path. Requires Hazard Roll.",
+      "category": "movement",
+      "files": {}
+    },
+    "flyby": {
+      "label": "Flyby",
+      "description": "Gain bonus Burns (gravity assist) without fuel cost.",
+      "category": "movement",
+      "files": {}
+    },
+    "hazard": {
+      "label": "Hazard",
+      "description": "Risk event requiring a Hazard Roll. Can damage or destroy components.",
+      "category": "danger",
+      "files": {}
+    },
+    "radiation": {
+      "label": "Radiation",
+      "description": "Radiation belt or cosmic ray hazard.",
+      "category": "danger",
+      "files": {}
+    },
+    "glitch": {
+      "label": "Glitch",
+      "description": "Component malfunction triggered by Events.",
+      "category": "danger",
+      "files": {}
+    },
+    "rad_hardened": {
+      "label": "Rad-Hardened",
+      "description": "Component resistant to radiation damage.",
+      "category": "card_attribute",
+      "files": {}
+    },
+    "felony": {
+      "label": "Felony",
+      "description": "Illegal action marker.",
+      "category": "politics",
+      "files": {}
+    },
+    "pac_man": {
+      "label": "Pac-Man",
+      "description": "Can perform air-eater refuel operation.",
+      "category": "card_attribute",
+      "files": {}
+    },
+    "ballerina": {
+      "label": "Ballerina",
+      "description": "Each icon provides 1 Bonus Pivot.",
+      "category": "card_attribute",
+      "files": {}
+    },
+    "crew": {
+      "label": "Crew",
+      "description": "Human astronaut crew card.",
+      "category": "card_type",
+      "files": {}
+    },
+    "robonaut": {
+      "label": "Robonaut",
+      "description": "Robotic crew card. Can operate without life support.",
+      "category": "card_type",
+      "files": {}
+    },
+    "refinery": {
+      "label": "Refinery",
+      "description": "ISRU refinery card for producing fuel at Sites.",
+      "category": "card_type",
+      "files": {}
+    },
+    "reactor": {
+      "label": "Reactor",
+      "description": "Power source card for spacecraft systems.",
+      "category": "card_type",
+      "files": {}
+    },
+    "radiator": {
+      "label": "Radiator",
+      "description": "Heat management card for spacecraft cooling.",
+      "category": "card_type",
+      "files": {}
+    },
+    "generator": {
+      "label": "Generator",
+      "description": "Power generation support card.",
+      "category": "card_type",
+      "files": {}
+    },
+    "thruster": {
+      "label": "Thruster",
+      "description": "Propulsion card. Rocket or Sail type.",
+      "category": "card_type",
+      "files": {}
+    },
+    "factory": {
+      "label": "Factory",
+      "description": "Production facility built at a Site via industrialization.",
+      "category": "infrastructure",
+      "files": {}
+    },
+    "colony": {
+      "label": "Colony",
+      "description": "Human settlement. Promotes from Factory.",
+      "category": "infrastructure",
+      "files": {}
+    },
+    "bernal": {
+      "label": "Bernal",
+      "description": "Orbital space station. Anchored to provide colony benefits.",
+      "category": "infrastructure",
+      "files": {}
+    },
+    "outpost": {
+      "label": "Outpost",
+      "description": "Remote facility placed at a Site.",
+      "category": "infrastructure",
+      "files": {}
+    },
+    "powersat": {
+      "label": "Powersat",
+      "description": "Power satellite providing beamed power to pushable thrusters.",
+      "category": "infrastructure",
+      "files": {}
+    },
+    "site_astrobiology": {
+      "label": "Astrobiology",
+      "description": "Site icon indicating potential for life discovery.",
+      "category": "site",
+      "files": {}
+    },
+    "site_atmospheric": {
+      "label": "Atmospheric",
+      "description": "Site icon indicating atmosphere present.",
+      "category": "site",
+      "files": {}
+    },
+    "site_push": {
+      "label": "Push",
+      "description": "Site icon for push-related discoveries.",
+      "category": "site",
+      "files": {}
+    },
+    "site_submarine": {
+      "label": "Submarine",
+      "description": "Site icon indicating subsurface ocean.",
+      "category": "site",
+      "files": {}
+    },
+    "hydration": {
+      "label": "Hydration",
+      "description": "Water availability rating at a Site (0-4 scale).",
+      "category": "site",
+      "files": {}
+    },
+    "site_size": {
+      "label": "Site Size",
+      "description": "Gravity well depth. Thrust must exceed this to land/liftoff.",
+      "category": "site",
+      "files": {}
+    },
+    "victory_point": {
+      "label": "Victory Point",
+      "description": "VP scored at endgame for claims, factories, colonies, and glories.",
+      "category": "scoring",
+      "files": {}
+    },
+    "glory": {
+      "label": "Glory",
+      "description": "Achievement token worth VP at endgame.",
+      "category": "scoring",
+      "files": {}
+    },
+    "spectral_type": {
+      "label": "Spectral Type",
+      "description": "Resource class of a Site (C, D, M, S, V). Determines what can be produced.",
+      "category": "site",
+      "files": {}
+    },
+    "dome": {
+      "label": "Dome",
+      "description": "Colony dome type for promotion requirements.",
+      "category": "infrastructure",
+      "files": {}
+    },
+    "cybernetics": {
+      "label": "Cybernetics",
+      "description": "Technology icon granted by fulfilled contracts (Module 4).",
+      "category": "card_attribute",
+      "files": {}
+    },
+    "loyalist": {
+      "label": "Loyalist",
+      "description": "Earth bloc (Module 3 Conflict). Represented by Earth symbol.",
+      "category": "politics",
+      "files": {}
+    },
+    "independent": {
+      "label": "Independent",
+      "description": "Sol/Independence bloc (Module 3 Conflict). Represented by Sun symbol.",
+      "category": "politics",
+      "files": {}
+    },
+    "busted": {
+      "label": "Busted",
+      "description": "Damaged/non-operational component marker.",
+      "category": "danger",
+      "files": {}
+    },
+    "decommission": {
+      "label": "Decommission",
+      "description": "Remove a card from play (free action).",
+      "category": "action",
+      "files": {}
+    },
+    "operation": {
+      "label": "Operation",
+      "description": "A player action that costs one Turn.",
+      "category": "action",
+      "files": {}
+    },
+    "free_action": {
+      "label": "Free Action",
+      "description": "An action that does not cost a Turn.",
+      "category": "action",
+      "files": {}
+    },
+    "auction": {
+      "label": "Auction",
+      "description": "Bidding on patent or contract cards.",
+      "category": "action",
+      "files": {}
+    },
+    "event": {
+      "label": "Event",
+      "description": "Random event triggered during play.",
+      "category": "action",
+      "files": {}
+    },
+    "inspiration": {
+      "label": "Inspiration",
+      "description": "Event that cycles patent/contract decks.",
+      "category": "action",
+      "files": {}
+    },
+    "weight_class": {
+      "label": "Weight Class",
+      "description": "Probe/Scout/Transport/Tug classification based on Wet Mass.",
+      "category": "spacecraft",
+      "files": {}
+    }
+  },
+  "categories": {
+    "resource": "Currencies, fuel, and expendable items",
+    "spacecraft": "Rocket attributes and stats",
+    "movement": "Navigation and maneuver concepts",
+    "danger": "Hazards, damage, and risks",
+    "card_type": "Patent card classifications",
+    "card_attribute": "Special abilities and properties on cards",
+    "infrastructure": "Factories, colonies, and installations",
+    "site": "Map location properties",
+    "scoring": "Victory points and achievements",
+    "politics": "Factions and political actions",
+    "action": "Player operations and game actions"
+  }
+}
