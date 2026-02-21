@@ -26,16 +26,16 @@
     <div class="card home-card">
       <div class="home-btn-group">
         <button class="btn-home-primary" onclick="startGameSetup()">
-          ⚙️ Game Setup
+          Game Setup
           <span class="home-btn-sub">Modules · Scenario · Players · Color Assignment</span>
         </button>
         <button class="btn-home-secondary" onclick="openFullRulebook()">
-          📖 Rules Reference
-          <span class="home-btn-sub">Browse rules, glossary &amp; card reference</span>
+          All Rules and Player Aids
+          <span class="home-btn-sub">All rules, glossary and references</span>
         </button>
         <button class="btn-home-secondary" onclick="openRulebook()">
-          📋 My Session Rulebook
-          <span class="home-btn-sub">Rules filtered for your active game config</span>
+          Current Game
+          <span class="home-btn-sub">Curated rules for use in a specific session</span>
         </button>
       </div>
     </div>
@@ -134,12 +134,13 @@
   <div class="step-wrap hidden" id="step-6">
     <div class="card">
       <div class="results-title">✨ Ready to Play!</div>
-      <div class="results-summary" id="game-summary"></div>
       <div id="player-list"></div>
+      <div id="game-summary"></div>
       <div class="divider"></div>
-      <button class="btn-secondary" onclick="openRulesAndAids()">📖 Rules &amp; Player Aids</button>
-      <button class="btn-secondary" onclick="openRulebookFromGame()">📋 My Rulebook</button>
-      <button class="btn-secondary" onclick="resetApp()">↩ Start Over</button>
+      <div class="nav-row" style="gap:12px">
+        <button class="btn-back" style="background:#c0392b;border-color:#c0392b;color:white;flex:1" onclick="resetApp()">↩ Start Over</button>
+        <button class="btn-primary" style="flex:2" onclick="startPlaying()">🚀 Start Playing</button>
+      </div>
     </div>
   </div>
 
@@ -174,22 +175,33 @@
     </div>
   </div>
 
-  <!-- ─── RULES & PLAYER AIDS SCREEN ─── -->
-  <div class="step-wrap hidden" id="screen-rules-and-aids">
+  <!-- ─── CURRENT GAME HUB SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-current-game">
     <div class="card home-card">
-      <div class="step-heading" style="margin-bottom:22px">📖 Rules &amp; Player Aids</div>
+      <div class="step-heading" style="margin-bottom:6px">Current Game</div>
+      <div class="step-subheading" style="margin-bottom:22px">Player aids &amp; rules for your session</div>
       <div class="home-btn-group">
-        <button class="btn-home-secondary" onclick="openRulesFromAids()">
-          📜 Rules
-          <span class="home-btn-sub">Browse the session rulebook for your active game</span>
+        <button class="btn-home-secondary" onclick="openPlayerAid('operations')">
+          Operations &amp; Free Actions
+          <span class="home-btn-sub">What you can do on your turn</span>
         </button>
-        <button class="btn-home-secondary" onclick="openPlayerAidsFromAids()">
-          🗂 Player Aids
-          <span class="home-btn-sub">Quick-reference cards, tables &amp; cheat sheets</span>
+        <button class="btn-home-secondary" onclick="openPlayerAid('threats')">
+          Threats
+          <span class="home-btn-sub">Hazards, radiation &amp; combat reference</span>
+        </button>
+        <button class="btn-home-secondary" onclick="openPlayerAid('events')">
+          Events
+          <span class="home-btn-sub">Sunspot cycle events &amp; triggers</span>
+        </button>
+      </div>
+      <div style="margin-top:14px">
+        <button class="btn-home-secondary" onclick="openRulebookFromCurrentGame()">
+          Rules
+          <span class="home-btn-sub">Full curated rulebook for your session</span>
         </button>
       </div>
       <div class="nav-row" style="margin-top:22px">
-        <button class="btn-back" onclick="closeRulesAndAids()">← Back</button>
+        <button class="btn-back" onclick="closeCurrentGame()">← Back</button>
       </div>
     </div>
   </div>
@@ -610,7 +622,7 @@
         group: 'm5',
         exclusive: null,
         forScenario: null,
-        ruleIds: [],
+        ruleIds: ['5A3e'],
       },
       {
         id: 'm5-jumpstart',
@@ -620,7 +632,7 @@
         group: 'm5',
         exclusive: null,
         forScenario: null,
-        ruleIds: [],
+        ruleIds: ['5Jd', '5K'],
       },
     ];
 
@@ -637,7 +649,7 @@
       1: 'Module Selection',
       2: 'Scenario',
       3: 'Scenario Options',
-      7: 'Variants',
+      7: 'Optional Rules',
       4: 'Player Count',
       5: 'Player Names',
       6: 'Color Assignment',
@@ -1027,33 +1039,17 @@
     // ─── STEP 6: RESULTS ─────────────────────────────────────────────────────
 
     function renderResults() {
-      // Build summary line
-      const parts = [st.scenario.name];
-      if (st.subOption) {
-        const opt = st.scenario.subOptions.find(o => o.id === st.subOption);
-        if (opt) parts.push(opt.label);
-      }
-      const modLabels = [...st.modules]
-        .filter(m => m !== 'core')
-        .map(m => MODULES.find(mod => mod.id === m)?.label)
-        .filter(Boolean);
-      if (modLabels.length) parts.push(modLabels.join(', '));
-      parts.push(st.playerCount + ' player' + (st.playerCount !== 1 ? 's' : ''));
-      document.getElementById('game-summary').textContent = parts.join(' · ');
-
-      // Assign colors — shuffle once per visit; store so viewCrewCards() can reuse
+      // ── Player list (first) ──────────────────────────────────────────────
       if (!st.assignedColors || st.assignedColors.length !== st.playerCount) {
         st.assignedColors = shuffle(COLORS).slice(0, st.playerCount);
       }
       const list = document.getElementById('player-list');
       list.innerHTML = '';
-
       st.savedNames.forEach((name, i) => {
         const color = st.assignedColors[i];
         const card  = document.createElement('div');
         card.className = 'player-card';
         card.style.cssText = `background:${color.hex}18; border:1.5px solid ${color.hex}55; animation-delay:${i * 0.08}s`;
-
         const textColor = color.dark ? '#1a1a2e' : 'white';
         card.innerHTML = `
           <div class="color-swatch" style="background:${color.hex}; box-shadow:0 0 18px ${color.shadow}"></div>
@@ -1067,6 +1063,52 @@
           </div>`;
         list.appendChild(card);
       });
+
+      // ── Config banner (second, rulebook style) ───────────────────────────
+      const tags = [];
+
+      // Scenario
+      if (st.scenario) {
+        let scenLabel = st.scenario.name;
+        if (st.subOption) {
+          const opt = st.scenario.subOptions && st.scenario.subOptions.find(o => o.id === st.subOption);
+          if (opt) scenLabel += ' — ' + opt.label;
+        }
+        tags.push({ label: scenLabel, type: 'scenario' });
+      }
+
+      // Modules
+      [...st.modules]
+        .filter(m => m !== 'core')
+        .forEach(m => {
+          const mod = MODULES.find(x => x.id === m);
+          if (mod) tags.push({ label: mod.label, type: 'module' });
+        });
+
+      // Active variants (skip crew-standard as it's the default)
+      [...st.variants]
+        .filter(v => v !== 'crew-standard')
+        .forEach(vid => {
+          const v = VARIANTS.find(x => x.id === vid);
+          if (v) tags.push({ label: v.label, type: 'variant' });
+        });
+
+      // Players
+      tags.push({ label: st.playerCount + ' player' + (st.playerCount !== 1 ? 's' : ''), type: 'players' });
+
+      const summary = document.getElementById('game-summary');
+      summary.innerHTML =
+        '<div class="rulebook-banner" style="margin-top:16px">' +
+          '<div class="rulebook-banner-title">YOUR GAME</div>' +
+          '<div class="rulebook-banner-tags">' +
+            tags.map(t => `<span class="rulebook-tag">${esc(t.label)}</span>`).join('') +
+          '</div>' +
+        '</div>';
+    }
+
+    function startPlaying() {
+      // Placeholder — could open session rulebook or a "game in progress" screen
+      alert('Good luck! May your rockets fly true 🚀');
     }
 
     // ─── CREW CARDS ──────────────────────────────────────────────────────────
@@ -1385,8 +1427,29 @@
     }
 
     function openRulebook() {
-      _rulebookCameFrom = 'home';
       document.getElementById('screen-home').classList.add('hidden');
+      const screen = document.getElementById('screen-current-game');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+    }
+
+    function closeCurrentGame() {
+      document.getElementById('screen-current-game').classList.add('hidden');
+      const home = document.getElementById('screen-home');
+      home.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void home.offsetWidth;
+      home.classList.add('anim-back');
+    }
+
+    function openPlayerAid(type) {
+      // Placeholder — player aid screens to be built
+      alert('Player aid coming soon: ' + type);
+    }
+
+    function openRulebookFromCurrentGame() {
+      _rulebookCameFrom = 'current-game';
+      document.getElementById('screen-current-game').classList.add('hidden');
       document.getElementById('rulebook-banner').innerHTML = '<div class="rulebook-banner-title">ACTIVE CONFIGURATION</div>';
       document.getElementById('rulebook-search').value = '';
       document.getElementById('rulebook-list').innerHTML = '<p class="rulebook-empty">Loading…</p>';
@@ -1485,6 +1548,11 @@
         step6.classList.remove('hidden', 'anim-forward', 'anim-back');
         void step6.offsetWidth;
         step6.classList.add('anim-back');
+      } else if (_rulebookCameFrom === 'current-game') {
+        const screen = document.getElementById('screen-current-game');
+        screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+        void screen.offsetWidth;
+        screen.classList.add('anim-back');
       } else {
         const home = document.getElementById('screen-home');
         home.classList.remove('hidden', 'anim-forward', 'anim-back');

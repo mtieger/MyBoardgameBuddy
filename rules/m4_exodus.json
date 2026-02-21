@@ -294,17 +294,17 @@
     },
     {
       "id": "4A5e",
-      "title": "Exodus Contract Deck (Modules 1 & 2)",
+      "title": "Exodus Contract Deck",
       "text": "Exodus Contract Deck (Modules 1 & 2). Shuffle the Exodus contracts, randomizing which side of each is faceup. Place them on the starship placard with the isobank token (4A2h) on top to show the deck is locked."
     },
     {
       "id": "4A5f",
-      "title": "New Colonists (Module 2)",
+      "title": "New Colonists",
       "text": "New Colonists ( • Queues."
     },
     {
       "id": "4A5g",
-      "title": "Augmentation & Child Chits (Module 2)",
+      "title": "Augmentation & Child Chits",
       "text": "Augmentation & Child Chits ("
     },
     {
@@ -543,7 +543,7 @@
     },
     {
       "id": "4B3k",
-      "title": "Postwar Space Empire (Module 3)",
+      "title": "Postwar Space Empire",
       "text": "Postwar Space Empire ("
     },
     {
@@ -717,7 +717,7 @@
     },
     {
       "id": "4B8c",
-      "title": "Placing Partner Delegates (Module 3)",
+      "title": "Placing Partner Delegates",
       "text": "Placing Partner Delegates ("
     },
     {
@@ -1216,7 +1216,7 @@
     },
     {
       "id": "4E4b",
-      "title": "Summary Interstellar Perks (C8)",
+      "title": "Summary Interstellar Perks",
       "text": "Summary Interstellar Perks (C8). The following gives you advantages in Interstellar, either to maximize mission success, or maximize game victory. See C8 in the Interstellar rulebook:\n• Winning the • Contributing the Most Isofuel (C8c), This awards the command medallion and you choose who is in command.\n• Contributing a Promoted TW Thruster (C8d), You start with the propulsion medallion.\n• Having Augmentations (C8e), These enable your passengers on Exodus to start augmented.\n• Glory & Medals (C8f). These are worth 1 VP each in Interstellar."
     },
     {
@@ -1231,7 +1231,7 @@
     },
     {
       "id": "4E4e",
-      "title": "Interstellar Starship Wet Mass (C8l)",
+      "title": "Interstellar Starship Wet Mass",
       "text": "Interstellar Starship Wet Mass (C8l). Exodus starts with a variable amount of fuel, depending on how much the player’s have jointly contributed per 4C4d.\n16PAYLOAD COST. A starship of mass 10 (400 tonnes) traveling at its game maximum (15% lightspeed) would have a kinetic energy of 18 trillion joules. Every kilogram of payload on the starship that is accelerated to this speed would need 150 kilograms of isofuel releasing 45 million joules. This is equal to the total global energy usage each month in 2020, mostly from gas, oil, and coal. Converted to power, the 2020 global power demand of 17 terawatts is much less than the power of a starship engine (50 TW for Daedalus 1st stage, 4 TW for the 2nd stage). To achieve a delta-v for a cruising speed of 15%c, and assuming Daedalus engines with an exit velocity of 3%c, the mass ratio equals 150. This means that if one astronaut was 10 kilos overweight, it would cost the expedition man-years of miners and refiners to produce the additional one and a half tonnes of pure isotope fuel.\nTIP: Consider a map exit if making an Ad Astra Future with that exit or by making the desperation starshot (4C3c). [4E4d]\nEXAMPLE [4E3e] Players Purple, Green, and Player White all have Promoted Bernals. Player Purple also has the Daedalus TW thruster, which has the highest base thrust (11) and therefore chosen as the engine for Exodus. Player Purple thus holds the “propulsion” equipment medal, making him ineligible to hold the Bernal medal. SInce Player White is trailing in overall VP, he decides to award Player\nWhite with the “Bernal” equipment medal."
     },
     {
@@ -1244,35 +1244,50 @@
         "4Fc": "4F",
         "4Fd": "4F"
       },
-      "type": "scenario"
+      "type": "scenario",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4Fa",
       "title": "Sides",
       "text": "Sides. One side (as specified) are the Loyalists and the other are the Independents. However, as this is an ideological rather than racial war, you are free to join the enemy side using defection (3B3c).",
       "type": "scenario",
-      "parent_rules": "4F"
+      "parent_rules": "4F",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4Fb",
       "title": "Desperation Starshot",
       "text": "Desperation Starshot. If you are the commander, you may attempt to end the game early per 4C3c, except that you may also attempt it after the War if you lost the War (i.e. your extremist delegate was disgraced).",
       "type": "scenario",
-      "parent_rules": "4F"
+      "parent_rules": "4F",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4Fc",
       "title": "Winning the War",
       "text": "Winning the War. See 3F4.",
       "type": "scenario",
-      "parent_rules": "4F"
+      "parent_rules": "4F",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4Fd",
       "title": "Winning the Game",
       "text": "Winning the Game. See 4E2, including contributions to Project Exodus (4E3).",
       "type": "scenario",
-      "parent_rules": "4F"
+      "parent_rules": "4F",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F1",
@@ -1280,7 +1295,10 @@
       "text": "This game plays with all the rules of",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F1"
+      "scenario_group": "4F1",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2",
@@ -1297,7 +1315,10 @@
       },
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2a",
@@ -1305,7 +1326,10 @@
       "text": "Indicate Bloc Allegiance. Players with Robot/spaceborn Colonists (i.e. belonging to the Spacer Union (4D2)) start as Independence. Players with earthborn Colonists start as Loyalist. Players with no Colonists must join either bloc, choosing secretly and simultaneously. Flip your propaganda chit to independence or loyalist without losing your extremist. Propaganda chits with no Extremists are unaffected.\nEXAMPLE [4F2a] As Player Purple, you default as Loyalist when War breaks out. Yet you hold the “Gabonese Mining Consortium” Colonist and thus are a member of the Spacer Union, which indicates that you start as Independence. Flip the propaganda in authority to its Independence side, with your extremist on top. • Evade the “No Enemy Colonists” restriction (3D5d honor).\n• Discard this enemy Colonist to the bottom of its queue.",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2b",
@@ -1313,7 +1337,10 @@
       "text": "If your Colonist is spaceborn and thus a member of the Spacer Union, you start as Independence. Flip the propaganda in authority to its Independence side, with your extremist on top. Spaceborn may evade the \"No Enemy Colonists\" restriction (3D5d honor) and discard enemy Colonists to the bottom of their queue.",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2c",
@@ -1321,7 +1348,10 @@
       "text": "War Outbreak. There are 3 ways that War can occur: • A War Outbreak Roll is made during each adjustment of the exploitation track per 3C1 to see if War occurs.\n• Empty Queue. War also occurs if there is an exomigration (2A6) but there are no cards in the appropriate queue to draw from.\n• Uplift Future. War also occurs if the uplift future (1D5n) has been completed. This player alone becomes the independence bloc.",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2d",
@@ -1329,7 +1359,10 @@
       "text": "Stillborn War. If War breaks out with all the factions and all the extremists in the same bloc, then the war ends without any War effect (including no Space Lord effects).",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2e",
@@ -1337,7 +1370,10 @@
       "text": "Exomigration. Independence can only exomigrate (2A6) from the Robot/spaceborn queue, and Loyalists can only exomigrate from the earthborn queue.",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2f",
@@ -1345,7 +1381,10 @@
       "text": "Postbellum. After the War, see 3F5 for the effects of the Space Republic or Space Empire. Furthermore, in a Space Empire the Spacer Union is dissolved, so that 4D2c and 4D2d are ignored, allowing players to hold both types of Colonists.",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4F2g",
@@ -1353,20 +1392,29 @@
       "text": "Winning the Game. See 4E2.\n17MORALITY OF MACHINES. Morality is a code of values that guide a being’s decisions, assuming the being actually has a choice and is not a slave to its programming. Morality is inapplicable to beings (such as animals other than humans) that cannot make moral or immoral choices. Just as in the creation of conscious humans as simulated in Bios:Origins, conscious robots are created by the conceptual and technological facility of using language to create a simulated mental landscape on which to make choices. The crucial aspect of consciousness is that it empowers the being to overwrite its own programming and adopt its own values. The fact that humans (and no other animal) commit suicide or become celibate hermits overwrites 500 million years of natural selection programming to survive and spread genes. The assumed value that the robot majority are assumed to pursue in this game is knowledge, thus the exclusivity of experience and Futures in victory accounting.\nEASILY MISSED: If your exomigration is limited by the lack of suitable Colonists, you must wait until one is available. See 3A3g. [4F2b]",
       "type": "scenario",
       "parent_rules": "4F",
-      "scenario_group": "4F2"
+      "scenario_group": "4F2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G",
       "title": "Module 4 Solitaire Games",
       "text": "If you play solo or using a full cooperative mode, apply the following rules when playing this Module:",
-      "type": "scenario"
+      "type": "scenario",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G1",
       "title": "Contract Auctions Modifications",
-      "text": "",
+      "text": "Unless playing with CEO, each contract has a flat 6 years to fulfill.",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G2",
@@ -1381,7 +1429,10 @@
       },
       "parent_rules": "4G",
       "type": "scenario",
-      "scenario_group": "4G2"
+      "scenario_group": "4G2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G2a",
@@ -1389,7 +1440,10 @@
       "text": "Major Achievements include contract fulfillment, becoming the isobanker, or completing an Exodus contract. Achieving one counts as a fulfillment for the next board meeting (V6c), except the last one which must either be a Future or a Columbus level starshot (4G4b).",
       "parent_rules": "4G",
       "type": "scenario",
-      "scenario_group": "4G2"
+      "scenario_group": "4G2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G2b",
@@ -1397,7 +1451,10 @@
       "text": "Default counts as not meeting a requirement of the next valid Board meeting, ignoring other effects.",
       "parent_rules": "4G",
       "type": "scenario",
-      "scenario_group": "4G2"
+      "scenario_group": "4G2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G2c",
@@ -1405,7 +1462,10 @@
       "text": "Contract Auction Skipped. Each contract has a flat 6 years to fulfill.",
       "parent_rules": "4G",
       "type": "scenario",
-      "scenario_group": "4G2"
+      "scenario_group": "4G2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G2d",
@@ -1413,7 +1473,10 @@
       "text": "VP Threshold. At least once before the final Meeting you need to meet a VP Threshold at the board meeting. This can be alongside your major achievement.",
       "parent_rules": "4G",
       "type": "scenario",
-      "scenario_group": "4G2"
+      "scenario_group": "4G2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G2e",
@@ -1421,7 +1484,10 @@
       "text": "Victory Conditions. See V6e (do not use 4G4).",
       "parent_rules": "4G",
       "type": "scenario",
-      "scenario_group": "4G2"
+      "scenario_group": "4G2",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3",
@@ -1437,56 +1503,80 @@
         "4G3g": "4G3"
       },
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3a",
       "title": "Setup",
       "text": "Setup. Place an additional delegate into centrist.",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3b",
       "title": "Individuality Law “Launch Contracts”",
       "text": "Individuality Law “Launch Contracts”. Boosting is a free action.",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3c",
       "title": "Individuality Lobby",
       "text": "Individuality Lobby. Pay 1 Aqua and Discard a delegate in an inactive Ideology to use its Law.",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3d",
       "title": "Equality Law “Subsidized Research”",
       "text": "",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3e",
       "title": "Equality Law — Subsidized Research",
       "text": "Equality Law \"Subsidized Research\". Take bonus supports when initiating a research auction op. Pay 1 Aqua per support card.",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3f",
       "title": "Unity Law “Sol Unification”",
       "text": "Unity Law “Sol Unification”. Replace season blue Anarchy with International Assistance. FINAO cost is 2 less until the end of season blue.",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G3g",
       "title": "Unity Lobby Cost is 0 Aqua",
       "text": "Unity Lobby Cost is 0 Aqua.",
       "parent_rules": "4G",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4G4",
@@ -1494,7 +1584,10 @@
       "text": "You win as a solitaire player (including Combined Game solitaire) if you make a starshot (4E2e). Score your VP per 4E2 & 4E3, then check which victory level (Viking, Columbus, or Polynesian) that you achieved for colonizing a New World:\nSolitaire Length: 4-cycle 5-cycle 6-cycle 7-cycle a. Viking 0 - 15 VP 0 - 30 VP 10 - 45 VP 20 - 65 VP b. Columbus 16 - 25 VP 31 - 55 VP 46 - 75 VP 66 - 100 VP c. Polynesian 26+ VP 56+ VP 76+ VP 101+ VP",
       "parent_rules": "4G",
       "type": "scenario",
-      "scenario_group": "4G4"
+      "scenario_group": "4G4",
+      "modules_required": [
+        "m4"
+      ]
     },
     {
       "id": "4I",
