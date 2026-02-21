@@ -59,6 +59,7 @@
       <div class="step-subheading">Choose which expansion modules to include in your game.</div>
       <div class="module-list" id="module-list"></div>
       <div class="nav-row">
+        <button class="btn-back" onclick="goToHome()">← Back</button>
         <button class="btn-primary" onclick="goNext()">Next →</button>
       </div>
     </div>
@@ -93,7 +94,7 @@
   <!-- ─── STEP 7: Variants ─── -->
   <div class="step-wrap hidden" id="step-7">
     <div class="card">
-      <div class="step-heading">Optional Variants</div>
+      <div class="step-heading">Optional Rules</div>
       <div class="step-subheading">Toggle optional rules to customise your game. All are off by default — any combination is valid.</div>
       <div class="module-list" id="variant-list"></div>
       <div class="nav-row">
@@ -257,6 +258,7 @@
         id: 'space-diamonds', name: 'Space Diamonds', tag: 'Beginner', group: 'Core',
         desc: 'Lightweight family-friendly race through the solar system.',
         compat: coreOnly, subOptions: null, minPlayers: 1, maxPlayers: 6,
+        ruleIds: ['V1'],
       },
       {
         id: 'race-for-glory', name: 'Race for Glory', tag: 'Introductory', group: 'Core',
@@ -267,48 +269,50 @@
           { id: 'top',  label: 'Race to the Top', desc: 'Full map, 48 turns'           },
         ],
         minPlayers: 1, maxPlayers: 6,
+        ruleIds: [],
       },
       {
         id: 'standard', name: 'Standard Game', tag: 'Standard', group: 'Core',
         desc: 'The full High Frontier experience with any modules.',
         compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
+        ruleIds: [],
       },
 
-      // ── Competitive Variants ──────────────────────────────────────────────
+      // ── Variant Scenarios ─────────────────────────────────────────────────
       {
-        id: 'quick-start', name: 'Quick Start (V1)', tag: 'Variant', group: 'Competitive Variants',
-        desc: 'Accelerated early game — 0 starting Aqua, 12-year card-draw phase. Recommended for 4+ players.',
-        compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
-      },
-      {
-        id: 'race-to-saturn', name: 'Race to Saturn (V2)', tag: 'Variant', group: 'Competitive Variants',
+        id: 'race-to-saturn', name: 'Race to Saturn', tag: 'Variant', group: 'Variant Scenarios',
         desc: 'First to land a Crew on Titan and return to LEO wins.',
         compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+        ruleIds: ['V2'],
       },
       {
-        id: 'grand-tour', name: 'Grand Tour (V3)', tag: 'Variant', group: 'Competitive Variants',
+        id: 'grand-tour', name: 'Grand Tour', tag: 'Variant', group: 'Variant Scenarios',
         desc: 'Short game — 2 Seniority Disks, score only Claims and glory.',
         compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+        ruleIds: ['V3'],
       },
       {
-        id: 'red-giant', name: 'Red Giant (V10)', tag: 'Variant', group: 'Competitive Variants',
+        id: 'red-giant', name: 'Red Giant', tag: 'Variant', group: 'Variant Scenarios',
         desc: 'Sol is going red giant. Inner solar system desiccates; only outer-system VP counts.',
         compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+        ruleIds: ['V10'],
       },
       {
-        id: 'diamonds-4-all', name: 'Diamonds 4 All (V11)', tag: 'Variant', group: 'Competitive Variants',
+        id: 'diamonds-4-all', name: 'Diamonds 4 All', tag: 'Variant', group: 'Variant Scenarios',
         desc: 'Place discovery chits on Sites. Humans explore them for bonus VP and Abilities.',
         compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
+        ruleIds: ['V11'],
       },
       {
-        id: 'panspermia', name: 'Panspermia (V12)', tag: 'Variant', group: 'Competitive Variants',
+        id: 'panspermia', name: 'Panspermia', tag: 'Variant', group: 'Variant Scenarios',
         desc: 'Multiple alien species (Earthlings, Martians, Venusians, Sirens, Oceanians, Tholians, Nuclei) race the solar system.',
         compat: always, subOptions: null, minPlayers: 2, maxPlayers: 6,
+        ruleIds: ['V12'],
       },
 
       // ── Solo & Cooperative ────────────────────────────────────────────────
       {
-        id: 'altruism', name: 'Altruism (V4)', tag: 'SoloCoop', group: 'Solo & Cooperative',
+        id: 'altruism', name: 'Altruism', tag: 'SoloCoop', group: 'Solo & Cooperative',
         desc: 'Solo or cooperative. Reach a VP threshold to win.',
         compat: always,
         subOptions: [
@@ -316,14 +320,16 @@
           { id: 'coop', label: 'Cooperative', desc: 'Team up to reach the VP threshold' },
         ],
         minPlayers: 1, maxPlayers: 6,
+        ruleIds: ['V4'],
       },
       {
-        id: 'hermes-fall', name: 'Hermes Fall (V5)', tag: 'Solo', group: 'Solo & Cooperative',
+        id: 'hermes-fall', name: 'Hermes Fall', tag: 'Solo', group: 'Solo & Cooperative',
         desc: 'Solo. Industrialize both Hermes sites before time runs out to deflect an asteroid.',
         compat: always, subOptions: null, minPlayers: 1, maxPlayers: 1,
+        ruleIds: ['V5'],
       },
       {
-        id: 'ceo', name: 'CEO (V6)', tag: 'Solo', group: 'Solo & Cooperative',
+        id: 'ceo', name: 'CEO', tag: 'Solo', group: 'Solo & Cooperative',
         desc: "Solo. Meet the Board's KPI at each Solar Cycle board meeting.",
         compat: always,
         subOptions: [
@@ -331,16 +337,18 @@
           { id: 'futures',  label: 'With Futures', desc: 'Requires Module 1 + Module 2' },
         ],
         minPlayers: 1, maxPlayers: 1,
+        ruleIds: ['V6'],
       },
 
       // ── Campaign ──────────────────────────────────────────────────────────
       {
-        id: 'bios-earth', name: 'Bios:Earth (V7)', tag: 'Campaign', group: 'Campaign',
+        id: 'bios-earth', name: 'Bios:Earth', tag: 'Campaign', group: 'Campaign',
         desc: 'Campaign continuation from the Bios trilogy — your Bios:Origins end-state determines starting conditions.',
         compat: always, subOptions: null, minPlayers: 1, maxPlayers: 6,
+        ruleIds: ['V7'],
       },
       {
-        id: 'bios-venus-mars', name: 'Bios:Venus / Bios:Mars (V8)', tag: 'Campaign', group: 'Campaign',
+        id: 'bios-venus-mars', name: 'Bios:Venus / Bios:Mars', tag: 'Campaign', group: 'Campaign',
         desc: 'Start civilisation on Venus or Mars, then expand to the solar system.',
         compat: noM0,
         subOptions: [
@@ -348,23 +356,26 @@
           { id: 'mars',  label: 'Mars',  desc: 'Start the campaign on Mars'  },
         ],
         minPlayers: 1, maxPlayers: 6,
+        ruleIds: ['V8'],
       },
       {
-        id: 'sirens', name: 'The Sirens (V9)', tag: 'Campaign', group: 'Campaign',
+        id: 'sirens', name: 'The Sirens', tag: 'Campaign', group: 'Campaign',
         desc: 'Carbon-based alien factions from Uranus explore the solar system.',
         compat: noM0, subOptions: null, minPlayers: 1, maxPlayers: 6,
+        ruleIds: ['V9'],
       },
 
-      // ── Modules 1 & 2 ────────────────────────────────────────────────────
+      // ── Module 1 ─────────────────────────────────────────────────────────
       {
-        id: 'wernersstar', name: "Werner's Star (M1 Solo)", tag: 'Solo', group: 'Modules 1 & 2',
+        id: 'wernersstar', name: "Werner's Star", tag: 'Solo', group: 'Module 1',
         desc: "Solo. Werner dreams of the stars — win by completing a TW thruster Future before he dies of old age.",
-        compat: needsM1M2, subOptions: null, minPlayers: 1, maxPlayers: 1,
+        compat: mods => mods.has('m1'), subOptions: null, minPlayers: 1, maxPlayers: 1,
+        ruleIds: ['1F', 'S-WernerStar'],
       },
 
       // ── Modules 3 & 4 ────────────────────────────────────────────────────
       {
-        id: 'exodus-scenarios', name: 'Exodus Scenarios (M3+M4)', tag: 'Wargame', group: 'Modules 3 & 4',
+        id: 'exodus-scenarios', name: 'Exodus Scenarios', tag: 'Wargame', group: 'Modules 3 & 4',
         desc: 'Total war between two factions. The losers are motivated to build a starship and escape the solar system.',
         compat: needsM3M4,
         subOptions: [
@@ -372,65 +383,199 @@
           { id: 'union',        label: 'Union War',        desc: 'Robots gain consciousness and join the Independence faction' },
         ],
         minPlayers: 2, maxPlayers: 6,
+        ruleIds: ['4F', '4F1', '4F2', 'S-ExodusScenarios'],
       },
 
       // ── Module 5 ──────────────────────────────────────────────────────────
       {
-        id: 'iso-dawn', name: 'Iso Dawn (M5)', tag: 'Module5', group: 'Module 5',
+        id: 'iso-dawn', name: 'Iso Dawn', tag: 'Module5', group: 'Module 5',
         desc: 'Start immediately after the stock market flips to isotope monetization. Requires Modules 0, 1, 2 & 5.',
         compat: needsM0M1M2M5, subOptions: null, minPlayers: 2, maxPlayers: 6,
+        ruleIds: ['5J', 'S-IsoDawn'],
       },
       {
-        id: 'taurus', name: "Roger's Taurus (M5 Solo)", tag: 'Solo', group: 'Module 5',
+        id: 'taurus', name: "Roger's Taurus", tag: 'Solo', group: 'Module 5',
         desc: 'Solo/2-player. An NPC "Taurus" competes to chair every company. Requires Modules 0 & 5.',
         compat: needsM0M5, subOptions: null, minPlayers: 1, maxPlayers: 2,
+        ruleIds: ['5L', 'S-Taurus'],
       },
     ];
 
     // ─── VARIANTS ────────────────────────────────────────────────────────────
+    // forScenario: scenario id this variant only applies to (null = all scenarios)
+    // group: used for color-coding on the Optional Rules page
 
     const VARIANTS = [
+      // ── Quick Start (shown on Variant Scenarios page) ─────────────────────
+      {
+        id: 'quick-start',
+        label: 'Quick Start',
+        desc: 'Accelerated early game — 0 starting Aqua, 12-year card-draw phase. Recommended for 4+ players.',
+        requires: always,
+        group: 'quick-start',
+        forScenario: null,
+        ruleIds: ['V1'],
+      },
+
+      // ── Auction / Card Market rules ───────────────────────────────────────
       {
         id: 'rapid-start',
         label: 'Rapid Start',
-        desc: "4 rounds of patent auctions replace the first solar cycle. Start with 9 Aqua. Roger Lund's alternative to Quick Start. Works with any modules.",
+        desc: "4 rounds of patent auctions replace the first solar cycle. Start with 9 Aqua. Roger Lund's alternative to Quick Start.",
         requires: always,
+        group: 'auction',
+        forScenario: null,
+        ruleIds: ['OPT-RapidStart', '5K'],
+      },
+      {
+        id: 'open-cycle-generators',
+        label: 'Open-Cycle Generators',
+        desc: 'Dirt thrusters with an ISRU ≥ 5 can also function as generators. Adds a water-production option on any Site.',
+        requires: mods => mods.has('m2'),
+        group: 'auction',
+        forScenario: null,
+        ruleIds: ['2X1'],
+      },
+      {
+        id: 'batteries',
+        label: 'Batteries',
+        desc: 'Any thruster can store energy as a battery charge to boost a future burn. Adds tactical resource management.',
+        requires: mods => mods.has('m2'),
+        group: 'auction',
+        forScenario: null,
+        ruleIds: ['2X2'],
+      },
+      {
+        id: 'm4-contract-auctions',
+        label: 'Contract Auctions Modifications',
+        desc: 'Modifies how contracts are auctioned — see 4G1 for details.',
+        requires: mods => mods.has('m4'),
+        group: 'auction',
+        forScenario: null,
+        ruleIds: ['4G1'],
+      },
+      {
+        id: 'm4-solitaire-contract-skip',
+        label: 'Contract Auction Skipped',
+        desc: 'In solitaire/cooperative, skip the contract auction step entirely.',
+        requires: mods => mods.has('m4'),
+        group: 'auction',
+        forScenario: 'exodus-scenarios',
+        ruleIds: ['OPT-M4Solitairec'],
+      },
+
+      // ── General optional rules ────────────────────────────────────────────
+      {
+        id: 'realistic-solar-flux',
+        label: 'Realistic Solar Flux',
+        desc: 'Solar power varies with distance from the Sun. Cards with solar power icons produce less power in the outer solar system.',
+        requires: mods => mods.has('m2'),
+        group: 'general',
+        forScenario: null,
+        ruleIds: ['2X3'],
+      },
+      {
+        id: 'risky-oberth',
+        label: 'Risky Oberth Flybys',
+        desc: 'Performing an Oberth flyby now risks a hazard roll. High reward, higher risk.',
+        requires: mods => mods.has('m2'),
+        group: 'general',
+        forScenario: null,
+        ruleIds: ['2X4'],
+      },
+      {
+        id: 'torchship',
+        label: 'Torchship Travel',
+        desc: 'Spacecraft with sufficiently powerful thrusters can burn continuously, reaching any destination in one turn.',
+        requires: mods => mods.has('m2'),
+        group: 'general',
+        forScenario: null,
+        ruleIds: ['2X5'],
       },
       {
         id: 'diamonds-overlay',
         label: 'Diamonds 4 All Overlay',
         desc: 'Place discovery chits on Sites with special icons. Humans explore them during play for bonus VP and Abilities.',
         requires: always,
+        group: 'general',
+        forScenario: null,
+        ruleIds: ['V11'],
       },
       {
         id: 'asteroid-jormungandr',
         label: 'Asteroid Jormungandr',
         desc: 'Place this optional asteroid tile anywhere in the Mars zone. Prospecting it with a Colonist grants a free augmentation chit.',
         requires: mods => mods.has('m4') || mods.has('m5'),
+        group: 'general',
+        forScenario: null,
+        ruleIds: [],
       },
       {
         id: 'habitable-venus',
         label: 'Habitable Venus Overlay',
-        desc: 'Use the Habitable Venus overlay card for an alternate Venus experience — relevant for Bios:Venus/Mars (V8).',
+        desc: 'Use the Habitable Venus overlay card for an alternate Venus experience — relevant for Bios:Venus/Mars.',
         requires: always,
+        group: 'general',
+        forScenario: null,
+        ruleIds: ['V8b'],
       },
+      {
+        id: 'piracy',
+        label: 'Age of Piracy',
+        desc: 'Experience combat without a full War of Independence. Felonies are freely permitted; no War/Anarchy outbreak needed.',
+        requires: mods => mods.has('m3'),
+        group: 'general',
+        forScenario: null,
+        ruleIds: ['3Ac', '3Ad'],
+      },
+      {
+        id: 'modified-future-wars',
+        label: 'Modified Future Wars',
+        desc: 'Adjusts how Future-triggered wars escalate. Reduces snowball effects from early war outbreaks.',
+        requires: mods => mods.has('m3'),
+        group: 'general',
+        forScenario: null,
+        ruleIds: ['3Ae'],
+      },
+
+      // ── Solitaire / specific-scenario variants ────────────────────────────
       {
         id: 'alt-solitaire-politics',
         label: 'Alternative Solitaire Political Diagram',
-        desc: 'Revised laws designed to reduce randomness in solo play. All ideologies become viable. Requires Modules 0 & 4.',
+        desc: 'Revised laws designed to reduce randomness in solo play. All ideologies become viable.',
         requires: mods => mods.has('m0') && mods.has('m4'),
+        group: 'solitaire',
+        forScenario: 'exodus-scenarios',
+        ruleIds: ['4G3', 'OPT-M4Solitaire'],
       },
+      {
+        id: 'm4-solitaire-vp',
+        label: 'Module 4 Solitaire VP Threshold',
+        desc: 'Sets the VP threshold required to win in solitaire/cooperative Exodus play.',
+        requires: mods => mods.has('m4'),
+        group: 'solitaire',
+        forScenario: 'exodus-scenarios',
+        ruleIds: ['OPT-M4Solitaired'],
+      },
+
+      // ── Module 5 variants ─────────────────────────────────────────────────
       {
         id: 'm5-short',
         label: 'Module 5: Short Game (1–2 Seniority Disks)',
         desc: 'Use only 1–2 Seniority Disks instead of the default 3–4 for a faster Module 5 game.',
         requires: mods => mods.has('m5'),
+        group: 'm5',
+        forScenario: null,
+        ruleIds: [],
       },
       {
         id: 'm5-jumpstart',
         label: 'Module 5: Jump Start',
         desc: 'Begin with pre-built starting Factories and Bernals per the Iso Dawn faction table. Recommended for experienced groups.',
         requires: mods => mods.has('m5'),
+        group: 'm5',
+        forScenario: null,
+        ruleIds: [],
       },
     ];
 
@@ -471,6 +616,23 @@
       st.dir = 'forward';
       updateProgress();
       onEnter(1);
+    }
+
+    function goToHome() {
+      // Hide current step and progress
+      const cur = document.getElementById('step-' + st.step);
+      if (cur) { cur.classList.add('hidden'); cur.classList.remove('anim-forward','anim-back'); }
+      document.getElementById('progress-wrap').classList.add('hidden');
+
+      // Reset state
+      st = { step: 1, modules: new Set(['core']), scenario: null, subOption: null,
+             variants: new Set(), playerCount: 2, savedNames: [], assignedColors: null, dir: 'forward' };
+
+      // Show home
+      const home = document.getElementById('screen-home');
+      home.classList.remove('hidden');
+      void home.offsetWidth;
+      home.classList.add('anim-back');
     }
 
     // ─── STATE ───────────────────────────────────────────────────────────────
@@ -1303,21 +1465,95 @@
       'm5-jumpstart':           ['Jump Start', 'Iso Dawn faction table'],
     };
 
-    let _allRulesCache = null;
-
-    function _loadAllRules() {
-      if (_allRulesCache) return Promise.resolve(_allRulesCache);
-
-      const FILES = [
-        { file: 'rules/core_rules.json',      label: 'Core Rules' },
-        { file: 'rules/m1_terawatt.json',     label: 'Module 1 — Terawatt & Futures' },
-        { file: 'rules/m2_colonization.json', label: 'Module 2 — Colonization' },
-        { file: 'rules/m3_conflict.json',     label: 'Module 3 — Conflict' },
-        { file: 'rules/m4_exodus.json',       label: 'Module 4 — Exodus' },
-        { file: 'rules/m5_economy.json',      label: 'Module 5 — Economy' },
-        { file: 'rules/glossary.json',        label: 'Glossary' },
-        { file: 'rules/appendix.json',        label: 'Appendix' },
+    // Returns only the JSON files for currently selected modules
+    function _getActiveModuleFiles() {
+      const ALL_FILES = [
+        { file: 'rules/core_rules.json',      label: 'Core Rules',                      mod: 'core' },
+        { file: 'rules/m1_terawatt.json',     label: 'Module 1 — Terawatt & Futures',   mod: 'm1'   },
+        { file: 'rules/m2_colonization.json', label: 'Module 2 — Colonization',          mod: 'm2'   },
+        { file: 'rules/m3_conflict.json',     label: 'Module 3 — Conflict',              mod: 'm3'   },
+        { file: 'rules/m4_exodus.json',       label: 'Module 4 — Exodus',                mod: 'm4'   },
+        { file: 'rules/m5_economy.json',      label: 'Module 5 — Economy',               mod: 'm5'   },
+        { file: 'rules/appendix.json',        label: 'Appendix',                         mod: null   },
       ];
+      return ALL_FILES.filter(f => f.mod === null || st.modules.has(f.mod));
+    }
+
+    // ─── STEP 7: VARIANTS ────────────────────────────────────────────────────
+
+    function renderVariants() {
+      const el = document.getElementById('variant-list');
+      el.innerHTML = '';
+
+      const activeScenarioId = st.scenario ? st.scenario.id : null;
+
+      // Group definitions with display labels and accent colors
+      const GROUP_META = {
+        'auction':   { label: '🃏 Card Auctions & Market',        color: '#e8f4fd', border: '#3498db' },
+        'quick-start': { label: '⚡ Quick Start',                 color: '#fef9e7', border: '#f1c40f' },
+        'general':   { label: '⚙️ General Optional Rules',        color: '#f9f9f9', border: '#bdc3c7' },
+        'solitaire': { label: '🎯 Solitaire / Cooperative',        color: '#f0faf4', border: '#2ecc71' },
+        'm5':        { label: '📈 Module 5 — Economy',             color: '#fdf2fb', border: '#9b59b6' },
+      };
+
+      // Determine which variants to show
+      const visibleVariants = VARIANTS.filter(v => {
+        if (!v.requires(st.modules)) return false;
+        // Scenario-specific variants: only show if that scenario is selected
+        if (v.forScenario && v.forScenario !== activeScenarioId) return false;
+        return true;
+      });
+
+      if (visibleVariants.length === 0) {
+        el.innerHTML = '<p class="rulebook-empty">No optional rules available for your current module selection.</p>';
+        return;
+      }
+
+      // Render by group, auction group first
+      const groupOrder = ['auction', 'quick-start', 'general', 'solitaire', 'm5'];
+      groupOrder.forEach(groupKey => {
+        const groupVariants = visibleVariants.filter(v => v.group === groupKey);
+        if (groupVariants.length === 0) return;
+
+        const meta = GROUP_META[groupKey] || { label: groupKey, color: '#f9f9f9', border: '#bdc3c7' };
+
+        const groupEl = document.createElement('div');
+        groupEl.className = 'variant-group';
+        groupEl.style.cssText = `margin-bottom:18px; border-left:3px solid ${meta.border}; padding-left:12px;`;
+
+        const groupHdr = document.createElement('div');
+        groupHdr.className = 'variant-group-label';
+        groupHdr.style.cssText = `font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:#666; margin-bottom:8px;`;
+        groupHdr.textContent = meta.label;
+        groupEl.appendChild(groupHdr);
+
+        groupVariants.forEach(v => {
+          const checked = st.variants.has(v.id);
+          const item = document.createElement('div');
+          item.className = 'module-item' + (checked ? ' is-checked' : '');
+          item.style.cssText = `background:${checked ? meta.color : '#fff'}; border-color:${checked ? meta.border : '#e5e7eb'};`;
+          item.addEventListener('click', () => {
+            if (st.variants.has(v.id)) st.variants.delete(v.id);
+            else st.variants.add(v.id);
+            renderVariants();
+          });
+          item.innerHTML = `
+            <div class="mod-checkbox"><div class="mod-checkbox-inner"></div></div>
+            <div class="mod-text">
+              <div class="mod-name-row">
+                <span class="mod-name">${v.label}</span>
+                ${v.forScenario ? '<span class="mod-badge badge-core" style="background:#ffeaa7;color:#856404">Scenario-specific</span>' : ''}
+              </div>
+              <div class="mod-desc">${v.desc}</div>
+            </div>`;
+          groupEl.appendChild(item);
+        });
+
+        el.appendChild(groupEl);
+      });
+    }
+
+    
 
       return Promise.all(FILES.map(f =>
         fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))
@@ -1381,10 +1617,30 @@
       body.innerHTML = '<p class="rulebook-empty">Loading…</p>';
       overlay.classList.remove('hidden');
 
-      const keywords = SCENARIO_RULE_KEYWORDS[scenarioId] || [scenario.name];
+      // Only load files for selected modules
+      const activeModuleFiles = _getActiveModuleFiles();
 
-      _loadAllRules().then(allRules => {
-        const matched = _filterRulesByKeywords(allRules, keywords);
+      Promise.all(activeModuleFiles.map(f =>
+        fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))
+      )).then(results => {
+        const allRules = [];
+        results.forEach(({ label, data }) => {
+          if (Array.isArray(data.sections)) {
+            data.sections.forEach(s => allRules.push({ id: s.id, title: s.title, text: s.text, _group: label }));
+          }
+        });
+
+        // Filter to only sections whose IDs match the scenario's ruleIds
+        const ruleIds = scenario.ruleIds || [];
+        let matched = [];
+        if (ruleIds.length > 0) {
+          matched = allRules.filter(r => ruleIds.some(rid => r.id === rid || r.id.startsWith(rid)));
+        }
+        // Fallback: keyword search using scenario name
+        if (matched.length === 0) {
+          const kw = scenario.name.toLowerCase();
+          matched = allRules.filter(r => (r.title + ' ' + r.text).toLowerCase().includes(kw));
+        }
         _renderModalRules(matched);
       }).catch(() => {
         body.innerHTML = '<p class="rulebook-empty">Failed to load rules. Ensure the app is served over HTTP.</p>';
@@ -1403,10 +1659,26 @@
       body.innerHTML = '<p class="rulebook-empty">Loading…</p>';
       overlay.classList.remove('hidden');
 
-      const keywords = VARIANT_RULE_KEYWORDS[variantId] || [variant.label];
+      const ruleIds = variant.ruleIds || [];
+      const activeModuleFiles = _getActiveModuleFiles();
 
-      _loadAllRules().then(allRules => {
-        const matched = _filterRulesByKeywords(allRules, keywords);
+      Promise.all(activeModuleFiles.map(f =>
+        fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))
+      )).then(results => {
+        const allRules = [];
+        results.forEach(({ label, data }) => {
+          if (Array.isArray(data.sections)) {
+            data.sections.forEach(s => allRules.push({ id: s.id, title: s.title, text: s.text, _group: label }));
+          }
+        });
+        let matched = [];
+        if (ruleIds.length > 0) {
+          matched = allRules.filter(r => ruleIds.some(rid => r.id === rid || r.id.startsWith(rid)));
+        }
+        if (matched.length === 0) {
+          const kw = variant.label.toLowerCase();
+          matched = allRules.filter(r => (r.title + ' ' + r.text).toLowerCase().includes(kw));
+        }
         _renderModalRules(matched);
       }).catch(() => {
         body.innerHTML = '<p class="rulebook-empty">Failed to load rules. Ensure the app is served over HTTP.</p>';
