@@ -181,20 +181,14 @@
       <div class="step-heading" style="margin-bottom:6px">Current Game</div>
       <div class="step-subheading" style="margin-bottom:22px">Player aids &amp; rules for your session</div>
       <div class="home-btn-group">
-        <button class="btn-home-secondary" onclick="openPlayerAid('operations')">
+        <button class="btn-home-secondary" onclick="openOpsScreen()">
           Operations &amp; Free Actions
           <span class="home-btn-sub">What you can do on your turn</span>
         </button>
-        <button class="btn-home-secondary" onclick="openPlayerAid('threats')">
-          Threats
-          <span class="home-btn-sub">Hazards, radiation &amp; combat reference</span>
+        <button class="btn-home-secondary" onclick="openPlayerAidsScreen()">
+          Player Aids
+          <span class="home-btn-sub">Quick-reference tables &amp; cheat sheets</span>
         </button>
-        <button class="btn-home-secondary" onclick="openPlayerAid('events')">
-          Events
-          <span class="home-btn-sub">Sunspot cycle events &amp; triggers</span>
-        </button>
-      </div>
-      <div style="margin-top:14px">
         <button class="btn-home-secondary" onclick="openRulebookFromCurrentGame()">
           Rules
           <span class="home-btn-sub">Full curated rulebook for your session</span>
@@ -203,6 +197,46 @@
       <div class="nav-row" style="margin-top:22px">
         <button class="btn-back" onclick="closeCurrentGame()">← Back</button>
       </div>
+    </div>
+  </div>
+
+  <!-- ─── OPERATIONS & FREE ACTIONS SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-ops">
+    <div class="card home-card">
+      <div class="step-heading" style="margin-bottom:6px">Operations &amp; Free Actions</div>
+      <div class="step-subheading" style="margin-bottom:16px">Available for your current configuration</div>
+      <div style="margin-bottom:8px; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--app-muted)">Operations</div>
+      <div class="home-btn-group" id="ops-btn-group"></div>
+      <div style="margin:18px 0 8px; font-weight:700; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--app-muted)">Free Actions</div>
+      <div class="home-btn-group" id="free-btn-group"></div>
+      <div class="nav-row" style="margin-top:22px">
+        <button class="btn-back" onclick="closeOpsScreen()">← Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PLAYER AIDS SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-player-aids">
+    <div class="card home-card">
+      <div class="step-heading" style="margin-bottom:6px">Player Aids</div>
+      <div class="step-subheading" style="margin-bottom:22px">Quick-reference for your session</div>
+      <div class="home-btn-group">
+        <p class="rulebook-empty">Player aids coming soon.</p>
+      </div>
+      <div class="nav-row" style="margin-top:22px">
+        <button class="btn-back" onclick="closePlayerAidsScreen()">← Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── OPERATION DETAIL SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-op-detail" style="max-width:700px">
+    <div class="card">
+      <div class="nav-row" style="margin-bottom:14px">
+        <button class="btn-back" onclick="closeOpDetail()">← Back</button>
+        <div class="step-heading" style="margin:0" id="op-detail-title">Operation</div>
+      </div>
+      <div id="op-detail-body"></div>
     </div>
   </div>
 
@@ -1426,12 +1460,37 @@
       });
     }
 
-    function openRulebook() {
-      document.getElementById('screen-home').classList.add('hidden');
-      const screen = document.getElementById('screen-current-game');
+    function openOpsScreen() {
+      document.getElementById('screen-current-game').classList.add('hidden');
+      renderCurrentGame();
+      const screen = document.getElementById('screen-ops');
       screen.classList.remove('hidden', 'anim-forward', 'anim-back');
       void screen.offsetWidth;
       screen.classList.add('anim-forward');
+    }
+
+    function closeOpsScreen() {
+      document.getElementById('screen-ops').classList.add('hidden');
+      const screen = document.getElementById('screen-current-game');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-back');
+    }
+
+    function openPlayerAidsScreen() {
+      document.getElementById('screen-current-game').classList.add('hidden');
+      const screen = document.getElementById('screen-player-aids');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+    }
+
+    function closePlayerAidsScreen() {
+      document.getElementById('screen-player-aids').classList.add('hidden');
+      const screen = document.getElementById('screen-current-game');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-back');
     }
 
     function closeCurrentGame() {
@@ -1442,9 +1501,323 @@
       home.classList.add('anim-back');
     }
 
-    function openPlayerAid(type) {
-      // Placeholder — player aid screens to be built
-      alert('Player aid coming soon: ' + type);
+    // ─── OPERATIONS & FREE ACTIONS DATA ─────────────────────────────────────
+    // show:    function(mods, scenario, variants) → true if this op is available
+    // ruleIds: sections to load for the detail screen (core + any module overrides)
+    // note:    short contextual note shown on the button when active
+
+    const OPERATIONS = [
+      {
+        id: 'income',
+        label: 'Income',
+        desc: 'Receive 1 Aqua from the pool',
+        show: (mods) => !mods.has('m0'),  // replaced by Fundraise when M0 active
+        ruleIds: ['I1'],
+        note: null,
+      },
+      {
+        id: 'fundraise',
+        label: 'Fundraise',
+        desc: 'Receive 1 Aqua, elect & move a delegate (replaces Income with Module 0)',
+        show: (mods) => mods.has('m0'),
+        ruleIds: ['O2', 'I1'],
+        note: 'Module 0',
+      },
+      {
+        id: 'research',
+        label: 'Research Auction',
+        desc: 'Bid on a patent card from the top of a patent deck',
+        show: () => true,
+        ruleIds: ['I2', 'I2a', 'I2b', 'I2c', 'I2d', 'I2e', 'I2f', 'I2g', '2A7c'],
+        note: null,
+      },
+      {
+        id: 'market',
+        label: 'Free Market',
+        desc: 'Sell a card from your hand or a Black-Side card from LEO',
+        show: () => true,
+        ruleIds: ['I3', 'I3a', 'I3b'],
+        note: null,
+      },
+      {
+        id: 'boost',
+        label: 'Boost',
+        desc: 'Launch a card from your hand to LEO',
+        show: () => true,
+        ruleIds: ['I4', 'I4a', 'I4b', 'I4c', '5Gf'],
+        note: null,
+      },
+      {
+        id: 'refuel',
+        label: 'Site Refuel',
+        desc: 'Refuel your Rocket at a Site using ISRU, Factory, or Air-Eater',
+        show: () => true,
+        ruleIds: ['I5', 'I5a', 'I5b', 'I5c', '2A7d'],
+        note: null,
+      },
+      {
+        id: 'prospect',
+        label: 'Prospect',
+        desc: 'Attempt to claim a Site using your Robonaut, Buggy, or Missile',
+        show: () => true,
+        ruleIds: ['I6', 'I6a', 'I6b', 'I6c'],
+        note: null,
+      },
+      {
+        id: 'industrialize',
+        label: 'Industrialize',
+        desc: 'Build a Factory on a claimed Site',
+        show: () => true,
+        ruleIds: ['I7', 'I7a', 'I7b', 'I7c', 'I7d', 'I7e', 'I7f', 'I7g'],
+        note: null,
+      },
+      {
+        id: 'et-production',
+        label: 'ET Production',
+        desc: 'Produce Black-Side cards at your Factory',
+        show: () => true,
+        ruleIds: ['I8', 'I8a', 'I8b', 'I8c', 'I8d', 'I8e', '2A7e'],
+        note: null,
+      },
+      {
+        id: 'delivery',
+        label: 'Delivery',
+        desc: 'Move a Black-Side card from a Factory back to LEO for income',
+        show: (mods) => !mods.has('m1'),  // not available with Module 1 (Freighters replace it)
+        ruleIds: ['I9', 'I9a'],
+        note: null,
+      },
+      {
+        id: 'promote',
+        label: 'Promote',
+        desc: 'Flip a card to its improved Purple-Side at a Colony or Lab',
+        show: (mods) => mods.has('m1') || mods.has('m2'),
+        ruleIds: ['1A5', '1A5a', '1A5b', '1A5d'],
+        note: 'Module 1/2',
+      },
+      {
+        id: 'homestead',
+        label: 'Homestead',
+        desc: 'Build a Colony by surrendering a Factory cube at a Site',
+        show: (mods) => mods.has('m2'),
+        ruleIds: ['2A4', '2A4c'],
+        note: 'Module 2',
+      },
+      {
+        id: 'anchor',
+        label: 'Anchor',
+        desc: 'Build a Bernal space station from your Factory cubes',
+        show: (mods) => mods.has('m2'),
+        ruleIds: ['2A5', '2A5f', '2A5g'],
+        note: 'Module 2',
+      },
+      {
+        id: 'contract-auction',
+        label: 'Contract Auction',
+        desc: 'Bid for a contract during your Fundraise operation',
+        show: (mods) => mods.has('m4'),
+        ruleIds: ['4B3', '4B3b', '4B3c', '4B3e', '4B3g', '4B3h', '4B3i', '4B3j', '4B3k'],
+        note: 'Module 4',
+      },
+      {
+        id: 'implant',
+        label: 'Implant',
+        desc: 'Place augmentation chits onto Colonists at an Anchored Bernal',
+        show: (mods) => mods.has('m4') && mods.has('m2'),
+        ruleIds: ['4D4', '4D4a', '4D4b', '4D4c', '4D4d', '4D4e', '4D4f'],
+        note: 'Module 4',
+      },
+    ];
+
+    const FREE_ACTIONS = [
+      {
+        id: 'cargo',
+        label: 'Cargo Transfer',
+        desc: 'Transfer cards or fuel between Stacks at the same location',
+        show: () => true,
+        ruleIds: ['G1', 'G1a', 'G1b', 'G1c', 'G1d', 'G1e', 'G1f', 'G1g', 'G1h'],
+        note: null,
+      },
+      {
+        id: 'tankage',
+        label: 'Internal Tankage',
+        desc: 'Convert Fuel to FTs or FTs to Fuel in your Stack',
+        show: () => true,
+        ruleIds: ['G2', 'G2a', 'G2b', 'G2c'],
+        note: null,
+      },
+      {
+        id: 'colony',
+        label: 'Build Colony',
+        desc: 'Place a Colony dome on a Site where you have a Factory',
+        show: () => true,
+        ruleIds: ['G3', 'G3a', 'G3b', 'G3c', 'G3d'],
+        note: null,
+      },
+      {
+        id: 'claimjump',
+        label: 'Claim Jump',
+        desc: 'Move your Claim disk to displace an opponent\'s Claim',
+        show: () => true,
+        ruleIds: ['G4', 'G4a', 'G4b'],
+        note: null,
+      },
+      {
+        id: 'glory',
+        label: 'Load Glory Chit',
+        desc: 'Pick up a Glory chit from the Site your Stack is on',
+        show: () => true,
+        ruleIds: ['G5'],
+        note: null,
+      },
+      {
+        id: 'discard',
+        label: 'Voluntary Discard',
+        desc: 'Discard cards or tokens from your hand or Stack',
+        show: () => true,
+        ruleIds: ['G6', 'G6a', 'G6b'],
+        note: null,
+      },
+      {
+        id: 'repair',
+        label: 'Glitch Repair',
+        desc: 'Repair a Glitched card in your Stack at a Factory',
+        show: () => true,
+        ruleIds: ['G7'],
+        note: null,
+      },
+      {
+        id: 'contract-fulfill',
+        label: 'Contract Fulfillment',
+        desc: 'Fulfill a step of an active contract by reaching its destination',
+        show: (mods) => mods.has('m4'),
+        ruleIds: ['4B4', '4B4a', '4B4c', '4B4g', '4A6h'],
+        note: 'Module 4',
+      },
+      {
+        id: 'lobby',
+        label: 'Lobby',
+        desc: 'Pay 1 Aqua to use an inactive Law for your Turn',
+        show: (mods) => mods.has('m0'),
+        ruleIds: ['O4'],
+        note: 'Module 0',
+      },
+      {
+        id: 'dump',
+        label: 'Dumping',
+        desc: 'Sell any or all of your shares in companies for their share value',
+        show: (mods) => mods.has('m5'),
+        ruleIds: ['5C5', '5C5b'],
+        note: 'Module 5',
+      },
+    ];
+
+    // ─── CURRENT GAME SCREEN ─────────────────────────────────────────────────
+
+    function renderCurrentGame() {
+      const mods = st.modules;
+      const scenario = st.scenario ? st.scenario.id : null;
+      const variants = st.variants;
+
+      function buildBtns(items, containerId) {
+        const el = document.getElementById(containerId);
+        el.innerHTML = '';
+        items.forEach(op => {
+          if (!op.show(mods, scenario, variants)) return;
+          const btn = document.createElement('button');
+          btn.className = 'btn-home-secondary';
+          btn.style.cssText = 'text-align:left';
+          btn.innerHTML = op.label +
+            (op.note ? ` <span class="mod-badge badge-core" style="font-size:0.65rem;vertical-align:middle">${op.note}</span>` : '') +
+            `<span class="home-btn-sub">${op.desc}</span>`;
+          btn.addEventListener('click', () => openOpDetail(op));
+          el.appendChild(btn);
+        });
+        if (!el.hasChildNodes()) {
+          el.innerHTML = '<p class="rulebook-empty" style="font-size:0.85rem">None available for current configuration.</p>';
+        }
+      }
+
+      buildBtns(OPERATIONS, 'ops-btn-group');
+      buildBtns(FREE_ACTIONS, 'free-btn-group');
+    }
+
+    // ─── OPERATION DETAIL ────────────────────────────────────────────────────
+
+    let _opDetailCameFrom = 'current-game';
+
+    function openOpDetail(op) {
+      _opDetailCameFrom = 'ops';
+      document.getElementById('screen-ops').classList.add('hidden');
+      document.getElementById('op-detail-title').textContent = op.label;
+      const body = document.getElementById('op-detail-body');
+      body.innerHTML = '<p class="rulebook-empty">Loading…</p>';
+
+      const screen = document.getElementById('screen-op-detail');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+
+      // Load only files relevant to active modules
+      const activeFiles = _getActiveModuleFiles();
+      Promise.all(activeFiles.map(f =>
+        fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))
+      )).then(results => {
+        const allSections = [];
+        results.forEach(({ label, data }) => {
+          if (Array.isArray(data.sections)) {
+            data.sections.forEach(s => allSections.push({ ...s, _group: label }));
+          }
+        });
+
+        // Match ruleIds — include exact match and direct children (e.g. I2 → I2a, I2b...)
+        const matched = allSections.filter(s =>
+          op.ruleIds.some(rid => s.id === rid || s.id.startsWith(rid))
+        );
+
+        if (!matched.length) {
+          body.innerHTML = '<p class="rulebook-empty">No rule text found for current configuration.</p>';
+          return;
+        }
+
+        // Group by source file
+        const groups = new Map();
+        const order = [];
+        matched.forEach(s => {
+          const k = s._group;
+          if (!groups.has(k)) { groups.set(k, []); order.push(k); }
+          groups.get(k).push(s);
+        });
+
+        body.innerHTML = order.map(k =>
+          (order.length > 1 ? `<div class="rulebook-section-heading">${esc(k)}</div>` : '') +
+          groups.get(k).map(s =>
+            `<div class="rule-card">
+               <div class="rule-card-id">${esc(s.id)}</div>
+               <div class="rule-card-title">${esc(s.title)}</div>
+               <div class="rule-card-text">${esc(s.text)}</div>
+             </div>`
+          ).join('')
+        ).join('');
+      }).catch(() => {
+        body.innerHTML = '<p class="rulebook-empty">Failed to load rules. Ensure the app is served over HTTP.</p>';
+      });
+    }
+
+    function closeOpDetail() {
+      document.getElementById('screen-op-detail').classList.add('hidden');
+      const screen = document.getElementById('screen-ops');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-back');
+    }
+
+    function openRulebook() {
+      document.getElementById('screen-home').classList.add('hidden');
+      const screen = document.getElementById('screen-current-game');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
     }
 
     function openRulebookFromCurrentGame() {
