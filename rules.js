@@ -185,6 +185,52 @@ const RULES_DB = [
     supersedes: null,
   },
 
+  // ── MODULE 4 — EXODUS (Solitaire) ──────────────────────────────────────
+
+  {
+    id: "4G",
+    section: "4G",
+    title: "Module 4 Solitaire Games",
+    text: "If you play solo or using a full cooperative mode, apply the following rules when playing this Module.",
+    modules: [4],
+    scenarios: ["all"],
+    variants: [],
+    supersedes: null,
+  },
+
+  {
+    id: "4G1",
+    section: "4G1",
+    title: "Contract Auctions Modifications",
+    text: "Unless playing with CEO, each contract has a flat 6 years to fulfill.",
+    modules: [4],
+    scenarios: ["all"],
+    variants: [],
+    supersedes: null,
+  },
+
+  {
+    id: "4G2",
+    section: "4G2",
+    title: "CEO Solitaire Modifications",
+    text: "If using CEO Solitaire (V6):\na. Major Achievements include contract fulfillment, becoming the isobanker, or completing an Exodus contract. Achieving one counts as a fulfillment for the next board meeting (V6c), except the last one which must either be a Future or a Columbus level starshot (4G4b).\nb. Default counts as not meeting a requirement of the next valid Board meeting, ignoring other effects.\nc. Contract Auction Skipped. Each contract has a flat 6 years to fulfill.\nd. VP Threshold. At least once before the final Meeting you need to meet a VP Threshold at the board meeting. This can be alongside your major achievement.\ne. Victory Conditions. See V6e (do not use 4G4).",
+    modules: [4],
+    scenarios: ["all"],
+    variants: [],
+    supersedes: null,
+  },
+
+  {
+    id: "4G3",
+    section: "4G3",
+    title: "Alternative Political Diagram for Solitaire",
+    text: "The provided solitaire political diagram may be used instead of the standard political diagram for any solitaire game using Module 0. This changes four of the Laws (O5), with the design goal to make all Ideologies relevant, and to reduce the randomness and luck-factor of the experience, so one can plan better for victory. The revised setup, and the new Laws and lobbies are:\na. Setup. Place an additional delegate into centrist.\nb. Individuality Law \"Launch Contracts\". Boosting is a free action.\nc. Individuality Lobby. Pay 1 Aqua and Discard a delegate in an inactive Ideology to use its Law.\nd. Equality Law \"Subsidized Research\". Take bonus supports when initiating a research auction op. Pay 1 Aqua per support card.",
+    modules: [0, 4],
+    scenarios: ["all"],
+    variants: [],
+    supersedes: null,
+  },
+
 ];
 
 /**

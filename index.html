@@ -1681,6 +1681,10 @@
           if (v.forScenario) badges += '<span class="mod-badge badge-coming-soon">Scenario only</span>';
           if (v.exclusive)   badges += '<span class="mod-badge badge-core">Pick one</span>';
 
+          const rulesBtn = v.ruleIds && v.ruleIds.length > 0
+            ? `<button class="btn-inline-rules" onclick="event.stopPropagation(); openVariantRules('${v.id}')" title="View rules">📖</button>`
+            : '';
+
           item.innerHTML = `
             <div class="mod-checkbox"><div class="mod-checkbox-inner"></div></div>
             <div class="mod-text">
@@ -1688,7 +1692,8 @@
                 <span class="mod-name">${v.label}</span>${badges}
               </div>
               <div class="mod-desc">${v.desc}</div>
-            </div>`;
+            </div>
+            ${rulesBtn}`;
           groupEl.appendChild(item);
         });
 

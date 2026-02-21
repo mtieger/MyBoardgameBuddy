@@ -124,7 +124,7 @@
     },
     {
       "id": "2A4d",
-      "title": "Delegates (Module 0)",
+      "title": "Delegates",
       "text": "Delegates (Module 0). For each exomigration, you gain one delegate of your color per 2A6c.\nEASILY MISSED: The PurpleSide contains Futures, which are ignored unless you are using 1D. [2A3e]\nEASILY MISSED: You cannot homestead your Crew or non-emancipated Robots.\n[2A4b]\nANCHORING PROMOTION COLONY\nEXAMPLE [2A3]\nYou manufacture a Black-Side S card on Luna, and fly it to your Home Bernal. On your next Turn, you use this card to homestead, putting it on the bottom of its patent deck. Then you Decommission your House of Saud Colonists on Mars, returning their card to the bottom of the queue. You add a colony dome to your Factory on Europa. Then you exomigrate the top card from the colonist queue, the Biomechs. Place this card in your Home Bernal stack."
     },
     {
@@ -198,7 +198,7 @@
     },
     {
       "id": "2A6c",
-      "title": "Delegates (Module 0)",
+      "title": "Delegates",
       "text": "Delegates (Module 0). For each exomigration, you gain a delegate of your color in the Ideology indicated on the new Colonist card (O2c), and then perform a vote tally (O3a). Delegates are subject to cube availability (I7f). Emancipated Robots provide Centrist delegates.\nYou take a Colonist to Titan and Decommission it to build a Colony (G3). Take the Colonist from the top of the queue (smart pets) and add it to your Hand. You gain no delegates since smart pets have no ideology icon (B6b), and unemancipated pets can’t vote. Then take the next card from the colonist deck [a random Human Colonist], which goes to your Home Bernal.\nEXAMPLE [2A6c]"
     },
     {
@@ -221,12 +221,12 @@
     },
     {
       "id": "2A7b",
-      "title": "Colony Build (G3)",
+      "title": "Colony Build",
       "text": "Colony Build (G3). You may Decommission a Human Colonist at a Factory to create a Colony. This also causes exomigration (2A5f) and adds 2 delegates, one for the Colony (G3c) and one for the exomigration (2A6c). Perform a vote tally (O3a) after each exomigration."
     },
     {
       "id": "2A7c",
-      "title": "Research Auction Operation (I2)",
+      "title": "Research Auction Operation",
       "text": "Research Auction Operation (I2). You are limited to 2 Bernal Cards, and cannot initiate or participate in a research auction for a Bernal Card if you already have 2.\n• Bernals Building Bernals. If you already have a Home Bernal (2B3), and you have a second Bernal Card in your Hand, for the cost of 10 Aqua as a free action you may move it from your Hand to your Home Bernal\nStack.\nYou win an auction for the cancer hospital. Because you already have a Home Bernal (diplomatic), your new cancer hospital Bernal skips your Hand and goes directly into your Home Bernal Stack on its White-Side. You pay 10 Aqua to cover the assumed cost of materials."
     },
     {
@@ -236,7 +236,7 @@
     },
     {
       "id": "2A7e",
-      "title": "ET Production Operation (I8)",
+      "title": "ET Production Operation",
       "text": "ET Production Operation (I8). If you perform an ET production operation at a Factory that is Dirtside to a Bernal, you may choose to have the product’s Black-Side appear at the Bernal Stack."
     },
     {
@@ -404,7 +404,7 @@
     },
     {
       "id": "2B3e",
-      "title": "Boost Cost (I4)",
+      "title": "Boost Cost",
       "text": "Boost Cost (I4). You may boost directly to your Bernal instead of LEO, at a doubled boost cost (i.e. equal to double the combined Mass of the cards boosted). Even though this boost might have cards traveling through Burn Spaces or Earth’s Radiation Belt, you do not need to expend Fuel or make a Belt Roll.\n• A second Bernal acquired in a Research Auction goes directly to your Home Bernal (2A7c)."
     },
     {
@@ -572,7 +572,7 @@
     {
       "id": "2C1",
       "title": "Professions & Specialties",
-      "text": "a. Miner. During a site refuel operation (I5), you may perform one extra refuel per Colocated miner present, including on an Anchored Bernal.12 The refuels may be of different types (you may receive 1 isotope and 7 water, for example).\nb. Prospector. You may perform one prospect operation (I6) or promotion operation (2A3) as a once-per-turn free action per prospector. Use either the prospector’s ISRU platform, or that of a Colocated card.\nc. Industrialist. You may perform one industrialize operation (I7), anchoring operation (2A5), or nanofacture operation (1A7), as a once-per-turn free action per industrialist, if requirements are met.\n12BERNAL HOUSEHOLDS. Although your colonists can be working anywhere in space, it is assumed that their families and supplies reside back home in the Bernal’s shirtsleeve environment. Without such human factors, space cannot be colonized.\nEASILY MISSED: Promoted Bernals support 2 Colonists rather than one. [2Ca]\nEXAMPLE [2Ca]\n18 | HIGH FRONTIER 4 ALL | MODULE 2 - COLONIZATION d. Engineer. During an ET production operation (I8), you may produce one extra card of the same Spectral\nType per engineer present at the Factory or at the Anchored Bernal of the Factory.13"
+      "text": "a. Miner. During a site refuel operation (I5), you may perform one extra refuel per Colocated miner present, including on an Anchored Bernal.12 The refuels may be of different types (you may receive 1 isotope and 7 water, for example).\nb. Prospector. You may perform one prospect operation (I6) or promotion operation (2A3) as a once-per-turn free action per prospector. Use either the prospector’s ISRU platform, or that of a Colocated card.\nc. Industrialist. You may perform one industrialize operation (I7), anchoring operation (2A5), or nanofacture operation (1A7), as a once-per-turn free action per industrialist, if requirements are met.\n12BERNAL HOUSEHOLDS. Although your colonists can be working anywhere in space, it is assumed that their families and supplies reside back home in the Bernal’s shirtsleeve environment. Without such human factors, space cannot be colonized.\nEASILY MISSED: Promoted Bernals support 2 Colonists rather than one. [2Ca] Type per engineer present at the Factory or at the Anchored Bernal of the Factory.13"
     },
     {
       "id": "2C2",
@@ -617,7 +617,7 @@
     {
       "id": "2C4b",
       "title": "Siren Cybernautics Inc.",
-      "text": "Siren Cybernautics Inc., promotes to Josephson Implants. Promoted Ability: FINAO costs are halved (drop fractions).14\n14FINAO. The ESA’s Schiaparelli Mars lander crashed on Mars in 2016 due to a programming error. After its parachute was deployed, it spun fast enough to briefly saturate its spin-measuring instrument, which caused activation of its on-ground system as if it had already landed, including early release of parachute and backshell, and a thruster fire for only 3 seconds instead of 30 seconds. On the other hand, a special emergency programming maneuver saved the Juno spacecraft as it was about to move into Jupiter’s shadow in 2019. According to Cheng Li of the Juno mission: \"Without that maneuver, without the creative genius of the folks at JPL on the navigation team, we wouldn't have the beautiful data that we have to show you today.\"\nEXAMPLE [2C3]\nEXAMPLE [2C2]\n20 | HIGH FRONTIER 4 ALL | MODULE 2 - COLONIZATION c. Heavy Water Survivalists, promotes to New Attica Secessionists. Promoted Ability: Boost costs are doubled for all your opponents."
+      "text": "Siren Cybernautics Inc., promotes to Josephson Implants. Promoted Ability: FINAO costs are halved (drop fractions).14\n14FINAO. The ESA’s Schiaparelli Mars lander crashed on Mars in 2016 due to a programming error. After its parachute was deployed, it spun fast enough to briefly saturate its spin-measuring instrument, which caused activation of its on-ground system as if it had already landed, including early release of parachute and backshell, and a thruster fire for only 3 seconds instead of 30 seconds. On the other hand, a special emergency programming maneuver saved the Juno spacecraft as it was about to move into Jupiter’s shadow in 2019. According to Cheng Li of the Juno mission: \"Without that maneuver, without the creative genius of the folks at JPL on the navigation team, we wouldn't have the beautiful data that we have to show you today.\""
     },
     {
       "id": "2C4c",
@@ -731,40 +731,68 @@
         "2X1a": "2X1",
         "2X1b": "2X1"
       },
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X1a",
       "title": "Open-Cycle Generators",
       "text": "Open-Cycle Generators include cascade thermoacoustic, MHD open-cycle, z-pinch microfission, and granular rainbow corral generators.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X1b",
       "title": "Afterburn",
       "text": "Afterburn. Open-cycle thrust modification and cooling is cumulative to any afterburn effects, and can also be used for GW thrusters.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X2",
       "title": "Batteries",
-      "text": "Certain generators are actually batteries16 that recharge only slowly with solar-power. In other words, they store energy more than generate it. If a battery is used in the support chain for an activated thruster, rotate it 180° (so that its text reads upside down). This means that if it is used on the very next Turn to support thrust, then it suffers a -4 thrust modifier. However, if on the next Turn it does not support thrust, rotate it back again, to indicate it is recharged.",
+      "text": "Certain generators are actually batteries that recharge only slowly with solar-power. In other words, they store energy more than generate it. If a battery is used in the support chain for an activated thruster, rotate it 180° (so that its text reads upside down). This means that if it is used on the very next Turn to support thrust, then it suffers a -4 thrust modifier. However, if on the next Turn it does not support thrust, rotate it back again, to indicate it is recharged.",
       "sub_ids": {
-        "2X2a": "2X2"
+        "2X2a": "2X2",
+        "2X2b": "2X2"
       },
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X2a",
       "title": "Battery Generators",
-      "text": "Battery Generators include: H2-O2 fuel cell/microbial fuel cell (White-Side/Black-Side); marx capacitor bank/casimir battery (White-Side/Black-Side); flywheel compulsatator/superconducting adductor (WhiteSide/Black-Side); diamond electro-dynamic tether (Black-Side); cascade thermoacoustic (White-Side); triggered decay nuclear battery (Black-Side). OPEN-CYCLE THRUST is increasing thrust by adding coolant to the exhaust. The power generated by the generator, 200 MW or so, is inconsequential to this thrust increase. What is important is the increase in mass flow, not energy. The increase in mass flow, without increasing power, means the exhaust won’t be as hot, which increases fuel consumption (assuming a thermodynamic rocket). Because High Frontier uses a log scale, a +1 thrust is equivalent to doubling the mass flow, and this multiplies fuel consumption by 1.41. This would mean, for a realistic open-cycle rocket, a 2•2 rocket should become a 3•3 rocket. BATTERY differs from a generator in that its purpose is to store electrical energy, not just convert it into electricity. The High Frontier batteries are scaled to an energy storage capacity of 200 GJ, enough to provide the standard High Frontier generator power at 60 MWe for just under hour before they need to recharge. Some batteries (e.g. superconducting adductor generator) are even less, only a couple of minutes.\n24 | HIGH FRONTIER 4 ALL | MODULE 2 - COLONIZATION b. Industrial Power. Battery Generators are not affected by non-thrust uses of generators (e.g. prospecting, industrializing, anchoring, etc.).",
-      "type": "variant"
+      "text": "Battery Generators include: H2-O2 fuel cell/microbial fuel cell (White-Side/Black-Side); marx capacitor bank/casimir battery (White-Side/Black-Side); flywheel compulsatator/superconducting adductor (White-Side/Black-Side); diamond electro-dynamic tether (Black-Side); cascade thermoacoustic (White-Side); triggered decay nuclear battery (Black-Side).",
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
+    },
+    {
+      "id": "2X2b",
+      "title": "Industrial Power",
+      "text": "Battery Generators are not affected by non-thrust uses of generators (e.g. prospecting, industrializing, anchoring, etc.).",
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X3",
       "title": "Realistic Solar Flux",
       "text": "The following solar flux values for Ceres zone (K) and beyond apply to Solar-Powered thrusters (and thrusters with Solar-Powered supports) to more realistically model available solar-power at these ranges:\nZONE NEW FLUX\nCeres K -3 net thrust\nJupiter F -5 net thrust\nSaturn G -7 net thrust\nUranus H & Neptune J no Solar-Power (even with a push) a. Flare & Electric Sail Exceptions. Solar flare events (K2d) and the electric sail are dependent on solar wind instead of solar-power, so for them use the thrust modifiers printed on the map.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X4",
@@ -776,31 +804,46 @@
         "2X4c": "2X4",
         "2X4d": "2X4"
       },
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X4a",
       "title": "Minimum Net Thrust",
       "text": "Minimum Net Thrust. The number of Bonus Burns a Spacecraft obtains from a risky oberth is equal to its net thrust minus 5. Therefore, it must have a net thrust of at least 6 to take advantage of this option.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X4b",
       "title": "Fuel Cost",
-      "text": "Fuel Cost. This flyby costs 1 step of Fuel, following the black line on the Fuel Strip.17 OBERTH FLYBY. This maneuver is an Oberth, which means it must be made under power, and its effect is to multiply the thrust during the short time that the spacecraft makes its close approach to the gravitational body. Accordingly, sails and low thrust vehicles do not benefit from this maneuver.\nMODULE 2 - COLONIZATION | HIGH FRONTIER 4 ALL | 25 c. Hazard Roll. Assuming you do not pay FINAO, the Hazard Roll fails if a ‘1’ is rolled. However, assuming the Stack does not already have a Glitch, the Stack suffers a Glitch rather than Decommission. It only suffers the normal Decommission if it Stack is already glitched.",
-      "type": "variant"
+      "text": "Fuel Cost. This flyby costs 1 step of Fuel, following the black line on the Fuel Strip.",
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X4c",
       "title": "Hazard Roll",
       "text": "Assuming you do not pay FINAO, the Hazard Roll fails if a ‘1’ is rolled. However, assuming the Stack does not already have a Glitch, the Stack suffers a Glitch rather than Decommission. It only suffers the normal Decommission if it Stack is already glitched.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X4d",
       "title": "Annual",
       "text": "Annual. You can only make one risky oberth per Turn.\nExample: You enter the +4 Jupiter flyby with a net thrust of 7. You pay 1 step of fuel (which represents firing your engines at closest approach). You then gain 4 + 2 = 6 Bonus Burns. Unfortunately, you roll the ‘1’ during the Hazard Roll, and your Rocket suffers a Glitch.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X5",
@@ -811,25 +854,37 @@
         "2X5b": "2X5",
         "2X5c": "2X5"
       },
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X5a",
       "title": "Lander Burns",
       "text": "Lander Burns are not included in the calculation, and Fuel for them must be spent separately.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X5b",
       "title": "Net Thrust",
       "text": "Net Thrust is calculated as before (H3), but only used for powered landing/liftoff (H6a) and for Belt Rolls.",
-      "type": "variant"
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     },
     {
       "id": "2X5c",
       "title": "Zero Fuel Thrusters",
-      "text": "Thrusters with 0 fuel consumption move as Freighters (1B4).\nStarting in LEO, you take route yellow to Lutetia, which is 4 Burns plus 1 Pivot distant. To get there in one year would need 5^2 = 25 Burns, far too many. To get there one Burn or Pivot at a time would take 5 Burns and 5 years, far too long. You decide to move 2 Burns at a time, which costs (for the entire trip) 4 + 4 + 1 = 9 Burns, for a 3 year trip. Assuming a fuel consumption of 2, this is 18 fuel steps.\n18 TORCHSHIPS. This rule more accurately reflects the performance of a torchship, a sci-fi trope of a continuously thrusting rocket with high thrust and ultra-high specific impulse. The game assumes that a spacecraft spends half its year moving, and the other half doing operations, such as prospecting. This underestimates a spaceship that continuously thrusts for the entire year. A net thrust of one, corresponding to an acceleration of about 0.3 milligees, can travel about 2.4 AU in 6 months (about 1 Pivot) but 9.7 AU (distance to Saturn) if thrusting for an entire year.\nIf at constant mass and ignoring solar gravity, this comes to an equivalent of 9 burns for the 6 month thrust. Furthermore, the game’s Pivot system underestimates the delta-v required for a torchship to fly long distances. For instance, a torchship flight to Neptune needs ~35 Burns in one year in the game, versus over 100 Burns in reality (work done against solar gravity: 0.6 milligees @ 1 AU). Using the torchship rule gives you ~153 Burns to Neptune, much closer to reality.\nEXAMPLE [2X5]\nEXAMPLE [2X4]",
-      "type": "variant"
+      "text": "Thrusters with 0 fuel consumption move as Freighters (1B4).",
+      "type": "variant",
+      "modules_required": [
+        "m2"
+      ]
     }
   ]
 }
