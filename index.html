@@ -5,741 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🚀 High Frontier — Game Setup</title>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #1a1a2e;
-      --card: #16213e;
-      --accent: #e94560;
-      --gold: #f5a623;
-      --text: #eaeaea;
-      --muted: #8892a4;
-      --radius: 16px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Nunito', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px 80px;
-      background-image:
-        radial-gradient(circle at 20% 20%, rgba(233,69,96,0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(52,152,219,0.08) 0%, transparent 50%);
-    }
-
-    h1 {
-      font-family: 'Fredoka One', cursive;
-      font-size: clamp(2rem, 6vw, 3.2rem);
-      color: var(--gold);
-      letter-spacing: 1px;
-      text-align: center;
-      margin-bottom: 6px;
-      text-shadow: 0 2px 20px rgba(245,166,35,0.3);
-    }
-
-    .subtitle {
-      color: var(--muted);
-      font-size: 1rem;
-      text-align: center;
-      margin-bottom: 28px;
-    }
-
-    .color-dots-preview {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 28px;
-    }
-    .preview-dot {
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      opacity: 0.7;
-    }
-
-    /* ── Progress ── */
-    .progress-wrap {
-      width: 100%;
-      max-width: 540px;
-      margin-bottom: 16px;
-    }
-    .progress-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .progress-label .step-name { color: var(--gold); font-weight: 700; }
-    .progress-bar-track {
-      height: 4px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .progress-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--accent), var(--gold));
-      border-radius: 4px;
-      transition: width 0.4s ease;
-    }
-
-    /* ── Card / Steps ── */
-    .step-wrap {
-      width: 100%;
-      max-width: 540px;
-    }
-    .step-wrap.hidden { display: none; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .anim-forward { animation: fadeInUp  0.28s ease both; }
-    .anim-back    { animation: fadeInDown 0.28s ease both; }
-
-    .card {
-      background: var(--card);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: var(--radius);
-      padding: 32px;
-      width: 100%;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-    }
-
-    .step-heading {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.35rem;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-    .step-subheading {
-      color: var(--muted);
-      font-size: 0.88rem;
-      margin-bottom: 22px;
-    }
-
-    /* ── Module checkboxes ── */
-    .module-list {
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      margin-bottom: 28px;
-    }
-    .module-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-      padding: 13px 15px;
-      background: rgba(255,255,255,0.03);
-      border: 1.5px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-      user-select: none;
-    }
-    .module-item:hover:not(.is-disabled):not(.is-coming-soon) {
-      border-color: rgba(233,69,96,0.4);
-      background: rgba(233,69,96,0.05);
-    }
-    .module-item.is-checked {
-      border-color: rgba(233,69,96,0.5);
-      background: rgba(233,69,96,0.08);
-    }
-    .module-item.is-disabled { opacity: 0.5; cursor: default; }
-    .module-item.is-coming-soon { opacity: 0.4; cursor: default; }
-
-    .mod-checkbox {
-      width: 20px; height: 20px;
-      border-radius: 6px;
-      border: 2px solid var(--muted);
-      background: transparent;
-      flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      transition: all 0.15s;
-      margin-top: 1px;
-    }
-    .is-checked .mod-checkbox {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-    .mod-checkbox-inner {
-      width: 5px; height: 9px;
-      border: 2px solid white;
-      border-top: none; border-left: none;
-      transform: rotate(45deg) translateY(-1px);
-      display: none;
-    }
-    .is-checked .mod-checkbox-inner { display: block; }
-
-    .mod-text { flex: 1; min-width: 0; }
-    .mod-name-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .mod-name {
-      font-weight: 700;
-      font-size: 0.93rem;
-      color: var(--text);
-    }
-    .mod-desc {
-      font-size: 0.81rem;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-    .mod-badge {
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      flex-shrink: 0;
-    }
-    .badge-core        { background: rgba(245,166,35,0.2);  color: var(--gold); }
-    .badge-coming-soon { background: rgba(136,146,164,0.2); color: var(--muted); }
-
-    /* ── Scenario cards ── */
-    .scenario-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      margin-bottom: 24px;
-      max-height: 400px;
-      overflow-y: auto;
-      padding-right: 4px;
-    }
-    .scenario-grid::-webkit-scrollbar { width: 4px; }
-    .scenario-grid::-webkit-scrollbar-track { background: rgba(255,255,255,0.04); border-radius: 4px; }
-    .scenario-grid::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 4px; }
-
-    .scenario-card {
-      padding: 13px 15px;
-      background: rgba(255,255,255,0.03);
-      border: 1.5px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      user-select: none;
-    }
-    .scenario-card:hover {
-      border-color: rgba(233,69,96,0.4);
-      background: rgba(233,69,96,0.05);
-    }
-    .scenario-card.is-selected {
-      border-color: var(--accent);
-      background: rgba(233,69,96,0.1);
-    }
-    .sc-radio {
-      width: 18px; height: 18px;
-      border-radius: 50%;
-      border: 2px solid var(--muted);
-      flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      transition: border-color 0.15s;
-    }
-    .scenario-card.is-selected .sc-radio { border-color: var(--accent); }
-    .sc-radio-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: none;
-    }
-    .scenario-card.is-selected .sc-radio-dot { display: block; }
-
-    .sc-text { flex: 1; min-width: 0; }
-    .sc-name {
-      font-weight: 700;
-      font-size: 0.93rem;
-      color: var(--text);
-    }
-    .sc-desc {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-    .sc-tag {
-      padding: 3px 10px;
-      border-radius: 10px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .tag-Beginner     { background: rgba(46,204,113,0.18);  color: #2ecc71; }
-    .tag-Introductory { background: rgba(52,152,219,0.18);  color: #3498db; }
-    .tag-Standard     { background: rgba(245,166,35,0.18);  color: var(--gold); }
-    .tag-Variant      { background: rgba(233,69,96,0.18);   color: var(--accent); }
-    .tag-Solo         { background: rgba(155,89,182,0.18);  color: #9b59b6; }
-    .tag-SoloCoop     { background: rgba(155,89,182,0.14);  color: #b07cd8; }
-    .tag-Campaign     { background: rgba(230,126,34,0.18);  color: #e67e22; }
-    .tag-Wargame      { background: rgba(192,57,43,0.18);   color: #e74c3c; }
-    .tag-Module5      { background: rgba(26,188,156,0.18);  color: #1abc9c; }
-
-    /* ── Scenario group headers ── */
-    .sc-group-header {
-      font-family: 'Fredoka One', cursive;
-      font-size: 0.72rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1.8px;
-      padding: 14px 2px 6px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 2px;
-    }
-    .sc-group-header:first-child { padding-top: 2px; }
-
-    /* ── Sub-options ── */
-    .suboption-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    .suboption-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 16px 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1.5px solid rgba(255,255,255,0.08);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-      user-select: none;
-    }
-    .suboption-item:hover {
-      border-color: rgba(233,69,96,0.4);
-      background: rgba(233,69,96,0.05);
-    }
-    .suboption-item.is-selected {
-      border-color: var(--accent);
-      background: rgba(233,69,96,0.1);
-    }
-    .sub-radio {
-      width: 18px; height: 18px;
-      border-radius: 50%;
-      border: 2px solid var(--muted);
-      flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 2px;
-      transition: border-color 0.15s;
-    }
-    .suboption-item.is-selected .sub-radio { border-color: var(--accent); }
-    .sub-radio-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: none;
-    }
-    .suboption-item.is-selected .sub-radio-dot { display: block; }
-    .sub-label { font-weight: 700; font-size: 0.95rem; color: var(--text); }
-    .sub-desc  { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
-
-    /* ── Player count ── */
-    .player-count-row {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 28px;
-    }
-    .count-btn {
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      border: 2px solid var(--accent);
-      background: transparent;
-      color: var(--accent);
-      font-size: 1.7rem;
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: all 0.15s;
-      line-height: 1;
-    }
-    .count-btn:hover:not(:disabled) { background: var(--accent); color: white; transform: scale(1.1); }
-    .count-btn:disabled { opacity: 0.3; cursor: default; transform: none; }
-    #count-display {
-      font-family: 'Fredoka One', cursive;
-      font-size: 3.2rem;
-      color: var(--text);
-      min-width: 64px;
-      text-align: center;
-    }
-    .count-locked-note {
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.88rem;
-      margin-bottom: 28px;
-      padding: 14px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 10px;
-    }
-    .count-locked-num {
-      font-family: 'Fredoka One', cursive;
-      font-size: 2.4rem;
-      color: var(--text);
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    /* ── Name inputs ── */
-    #name-fields {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    .name-input-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      animation: slideIn 0.22s ease both;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(-6px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .player-dot {
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      background: var(--muted);
-      flex-shrink: 0;
-    }
-    .name-input {
-      flex: 1;
-      background: rgba(255,255,255,0.05);
-      border: 1.5px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 12px 16px;
-      color: var(--text);
-      font-family: 'Nunito', sans-serif;
-      font-size: 1rem;
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .name-input:focus {
-      border-color: var(--gold);
-      background: rgba(255,255,255,0.08);
-    }
-    .name-input::placeholder { color: var(--muted); }
-
-    /* ── Results ── */
-    .results-title {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.5rem;
-      color: var(--gold);
-      text-align: center;
-      margin-bottom: 6px;
-    }
-    .results-summary {
-      font-size: 0.82rem;
-      color: var(--muted);
-      text-align: center;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-    .player-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 16px 20px;
-      border-radius: 12px;
-      margin-bottom: 12px;
-      animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
-    }
-    @keyframes popIn {
-      from { opacity: 0; transform: scale(0.82); }
-      to   { opacity: 1; transform: scale(1); }
-    }
-    .color-swatch {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    .player-info { flex: 1; }
-    .player-name { font-weight: 700; font-size: 1.05rem; }
-    .color-name  {
-      font-size: 0.82rem;
-      opacity: 0.7;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .color-badge {
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .player-card-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-    .btn-crew-cards {
-      padding: 5px 11px;
-      background: rgba(255,255,255,0.07);
-      border: 1.5px solid rgba(255,255,255,0.14);
-      border-radius: 8px;
-      color: var(--muted);
-      font-family: 'Nunito', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 700;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.15s;
-      letter-spacing: 0.2px;
-    }
-    .btn-crew-cards:hover {
-      background: rgba(255,255,255,0.14);
-      border-color: rgba(255,255,255,0.28);
-      color: var(--text);
-    }
-
-    /* ── Crew Cards screen ── */
-    .crew-screen-head {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.3rem;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-    .crew-screen-sub {
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-bottom: 22px;
-    }
-    .crew-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-bottom: 4px;
-    }
-    .crew-img {
-      width: 100%;
-      border-radius: 10px;
-      display: block;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .crew-img:hover { transform: scale(1.04); box-shadow: 0 8px 32px rgba(0,0,0,0.65); }
-    .divider {
-      height: 1px;
-      background: rgba(255,255,255,0.08);
-      margin: 24px 0;
-    }
-
-    /* ── Navigation ── */
-    .nav-row {
-      display: flex;
-      gap: 12px;
-    }
-    .btn-primary {
-      flex: 1;
-      padding: 15px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.15rem;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
-      box-shadow: 0 4px 20px rgba(233,69,96,0.4);
-    }
-    .btn-primary:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 28px rgba(233,69,96,0.5);
-    }
-    .btn-primary:active:not(:disabled) { transform: scale(0.98); }
-    .btn-primary:disabled { opacity: 0.35; cursor: default; box-shadow: none; }
-
-    .btn-back {
-      padding: 15px 20px;
-      background: transparent;
-      color: var(--muted);
-      border: 1.5px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius);
-      font-family: 'Nunito', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.15s;
-      white-space: nowrap;
-    }
-    .btn-back:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
-
-    .btn-secondary {
-      width: 100%;
-      padding: 14px;
-      background: transparent;
-      color: var(--muted);
-      border: 1.5px solid rgba(255,255,255,0.13);
-      border-radius: var(--radius);
-      font-family: 'Nunito', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 4px;
-      transition: all 0.15s;
-    }
-    .btn-secondary:hover { color: var(--text); border-color: rgba(255,255,255,0.35); }
-
-    /* ── Home Screen ── */
-    .home-card {
-      text-align: center;
-      padding: 44px 32px 40px;
-    }
-    .home-btn-group {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .btn-home-primary {
-      width: 100%;
-      padding: 22px 24px 18px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: var(--radius);
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.35rem;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 4px 24px rgba(233,69,96,0.4);
-    }
-    .btn-home-primary:hover  { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(233,69,96,0.55); }
-    .btn-home-primary:active { transform: scale(0.98); }
-    .btn-home-secondary {
-      width: 100%;
-      padding: 20px 24px 16px;
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      border: 1.5px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius);
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.35rem;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      transition: transform 0.15s, background 0.15s, border-color 0.15s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
-    .btn-home-secondary:hover  { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); transform: translateY(-2px); }
-    .btn-home-secondary:active { transform: scale(0.98); }
-    .home-btn-sub {
-      font-family: 'Nunito', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      opacity: 0.72;
-      letter-spacing: 0;
-    }
-
-    /* ── Session Rulebook Screen ── */
-    #screen-rulebook { width: 100%; max-width: 700px; }
-    .rulebook-banner {
-      background: rgba(245,166,35,0.07);
-      border: 1px solid rgba(245,166,35,0.25);
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 14px;
-    }
-    .rulebook-banner-title {
-      font-family: 'Fredoka One', cursive;
-      color: var(--gold);
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-    }
-    .rulebook-banner-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .rulebook-tag {
-      background: rgba(245,166,35,0.12);
-      color: var(--gold);
-      border: 1px solid rgba(245,166,35,0.3);
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 3px 10px;
-    }
-    .rulebook-search {
-      width: 100%;
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 11px 16px;
-      font-family: 'Nunito', sans-serif;
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-    .rulebook-search:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .rulebook-section-heading {
-      font-family: 'Fredoka One', cursive;
-      color: var(--gold);
-      font-size: 1rem;
-      margin: 18px 0 8px;
-      letter-spacing: 0.5px;
-    }
-    .rule-card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 10px;
-    }
-    .rule-card-id {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 3px;
-    }
-    .rule-card-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 8px;
-    }
-    .rule-card-text {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.65;
-      white-space: pre-wrap;
-    }
-    .rulebook-empty {
-      text-align: center;
-      color: var(--muted);
-      padding: 40px 0;
-      font-size: 0.95rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -870,6 +136,7 @@
       <div class="results-summary" id="game-summary"></div>
       <div id="player-list"></div>
       <div class="divider"></div>
+      <button class="btn-secondary" onclick="openRulesAndAids()">📖 Rules &amp; Player Aids</button>
       <button class="btn-secondary" onclick="openRulebookFromGame()">📋 My Rulebook</button>
       <button class="btn-secondary" onclick="resetApp()">↩ Start Over</button>
     </div>
@@ -902,6 +169,62 @@
       <div class="crew-grid" id="crew-grid"></div>
       <div class="nav-row" style="margin-top:20px">
         <button class="btn-back" onclick="closeCrewCards()">← Back to Ready</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── RULES & PLAYER AIDS SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-rules-and-aids">
+    <div class="card home-card">
+      <div class="step-heading" style="margin-bottom:22px">📖 Rules &amp; Player Aids</div>
+      <div class="home-btn-group">
+        <button class="btn-home-secondary" onclick="openRulesFromAids()">
+          📜 Rules
+          <span class="home-btn-sub">Browse the session rulebook for your active game</span>
+        </button>
+        <button class="btn-home-secondary" onclick="openPlayerAidsFromAids()">
+          🗂 Player Aids
+          <span class="home-btn-sub">Quick-reference cards, tables &amp; cheat sheets</span>
+        </button>
+      </div>
+      <div class="nav-row" style="margin-top:22px">
+        <button class="btn-back" onclick="closeRulesAndAids()">← Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── RULES VIEWER SCREEN ─── -->
+  <div class="step-wrap hidden" id="screen-rules-viewer" style="max-width:700px">
+    <div class="card">
+      <div class="nav-row" style="margin-bottom:14px">
+        <button class="btn-back" onclick="closeRulesViewer()">← Back</button>
+        <div class="step-heading" style="margin:0" id="rules-viewer-title">Session Rules</div>
+      </div>
+      <div class="rules-toggle-row" id="rules-toggle-row">
+        <button class="rules-toggle-btn is-active" id="toggle-session" onclick="setRulesMode('session')">Session Rules</button>
+        <button class="rules-toggle-btn" id="toggle-complete" onclick="setRulesMode('complete')">Complete Rules</button>
+      </div>
+      <div id="rules-viewer-banner" class="rulebook-banner"></div>
+      <input
+        type="search"
+        id="rules-viewer-search"
+        class="rulebook-search"
+        placeholder="Search rules by keyword…"
+        oninput="filterRulesViewer(this.value)"
+      >
+      <div id="rules-viewer-list"></div>
+    </div>
+  </div>
+
+  <!-- ─── RULES MODAL ─── -->
+  <div class="rules-modal-overlay hidden" id="rules-modal-overlay" onclick="closeRulesModal()">
+    <div class="rules-modal" onclick="event.stopPropagation()">
+      <div class="rules-modal-header">
+        <div class="rules-modal-title" id="rules-modal-title">Rules</div>
+        <button class="rules-modal-close" onclick="closeRulesModal()" aria-label="Close">✕</button>
+      </div>
+      <div class="rules-modal-body" id="rules-modal-body">
+        <p class="rulebook-empty">Loading…</p>
       </div>
     </div>
   </div>
@@ -1330,7 +653,10 @@
               <div class="sc-name">${scenario.name}</div>
               <div class="sc-desc">${scenario.desc}</div>
             </div>
-            <div class="sc-tag tag-${scenario.tag}">${tagLabel}</div>`;
+            <div class="sc-actions">
+              <button class="btn-inline-rules" onclick="event.stopPropagation(); openScenarioRules('${scenario.id}')" title="View rules for ${esc(scenario.name)}">📖</button>
+              <div class="sc-tag tag-${scenario.tag}">${tagLabel}</div>
+            </div>`;
           grid.appendChild(card);
         });
       });
@@ -1399,6 +725,7 @@
           <div class="mod-text">
             <div class="mod-name-row">
               <span class="mod-name">${variant.label}</span>
+              <button class="btn-inline-rules" onclick="event.stopPropagation(); openVariantRules('${variant.id}')" title="View rules for ${esc(variant.label)}">📖</button>
             </div>
             <div class="mod-desc">${variant.desc}</div>
           </div>`;
@@ -1578,6 +905,168 @@
       step6.classList.remove('hidden', 'anim-forward', 'anim-back');
       void step6.offsetWidth;
       step6.classList.add('anim-back');
+    }
+
+    // ─── RULES & PLAYER AIDS ──────────────────────────────────────────────
+
+    function openRulesAndAids() {
+      document.getElementById('step-6').classList.add('hidden');
+      document.getElementById('progress-wrap').classList.add('hidden');
+
+      const screen = document.getElementById('screen-rules-and-aids');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+    }
+
+    function closeRulesAndAids() {
+      document.getElementById('screen-rules-and-aids').classList.add('hidden');
+
+      document.getElementById('progress-wrap').classList.remove('hidden');
+
+      const step6 = document.getElementById('step-6');
+      step6.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void step6.offsetWidth;
+      step6.classList.add('anim-back');
+    }
+
+    function openRulesFromAids() {
+      document.getElementById('screen-rules-and-aids').classList.add('hidden');
+
+      _rulesViewerMode = 'session';
+      _renderRulesViewer();
+
+      const screen = document.getElementById('screen-rules-viewer');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+    }
+
+    // ─── RULES VIEWER ─────────────────────────────────────────────────────
+
+    let _rulesViewerMode  = 'session'; // 'session' | 'complete'
+    let _rulesViewerRules = [];
+
+    function _getSessionRules() {
+      const moduleMap  = { m0:0, m1:1, m2:2, m3:3, m4:4, m5:5 };
+      const moduleNums = [...st.modules].filter(m => m !== 'core').map(m => moduleMap[m]).filter(n => n !== undefined);
+      const scenarioName = (st.scenario && st.scenario.name) ? st.scenario.name : 'all';
+      const variantList  = [...st.variants];
+      return {
+        rules: buildSessionRulebook({ modules: moduleNums, scenario: scenarioName, variants: variantList }),
+        moduleNums,
+        scenarioName,
+        variantList,
+      };
+    }
+
+    function _getAllRules() {
+      // Return every rule in RULES_DB unfiltered
+      return RULES_DB.map(r => ({
+        id: r.id,
+        title: r.title,
+        text: r.text,
+        _group: r.modules.length === 0 ? 'Core Rules' : 'Module ' + r.modules[0],
+      }));
+    }
+
+    function _renderRulesViewer() {
+      const title  = document.getElementById('rules-viewer-title');
+      const banner = document.getElementById('rules-viewer-banner');
+      const search = document.getElementById('rules-viewer-search');
+      const btnS   = document.getElementById('toggle-session');
+      const btnC   = document.getElementById('toggle-complete');
+
+      btnS.classList.toggle('is-active', _rulesViewerMode === 'session');
+      btnC.classList.toggle('is-active', _rulesViewerMode === 'complete');
+      search.value = '';
+
+      if (_rulesViewerMode === 'session') {
+        title.textContent = 'Session Rules';
+        const cfg = _getSessionRules();
+        _rulesViewerRules = cfg.rules;
+
+        const moduleLabels = { 0:'Module 0', 1:'Module 1', 2:'Module 2', 3:'Module 3', 4:'Module 4', 5:'Module 5' };
+        const tags = ['Core Game'];
+        cfg.moduleNums.forEach(n => tags.push(moduleLabels[n] || 'Module ' + n));
+        if (cfg.scenarioName && cfg.scenarioName !== 'all') tags.push('Scenario: ' + cfg.scenarioName);
+        cfg.variantList.forEach(v => tags.push('Variant: ' + v));
+
+        banner.classList.remove('hidden');
+        banner.innerHTML =
+          '<div class="rulebook-banner-title">ACTIVE CONFIGURATION</div>' +
+          '<div class="rulebook-banner-tags">' +
+            tags.map(t => '<span class="rulebook-tag">' + esc(t) + '</span>').join('') +
+          '</div>';
+      } else {
+        title.textContent = 'Complete Game Rules';
+        _rulesViewerRules = _getAllRules();
+
+        banner.classList.remove('hidden');
+        banner.innerHTML =
+          '<div class="rulebook-banner-title">COMPLETE RULEBOOK</div>' +
+          '<div class="rulebook-banner-tags">' +
+            '<span class="rulebook-tag">All Modules</span>' +
+            '<span class="rulebook-tag">All Rules</span>' +
+          '</div>';
+      }
+
+      _renderRulesViewerList(_rulesViewerRules);
+    }
+
+    function setRulesMode(mode) {
+      if (_rulesViewerMode === mode) return;
+      _rulesViewerMode = mode;
+      _renderRulesViewer();
+    }
+
+    function filterRulesViewer(query) {
+      const q = query.trim().toLowerCase();
+      if (!q) { _renderRulesViewerList(_rulesViewerRules); return; }
+      const filtered = _rulesViewerRules.filter(r =>
+        r.id.toLowerCase().includes(q) ||
+        r.title.toLowerCase().includes(q) ||
+        r.text.toLowerCase().includes(q)
+      );
+      _renderRulesViewerList(filtered);
+    }
+
+    function _renderRulesViewerList(rules) {
+      const container = document.getElementById('rules-viewer-list');
+      if (!rules.length) {
+        container.innerHTML = '<p class="rulebook-empty">No rules match your search.</p>';
+        return;
+      }
+      const sections = [];
+      const groups   = new Map();
+      rules.forEach(r => {
+        const key = r._group || (r.modules && r.modules.length > 0 ? 'Module ' + r.modules[0] : 'Core Rules');
+        if (!groups.has(key)) { groups.set(key, []); sections.push(key); }
+        groups.get(key).push(r);
+      });
+      container.innerHTML = sections.map(key =>
+        '<div class="rulebook-section-heading">' + esc(key) + '</div>' +
+        groups.get(key).map(r =>
+          '<div class="rule-card">' +
+            '<div class="rule-card-id">' + esc(r.id) + '</div>' +
+            '<div class="rule-card-title">' + esc(r.title) + '</div>' +
+            '<div class="rule-card-text">' + esc(r.text) + '</div>' +
+          '</div>'
+        ).join('')
+      ).join('');
+    }
+
+    function closeRulesViewer() {
+      document.getElementById('screen-rules-viewer').classList.add('hidden');
+
+      const screen = document.getElementById('screen-rules-and-aids');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-back');
+    }
+
+    function openPlayerAidsFromAids() {
+      // Placeholder — screen not built yet
     }
 
     // ─── RESET ───────────────────────────────────────────────────────────────
@@ -1778,6 +1267,162 @@
         ).join('')
       ).join('');
     }
+
+    // ─── RULES MODAL ──────────────────────────────────────────────────────
+
+    // Map scenario IDs to search terms for finding relevant rules
+    const SCENARIO_RULE_KEYWORDS = {
+      'space-diamonds':   ['Space Diamonds', 'diamond'],
+      'race-for-glory':   ['Race for Glory', 'race for glory', 'walkthrough'],
+      'standard':         ['Standard Game', 'standard game'],
+      'quick-start':      ['Quick Start', 'V1'],
+      'race-to-saturn':   ['Race to Saturn', 'V2', 'Titan'],
+      'grand-tour':       ['Grand Tour', 'V3'],
+      'red-giant':        ['Red Giant', 'V10'],
+      'diamonds-4-all':   ['Diamonds 4 All', 'V11', 'discovery chit'],
+      'panspermia':       ['Panspermia', 'V12', 'alien species'],
+      'altruism':         ['Altruism', 'V4', 'cooperative'],
+      'hermes-fall':      ['Hermes Fall', 'V5', 'Hermes'],
+      'ceo':              ['CEO', 'V6', 'KPI', 'board meeting'],
+      'bios-earth':       ['Bios:Earth', 'Bios Earth', 'V7', 'Bios:Origins'],
+      'bios-venus-mars':  ['Bios:Venus', 'Bios:Mars', 'V8'],
+      'sirens':           ['Sirens', 'V9', 'Uranus'],
+      'wernersstar':      ["Werner's Star", 'Werner', 'TW thruster'],
+      'exodus-scenarios': ['Exodus', 'starship', 'Independence'],
+      'iso-dawn':         ['Iso Dawn', 'isotope monetization'],
+      'taurus':           ["Roger's Taurus", 'Taurus', 'NPC'],
+    };
+
+    const VARIANT_RULE_KEYWORDS = {
+      'rapid-start':            ['Rapid Start', 'patent auction'],
+      'diamonds-overlay':       ['Diamonds 4 All', 'discovery chit'],
+      'asteroid-jormungandr':   ['Jormungandr', 'asteroid tile'],
+      'habitable-venus':        ['Habitable Venus', 'Venus overlay'],
+      'alt-solitaire-politics': ['Alternative Solitaire', 'political diagram', 'solitaire politics'],
+      'm5-short':               ['Short Game', 'Seniority Disk'],
+      'm5-jumpstart':           ['Jump Start', 'Iso Dawn faction table'],
+    };
+
+    let _allRulesCache = null;
+
+    function _loadAllRules() {
+      if (_allRulesCache) return Promise.resolve(_allRulesCache);
+
+      const FILES = [
+        { file: 'rules/core_rules.json',      label: 'Core Rules' },
+        { file: 'rules/m1_terawatt.json',     label: 'Module 1 — Terawatt & Futures' },
+        { file: 'rules/m2_colonization.json', label: 'Module 2 — Colonization' },
+        { file: 'rules/m3_conflict.json',     label: 'Module 3 — Conflict' },
+        { file: 'rules/m4_exodus.json',       label: 'Module 4 — Exodus' },
+        { file: 'rules/m5_economy.json',      label: 'Module 5 — Economy' },
+        { file: 'rules/glossary.json',        label: 'Glossary' },
+        { file: 'rules/appendix.json',        label: 'Appendix' },
+      ];
+
+      return Promise.all(FILES.map(f =>
+        fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))
+      )).then(results => {
+        const allRules = [];
+        results.forEach(({ label, data }) => {
+          if (Array.isArray(data.sections)) {
+            data.sections.forEach(s => allRules.push({ id: s.id, title: s.title, text: s.text, _group: label }));
+          } else if (Array.isArray(data.entries)) {
+            data.entries.forEach(e => allRules.push({ id: e.term[0].toUpperCase(), title: e.term, text: e.definition, _group: label }));
+          }
+        });
+        _allRulesCache = allRules;
+        return allRules;
+      });
+    }
+
+    function _filterRulesByKeywords(allRules, keywords) {
+      const lowerKw = keywords.map(k => k.toLowerCase());
+      return allRules.filter(r => {
+        const haystack = (r.id + ' ' + r.title + ' ' + r.text).toLowerCase();
+        return lowerKw.some(kw => haystack.includes(kw));
+      });
+    }
+
+    function _renderModalRules(rules) {
+      const body = document.getElementById('rules-modal-body');
+      if (!rules.length) {
+        body.innerHTML = '<p class="rulebook-empty">No specific rules found. Try the full Rules Reference from the home screen.</p>';
+        return;
+      }
+      // Group by source
+      const sections = [];
+      const groups = new Map();
+      rules.forEach(r => {
+        const key = r._group || 'Rules';
+        if (!groups.has(key)) { groups.set(key, []); sections.push(key); }
+        groups.get(key).push(r);
+      });
+      body.innerHTML = sections.map(key =>
+        '<div class="rulebook-section-heading">' + esc(key) + '</div>' +
+        groups.get(key).map(r =>
+          '<div class="rule-card">' +
+            '<div class="rule-card-id">' + esc(r.id) + '</div>' +
+            '<div class="rule-card-title">' + esc(r.title) + '</div>' +
+            '<div class="rule-card-text">' + esc(r.text) + '</div>' +
+          '</div>'
+        ).join('')
+      ).join('');
+    }
+
+    function openScenarioRules(scenarioId) {
+      const scenario = SCENARIOS.find(s => s.id === scenarioId);
+      if (!scenario) return;
+
+      const overlay = document.getElementById('rules-modal-overlay');
+      const title   = document.getElementById('rules-modal-title');
+      const body    = document.getElementById('rules-modal-body');
+
+      title.textContent = scenario.name + ' — Rules';
+      body.innerHTML = '<p class="rulebook-empty">Loading…</p>';
+      overlay.classList.remove('hidden');
+
+      const keywords = SCENARIO_RULE_KEYWORDS[scenarioId] || [scenario.name];
+
+      _loadAllRules().then(allRules => {
+        const matched = _filterRulesByKeywords(allRules, keywords);
+        _renderModalRules(matched);
+      }).catch(() => {
+        body.innerHTML = '<p class="rulebook-empty">Failed to load rules. Ensure the app is served over HTTP.</p>';
+      });
+    }
+
+    function openVariantRules(variantId) {
+      const variant = VARIANTS.find(v => v.id === variantId);
+      if (!variant) return;
+
+      const overlay = document.getElementById('rules-modal-overlay');
+      const title   = document.getElementById('rules-modal-title');
+      const body    = document.getElementById('rules-modal-body');
+
+      title.textContent = variant.label + ' — Rules';
+      body.innerHTML = '<p class="rulebook-empty">Loading…</p>';
+      overlay.classList.remove('hidden');
+
+      const keywords = VARIANT_RULE_KEYWORDS[variantId] || [variant.label];
+
+      _loadAllRules().then(allRules => {
+        const matched = _filterRulesByKeywords(allRules, keywords);
+        _renderModalRules(matched);
+      }).catch(() => {
+        body.innerHTML = '<p class="rulebook-empty">Failed to load rules. Ensure the app is served over HTTP.</p>';
+      });
+    }
+
+    function closeRulesModal() {
+      document.getElementById('rules-modal-overlay').classList.add('hidden');
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !document.getElementById('rules-modal-overlay').classList.contains('hidden')) {
+        closeRulesModal();
+      }
+    });
 
     // ─── INIT ────────────────────────────────────────────────────────────────
     // Start on the home screen; game setup begins when the user taps "Game Setup"

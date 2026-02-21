@@ -15,7 +15,7 @@
     },
     {
       "term": "Active Law",
-      "definition": "In Module 0, as soon as the gold star token enters an Ideology, it makes the Law associated with that Ideology active (O3) while there is no Anarchy/War."
+      "definition": "In"
     },
     {
       "term": "Active Thrust Triangle",
@@ -26,16 +26,12 @@
       "definition": "A Space is adjacent to another Space if you can trace a route from one to the other (along the lines of the map) without passing through another Space. Ignore any Space with a Crash Hazard (including Crash Hazard Burns but not including Aerobrakes) and lander burn Spaces when determining adjacency (since these represent abstractions, not distance). Adjacency is relevant for e.g. rayguns and Dirtsides."
     },
     {
-      "term": "Buggy Roads",
-      "definition": "Spaces connected by yellow dashed lines are never adjacent to each other (since the horizon blocks line-of-sight)."
-    },
-    {
       "term": "Aerobrake Hazard",
       "definition": "A Space marked with the parachute icon . Entering it represents flying into the atmosphere to decelerate for landing, orbital adjustment, or scooping.\na. Aerobrake Hazard Roll. When entering an aerobrake hazard, make a\nHazard Roll unless using FINAO (H7e). The Ability of certain cards, if\nOperational, allows the stack they are in to forgo this roll.\nb. Air-Eater Operation (I5c) is performed on an aerobrake hazard if you have an Operational card with the pac-man icon. Each Turn of refuel requires either a Hazard Roll or FINAO.\nc. One Way. A Spacecraft cannot move against the arrow's direction on an aerobrake path (B7e).\nd. Ballistic Re-entry. You may use coasting (H2b) to follow an aerobrake path (B7e).\ne. Solar Sails (photon heliogyro, electric sail, photon kite sail, mag sail, etc.) are involuntarily decommissioned if their stack enters an aerobrake hazard, even if they are not activated."
     },
     {
       "term": "Anarchy",
-      "definition": "Can happen during season blue, as an event (K2e). Because this danger is periodic, think of it as representing a divisive election year. During anarchy, all players lose their listed faction privileges (B6a), but gain the Felonious faction privilege. (Module 0) Anarchy has 2 additional effects: it inactivates the effects of the Active Law (which can still be lobbied), and also makes a 1d6 Purge Roll, which removes one delegate of each Faction in the Ideology of the number rolled. Anarchy ends when the Sunspot Cube exits season blue."
+      "definition": "Can happen during season blue, as an event (K2e). Because this danger is periodic, think of it as representing a divisive election year. During anarchy, all players lose their listed faction privileges (B6a), but gain the Felonious faction privilege. ("
     },
     {
       "term": "Anchored",
@@ -82,6 +78,10 @@
       "definition": "Indicated by the ballerina icon. Each ballerina on an activated thruster or other card indicates an extra Pivot a Spacecraft can make in a single move without spending fuel and without counting towards its burn limit (H5c). Bonus pivots are listed on Sails, some promoted thrusters, and on certain Freighters (1B4a) and one bonus pivot is conferred to pushable Spacecraft by the collimator Bernal, a Bernal Ability (2B4d)."
     },
     {
+      "term": "Buggy Roads",
+      "definition": "Spaces connected by yellow dashed lines are never adjacent to each other (since the horizon blocks line-of-sight)."
+    },
+    {
       "term": "Burn",
       "definition": "Spending a number of fuel steps on the Fuel Strip, following the black line, equal to a Spacecraft's fuel consumption (B2d). This can occur either by entering a Burn Space on the map or by making a Pivot."
     },
@@ -103,7 +103,8 @@
     },
     {
       "term": "Claim Jump",
-      "definition": "See G4, 1B9b, 1D1c."
+      "definition": "See G4, 1B9b, 1D1c.",
+      "type": "cross-reference"
     },
     {
       "term": "CME Roll",
@@ -135,7 +136,7 @@
     },
     {
       "term": "Crew",
-      "definition": "This card has Mass, ISRU platform, rad-hardness, and usually a thrust triangle. It is Human, and so is useful to defend against Felonies and fix Glitches. It cannot be traded, sold, or Discarded, and always occupies a Stack, never going into your Hand. Except during Anarchy (K2e) (or your Home Bernal if using Module 2), its listed faction privileges (B6a) are active, regardless of the crew's location. If Decommissioned, crew goes into LEO (or your Bank if using Module 2)."
+      "definition": "This card has Mass, ISRU platform, rad-hardness, and usually a thrust triangle. It is Human, and so is useful to defend against Felonies and fix Glitches. It cannot be traded, sold, or Discarded, and always occupies a Stack, never going into your Hand. Except during Anarchy (K2e) (or your Home Bernal if using"
     },
     {
       "term": "Decommission",
@@ -147,7 +148,7 @@
     },
     {
       "term": "Dirtside (2Ba)",
-      "definition": "A Factory Adjacent to an Anchored Bernal (see Adjacent in the glossary). The Hydration of its Site counts towards your dirtside hydration (2B5) for endgame scoring. Your Factory Adjacent to an opponent's Bernal counts towards their dirtside hydration. You may specify dirt refuel (G1c), factory-refueled FTs (I5b, 2A7e) or ET factory products (I8, 2A7f) built at a Dirtside to appear at the Bernal instead."
+      "definition": "A Factory Adjacent to an Anchored Bernal (see Adjacent in the"
     },
     {
       "term": "Discard",
@@ -187,11 +188,7 @@
     },
     {
       "term": "Factory",
-      "definition": "A cube sitting on a Claim. This indicates the Site is industrialized, with the factory cube created by the industrialize operation (I7). Factories provide VP and many other benefits. If you Promote a Freighter (1Bc), all your Factory cubes become Mobile Factories. A Factory Adjacent to an Anchored Bernal is called a Dirtside (2Ba). A Factory on a Site with the push icon grants the Powersat Ability (H3d)."
-    },
-    {
-      "term": "Factory-Assist Hazard",
-      "definition": "Using factory-assist (H6c) incurs a Hazard Roll unless it is colonized or you have Powersat."
+      "definition": "A cube sitting on a Claim. This indicates the Site is industrialized, with the factory cube created by the industrialize operation (I7). Factories provide VP and many other benefits. If you Promote a Freighter (Bc), all your Factory cubes become Mobile Factories. A Factory Adjacent to an Anchored Bernal is called a Dirtside (Ba). A Factory on a Site with the push icon grants the Powersat Ability (H3d)."
     },
     {
       "term": "Factory Hijack",
@@ -200,6 +197,10 @@
     {
       "term": "Factory Loading Only",
       "definition": "A Freighter labeled as such may only receive Cargo when located at a Factory or your non-Home Anchored Bernal.\na. Cargo Load/Unload, It may never receive Cargo in\nLEO or at your Home Bernal. It may give Cargo anywhere."
+    },
+    {
+      "term": "Factory-Assist Hazard",
+      "definition": "Using factory-assist (H6c) incurs a Hazard Roll unless it is colonized or you have Powersat."
     },
     {
       "term": "Felonious",
@@ -251,7 +252,7 @@
     },
     {
       "term": "GW",
-      "definition": "Short for \"gigawatt\", or a billion watts. Thrusters are rated to approximately how many watts of power they are rated for. The core game uses megawatt thrusters, and Module 1 introduces gigawatt thrusters, which become starship-class terawatt (trillion watt) thrusters if Promoted."
+      "definition": "Short for \"gigawatt\", or a billion watts. Thrusters are rated to approximately how many watts of power they are rated for. The core game uses megawatt thrusters, and"
     },
     {
       "term": "Hand",
@@ -274,12 +275,12 @@
       "definition": "A Space where two routes either intersect or make a corner, unmarked by a circle or other icon (B7b). Changing direction mid-move in a Hohmann requires a Pivot (H4c). If routes cross without touching, this is not a Space and Pivots are not allowed."
     },
     {
-      "term": "Home Orbits",
-      "definition": "Spaces near Earth marked with a 7-pointed star, see 2Bb."
-    },
-    {
       "term": "Home Bernal",
       "definition": "A Bernal anchored in a Home Orbit (2B3, 2B4)."
+    },
+    {
+      "term": "Home Orbits",
+      "definition": "Spaces near Earth marked with a 7-pointed star, see Bb."
     },
     {
       "term": "Human",
@@ -287,11 +288,11 @@
     },
     {
       "term": "Hydration",
-      "definition": "Water availability on a Site, as denoted by the number of waterdrops listed (between zero and four, see (B7a)). If the number of waterdrops is less than the ISRU rating of a robonaut or Human card, then ISRU refueling (I5a) and prospecting (I6.2) operations are impossible. Dirtside hydration is used for victory points in Module 2 (2B5)."
+      "definition": "Water availability on a Site, as denoted by the number of waterdrops listed (between zero and four, see (B7a)). If the number of waterdrops is less than the ISRU rating of a robonaut or Human card, then ISRU refueling (I5a) and prospecting (I6.2) operations are impossible. Dirtside hydration is used for victory points in"
     },
     {
       "term": "Ideology",
-      "definition": "One of the 7 regions in the assembly (Module 0). Six of them are associated with player colors."
+      "definition": "One of the 7 regions in the assembly ("
     },
     {
       "term": "Isotope Fuel",
@@ -323,7 +324,8 @@
     },
     {
       "term": "Laws",
-      "definition": "See O5."
+      "definition": "See O5.",
+      "type": "cross-reference"
     },
     {
       "term": "LEO",
@@ -363,7 +365,7 @@
     },
     {
       "term": "MW",
-      "definition": "Short for \"megawatt\", or a million watts of power. The core game thrusters are in the MW range, while Module 1 introduces thrusters in the gigawatt range (see \"GW\" for comparison)."
+      "definition": "Short for \"megawatt\", or a million watts of power. The core game thrusters are in the MW range, while"
     },
     {
       "term": "On-Board Nuclear Support",
@@ -407,7 +409,7 @@
     },
     {
       "term": "Powersat",
-      "definition": "A faction privilege (B6a) or Ability used when calculating a Spacecraft's net thrust (H3d). It only works on Spacecraft with the push icon . It gives its \"+1 push\" at any range.\na. Single Push. It has no effect if the Spacecraft is already being pushed (H3d).\nb. Negotiation. A push can be negotiated outside of your Turn (N4a).\nc. Push Factory. A Factory on a Site with the push icon yields the\nPowersat Ability.\nd. Ability. Some cards (e.g. ionosphere lasing refinery) allow you to permanently gain the Powersat Ability.\ne. Safe Factory-Assist. Allows factory-assist (H6c) without a\nHazard Roll.\nf. Freighters (Module 1) can move 2 if pushed with a powersat.\ng. Bernals (Module 2). When anchoring a Bernal, Solar-Powered supports do not work in the Jupiter zone or beyond unless you get a push from a powersat.\nh. Anarchy/War cancels the Powersat faction privilege, but not the\nPowersat Ability conferred by cards or Push Factories/Colonies."
+      "definition": "A faction privilege (B6a) or Ability used when calculating a Spacecraft's net thrust (H3d). It only works on Spacecraft with the push icon . It gives its \"+1 push\" at any range.\na. Single Push. It has no effect if the Spacecraft is already being pushed (H3d).\nb. Negotiation. A push can be negotiated outside of your Turn (N4a).\nc. Push Factory. A Factory on a Site with the push icon yields the\nPowersat Ability.\nd. Ability. Some cards (e.g. ionosphere lasing refinery) allow you to permanently gain the Powersat Ability.\ne. Safe Factory-Assist. Allows factory-assist (H6c) without a\nHazard Roll.\nf. Freighters ( g. Bernals ( h. Anarchy/War cancels the Powersat faction privilege, but not the\nPowersat Ability conferred by cards or Push Factories/Colonies."
     },
     {
       "term": "Profession",
@@ -415,15 +417,16 @@
     },
     {
       "term": "Promote",
-      "definition": "This Operation is part of Module 1 (1A5) and Module 2 (2A3). It permanently flips a card to its Purple-Side when the card is at its promotion colony (1A5a), unlocking Abilities and optionally Futures."
-    },
-    {
-      "term": "Purple-Side Card",
-      "definition": "The Promoted side of certain patent (B2) and Colonist cards. The promote operation is part of Module 1 (1A5) and Module 2 (2A3)."
+      "definition": "This Operation is part of"
     },
     {
       "term": "Purge Roll",
-      "definition": "(K2e)."
+      "definition": "(K2e).",
+      "type": "cross-reference"
+    },
+    {
+      "term": "Purple-Side Card",
+      "definition": "The Promoted side of certain patent (B2) and Colonist cards. The promote operation is part of"
     },
     {
       "term": "Push Colony (1A5a)",
@@ -466,16 +469,16 @@
       "definition": "Translucent red disks in the center of the Sunspot Cycle (over the Sol icon) count the game's Solar Cycles. One disk is removed each time the Sunspot Cube crosses the indicated seniority threshold, indicating the completion of one 12-year cycle. If there are no more disks to take, the game ends per M1."
     },
     {
-      "term": "Skunkworks",
-      "definition": "This faction privilege (B6a) allows you to ignore the academia hand limit (I2a), so that you can participate in a research auction operation (I2) regardless of your hand size. It applies to both starting and bidding in auctions."
-    },
-    {
       "term": "Site",
       "definition": "These hexagonal Spaces are worlds where a Spacecraft can land. Sites have a Size (the number), a Spectral Type (the letter), an amount of Hydration (0-4 water droplets), and sometimes other icons, see B7a."
     },
     {
       "term": "Size",
       "definition": "The first number on a Site represents the magnitude of its surface gravity. It is used for a size roll (I6.3) during prospecting and during powered landing/liftoff (H6a)."
+    },
+    {
+      "term": "Skunkworks",
+      "definition": "This faction privilege (B6a) allows you to ignore the academia hand limit (I2a), so that you can participate in a research auction operation (I2) regardless of your hand size. It applies to both starting and bidding in auctions."
     },
     {
       "term": "Sol",
@@ -490,12 +493,12 @@
       "definition": "A position on the map accessible along route lines, sometimes referred to as \"location\". Spaces include Hohmanns (both intersections and corners), Site hexes, Burn Spaces, Hazards of any sort, and any open circle with a symbol inside it. Some intersections are \"bridged\" as indicated by a gap in the route, and these are not Spaces."
     },
     {
-      "term": "Spacecraft",
-      "definition": "The Rocket, Freighter, Mobile Factory, and Bernal Figures, as defined by the cards, FTs, and cubes in their associated Stacks. They are capable of movement, and each can be moved once per Turn. Rockets and Bernals track fuel during movement, and thus use the Fuel Strip."
+      "term": "Space Elevator (1B9)",
+      "definition": "A structure connecting 2 Spaces on the map as indicated by a special icon, allowing connected Factory owners to move Cargo or Humans. To build a space elevator, one of the Spaces must be industrialized, and you must have a cube (Factory, Freighter or Mobile Factory) at the other. Then you must perform an epic hazard operation (1A6), and if its roll is successful place a wooden elevator stick over the map icon. The Space Elevator at Earth is exceptional, and is automatically built by anchoring the GEO Elevator Home Bernal ("
     },
     {
-      "term": "Space Elevator (1B9)",
-      "definition": "A structure connecting 2 Spaces on the map as indicated by a special icon, allowing connected Factory owners to move Cargo or Humans. To build a space elevator, one of the Spaces must be industrialized, and you must have a cube (Factory, Freighter or Mobile Factory) at the other. Then you must perform an epic hazard operation (1A6), and if its roll is successful place a wooden elevator stick over the map icon. The Space Elevator at Earth is exceptional, and is automatically built by anchoring the GEO Elevator Home Bernal (Module 2, 2B4i)."
+      "term": "Spacecraft",
+      "definition": "The Rocket, Freighter, Mobile Factory, and Bernal Figures, as defined by the cards, FTs, and cubes in their associated Stacks. They are capable of movement, and each can be moved once per Turn. Rockets and Bernals track fuel during movement, and thus use the Fuel Strip."
     },
     {
       "term": "Spectral Type",
@@ -531,7 +534,7 @@
     },
     {
       "term": "Token VP",
-      "definition": "Victory points obtained for having wood or plastic tokens of your color at the endgame. On the map, this includes disks, cubes, domes, Rockets, Freighters, Bernals (M2a). Note that domes may be worth additional VP (M2b). (Module 0) Token VP is also awarded for each delegate (M2a) in the assembly."
+      "definition": "Victory points obtained for having wood or plastic tokens of your color at the endgame. On the map, this includes disks, cubes, domes, Rockets, Freighters, Bernals (M2a). Note that domes may be worth additional VP (M2b). ("
     },
     {
       "term": "Turn",
@@ -539,7 +542,7 @@
     },
     {
       "term": "War of Independence",
-      "definition": "Can occur as a result of certain Futures (Module 1) or during Module 3 (Conflict). This war is between the Independents, the space factions who want independence from Earth, and the Loyalists, those who want to remain national colonies dependent on Earth. Unless playing Module 3, players completing a casus belli future (1D2c) are automatically Independents and the other players are Loyalists. Unless playing with Module 3, War creates the following effects for all players:\na. Home Bernals. For the Independents, Home Bernals must unanchor at their first opportunity for the duration of the War. For the loyalists,\nBernal profits (2B3d) are canceled.\nb. No Earth Operations. Income/fundraising, research auctions, free market, boost, and delivery operations are not allowed.\nExomigration (2A6) is allowed. Lobbying (O4) is allowed for\nLoyalists only. Homesteading (2A4) is allowed for Independents only.\nc. Research Auctions are replaced by a new operation called war grants, in which a player takes the top card of any patent deck without bonus supports. Since it can't be boosted, only the Black-Side is useful. On-Site Operations are allowed.\nd. Glory. Ticker tape parades (La) are not allowed, although pre-war glory stored on your playmat still counts.\ne. Felonies. All players lose their listed faction privileges (B6a), but gain the Felonious faction privilege (similar to\nAnarchy (K2e).\nf. End Of War. Unless playing Module 3, war ends when the Sunspot\nCube exits the current season (similar to Anarchy (K2e)). War can only happen once.\ng. FINAO. Paying for FINAO is not allowed.\nh. Scoring. Unless playing solo, if the game ends in War, Factory stock prices (M2b) are reduced to 2 each and Politics VP (M2c) doesn't score."
+      "definition": "Can occur as a result of certain Futures ( a. Home Bernals. For the Independents, Home Bernals must unanchor at their first opportunity for the duration of the War. For the loyalists,\nBernal profits (2B3d) are canceled.\nb. No Earth Operations. Income/fundraising, research auctions, free market, boost, and delivery operations are not allowed.\nExomigration (2A6) is allowed. Lobbying (O4) is allowed for\nLoyalists only. Homesteading (2A4) is allowed for Independents only.\nc. Research Auctions are replaced by a new operation called war grants, in which a player takes the top card of any patent deck without bonus supports. Since it can't be boosted, only the Black-Side is useful. On-Site Operations are allowed.\nd. Glory. Ticker tape parades (La) are not allowed, although pre-war glory stored on your playmat still counts.\ne. Felonies. All players lose their listed faction privileges (B6a), but gain the Felonious faction privilege (similar to\nAnarchy (K2e).\nf. End Of War. Unless playing Cube exits the current season (similar to Anarchy (K2e)). War can only happen once.\ng. FINAO. Paying for FINAO is not allowed.\nh. Scoring. Unless playing solo, if the game ends in War, Factory stock prices (M2b) are reduced to 2 each and Politics VP (M2c) doesn't score."
     },
     {
       "term": "Wet Mass",

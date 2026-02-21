@@ -7,170 +7,890 @@
   "sections": [
     {
       "id": "V1",
-      "type": "variant",
       "title": "Quick Start",
-      "author": "Phil Eklund",
-      "text": "This variant will accelerate the early phases of the game. It is recommended for games with larger numbers of players (4 or more), solitaire or cooperative games, or games with a turn length of 60 years or longer.\na. Number of Players. 1 or more. b. Setup. As per Core rulebook C, with any Modules, with the following exceptions:\n• Seniority Disks (C1). Place 4 Seniority Disks for a short game, 5 for an intermediate game or 7 if playing\nFutures.\n• Starting Aqua (C5). Players start with 0 Aquas each.\nc. Special Rules. • 1st Solar Cycle. For the first 12 years, no operations, actions, or events are undertaken. The only option available to a player in her player turn is to take the top card from any patent deck into her Hand. This selected card comes without bonus supports (I2g). The academia hand limit (I2a) is not in force during this process. In the last year, the sunspot cube is not moved (it should therefore be back on the start slot).\n• Bonus Round. When each player has obtained 12 cards, a bonus round applies. Each player may sell as many cards as she wishes in any order she chooses for one Aqua each, placing each on the bottom of the relevant patent deck as it is sold. The bonus round is conducted in normal player order. The sunspot cube is not moved.\n• Start Core Game. Once the bonus round is complete, Discard the first Seniority Disk and continue the game as normal. Do not place this disk into the assembly (O6) or perform baton pass (O6a).\nd. Game End. The game ends when the last Seniority Disk is removed. e. Victory Conditions. Scoring as per Core rulebook M."
+      "text": "This variant will accelerate the early phases of the game. It is recommended for games with larger numbers of players (4 or more), solitaire or cooperative games, or games with a turn length of 60 years or longer.",
+      "type": "scenario",
+      "sub_ids": {
+        "V1a": "V1",
+        "V1b": "V1",
+        "V1c": "V1",
+        "V1d": "V1",
+        "V1e": "V1"
+      }
+    },
+    {
+      "id": "V1a",
+      "title": "Number of Players",
+      "text": "Number of Players. 1 or more.",
+      "type": "scenario"
+    },
+    {
+      "id": "V1b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C, with any Modules, with the following exceptions:\n• Seniority Disks (C1). Place 4 Seniority Disks for a short game, 5 for an intermediate game or 7 if playing\nFutures.\n• Starting Aqua (C5). Players start with 0 Aquas each.",
+      "type": "scenario"
+    },
+    {
+      "id": "V1c",
+      "title": "Special Rules",
+      "text": "Special Rules. • 1st Solar Cycle. For the first 12 years, no operations, actions, or events are undertaken. The only option available to a player in her player turn is to take the top card from any patent deck into her Hand. This selected card comes without bonus supports (I2g). The academia hand limit (I2a) is not in force during this process. In the last year, the sunspot cube is not moved (it should therefore be back on the start slot).\n• Bonus Round. When each player has obtained 12 cards, a bonus round applies. Each player may sell as many cards as she wishes in any order she chooses for one Aqua each, placing each on the bottom of the relevant patent deck as it is sold. The bonus round is conducted in normal player order. The sunspot cube is not moved.\n• Start Core Game. Once the bonus round is complete, Discard the first Seniority Disk and continue the game as normal. Do not place this disk into the assembly (O6) or perform baton pass (O6a).",
+      "type": "scenario"
+    },
+    {
+      "id": "V1d",
+      "title": "Game End",
+      "text": "Game End. The game ends when the last Seniority Disk is removed.",
+      "type": "scenario"
+    },
+    {
+      "id": "V1e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. Scoring as per Core rulebook M.",
+      "type": "scenario"
     },
     {
       "id": "V2",
-      "type": "variant",
       "title": "Race To Saturn",
-      "author": "Phil Eklund",
-      "text": "The world governing body has sponsored a new technology competition intended to drive innovation: a race to Saturn and Back.\na. Number of Players. 2 or more, competitive.\nb. Setup. As per Core rulebook C with any Modules.\nc. Special Rules. None.\nd. Game End. When someone wins the race. e. Victory Conditions. Core rulebook M does not apply. The winner is the first to land a Crew on the surface of Titan (not the aerostat) and return them to LEO."
+      "text": "The world governing body has sponsored a new technology competition intended to drive innovation: a race to Saturn and Back.",
+      "type": "scenario",
+      "sub_ids": {
+        "V2a": "V2",
+        "V2b": "V2",
+        "V2c": "V2",
+        "V2d": "V2",
+        "V2e": "V2"
+      }
+    },
+    {
+      "id": "V2a",
+      "title": "Number of Players",
+      "text": "Number of Players. 2 or more, competitive.",
+      "type": "scenario"
+    },
+    {
+      "id": "V2b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C with any Modules.",
+      "type": "scenario"
+    },
+    {
+      "id": "V2c",
+      "title": "Special Rules",
+      "text": "Special Rules. None.",
+      "type": "scenario"
+    },
+    {
+      "id": "V2d",
+      "title": "Game End",
+      "text": "Game End. When someone wins the race.",
+      "type": "scenario"
+    },
+    {
+      "id": "V2e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. Core rulebook M does not apply. The winner is the first to land a Crew on the surface of Titan (not the aerostat) and return them to LEO.",
+      "type": "scenario"
     },
     {
       "id": "V3",
-      "type": "variant",
       "title": "Grand Tour",
-      "author": "Andy Graham",
-      "text": "Space exploration isn’t about money; it’s about discovery and glory.\na. Number of Players. 2 or more, competitive.\nb. Setup. As per Core rulebook C, with any Modules, with the following changes:\n• Seniority Disks (C1). Place 2 Seniority Disks in the center of the Sunspot Cycle.\nc. Special Rules. None d. Game End. The game ends when the last Seniority Disk is removed.\ne. Victory Conditions. In your endgame score, only earn Victory Points for Claims (M2a) and glory chits (M2b)."
+      "text": "Space exploration isn’t about money; it’s about discovery and glory.",
+      "type": "scenario",
+      "sub_ids": {
+        "V3a": "V3",
+        "V3b": "V3",
+        "V3c": "V3",
+        "V3d": "V3",
+        "V3e": "V3"
+      }
+    },
+    {
+      "id": "V3a",
+      "title": "Number of Players",
+      "text": "Number of Players. 2 or more, competitive.",
+      "type": "scenario"
+    },
+    {
+      "id": "V3b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C, with any Modules, with the following changes:\n• Seniority Disks (C1). Place 2 Seniority Disks in the center of the Sunspot Cycle.",
+      "type": "scenario"
+    },
+    {
+      "id": "V3c",
+      "title": "Special Rules",
+      "text": "Special Rules. None d. Game End. The game ends when the last Seniority Disk is remove",
+      "type": "scenario"
+    },
+    {
+      "id": "V3d",
+      "title": "Game End",
+      "text": "The game ends when the last Seniority Disk is removed.",
+      "type": "scenario"
+    },
+    {
+      "id": "V3e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. In your endgame score, only earn Victory Points for Claims (M2a) and glory chits (M2b).",
+      "type": "scenario"
     },
     {
       "id": "V4",
-      "type": "variant",
       "title": "Altruism",
-      "author": "Phil Eklund",
-      "text": "Go it alone or go it together, for the future of the species.\na. Number of Players. 1, alternatively 2 or more, cooperative.\nb. Setup. As per Core rulebook C, with any Modules, with the following changes:\n• Seniority Disks (C1). Place 4 Seniority Disks for a short game, 5 for a medium game, or 7 if playing Futures.\n• Patent Deck Setup (C4). Shuffle the patent decks as normal, then remove the bottom half of each deck (rounding up) from the game, sight unseen.\nExample: The starting decks should consist of 6 thrusters, 6 robonauts, 6 refineries, 8 generators, 6 radiators, 6 reactors, 3 GW thrusters, 3 Freighters, 5 or 6 Bernals, & 9 Colonists.\n• Faction Privilege (C5). In a solitaire game, if your chosen Faction has the Taxes, Secretary-General, or Felonious faction privilege (B6a), additionally start with an additional 6 Aquas.\nc. Special Rule.\n• Research Auction Operation (I2). Instead of the research auction (I2g), take the top card of a patent deck for your Operation, including bonus supports (I2g). This costs a number of Aquas equal to the number of cards taken. The academia hand limit (I2a) still applies to solitaire games. With the Marketeer faction privilege, during research auctons you are allowed to buy 3 cards for 2 aqua.\nd. Game End. The game ends when the last Seniority Disk is removed. e. Victory Conditions. Scoring as per Core rulebook M:\n• Solitaire. Win if your score is 40+ Victory Points (short), 60+ Victory Points (medium), or 100+ Victory Points (Futures).\n• Cooperative. Collectively win if each player scores 30+ Victory Points (short), 50+ Victory Points (medium), or 75+ Victory Points (Futures)."
+      "text": "Go it alone or go it together, for the future of the species.",
+      "type": "scenario",
+      "sub_ids": {
+        "V4a": "V4",
+        "V4b": "V4",
+        "V4c": "V4",
+        "V4d": "V4",
+        "V4e": "V4"
+      }
+    },
+    {
+      "id": "V4a",
+      "title": "Number of Players",
+      "text": "Number of Players. 1, alternatively 2 or more, cooperative.",
+      "type": "scenario"
+    },
+    {
+      "id": "V4b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C, with any Modules, with the following changes:\n• Seniority Disks (C1). Place 4 Seniority Disks for a short game, 5 for a medium game, or 7 if playing Futures.\n• Patent Deck Setup (C4). Shuffle the patent decks as normal, then remove the bottom half of each deck (rounding up) from the game, sight unseen.\nExample: The starting decks should consist of 6 thrusters, 6 robonauts, 6 refineries, 8 generators, 6 radiators, 6 reactors, 3 GW thrusters, 3 Freighters, 5 or 6 Bernals, & 9 Colonists.\n• Faction Privilege (C5). In a solitaire game, if your chosen Faction has the Taxes, Secretary-General, or Felonious faction privilege (B6a), additionally start with an additional 6 Aquas.",
+      "type": "scenario"
+    },
+    {
+      "id": "V4c",
+      "title": "Special Rule",
+      "text": "Special Rule.\n• Research Auction Operation (I2). Instead of the research auction (I2g), take the top card of a patent deck for your Operation, including bonus supports (I2g). This costs a number of Aquas equal to the number of cards taken. The academia hand limit (I2a) still applies to solitaire games. With the Marketeer faction privilege, during research auctons you are allowed to buy 3 cards for 2 aqua.",
+      "type": "scenario"
+    },
+    {
+      "id": "V4d",
+      "title": "Game End",
+      "text": "Game End. The game ends when the last Seniority Disk is removed.",
+      "type": "scenario"
+    },
+    {
+      "id": "V4e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. Scoring as per Core rulebook M:\n• Solitaire. Win if your score is 40+ Victory Points (short), 60+ Victory Points (medium), or 100+ Victory Points (Futures).\n• Cooperative. Collectively win if each player scores 30+ Victory Points (short), 50+ Victory Points (medium), or 75+ Victory Points (Futures).",
+      "type": "scenario"
     },
     {
       "id": "V5",
-      "type": "variant",
       "title": "Hermes Fall",
-      "author": "Phil Eklund",
-      "text": "Earth is threatened by the binary asteroid hermes (8:00 ). Your mission is to reach hermes and build the infrastructure needed to deflect the asteroids -- Factories and embedded dirt thrusters that can use the asteroids’ own regolith to deflect them from their current trajectory. Good luck and godspeed.\na. Number of Players. 1.\nb. Setup. As per Altruism (V4b), with any Modules, with the following changes:\n• Seniority Disks. Place 2 Seniority Disks in the center of the Sunspot Cycle.\n• Patent Deck Setup. Set aside the Mass Driver thruster before setting up the Patent decks per V4b. Then add it to the five-card Thruster stack and reshuffle.\n• Faction Privilege. See V4b and V4c.\nc. Special Rules. • Research Auction Operation (I2). Do not perform auctions. Instead use V4c (special rule).\n• I6. Prospecting is automatically successful on hermes a and b, using a robonaut of any ISRU.\n• I7. To industrialize hermes a or b, you need to additionally Decommission an operational dirt rocket (gray thruster triangle).\nd. Game End. The game ends when the second Seniority Disk is removed. e. Victory Conditions. Industrialize both hermes sites before the end of the game."
+      "text": "Earth is threatened by the binary asteroid hermes (8:00 ). Your mission is to reach hermes and build the infrastructure needed to deflect the asteroids -- Factories and embedded dirt thrusters that can use the asteroids’ own regolith to deflect them from their current trajectory. Good luck and godspeed.",
+      "type": "scenario",
+      "sub_ids": {
+        "V5a": "V5",
+        "V5b": "V5",
+        "V5c": "V5",
+        "V5d": "V5",
+        "V5e": "V5"
+      }
+    },
+    {
+      "id": "V5a",
+      "title": "Number of Players",
+      "text": "Number of Players. 1.",
+      "type": "scenario"
+    },
+    {
+      "id": "V5b",
+      "title": "Setup",
+      "text": "Setup. As per Altruism (V4b), with any Modules, with the following changes:\n• Seniority Disks. Place 2 Seniority Disks in the center of the Sunspot Cycle.\n• Patent Deck Setup. Set aside the Mass Driver thruster before setting up the Patent decks per V4b. Then add it to the five-card Thruster stack and reshuffle.\n• Faction Privilege. See V4b and V4c.",
+      "type": "scenario"
+    },
+    {
+      "id": "V5c",
+      "title": "Special Rules",
+      "text": "Special Rules. • Research Auction Operation (I2). Do not perform auctions. Instead use V4c (special rule).\n• I6. Prospecting is automatically successful on hermes a and b, using a robonaut of any ISRU.\n• I7. To industrialize hermes a or b, you need to additionally Decommission an operational dirt rocket (gray thruster triangle).",
+      "type": "scenario"
+    },
+    {
+      "id": "V5d",
+      "title": "Game End",
+      "text": "Game End. The game ends when the second Seniority Disk is removed.",
+      "type": "scenario"
+    },
+    {
+      "id": "V5e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. Industrialize both hermes sites before the end of the game.",
+      "type": "scenario"
     },
     {
       "id": "V6",
-      "type": "variant",
       "title": "CEO",
-      "author": "Victor Caminha",
-      "text": "Every 12 years the Board meets to determine if the company’s space program should continue or not based upon the achievements of the CEO. That’s you. Make your company money. And don’t bring any bad publicity in the process.\na. Number of Players. 1.\nb. Setup. As per Altruism (V4b), with any Modules, with the following changes:\n• Seniority Disks. Place 4 Seniority Disks for a short game or 7 if playing Futures.\n• Faction Privilege. See V4b and V4c.\nc. Special Rules. This variant can be played with Futures if using Modules 1 and 2. The following rules apply:\n• Fatality (E7). Every time a Crew or Human Colonist is involuntarily Decommissioned, add a fatality disk (use a disk of an unused player color) to the demand pile.\n• Board Meetings. Add the following steps to the Sunspot Cycle Phase (D2):\n • Upon passing the seniority threshold but before the Seniority Disk is removed in D2b, check to see whether the Board’s KPI (Key Performance Indicator) has been met. Calculate the Board’s KPI for that cycle as follows:\n i. If there are any Seniority Disks in the demand pile, then the value of each disk is 7 plus the number of Seniority Disks in the demand pile. Accordingly, the KPI for one Seniority Disk is 8, for two Seniority Disks is 18, and for three Seniority Disks is 30.\n ii. Additionally, each fatality disk in the demand pile is worth 3. iii. The KPI is the sum of the value of all disks.\n • Remove all fatality disks from the demand pile.\n • Remove a Seniority Disk from the Sunspot Cycle and place it onto the demand pile. Example: At the end of the first Solar Cycle before a Seniority Disk is removed, the demand pile contains no Seniority Disks but two fatalities.\nThe KPI is 6. After 36 years (3 cycles), at board meeting time there are two 2 Seniority Disks and 1 fatality disk in the demand pile. The board’s KPI for the CEO is equal to 21.\n• Research Auction Operation (I2). Do not perform auctions. Instead use V4c (special rule).\nd. Game End. The game ends when either of the following conditions are met:\n• The last Seniority Disk is removed.\n• The Board’s KPI is not met at the end of a solar cycle. To meet the Board’s KPI, you must have accumulated a number of victory points (M2) equal to at least the KPI value in the course of the game.\nExample: The demand pile contains 1 Seniority Disk and 1 fatality disk. So far, the player has added two Claims and two Factories to his collection. The Claims and Factories are worth 1 Victory Point each and the Factories add an additional 8 Victory Points combined for being the third and fourth D Type Factories built. As such the player has accumulated 12 Victory Points so far, exceeding the Board’s KPI of 11 (7+1 for the Seniority Disk+3 for the red disk). Play continues.\ne. Victory Conditions, No Futures. Score as per M2.\n• 30-34: controversial\n• 35-39: good\n• 40-59: memorable\n• 60+: legendary points 21 points\n3p\n3p\n3p Solar Cycle 3 Solar Cycle\n7+2p\n7+2p\nEXAMPLE [V6c]\n1p 1p 1p\n4x2=8p\n1p\n3p\n7+1p\nEXAMPLE [V6d] REMEMBER. Because at the end of the first solar cycle it is likely that there are no disks yet in the demand pile, you usually don't have to meet any KPI until the end of the 2nd solar cycle. [V6c] f. Victory Conditions, With Futures. To succeed at the 7th and final board meeting, instead of Victory Points you must complete a Future. Then count your endgame score (M2):\n• 0-77: Controversial\n• 78-94: Good\n• 95-114: Memorable\n• 115+: Legendary"
+      "text": "Every 12 years the Board meets to determine if the company’s space program should continue or not based upon the achievements of the CEO. That’s you. Make your company money. And don’t bring any bad publicity in the process.",
+      "type": "scenario",
+      "sub_ids": {
+        "V6a": "V6",
+        "V6b": "V6",
+        "V6c": "V6",
+        "V6d": "V6",
+        "V6e": "V6"
+      }
+    },
+    {
+      "id": "V6a",
+      "title": "Number of Players",
+      "text": "Number of Players. 1.",
+      "type": "scenario"
+    },
+    {
+      "id": "V6b",
+      "title": "Setup",
+      "text": "Setup. As per Altruism (V4b), with any Modules, with the following changes:\n• Seniority Disks. Place 4 Seniority Disks for a short game or 7 if playing Futures.\n• Faction Privilege. See V4b and V4c.",
+      "type": "scenario"
+    },
+    {
+      "id": "V6c",
+      "title": "Special Rules",
+      "text": "Special Rules. This variant can be played with Futures if using Modules 1 and 2. The following rules apply:\n• Fatality (E7). Every time a Crew or Human Colonist is involuntarily Decommissioned, add a fatality disk (use a disk of an unused player color) to the demand pile.\n• Board Meetings. Add the following steps to the Sunspot Cycle Phase (D2):\n • Upon passing the seniority threshold but before the Seniority Disk is removed in D2b, check to see whether the Board’s KPI (Key Performance Indicator) has been met. Calculate the Board’s KPI for that cycle as follows:\n i. If there are any Seniority Disks in the demand pile, then the value of each disk is 7 plus the number of Seniority Disks in the demand pile. Accordingly, the KPI for one Seniority Disk is 8, for two Seniority Disks is 18, and for three Seniority Disks is 30.\n ii. Additionally, each fatality disk in the demand pile is worth 3. iii. The KPI is the sum of the value of all disks.\n • Remove all fatality disks from the demand pile.\n • Remove a Seniority Disk from the Sunspot Cycle and place it onto the demand pile. Example: At the end of the first Solar Cycle before a Seniority Disk is removed, the demand pile contains no Seniority Disks but two fatalities.\nThe KPI is 6. After 36 years (3 cycles), at board meeting time there are two 2 Seniority Disks and 1 fatality disk in the demand pile. The board’s KPI for the CEO is equal to 21.\n• Research Auction Operation (I2). Do not perform auctions. Instead use V4c (special rule).",
+      "type": "scenario"
+    },
+    {
+      "id": "V6d",
+      "title": "Game End",
+      "text": "Game End. The game ends when either of the following conditions are met:\n• The last Seniority Disk is removed.\n• The Board’s KPI is not met at the end of a solar cycle. To meet the Board’s KPI, you must have accumulated a number of victory points (M2) equal to at least the KPI value in the course of the game.\nExample: The demand pile contains 1 Seniority Disk and 1 fatality disk. So far, the player has added two Claims and two Factories to his collection. The Claims and Factories are worth 1 Victory Point each and the Factories add an additional 8 Victory Points combined for being the third and fourth D Type Factories built. As such the player has accumulated 12 Victory Points so far, exceeding the Board’s KPI of 11 (7+1 for the Seniority Disk+3 for the red disk). Play continues.",
+      "type": "scenario"
+    },
+    {
+      "id": "V6e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions, No Futures. Score as per M2.\n• 30-34: controversial\n• 35-39: good\n• 40-59: memorable\n• 60+: legendary points 21 points\n3p\n3p\n3p Solar Cycle 3 Solar Cycle\n7+2p\n7+2p\nEXAMPLE [V6c]\n1p 1p 1p\n4x2=8p\n1p\n3p\n7+1p\nEXAMPLE [V6d] REMEMBER. Because at the end of the first solar cycle it is likely that there are no disks yet in the demand pile, you usually don't have to meet any KPI until the end of the 2nd solar cycle. [V6c] f. Victory Conditions, With Futures. To succeed at the 7th and final board meeting, instead of Victory Points you must complete a Future. Then count your endgame score (M2):\n• 0-77: Controversial\n• 78-94: Good\n• 95-114: Memorable\n• 115+: Legendary",
+      "type": "scenario"
     },
     {
       "id": "V7",
-      "type": "variant",
+      "type": "scenario",
       "title": "Bios:Earth",
       "author": "Phil Eklund & Paweł Garycki",
       "text": "If you own the Bios trilogy (Bios:Genesis, Bios:Megafauna and Bios:Origins), you can play a full campaign and continue into High Frontier 4 All. Starting as a biochemical process (biont), develop into microorganisms, macroorganisms, and megafauna with emotions and communications, and finally as conscious intelligences heading to the beyond, settling the Solar System and exiting to the nearby stars. Here is the most up-to-date compilation of transition rules between the games, covering important nuances.\na. Number of players. 1 to 4 competitive. For solitaire play, use Altruism (V4) or CEO (V6).\nb. Setup. As per Core rulebook C, with any Modules, except the end state of Bios:Origins determines the starting condition for High Frontier. Follow these steps (use these rules instead of M paragraph from Bios:Origins):\ni. Starting Faction. Choose Factions in the order of victory, with the highest scoring player choosing first. If your high score in Bios:Origins is political, preferably choose either yellow or purple. If it is cultural, preferably choose either white or green. If it is industrial, preferably choose either red or gray.\nii. Starting Politics. The Active Law depends upon the ending Philosophy in Bios:Origins: “CENTRIST” if in the center or adjacent to the center, “UNITY” if to the right (pacifist or unity), “EQUALITY” if to the left (agnostic or equality), or “FREEDOM” if in abolitionist or freedom.\niii. Orbital Capacity. Any player who has attained maritime 8 starts with double the usual Aquas.\niv. Nuclear Energy. Any player who has attained energy 8 starts with a random starting thruster.\nv. Bellwethers. Normally players start with currency of the amount of Aquas equal to the amount of patent decks (6-9) Aquas. For each Bellwether a player has, he starts with one extra Aqua.\nvi. Mars or Venus. If playing on Mars or Venus, additionally see V8.\nvii. Habitable Venus (optional). You may optionally use the habitable Venus overlay card (V8b) for a different play experience.\nc. Special Rules. If playing a full Campaign Game by continuing on from the Bios trilogy (Bios:Genesis, Bios: Megafauna and Bios:Origins), the following additional rules apply:\ni. Starting Privilege. Your Crew receives an additional Privilege determined by their species, as follows:\n • Archetype. None.\n • Flyer. Mass 0. (miniaturization)\n • Burrower or Swimmer. ISRU 3. (lichens)\n • Armored. Rad-hardness +2. (exoskeletal) ii. Bonuses. Depending on the technologies you maxed in Bios:Origins, start the game with the following, additional to orbital capacity and nuclear energy bonuses:\n • Footprint. Start with a random refinery.\n • Energy. All your thrusters except those on Human cards have at least 1 ballerina icon (H4c).\n • Metallurgy. Start with a random robonaut.\n • Immunology. Your Crew and Colonists are immune to CME Flare and Belt Rolls.\n • Maritime. Your additional starting cards start in LEO instead of Hand.\n • Information. Take a glory chit of your choice from the map, 1VP side up.\nd. Game End. The game ends when the last Seniority Disk is removed. e. Victory Conditions. At the end of each of the Bios games (Bios:Genesis, Bios:Meso/Megafauna,\nBios:Origins), each player gains one victory chit (taken from Bios:Origins) for each opponent who has fewer VP in that game. Add these points to half your ending High Frontier score (M2) to determine the final winner.\n• Ties. Share victory if tied.\nf. Continuation into Interstellar (3rd edition). For solo play, this requires completing an ad astra future (1D1b).\ni. Card Translation. You may opt to keep any cards you hold for Interstellar. Translate the cards into the closest equivalent 4th edition card.\nii. Ad Astra Exit. If an ad astra exit has been used (1D1b) at least once in a game, a Sol Exit may be used in Interstellar. For the Jupiter Exit, in order to gather 2 steps of speed the thruster needs to be Operational after the first Belt Roll assuming thrust 0.\niii. Starship. Except for solo play, start with either a random Purple-Side starship or a beehive (Operational TW thruster and promoted Bernal landed on a size 1 Synodic Comet).\niv. Futures Rewards. If you used an ad astra exit, draw a random Colonist for each Future accomplished. Additionally: UPLIFT = may start politics at Robot Emancipation. BEEHIVE ARK = quick-start Beehive Ark.\nSTARSHIP (AMMONIA or ENZMANN) = 2 more Colonists and either 1 factory or 10 fuel steps. PROTIUM = Protium Breakthrough. STAR WISP = free exploration up to 6 ly. EXOPLANET HUNT = free exploration.\nv. Fuel. Translate 1 isotope fuel to 1 fuel step in Interstellar, regardless of spectral type. Do not translate Aqua.\nvi. Starting Politics is determined by player color as follows: red = orange, white = upper white, yellow = lower white, purple = red, green = lower green, gray = upper green. The same applies to Crew political affinity.\nvii. War of Independence makes the SOS wisp inactive.\n EASILY MISSED. The Oort Exit guarantees 1 step of interstellar speed. [V7fii] viii. Victory. Add a victory chit for each victory level you achieve, starting with 1 chit at ZPG. If using Legacy\nStarshots variant, each next hop gives exactly 1 chit if at Linear Growth level. A final chit is awarded for exiting the map with Humans."
     },
     {
       "id": "V8",
-      "type": "variant",
       "title": "Bios:Venus, Bios:Mars",
-      "author": "Paweł Garycki",
-      "text": "You started in the primordial soup in the (once) abundant oceans of Venus or Mars. Now it’s time to expand as Venusians or Martians into the solar system before your oceans dry up. This contains optional perks if continuing a campaign game from Bios:Genesis, Bios:Megafauna, and Bios:Origins.\na. Number of Players. 1 to 4 competitive. For solitaire play, use Altruism (V4) or CEO (V6). All players start on the same planet as the same species.\nb. Setup. As per Core rulebook C, with any Modules except Module 0, with the following changes:\n• Seniority Disks (C1). Place 4 Seniority Disks for a short game, 5 for an intermediate game or 7 if playing Futures.\n• Earth/Venus Overlay Card has Earth on one side, and Venus on the other. Use the Earth side if there are no Earthlings in the game, or if starting on Mars. Use the Venus side if there are no Venusians in the game.\nIn either case, lay this card directly upon the map to cover its planet. • Busted. For the Venusians, aerostat-xity starts Busted (I5a) and you cannot pick up a glory chit there. For the Martians, Mars starts Busted and you cannot get a glory chit from any of its Sites or moonlets. These\nBusted sites cannot be re-prospected using special Abilities.\nc. Special Rules.\n• Ersatz LEO. For the Venusians, LVO serves as LEO for all purposes: Aqua storage (C5), Crew Decommission location (E7), free market sales (I3), the location for boosted cards (I4), and pad explosions/space debris (K2c). But without the Van Allen Belts, there is no solar flare protection. Similar for the Martians and LMO.\n• Moonlets Treaty. If starting on Mars, glory is unavailable on phobos or deimos, and (Module 2) Bernals cannot be anchored there.\n• Module 2. Home Bernals may be Anchored on (Venus) the 4 spaces indicated on the Venus overlay card, or (Mars) Sol-Mars Lagrange points (L1, L2, L5) or the Lagrange Burn between the martian moons. Note that there are no Van Allen Belts (VAB) around Venus/Mars, so ignore any special rules associated with them.\nNote that Tourist Cycler still grants its ability. There is no moon treaty (2Ba), so any player may prospect Luna.\n• Footfall and New Venus Futures (Modules 1 and 2). These work as written, except the targets are switched: New Venus is now New Earth, and Footfall stomps Venus/Mars.\n• Space Elevators. The Space Elevators depicted on the map at Earth and Mars can be built only by anchoring the GEO Elevator Bernal (2B4i) to the GEO Home Orbit (for Earth) or any Home Orbit in Mars (for Mars).\nd. Game End. The game ends when the last Seniority Disk is removed. e. Victory Conditions. As per Core rulebook M2. For Interstellar options, see V7.\nf. Campaign Transition Rules from Bios:Genesis to Bios:Meso/Megafauna. If the winning macroorganism originated from a cosmic refugium, the game may start on a different planet than Earth (may use both K and L rules in Bios:Genesis). The planetary choice depends on the refugium: If the winning Bios:Genesis macroorganism came from a cosmic landform, start High Frontier on a oceanic Mars if it came from the Mars paleo-ocean, start on an oceanic Mars, and otherwise start on an oceanic Venus.\ng. Campaign Transition Rules from Bios:Meso/Megafauna to Bios:Origins.\ni. Alien Terrain. Mars and Venus craton terrain is treated the following way:\n• Basin is treated as sea.\n• Highland is treated as a swamp if a green plant archetype is present (may place an unused burrower to further indicate this), or otherwise treated as weeds.\nii. Climate Chit Transformation. Replace the following on each craton in Mars solitaire/Venus multiplayer:\n• Mountain (black disk) -> orange chit\n• Sea (white disk) -> blue chit\n• Tubers Forest (green burrower plant) -> green chit\n• Wasteland (no green creeple and no disk) -> white chit iii. Alien America. Add two additional Earth cratons as America to form a continent to the west of the Mars or Venus cratons. Cover Earth cratons entirely with random terrain chits and apply climate chits there according to the player count stars."
+      "text": "You started in the primordial soup in the (once) abundant oceans of Venus or Mars. Now it’s time to expand as Venusians or Martians into the solar system before your oceans dry up. This contains optional perks if continuing a campaign game from Bios:Genesis, Bios:Megafauna, and Bios:Origins.",
+      "type": "scenario",
+      "sub_ids": {
+        "V8a": "V8",
+        "V8b": "V8",
+        "V8c": "V8",
+        "V8d": "V8",
+        "V8e": "V8",
+        "V8f": "V8",
+        "V8g": "V8",
+        "V8h": "V8",
+        "V8i": "V8"
+      }
+    },
+    {
+      "id": "V8a",
+      "title": "Number of Players",
+      "text": "Number of Players. 1 to 4 competitive. For solitaire play, use Altruism (V4) or CEO (V6). All players start on the same planet as the same species.",
+      "type": "scenario"
+    },
+    {
+      "id": "V8b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C, with any Modules except • Seniority Disks (C1). Place 4 Seniority Disks for a short game, 5 for an intermediate game or 7 if playing Futures.\n• Earth/Venus Overlay Card has Earth on one side, and Venus on the other. Use the Earth side if there are no Earthlings in the game, or if starting on Mars. Use the Venus side if there are no Venusians in the game.\nIn either case, lay this card directly upon the map to cover its planet. • Busted. For the Venusians, aerostat-xity starts Busted (I5a) and you cannot pick up a glory chit there. For the Martians, Mars starts Busted and you cannot get a glory chit from any of its Sites or moonlets. These\nBusted sites cannot be re-prospected using special Abilities.",
+      "type": "scenario"
+    },
+    {
+      "id": "V8c",
+      "title": "Special Rules",
+      "text": "Special Rules.\n• Ersatz LEO. For the Venusians, LVO serves as LEO for all purposes: Aqua storage (C5), Crew Decommission location (E7), free market sales (I3), the location for boosted cards (I4), and pad explosions/space debris (K2c). But without the Van Allen Belts, there is no solar flare protection. Similar for the Martians and LMO.\n• Moonlets Treaty. If starting on Mars, glory is unavailable on phobos or deimos, and ( • Note that Tourist Cycler still grants its ability. There is no moon treaty (Ba), so any player may prospect Luna.\n• Footfall and New Venus Futures (Modules 1 and 2). These work as written, except the targets are switched: New Venus is now New Earth, and Footfall stomps Venus/Mars.\n• Space Elevators. The Space Elevators depicted on the map at Earth and Mars can be built only by anchoring the GEO Elevator Bernal (2B4i) to the GEO Home Orbit (for Earth) or any Home Orbit in Mars (for Mars).",
+      "type": "scenario"
+    },
+    {
+      "id": "V8d",
+      "title": "Game End",
+      "text": "Game End. The game ends when the last Seniority Disk is removed.",
+      "type": "scenario"
+    },
+    {
+      "id": "V8e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. As per Core rulebook M2. For Interstellar options, see V7.",
+      "type": "scenario"
+    },
+    {
+      "id": "V8f",
+      "title": "Campaign Transition — Bios:Genesis",
+      "text": "Campaign Transition Rules from Bios:Genesis to Bios:Meso/Megafauna. If the winning macroorganism originated from a cosmic refugium, the game may start on a different planet than Earth (may use both K and L rules in Bios:Genesis). The planetary choice depends on the refugium: If the winning Bios:Genesis macroorganism came from a cosmic landform, start High Frontier on a oceanic Mars if it came from the Mars paleo-ocean, start on an oceanic Mars, and otherwise start on an oceanic Venus.",
+      "type": "scenario"
+    },
+    {
+      "id": "V8g",
+      "title": "Campaign Transition — Bios:Meso/Megafauna",
+      "text": "Campaign Transition Rules from Bios:Meso/Megafauna to Bios:Origins.",
+      "type": "scenario"
+    },
+    {
+      "id": "V8h",
+      "title": "[missing from source]",
+      "text": "",
+      "missing": true,
+      "type": "scenario"
+    },
+    {
+      "id": "V8i",
+      "title": "Alien Terrain",
+      "text": "Alien Terrain. Mars and Venus craton terrain is treated the following way:\n• Basin is treated as sea.\n• Highland is treated as a swamp if a green plant archetype is present (may place an unused burrower to further indicate this), or otherwise treated as weeds.\nii. Climate Chit Transformation. Replace the following on each craton in Mars solitaire/Venus multiplayer:\n• Mountain (black disk) -> orange chit\n• Sea (white disk) -> blue chit\n• Tubers Forest (green burrower plant) -> green chit\n• Wasteland (no green creeple and no disk) -> white chit iii. Alien America. Add two additional Earth cratons as America to form a continent to the west of the Mars or Venus cratons. Cover Earth cratons entirely with random terrain chits and apply climate chits there according to the player count stars.",
+      "type": "scenario"
     },
     {
       "id": "V9",
-      "type": "variant",
       "title": "The Sirens",
-      "author": "Paweł Garycki and Phil Eklund",
-      "text": "Carbon-based life that has gotten its start in the supercritical diamond oceans of Uranus. Because the surface gravity of Uranus is about the same as Earth’s, intelligent beings called the Sirens have discovered rocketing solutions to the gravity well problem very similar to the liquid fuel boosters on Earth.1 The players start as Sirenian Factions in the same manner as with terrestrial Factions, but with the Uranian moon cordelia being used instead of LEO.\na. Number of Players. 1 or more, competitive.\nb. Setup. As per Core rulebook C, with any Modules except Module 0, and except as follows: SUPERCRITICAL DIAMONDS. Perhaps you are surprised that Sirens are subjected to crushing diamond-forming pressures while they walk on a 1 gravity world? Pressure is a function of the weight of the fluid column over your head, not surface gravity. Consider the 1000 atm pressure in the Mariana Trench, which is also at 1 gravity. Or consider worlds with a surface gravity less than Earth, like Titan and Venus, yet have considerably higher atmospheric pressure.\n RECOMMENDED. In order to make Bios:Megafauna more likely to continue into\nBios:Origins, remove the requirement of population being higher than the heart limit for execution of the raindance superpower. [V8f]\n• Seniority (C1). Place 4 Seniority Disks for a short game, 5 for an intermediate game or 7 if playing Futures.\n• Earthlings (C4).The players can all be “Siren” Factions, or 1 or 2 players can be “Earthling” Factions. If the latter, all patent decks (and the Colonist queue) are to be split into two, one for Earthlings and one for Sirens. Earthlings have no access to Siren decks, and vice versa, except during trade (next bullet & special rules) or negotiation.\n• Solitaire. Use CEO (V6), but divide the patent deck between the Earthlings and Sirens per previous bullet except that the Sirens get all the D and V patents, and the Earthlings the remainder. The colonist queue remains split half to Earthlings, and half to Sirens.\n- Trade. If you land a Human on any D or V moon in the Uranian System, you may flip any white patent card in the landing stack to its Black-side.\n- First Contact. You automatically meet the board’s KPI threshold during the Solar Cycle when your Humans first land on an Uranian moon (discovering the Sirenians).\n• Busted. Place Busted Claims disks on Luna, Uranus Aerostat, and Cordelia, which do not grant glory to their home species and cannot be re-prospected using special Abilities.\nc. Special Rules. The following special rules apply:\n• Research Auction Operation (I2). If you are the only player in your species, so that you alone have access to the patent deck of your species, you do not perform auctions. Instead use V4c (special rule).\n• Cordelia. For the Sirens, this inner moon of Uranus acts as LEO for all purposes: Aqua storage (C5), Crew Decommission location (E7), free market sales (I3), the location for boosted cards (I4), and pad explosions/ space debris (K2c). You cannot pick up glory (L) on Cordelia or Uranus Aerostat.\n• Diamonds Aren’t Forever.2 Sirenian Crew and Colonists from the Siren queue (hereafter called “SIRENS”) are considered rad-hard 0. If a Stack with Sirens suffers a Glitch, nothing happens if the Stack is on a Site, and the Sirens are Decommissioned if the Stack is in space.\n• Heroism (Lc). If playing with Earthlings, if Humans and Sirens meet for the first time at the end of a Turn, give the player whose Turn it is one of the heroism chits (C7). Both Sirens and Humans can claim glory.\n• Technology Trade. If you are Earthling, you may take into your Hand one card from the top of a Siren patent deck if at the end of your Turn one of your Humans is colocated with a Siren. The same is true if you are a Siren and you end your Turn colocated with a Human.\n• Promotion Colonies (Modules 1 or 2). Regardless of its dome icon, Siren cards can only be promoted at push colonies (2A3a) or promoted and anchored Bernals (2A3c) (representing their need to enter into the inner solar system to meet their demands for solar energy).\n• Sirenian Bernals. The possible Home Orbits are indicated on the map, and any Bernal can go to any Home Orbit. Their dirtside hydration is not six, and instead depends upon the Hydration of the moons they are adjacent to. The Cycler Bernal allows safe passage through the “µ dust ring” Radiation Belt. Uranus\nElevator can be built only by anchoring the GEO Elevator Bernal to any Home Orbit (2B4i).\n• Footfall Future (1D5f) can be directed to either Earth or Uranus, which removes either both Earthlings or the Sirens from the game. If more than 1 Faction survives, they continue with War of Independence.\nd. Game End. The game ends when the last Seniority Disk is removed. e. Victory Conditions. As per Core rulebook M2, except the bonus VP (M2b) for Siren domes is +3 if at Push\nColonies (solar energy is important for the Sirens) or aerostats and +1 if anywhere else (including on Bernals)."
+      "text": "Carbon-based life that has gotten its start in the supercritical diamond oceans of Uranus. Because the surface gravity of Uranus is about the same as Earth’s, intelligent beings called the Sirens have discovered rocketing solutions to the gravity well problem very similar to the liquid fuel boosters on Earth.1 The players start as Sirenian Factions in the same manner as with terrestrial Factions, but with the Uranian moon cordelia being used instead of LEO.",
+      "type": "scenario",
+      "sub_ids": {
+        "V9a": "V9",
+        "V9b": "V9",
+        "V9c": "V9",
+        "V9d": "V9",
+        "V9e": "V9"
+      }
+    },
+    {
+      "id": "V9a",
+      "title": "Number of Players",
+      "text": "Number of Players. 1 or more, competitive.",
+      "type": "scenario"
+    },
+    {
+      "id": "V9b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C, with any Modules except RECOMMENDED. In order to make Bios:Megafauna more likely to continue into\nBios:Origins, remove the requirement of population being higher than the heart limit for execution of the raindance superpower. [V8f]\n• Seniority (C1). Place 4 Seniority Disks for a short game, 5 for an intermediate game or 7 if playing Futures.\n• Earthlings (C4).The players can all be “Siren” Factions, or 1 or 2 players can be “Earthling” Factions. If the latter, all patent decks (and the Colonist queue) are to be split into two, one for Earthlings and one for Sirens. Earthlings have no access to Siren decks, and vice versa, except during trade (next bullet & special rules) or negotiation.\n• Solitaire. Use CEO (V6), but divide the patent deck between the Earthlings and Sirens per previous bullet except that the Sirens get all the D and V patents, and the Earthlings the remainder. The colonist queue remains split half to Earthlings, and half to Sirens.\n- Trade. If you land a Human on any D or V moon in the Uranian System, you may flip any white patent card in the landing stack to its Black-side.\n- First Contact. You automatically meet the board’s KPI threshold during the Solar Cycle when your Humans first land on an Uranian moon (discovering the Sirenians).\n• Busted. Place Busted Claims disks on Luna, Uranus Aerostat, and Cordelia, which do not grant glory to their home species and cannot be re-prospected using special Abilities.",
+      "type": "scenario"
+    },
+    {
+      "id": "V9c",
+      "title": "Special Rules",
+      "text": "Special Rules. The following special rules apply:\n• Research Auction Operation (I2). If you are the only player in your species, so that you alone have access to the patent deck of your species, you do not perform auctions. Instead use V4c (special rule).\n• Cordelia. For the Sirens, this inner moon of Uranus acts as LEO for all purposes: Aqua storage (C5), Crew Decommission location (E7), free market sales (I3), the location for boosted cards (I4), and pad explosions/ space debris (K2c). You cannot pick up glory (L) on Cordelia or Uranus Aerostat.\n• Diamonds Aren’t Forever.2 Sirenian Crew and Colonists from the Siren queue (hereafter called “SIRENS”) are considered rad-hard 0. If a Stack with Sirens suffers a Glitch, nothing happens if the Stack is on a Site, and the Sirens are Decommissioned if the Stack is in space.\n• Heroism (Lc). If playing with Earthlings, if Humans and Sirens meet for the first time at the end of a Turn, give the player whose Turn it is one of the heroism chits (C7). Both Sirens and Humans can claim glory.\n• Technology Trade. If you are Earthling, you may take into your Hand one card from the top of a Siren patent deck if at the end of your Turn one of your Humans is colocated with a Siren. The same is true if you are a Siren and you end your Turn colocated with a Human.\n• Promotion Colonies (Modules 1 or 2). Regardless of its dome icon, Siren cards can only be promoted at push colonies (2A3a) or promoted and anchored Bernals (2A3c) (representing their need to enter into the inner solar system to meet their demands for solar energy).\n• Sirenian Bernals. The possible Home Orbits are indicated on the map, and any Bernal can go to any Home Orbit. Their dirtside hydration is not six, and instead depends upon the Hydration of the moons they are adjacent to. The Cycler Bernal allows safe passage through the “µ dust ring” Radiation Belt. Uranus\nElevator can be built only by anchoring the GEO Elevator Bernal to any Home Orbit (2B4i).\n• Footfall Future (1D5f) can be directed to either Earth or Uranus, which removes either both Earthlings or the Sirens from the game. If more than 1 Faction survives, they continue with War of Independence.",
+      "type": "scenario"
+    },
+    {
+      "id": "V9d",
+      "title": "Game End",
+      "text": "Game End. The game ends when the last Seniority Disk is removed.",
+      "type": "scenario"
+    },
+    {
+      "id": "V9e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. As per Core rulebook M2, except the bonus VP (M2b) for Siren domes is +3 if at Push\nColonies (solar energy is important for the Sirens) or aerostats and +1 if anywhere else (including on Bernals).",
+      "type": "scenario"
     },
     {
       "id": "V10",
-      "type": "variant",
       "title": "Red Giant",
-      "author": "Phil Eklund",
-      "text": "After a long (!) and moribund dark age, Earth-based astronomers of our future species belatedly discover that Sol is about to flash into a red giant.3 This will turn Earth into a cinder and make the inner solar system uninhabitable. To survive this crisis, the Factions prepare to colonize the outer solar system, which will then become habitable.\na. Number of Players. 2 or more, competitive.\nb. Setup. As per Core rulebook C, with any Modules.\nc. Special Rules. The following special rules apply:\n• Desiccation (B7a). All Sites except for those in the Uranus and Neptune zones are one fewer in Hydration (to a minimum of zero) due to solar heating.\n• Bright Future Sun (H3c). Counterintuitively, as Sol burns up its nuclear fuel, it becomes brighter. Add +2 to the solar thrust modifier of each Heliocentric Zone (including Neptune). Cards limited to given Heliocentric Zones can make it 2 zones farther away.\n• War of Independence (see glossary) breaks out at the end of the 2nd Solar Cycle. This represents the breakdown of the governments of Earth.\nd. Game End. As per Core rulebook M1. e. Victory Conditions. As per Core rulebook M2, with the following exceptions:\n• Victory Points are not awarded for any glories, Tokens, stock prices, or dirtside hydration except at Sites or Spaces within the Uranus zone or beyond. DIAMONDS are a quasi-stable crystalline form of carbon. Not to contradict James Bond, but the gem in a diamond ring will eventually turn black as it converts into its stable form: amorphous graphite. The stability of supercritical diamonds is unknown. Composed as they are of articulated supercritical diamond elements, the Sirens are hypersensitive to radiation. RED GIANT. Sol will expand into a red giant 5 billion years from now. As it warms, Earth may become a copy of Venus, as its oceans boil away and the carbon locked up in limestones and other carbonates is released.\n EASILY MISSED. You cannot play as the CEO of a Siren company. [V9b]"
+      "text": "After a long (!) and moribund dark age, Earth-based astronomers of our future species belatedly discover that Sol is about to flash into a red giant.3 This will turn Earth into a cinder and make the inner solar system uninhabitable. To survive this crisis, the Factions prepare to colonize the outer solar system, which will then become habitable.",
+      "type": "scenario",
+      "sub_ids": {
+        "V10a": "V10",
+        "V10b": "V10",
+        "V10c": "V10",
+        "V10d": "V10",
+        "V10e": "V10"
+      }
+    },
+    {
+      "id": "V10a",
+      "title": "Number of Players",
+      "text": "Number of Players. 2 or more, competitive.",
+      "type": "scenario"
+    },
+    {
+      "id": "V10b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C, with any Modules.",
+      "type": "scenario"
+    },
+    {
+      "id": "V10c",
+      "title": "Special Rules",
+      "text": "Special Rules. The following special rules apply:\n• Desiccation (B7a). All Sites except for those in the Uranus and Neptune zones are one fewer in Hydration (to a minimum of zero) due to solar heating.\n• Bright Future Sun (H3c). Counterintuitively, as Sol burns up its nuclear fuel, it becomes brighter. Add +2 to the solar thrust modifier of each Heliocentric Zone (including Neptune). Cards limited to given Heliocentric Zones can make it 2 zones farther away.\n• War of Independence (see glossary) breaks out at the end of the 2nd Solar Cycle. This represents the breakdown of the governments of Earth.",
+      "type": "scenario"
+    },
+    {
+      "id": "V10d",
+      "title": "Game End",
+      "text": "Game End. As per Core rulebook M1.",
+      "type": "scenario"
+    },
+    {
+      "id": "V10e",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. As per Core rulebook M2, with the following exceptions:\n• Victory Points are not awarded for any glories, Tokens, stock prices, or dirtside hydration except at Sites or Spaces within the Uranus zone or beyond. DIAMONDS are a quasi-stable crystalline form of carbon. Not to contradict James Bond, but the gem in a diamond ring will eventually turn black as it converts into its stable form: amorphous graphite. The stability of supercritical diamonds is unknown. Composed as they are of articulated supercritical diamond elements, the Sirens are hypersensitive to radiation. RED GIANT. Sol will expand into a red giant 5 billion years from now. As it warms, Earth may become a copy of Venus, as its oceans boil away and the carbon locked up in limestones and other carbonates is released.\n EASILY MISSED. You cannot play as the CEO of a Siren company. [V9b]",
+      "type": "scenario"
     },
     {
       "id": "V11",
-      "type": "variant",
       "title": "Diamonds 4 All",
-      "author": "Jon Manker and Paweł Garycki",
-      "text": "You struggle to develop rockets and journey to the corners of our solar system to build factories and colonies. However, on the way you stumble upon more riches than you expected, which can tilt the outcome of the game.\na. Number of Players. 1 or more, competitive/cooperative depending on other rules used.\nb. Setup. As per Core rulebook C, with any Modules and/or any scenario, (or as per setup in Race for Glory), except as follows:\n• Deal 1 Sail & 1 Rocket Mission to each player (interpret missions about spending water as spending Aqua).\n• Place Discovery Chits either per (iC2b) to Sites in the 5 innermost Heliocentric Zones (including Ceres ), or by adding chits to any zones in the following way:\n— Mix all discovery chits facedown (Spectral letter side up).\n— Placement. All players simultaneously place chits (without examining them) on any Site with icons (Astrobiology, Atmospheric, Push, Submarine). When these are filled, they load Sites without symbols.\n — Single-Handed. Players may only use 1 hand and grab chits one at a time. They must place a grabbed chit on a valid Site before grabbing another.\n — Dark Sites. After placement of all D chits, it is possible to place M or S chits on D Sites.\nc. Interpretation of Specific Mission Cards:\n• Red Shirt Expendable: You failed a Hazard Roll and thus Decommissioned a Sail.\n• Completionist: Score 10VP for this mission if playing Industrial Diamonds (V11f).\n• Emergency Eminence: Instead, be the first to perform an Air-eater Refuel Op for 3 consecutive turns.\n• Double Messenger, Space Maze Ace: Subtract 2 from each discovery roll on the required sites if playing Industrial Diamonds (V11f).\n• Ring my Bell: Be the first to have used both Saturn and Uranus flybys.\n• We Choose to do It because It is Hard: If using Module 1, fulfilling an ad astra future (1D1b) at Sol-Jupiter Sol solar exit satisfies this mission’s requirements.\n• Aegir in Space: Have the most fuel steps onboard your rocket. If using Module 1, these are isotope fuel steps.\nd. Gameplay. T.\n• Discovery Free Action. To pick up a discovery chit your Colocated Humans need to perform a discovery free action (G) while on the Site. Roll a die and subtract:\n- 2 for each icon on the Site (Astrobiology, Atmospheric, Push, Submarine). - 1 if one or more operational buggies are present on the Site. On Submarine Sites, subtract 1 for each operational buggy.\n- 1 for each Colocated Colonist in the performing stack.\n Pick up the discovery chit if rolling 0 or less or discard it out of game if rolling otherwise.\n• Discovery Chits are carried by stacks like FTs, with a Mass equal to the number of drops on them. Only the Stack carrying a chit may use their Ability.\n• Raygun Discovery (Free Action). If you have an operational raygun Adjacent to a Site with a discovery chit, as a free action you may examine it in secret. This is not possible during movement.\n• Common Knowledge. Everyone is able to examine any Site covered with a discovery chit without looking at its chit.\ne. Game End. As per Core rulebook M + any scenario + any modules you prefer to use.\nf. Diamonds 4 All Scoring as per Core rulebook M + any scenario + any modules you prefer to use, except do not score token VP (M2a) or factory stock price VP (M2b), and glory chits are worth double.\ng. Industrial Diamonds Scoring (Variant closer to the Core Game) as per Core rulebook M + any scenario + any modules used. Life, Gems and Industrial discovery chits score VP only at LEO or in your Anchored Bernal. All other discovery chits score if they are in any of your stacks."
+      "text": "You struggle to develop rockets and journey to the corners of our solar system to build factories and colonies. However, on the way you stumble upon more riches than you expected, which can tilt the outcome of the game.",
+      "type": "scenario",
+      "sub_ids": {
+        "V11a": "V11",
+        "V11b": "V11",
+        "V11c": "V11",
+        "V11d": "V11",
+        "V11e": "V11",
+        "V11f": "V11",
+        "V11g": "V11"
+      }
+    },
+    {
+      "id": "V11a",
+      "title": "Number of Players",
+      "text": "Number of Players. 1 or more, competitive/cooperative depending on other rules used.",
+      "type": "scenario"
+    },
+    {
+      "id": "V11b",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook C, with any Modules and/or any scenario, (or as per setup in Race for Glory), except as follows:\n• Deal 1 Sail & 1 Rocket Mission to each player (interpret missions about spending water as spending Aqua).\n• Place Discovery Chits either per (iC2b) to Sites in the 5 innermost Heliocentric Zones (including Ceres ), or by adding chits to any zones in the following way:\n— Mix all discovery chits facedown (Spectral letter side up).\n— Placement. All players simultaneously place chits (without examining them) on any Site with icons (Astrobiology, Atmospheric, Push, Submarine). When these are filled, they load Sites without symbols.\n — Single-Handed. Players may only use 1 hand and grab chits one at a time. They must place a grabbed chit on a valid Site before grabbing another.\n — Dark Sites. After placement of all D chits, it is possible to place M or S chits on D Sites.",
+      "type": "scenario"
+    },
+    {
+      "id": "V11c",
+      "title": "Interpretation of Specific Mission Cards:",
+      "text": "Interpretation of Specific Mission Cards:\n• Red Shirt Expendable: You failed a Hazard Roll and thus Decommissioned a Sail.\n• Completionist: Score 10VP for this mission if playing Industrial Diamonds (V11f).\n• Emergency Eminence: Instead, be the first to perform an Air-eater Refuel Op for 3 consecutive turns.\n• Double Messenger, Space Maze Ace: Subtract 2 from each discovery roll on the required sites if playing Industrial Diamonds (V11f).\n• Ring my Bell: Be the first to have used both Saturn and Uranus flybys.\n• We Choose to do It because It is Hard: If using • Aegir in Space: Have the most fuel steps onboard your rocket. If using",
+      "type": "scenario"
+    },
+    {
+      "id": "V11d",
+      "title": "Gameplay",
+      "text": "Players may only use 1 hand and grab chits one at a tim",
+      "type": "scenario"
+    },
+    {
+      "id": "V11e",
+      "title": "Game End",
+      "text": "Game End. As per Core rulebook M + any scenario + any modules you prefer to use.",
+      "type": "scenario"
+    },
+    {
+      "id": "V11f",
+      "title": "Scoring",
+      "text": "Diamonds 4 All Scoring as per Core rulebook M + any scenario + any modules you prefer to use, except do not score token VP (M2a) or factory stock price VP (M2b), and glory chits are worth double.",
+      "type": "scenario"
+    },
+    {
+      "id": "V11g",
+      "title": "Industrial Diamonds Scoring",
+      "text": "Industrial Diamonds Scoring (Variant closer to the Core Game) as per Core rulebook M + any scenario + any modules used. Life, Gems and Industrial discovery chits score VP only at LEO or in your Anchored Bernal. All other discovery chits score if they are in any of your stacks.",
+      "type": "scenario"
     },
     {
       "id": "V12",
-      "type": "variant",
       "title": "Panspermia Scenario",
-      "author": "Paweł Garycki",
-      "text": "Life has a single origin in the Solar System, yet has spread to various worlds. Some unknown goldilocks principle has caused several forms to develop consciousness simultaneously and emerge as spacefarers.\na. Number of Players. 2 or 4 competitive. Select 2 species from the list below and use their home world and low orbit. Select a Crew Card/color for them as well. The game plays best if there are 2 players per species.\nb. Earthlings Setup. See V9b.\nc. Martians Setup. Treat as Earthlings above (V9b) but use V8 for setup steps regarding starting location and special rules not contradicting V9b.\nd. Venusians Setup. Same as Martians above.\ne. Siren Setup. See V9.\nf. Oceanian Setup.\n• Home World Europa. Use its Radiation Belt as low orbit and L2/L1 jovian spaces for Bernals. Cycler allows safe passage through jovian Radiation Belts.\n• Oceanian Crew is mass 2 (large swimmers) and may land on Sites adjacent to a geyser without a required net thrust.\n• Promotion Colony symbols for the Oceanians are all Submarine and Aerostat, replacing the original dome icons. They only work in the Neptune Zone plus all Aerostats. For dirtside hydration count only Hydration on Submarine Sites, however add 2. Home Orbit Hydration remains at 6.\ng. Tholian Setup.\n• Home World Titan. Use LTO as low orbit and L1/L5 (except the innermost and outermost L1) saturnian spaces for Bernals. Cycler allows safe passage through all Radiation Belts in the Saturn system as well as rings. Use moonlets treaty (V8c) for Hyperion.\n STRATEGY NOTES FOR THE INDUSTRIAL DIAMONDS\nVARIANT: Because the discovery chits are a nice addition rather than the main theme, aim for exploration when you are well prepared, with good black or purple cards, a raygun and/or buggy, and Colonists.\nProspects are best in Sites with many icons. During setup try to place chits on such Sites first. With proper placement (remember the Dark Sites rule), you will end up with 2 chits (M and/or S) to be placed on Sites without symbols, e.g. hermes or ariadne mentioned on mission cards. [V11] STRATEGY NOTES:\nThis game is about winning glories and collecting discovery chits. Claims and Factories are merely a means to getting a Crew to ever more distant locations that provide glory chits, and returning them to LEO. Don't forget that ET production often can produce the technology essential to get your hands on those rewards. [V11] STRATEGY NOTES:\nPerhaps the most difficult alien to play are the Nuclei, with 10 Burns to escape into the prograde solar system, and even more to land on the Synodic Comets they favor. The Tholians are able to bust large Sites that are\n“unbustable” according to the Core rules. Interpret this as contamination of the surface with tholin-based biochemistry. [V12]\n• Tholian Crew & Colonists. When prospecting, Tholian’s Crew and Colonists make a “hydration roll” instead of a Size Roll, which is successful if they roll less than or equal to the Site’s Hydration.\n• Promotion Colonies icons are Atmospheric, replacing the original dome icons. Triton and Pluto also count as having trace atmospheres. Saturn and Mars labs work only if their elevator is built first.\nh. Nuclei Setup. • Home World Bee-Zed. This asteroid is not a Synodic Comet in this variant. Use its red space as a low orbit and the first 6 burns as spaces for Bernals. Cycler works for Jovian flyby Radiation Belts. All boost costs are halved (rounded up).\n• Nuclei Crew and Colonists are Mass 0. Size Rolls for the Nuclei Crew and Colonists are automatically successful for Synodic Comets. Due to low gravity, Nuclei can factory refuel 7 steps of water in Home Orbit as if a factory were there, however they cannot convert FT or fuel steps into Aqua.\n• Promotion Colonies icons are Astrobiology, replacing the original dome icons. i. Special rules. For this scenario, use the rules from Sirens (V9), plus the following:\n• Busted. All Sites of a home world start Busted to indicate that they start inhabited. Glory chits cannot be picked up there by their inhabitants.\n• Earth. If there are no Earthlings in the game, use the Earth overlay (V8b). j. Game End. The game ends when the last Seniority Disk is removed.\nk. Victory Conditions. Oceanians, Tholians and Nuclei count VP the same as for the Sirens (V9e).\nW. Strategy Guide"
+      "text": "Life has a single origin in the Solar System, yet has spread to various worlds. Some unknown goldilocks principle has caused several forms to develop consciousness simultaneously and emerge as spacefarers.",
+      "type": "scenario",
+      "sub_ids": {
+        "V12a": "V12",
+        "V12b": "V12",
+        "V12c": "V12",
+        "V12d": "V12",
+        "V12e": "V12",
+        "V12f": "V12",
+        "V12g": "V12",
+        "V12h": "V12",
+        "V12i": "V12",
+        "V12j": "V12",
+        "V12k": "V12"
+      }
+    },
+    {
+      "id": "V12a",
+      "title": "Number of Players",
+      "text": "Number of Players. 2 or 4 competitive. Select 2 species from the list below and use their home world and low orbit. Select a Crew Card/color for them as well. The game plays best if there are 2 players per species.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12b",
+      "title": "Earthlings Setup",
+      "text": "Earthlings Setup. See V9b.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12c",
+      "title": "Martians Setup",
+      "text": "Martians Setup. Treat as Earthlings above (V9b) but use V8 for setup steps regarding starting location and special rules not contradicting V9b.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12d",
+      "title": "Venusians Setup",
+      "text": "Venusians Setup. Same as Martians above.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12e",
+      "title": "Siren Setup",
+      "text": "Siren Setup. See V9.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12f",
+      "title": "Oceanian Setup",
+      "text": "Oceanian Setup.\n• Home World Europa. Use its Radiation Belt as low orbit and L2/L1 jovian spaces for Bernals. Cycler allows safe passage through jovian Radiation Belts.\n• Oceanian Crew is mass 2 (large swimmers) and may land on Sites adjacent to a geyser without a required net thrust.\n• Promotion Colony symbols for the Oceanians are all Submarine and Aerostat, replacing the original dome icons. They only work in the Neptune Zone plus all Aerostats. For dirtside hydration count only Hydration on Submarine Sites, however add 2. Home Orbit Hydration remains at 6.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12g",
+      "title": "Tholian Setup",
+      "text": "Tholian Setup.\n• Home World Titan. Use LTO as low orbit and L1/L5 (except the innermost and outermost L1) saturnian spaces for Bernals. Cycler allows safe passage through all Radiation Belts in the Saturn system as well as rings. Use moonlets treaty (V8c) for Hyperion.\n STRATEGY NOTES FOR THE INDUSTRIAL DIAMONDS\nVARIANT: Because the discovery chits are a nice addition rather than the main theme, aim for exploration when you are well prepared, with good black or purple cards, a raygun and/or buggy, and Colonists.\nProspects are best in Sites with many icons. During setup try to place chits on such Sites first. With proper placement (remember the Dark Sites rule), you will end up with 2 chits (M and/or S) to be placed on Sites without symbols, e.g. hermes or ariadne mentioned on mission cards. [V11] STRATEGY NOTES:\nThis game is about winning glories and collecting discovery chits. Claims and Factories are merely a means to getting a Crew to ever more distant locations that provide glory chits, and returning them to LEO. Don't forget that ET production often can produce the technology essential to get your hands on those rewards. [V11] STRATEGY NOTES:\nPerhaps the most difficult alien to play are the Nuclei, with 10 Burns to escape into the prograde solar system, and even more to land on the Synodic Comets they favor. The Tholians are able to bust large Sites that are\n“unbustable” according to the Core rules. Interpret this as contamination of the surface with tholin-based biochemistry. [V12]\n• Tholian Crew & Colonists. When prospecting, Tholian’s Crew and Colonists make a “hydration roll” instead of a Size Roll, which is successful if they roll less than or equal to the Site’s Hydration.\n• Promotion Colonies icons are Atmospheric, replacing the original dome icons. Triton and Pluto also count as having trace atmospheres. Saturn and Mars labs work only if their elevator is built first.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12h",
+      "title": "Nuclei Setup",
+      "text": "Nuclei Setup. • Home World Bee-Zed. This asteroid is not a Synodic Comet in this variant. Use its red space as a low orbit and the first 6 burns as spaces for Bernals. Cycler works for Jovian flyby Radiation Belts. All boost costs are halved (rounded up).\n• Nuclei Crew and Colonists are Mass 0. Size Rolls for the Nuclei Crew and Colonists are automatically successful for Synodic Comets. Due to low gravity, Nuclei can factory refuel 7 steps of water in Home Orbit as if a factory were there, however they cannot convert FT or fuel steps into Aqua.\n• Promotion Colonies icons are Astrobiology, replacing the original dome icons.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12i",
+      "title": "Special rules",
+      "text": "Special rules. For this scenario, use the rules from Sirens (V9), plus the following:\n• Busted. All Sites of a home world start Busted to indicate that they start inhabited. Glory chits cannot be picked up there by their inhabitants.\n• Earth. If there are no Earthlings in the game, use the Earth overlay (V8b).",
+      "type": "scenario"
+    },
+    {
+      "id": "V12j",
+      "title": "Game End",
+      "text": "Game End. The game ends when the last Seniority Disk is removed.",
+      "type": "scenario"
+    },
+    {
+      "id": "V12k",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. Oceanians, Tholians and Nuclei count VP the same as for the Sirens (V9e).\nW. Strategy Guide",
+      "type": "scenario"
     },
     {
       "id": "S-WernerStar",
+      "title": "Werner's Star",
+      "text": "1F. Little Werner dreams of becoming an astronaut (or cosmonaut, taikonaut, etc.) and traveling to another star. Can this dream come true? Werner is represented by your Crew card, and he wins if he attains a TW thruster future before he dies of old age. The game should take 2 hours. Use the entirety of Modules 1 & 2, including Futures. You may also add a. Setup. Play with 6 Seniority Disks for a 72-year game.",
       "type": "scenario",
-      "title": "Werner's Star (Module 1 Solitaire)",
-      "modules": [
-        "M1",
-        "M2"
-      ],
-      "players": "1",
-      "author": "Phil Eklund",
-      "text": "1F. Module 1 Solitaire: Werner’s Star (by Phil Eklund)\nLittle Werner dreams of becoming an astronaut (or cosmonaut, taikonaut, etc.) and traveling to another star. Can this dream come true? Werner is represented by your Crew card, and he wins if he attains a TW thruster future before he dies of old age. The game should take 2 hours. Use the entirety of Modules 1 & 2, including Futures. You may also add Module 0.\na. Setup. Play with 6 Seniority Disks for a 72-year game. b. Research. Instead of the research auction (I2), take the top card of a patent deck for your Operation, including bonus supports (I2g). This costs a number of Aquas equal to the number of cards taken.\nc. Tragedy. You lose the game if your Crew is involuntarily Decommissioned (Werner dies heroically). d. Werner’s Star Victory. Win if you attain a TW thruster future (1D3) before Werner becomes 84 years old.\nIf playing with Politics (Module 0), the Active Law must end in freedom. e. Interstellar Victory. If you have the Interstellar Module, send Werner off as a passenger in a starship. You win if his son reaches a habitable or living planet. You may integrate this into a continuing Interstellar game.\nFor compatibility with the 3rd edition Interstellar, see Appendix V7."
+      "sub_ids": {
+        "S-WernerStarb": "S-WernerStar",
+        "S-WernerStarc": "S-WernerStar",
+        "S-WernerStard": "S-WernerStar"
+      }
     },
     {
-      "id": "OPT-FuturesPlanning",
-      "type": "optional_rule",
-      "title": "Futures Planning Strategy Guide (Module 1)",
-      "modules": [
-        "M1"
-      ],
-      "players": "1+",
-      "author": "Ulrik Bøe",
-      "text": "1W. Futures Planning (by Ulrik Bøe) a. Adapt, Then Plan! Your first factory is often the deciding factor for which strategies you can pursue. It decides what black cards you can build, and also dictates what you need to do to start promoting cards. So first of all, get a mission together, build your first factory, and remember to start collecting the black cards you want as early as you can afford - you may have to grab a valuable thruster when it’s on top of the deck even though you had other plans, or risk seeing it go to the bottom on an Inspiration event, or worse, bought by another player!\nEXAMPLE [1Fb] You buy an electric rocket that comes with a generator support. This costs 2 Aqua. Next Turn you sell the thruster, which gains you 3 Aqua.\nc. Look To The Future. As soon as you’ve gotten the cards you want to promote, check their Futures. They will most likely require you to build factories in specific places - try to claim those early, and pay attention to what the other players are doing. If they claim a site you needed, you are allowed to Claim Jump for the sake of the Future.\nd. Keep On Building. Don’t forget to continue to build factories! They will be a large chunk of your points. Don’t worry too much about stock prices, in a Future’s game nobody should expect to get 8 points for having the only factory of a type (with a possible exception for H class). Just try to ensure that none of your opponents get the bonus, they will most likely return the favor! The winner will be one of the players that built the most factories, after that the deciding factor will be dirtside hydration, colonies - and Futures. Make sure you keep all those in mind when planning your moves.\ne. Don't Forget Your Toothbrush. Remember to bring the cards you need to complete the Future. If you want to complete the Dyson Bubble Future, remember to bring the colonist from Lloyd’s Insurance Company along (and pay the 4 Aqua to avoid the epic hazard roll if at all possible)."
+      "id": "S-WernerStarb",
+      "title": "Setup",
+      "text": "Research. Instead of the research auction (I2), take the top card of a patent deck for your Operation, including bonus supports (I2g). This costs a number of Aquas equal to the number of cards taken.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-WernerStarc",
+      "title": "Special Rules",
+      "text": "Tragedy. You lose the game if your Crew is involuntarily Decommissioned (Werner dies heroically).",
+      "type": "scenario"
+    },
+    {
+      "id": "S-WernerStard",
+      "title": "Victory Conditions",
+      "text": "Werner’s Star Victory. Win if you attain a TW thruster future (1D3) before Werner becomes 84 years old.\nIf playing with Politics ( For compatibility with the 3rd edition Interstellar, see",
+      "type": "scenario"
     },
     {
       "id": "S-ExodusScenarios",
+      "title": "Exodus Scenarios",
+      "text": "4F. Exodus Scenarios ( These wargame variants require a. Sides. One side (as specified) are the Loyalists and the other are the Independents. However, as this is an ideological rather than racial war, you are free to join the enemy side using defection (3B3c).",
       "type": "scenario",
-      "title": "Exodus Scenarios (Modules 3 & 4)",
-      "modules": [
-        "M3",
-        "M4"
-      ],
-      "players": "2+",
-      "author": "Phil Eklund",
-      "text": "4F. Exodus Scenarios (Module 3 competitive)\nThese wargame variants require Module 3 (Conflict). They assume a total war between two implacable foes, and the loser is motivated to exit the solar system entirely, and start over in a new system. Conversely the winners of the War are motivated to hinder the losers from building a starship and escaping.\na. Sides. One side (as specified) are the Loyalists and the other are the Independents. However, as this is an ideological rather than racial war, you are free to join the enemy side using defection (3B3c).\nb. Desperation Starshot. If you are the commander, you may attempt to end the game early per 4C3c, except that you may also attempt it after the War if you lost the War (i.e. your extremist delegate was disgraced).\nc. Winning the War. See 3F4.\nd. Winning the Game. See 4E2, including contributions to Project Exodus (4E3).\n4F1. Exodus Conventional War\nThis game plays with all the rules of Module 3, but with scoring per 4E2. Desperation starshots (4Fb) are allowed.\n4F2. Exodus Union War The game begins with Human factions per Module 3, but if War breaks out (from any of the causes listed below), the Robots become introspectively conscious and join the spaceborns in a fight for recognition as fully human.\nPlayers are assigned to a bloc depending upon the Colonists they hold. Follow these steps:\na. Indicate Bloc Allegiance. Players with Robot/spaceborn Colonists (i.e. belonging to the Spacer Union (4D2)) start as Independence. Players with earthborn Colonists start as Loyalist. Players with no Colonists must join either bloc, choosing secretly and simultaneously. Flip your propaganda chit to independence or loyalist without losing your extremist. Propaganda chits with no Extremists are unaffected.\nEXAMPLE [4F2a] As Player Purple, you default as Loyalist when War breaks out. Yet you hold the “Gabonese Mining Consortium” Colonist and thus are a member of the Spacer Union, which indicates that you start as Independence. Flip the propaganda in authority to its Independence side, with your extremist on top.\n• Evade the “No Enemy Colonists” restriction (3D5d honor).\n• Discard this enemy Colonist to the bottom of its queue.\nc. War Outbreak. There are 3 ways that War can occur: • A War Outbreak Roll is made during each adjustment of the exploitation track per 3C1 to see if War occurs.\n• Empty Queue. War also occurs if there is an exomigration (2A6) but there are no cards in the appropriate queue to draw from.\n• Uplift Future. War also occurs if the uplift future (1D5n) has been completed. This player alone becomes the independence bloc.\nd. Stillborn War. If War breaks out with all the factions and all the extremists in the same bloc, then the war ends without any War effect (including no Space Lord effects).\ne. Exomigration. Independence can only exomigrate (2A6) from the Robot/spaceborn queue, and Loyalists can only exomigrate from the earthborn queue.\nf. Postbellum. After the War, see 3F5 for the effects of the Space Republic or Space Empire. Furthermore, in a Space Empire the Spacer Union is dissolved, so that 4D2c and 4D2d are ignored, allowing players to hold both types of Colonists.\ng. Winning the Game. See 4E2.\nEASILY MISSED: If your exomigration is limited by the lack of suitable Colonists, you must wait until one is available. See 3A3g. [4F2b]"
+      "sub_ids": {
+        "S-ExodusScenariosb": "S-ExodusScenarios",
+        "S-ExodusScenariosc": "S-ExodusScenarios",
+        "S-ExodusScenariosd": "S-ExodusScenarios",
+        "S-ExodusScenariosa": "S-ExodusScenarios",
+        "S-ExodusScenariose": "S-ExodusScenarios",
+        "S-ExodusScenariosf": "S-ExodusScenarios",
+        "S-ExodusScenariosg": "S-ExodusScenarios"
+      }
+    },
+    {
+      "id": "S-ExodusScenariosb",
+      "title": "Desperation Starshot",
+      "text": "Desperation Starshot. If you are the commander, you may attempt to end the game early per 4C3c, except that you may also attempt it after the War if you lost the War (i.e. your extremist delegate was disgraced).",
+      "type": "scenario"
+    },
+    {
+      "id": "S-ExodusScenariosc",
+      "title": "Winning the War",
+      "text": "Winning the War. See 3F4.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-ExodusScenariosd",
+      "title": "Winning the Game",
+      "text": "Winning the Game. See 4E2, including contributions to Project Exodus (4E3).\n4F1. Exodus Conventional War\nThis game plays with all the rules of F2. Exodus Union War The game begins with Human factions per Players are assigned to a bloc depending upon the Colonists they hold. Follow these steps:",
+      "type": "scenario"
+    },
+    {
+      "id": "S-ExodusScenariosa",
+      "title": "Indicate Bloc Allegiance",
+      "text": "Indicate Bloc Allegiance. Players with Robot/spaceborn Colonists (i.e. belonging to the Spacer Union (4D2)) start as Independence. Players with earthborn Colonists start as Loyalist. Players with no Colonists must join either bloc, choosing secretly and simultaneously. Flip your propaganda chit to independence or loyalist without losing your extremist. Propaganda chits with no Extremists are unaffected.\nEXAMPLE [4F2a] As Player Purple, you default as Loyalist when War breaks out. Yet you hold the “Gabonese Mining Consortium” Colonist and thus are a member of the Spacer Union, which indicates that you start as Independence. Flip the propaganda in authority to its Independence side, with your extremist on top.\n• Evade the “No Enemy Colonists” restriction (3D5d honor).\n• Discard this enemy Colonist to the bottom of its queue.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-ExodusScenariose",
+      "title": "Exomigration",
+      "text": "Exomigration. Independence can only exomigrate (2A6) from the Robot/spaceborn queue, and Loyalists can only exomigrate from the earthborn queue.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-ExodusScenariosf",
+      "title": "Postbellum",
+      "text": "Postbellum. After the War, see 3F5 for the effects of the Space Republic or Space Empire. Furthermore, in a Space Empire the Spacer Union is dissolved, so that 4D2c and 4D2d are ignored, allowing players to hold both types of Colonists.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-ExodusScenariosg",
+      "title": "Winning the Game",
+      "text": "Winning the Game. See 4E2.\nEASILY MISSED: If your exomigration is limited by the lack of suitable Colonists, you must wait until one is available. See 3A3g. [4F2b]",
+      "type": "scenario"
     },
     {
       "id": "OPT-M4Solitaire",
-      "type": "optional_rule",
-      "title": "Module 4 Solitaire & Cooperative Rules",
-      "modules": [
-        "M4"
-      ],
-      "players": "1",
-      "author": "Phil Eklund",
-      "text": "4G. Module 4 Solitaire Games\nIf you play solo or using a full cooperative mode, apply the following rules when playing this Module:\n4G1. Contract Auctions Modifications Unless playing with CEO, each contract has a flat 6 years to fulfill.\n4G2. CEO Solitaire Modifications\nIf using CEO Solitaire (V6):\na. Major Achievements include contract fulfillment, becoming the isobanker, or completing an Exodus contract. Achieving one counts as a fulfillment for the next board meeting (V6c), except the last one which must either be a Future or a Columbus level starshot (4G4b).\nb. Default counts as not meeting a requirement of the next valid Board meeting, ignoring other effects.\nc. Contract Auction Skipped. Each contract has a flat 6 years to fulfill.\nd. VP Threshold. At least once before the final Meeting you need to meet a VP Threshold at the board meeting. This can be alongside your major achievement.\ne. Victory Conditions. See V6e (do not use 4G4).\n4G3. Alternative Political Diagram for Solitaire\nThe provided solitaire political diagram may be used instead of the standard political diagram for any solitaire game using Module 0. This changes four of the Laws (O5), with the design goal to make all Ideologies relevant, and to reduce the randomness and luck-factor of the experience, so one can plan better for victory. The revised setup, and the new Laws and lobbies are:\na. Setup. Place an additional delegate into centrist.\nb. Individuality Law “Launch Contracts”. Boosting is a free action.\nc. Individuality Lobby. Pay 1 Aqua and Discard a delegate in an inactive Ideology to use its Law.\nd. Equality Law “Subsidized Research”. Take bonus supports when initiating a research auction op. Pay 1 Aqua per support card.\nEASILY MISSED: Academia hand limit (I2a) applies to solitaire. [4G3] f. Unity Law “Sol Unification”. Replace season blue Anarchy with International Assistance. FINAO cost is 2 less until the end of season blue.\ng. Unity Lobby Cost is 0 Aqua.\n4G4. Solitaire/Cooperative Victory Conditions\nYou win as a solitaire player (including Combined Game solitaire) if you make a starshot (4E2e). Score your VP per 4E2 & 4E3, then check which victory level (Viking, Columbus, or Polynesian) that you achieved for colonizing a New World:\nSolitaire Length: 4-cycle 5-cycle 6-cycle 7-cycle a. Viking 0 - 15 VP 0 - 30 VP 10 - 45 VP 20 - 65 VP b. Columbus 16 - 25 VP 31 - 55 VP 46 - 75 VP 66 - 100 VP c. Polynesian 26+ VP 56+ VP 76+ VP 101+ VP"
+      "title": "Module 4 Solitaire & Cooperative",
+      "text": "4G. If you play solo or using a full cooperative mode, apply the following rules when playing this Module:\n4G1. Contract Auctions Modifications Unless playing with CEO, each contract has a flat 6 years to fulfill.\n4G2. CEO Solitaire Modifications\nIf using CEO Solitaire (V6):",
+      "type": "variant",
+      "sub_ids": {
+        "OPT-M4Solitairea": "OPT-M4Solitaire",
+        "OPT-M4Solitaireb": "OPT-M4Solitaire",
+        "OPT-M4Solitairec": "OPT-M4Solitaire",
+        "OPT-M4Solitaired": "OPT-M4Solitaire",
+        "OPT-M4Solitairef": "OPT-M4Solitaire",
+        "OPT-M4Solitairee": "OPT-M4Solitaire",
+        "OPT-M4Solitaireg": "OPT-M4Solitaire"
+      }
+    },
+    {
+      "id": "OPT-M4Solitairea",
+      "title": "Major Achievements",
+      "text": "Major Achievements include contract fulfillment, becoming the isobanker, or completing an Exodus contract. Achieving one counts as a fulfillment for the next board meeting (V6c), except the last one which must either be a Future or a Columbus level starshot (4G4b).",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-M4Solitaireb",
+      "title": "Default Penalty",
+      "text": "Default counts as not meeting a requirement of the next valid Board meeting, ignoring other effects.",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-M4Solitairec",
+      "title": "Contract Auction Skipped",
+      "text": "Contract Auction Skipped. Each contract has a flat 6 years to fulfill.",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-M4Solitaired",
+      "title": "VP Threshold",
+      "text": "VP Threshold. At least once before the final Meeting you need to meet a VP Threshold at the board meeting. This can be alongside your major achievement.",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-M4Solitairef",
+      "title": "Unity Law — Sol Unification",
+      "text": "Replace season blue Anarchy with International Assistanc",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-M4Solitairee",
+      "title": "Victory Conditions",
+      "text": "Victory Conditions. See V6e (do not use 4G4).\n4G3. Alternative Political Diagram for Solitaire\nThe provided solitaire political diagram may be used instead of the standard political diagram for any solitaire game using a. Setup. Place an additional delegate into centrist.",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-M4Solitaireg",
+      "title": "Unity Lobby Cost",
+      "text": "Unity Lobby Cost is 0 Aqua.\n4G4. Solitaire/Cooperative Victory Conditions\nYou win as a solitaire player (including Combined Game solitaire) if you make a starshot (4E2e). Score your VP per 4E2 & 4E3, then check which victory level (Viking, Columbus, or Polynesian) that you achieved for colonizing a New World:\nSolitaire Length: 4-cycle 5-cycle 6-cycle 7-cycle a. Viking 0 - 15 VP 0 - 30 VP 10 - 45 VP 20 - 65 VP b. Columbus 16 - 25 VP 31 - 55 VP 46 - 75 VP 66 - 100 VP c. Polynesian 26+ VP 56+ VP 76+ VP 101+ VP",
+      "type": "variant"
     },
     {
       "id": "S-IsoDawn",
+      "title": "Iso Dawn Scenario",
+      "text": "This scenario is set immediately after the market has flipped (5E). The value of Aqua has crashed and the spacefarers have begun to adopt rare fusion isotopes as money. A new central bank has become the accepted repository for isotopes and isotope transactions. This new dawn augurs a golden era for companies that will help colonize exotic Comets, create\nET products, expedite components between Bernals, and many other offers. But there are serious risks if greed and speculation overwhelms the stock market. Iso Dawn sets the stage for a full game of HF4 in the post-monetization era.",
       "type": "scenario",
-      "title": "Iso Dawn (Module 5 Post-Monetization Scenario)",
-      "modules": [
-        "M0",
-        "M1",
-        "M2",
-        "M5"
-      ],
-      "players": "2+",
-      "author": "Phil Eklund",
-      "text": "This scenario is set immediately after the market has flipped (5E). The value of Aqua has crashed and the spacefarers have begun to adopt rare fusion isotopes as money. A new central bank has become the accepted repository for isotopes and isotope transactions. This new dawn augurs a golden era for companies that will help colonize exotic Comets, create\nET products, expedite components between Bernals, and many other offers. But there are serious risks if greed and speculation overwhelms the stock market. Iso Dawn sets the stage for a full game of HF4 in the post-monetization era.\na. Number of Players. 2 or more.\nb. Modules. Must be played with Modules 0, 1, & 2. Can be played with Modules 3 & 4.\nc. Setup. As per Core (C) (plus the Modules used), with the following exceptions:\n• Seniority Disks (C1). Place 2, 3 or 4 Seniority Disks for a medium, long, or Futures game.\n• Stock Market. Place this placard in a public area on its \"Post-Monetization\" side.\n• Companies & Malfs. Place the companies placard in a public area, and place the 4 malf chits (5A5) into the spaces provided on this placard.\nd. Quick Start/Rapid Start (optional). To start with a Hand of cards, use a quick start (V1) or rapid start (5K), which, after performing the first Solar Cycle to acquire cards, expends the first Seniority Disk.\n• Setup (in addition to V1b, 5Kb). Roll 1d to determine the starting Factory Location for each Faction color according to row 3 in table 5Jj. Place a Claim and Factory of the faction color on the Site.\n• 1st solar cycle (change to V1c, 5Kc). During the first cycle, you can only take/auction from the 6 Core patent decks or take/auction one Crew card exclusively. If you take a Crew card, immediately complete your Faction setup by executing 5Jf - 5Jj.\n• 2nd solar cycle. Before starting this, players without a Faction complete their setup per 5Je - 5Jj.\ne. Faction Selection. Randomly, or by some arrangement, assign each player to a Crew card of a Faction color. If playing rapid start (5K), gain a Crew card during an auction, skip this and continue with 5Jf.\n• Space Agency. Each player can secretly choose either side of their assigned Crew card. f. Starting Colonist. Randomly, or by some arrangement, assign each player to an earthborn Colonist card (exclude Robots, see 4C).\ng.Starting Delegates. Each player starts with one cube in their Faction color in the political assembly, and a second cube in the ideology indicated by their Colonist.\nh.Vote Tally. Perform a vote tally (O3a) to set the Active Law star.\ni. Starting Implants (Module 4). Give each player two random augmentation chits (4C3) of differing shapes. Each player decides their Ability (side A or B) and implants them into their Colonist (4C3).\nTIP: Some faction privileges are obsolete in the postmonetization world. But still useful are Marketeer/\nScrum Troubleshooters (Player Gray), Skunkworks (Player Red), Dharma\nRefuel (Player White), Blink Telescope (Player Yellow),\nFelonious (Player Purple), & Powersat (Player Green).\n[5Je]\nTIP: With just your Crew thruster, you can get out to any of the starting\nFactories. Using Solar Oberth or Venus flyby in season blue gets you even further. [5Jj] j. Factions Setup. Consult rows 1 through 6 on the table below, according to your Faction Color (Row 1):\n• GW Thruster (Row 2). Receive the specified card into your Hand. Discard unused GW thrusters into their deck.\n• Starting Factory (Row 3). If playing quick/rapid start (5Jd), this was done during setup. Otherwise, roll 1d for the Location of your starting Factory. Place a Claim and Factory of your color on this Site.\n• Starting Home Bernal (Row 4). Take a Bernal placard and place a Kalpana Bernal topped with a Colony dome in the Home Orbit specified. Your Crew Card and Colonist start in this Bernal.\n• Starting Shares (Row 5). Start with 2 free shares in the indicated company chit (5A2). The first share floats a company, and each additional share raises it one row (5C1). If multiple players have shares in a company, the highest clout (C8) is the chair. Place any unused companies into the Pool.\n• Starting Player & Speculator's Beads (Row 6). You start with no Aqua, but your isovault starts with the FM (blue beads) specified. The speculator's Isovault starts with a number of FM (blue beads) equal to the number of floated companies.\n• Determine Isobanker & Isobank. Randomly select one player to be the Isobanker, and place 1 Isotope (gold bead) in their vault. The Isobank starts at the Isobanker's Factory. Place the starship chit there.\n• Hedge Funds. Each player places two shares and two cubes into the upper right corner of the stock market marked HEDGE FUNDS and adds their remaining 3 shares into their Reserves.\n• Glory Chits & cleanup. Discard Glory chits from Heliocentric zones that have Bernals and industrialized Sites. Remove any unused colored tokens placed during 5Jd.\n1. Faction Gray (individuality) Red (freedom) White (honor) Yellow (unity) Purple (authority) Green (equality)\n2. Starting GW Thruster\nDense Plasma H-B Focus Fusion (D)\nSalt-Water Zubrin (S)\nSpheromak 3\nHe-D Magnetic Fusion (H)\nMini-Mag Orion Z-Pinch Fission (M)\nAmat-Catalyzed Fission-Fusion (S)\nLevitated Dipole 6\nLi-H Fusion (V)\n3. Die roll for Industrial- ized Site\n1/2 - C. Elst-Pizarro (10: K)\n3/4 - Comet Wild 2 (8: K)\n5/6 - Comet Borrelly (12: K)\n1/2 - Neckar (12: K)\n3/4 - Gaspra (10: K)\n5/6 - Eros (12: E)\n1/2 - Comet Halley (10: H)\n3/4 - Kreutz sungrazer (8: G)\n5/6 - Comet Phaethon (8: M)\n1/2 - Oljato (12: E)\n3/4 - Nysa (11: K)\n5/6 - Lutetia ( 8: K)\n1/2 - Belenus (9: E)\n3/4 - Karin a (12: K)\n5/6 - Didymos (12: E)\n1/2 - Remus moonlet (10: K)\n3/4 - Kollaa (12: K)\n5/6 - Nyx (3: E) 4. Starting\nHome Bernal\nLofstrom loop µgravity (monetizing Bernal in L3)\nTourism cycler (in cycler orbit)\nElevator Bernal (monetizing Bernal in GEO orbit) Diplomatic (in SSO orbit)\nAntimatter factory (in L4 orbit)\nSolar cell factory (in L5 orbit)\n5. Starting shares share in Patent Co., share in Boost Co. share in Loan Co., share in FINAO Co. share in Boost Co., share in Loan Co. share in Boost Co., share in FINAO Co. share in Patent Co., share in Loan Co. share in Patent Co., share in FINAO Co.\n6. Starting Isotopes. blue beads in gray isovault. blue beads in red isovault. blue beads in white isovault. blue beads in yellow isovault. blue beads in purple isovault. blue beads in green isovault.\nIndicates isobank location.\nTIP: If your Factory starts on a distant world, consider producing a GW thruster and Freighter there, and ship them to your Bernal to make it Operational. [5Jj]\nEASILY MISSED: Iso Dawn starts you with a Hand of a single GW thruster card.\nPer 5E1, this sets your isostandard. [5Jj]"
+      "sub_ids": {
+        "S-IsoDawna": "S-IsoDawn",
+        "S-IsoDawnb": "S-IsoDawn",
+        "S-IsoDawnc": "S-IsoDawn",
+        "S-IsoDawnd": "S-IsoDawn",
+        "S-IsoDawne": "S-IsoDawn",
+        "S-IsoDawnf": "S-IsoDawn",
+        "S-IsoDawng": "S-IsoDawn",
+        "S-IsoDawnh": "S-IsoDawn",
+        "S-IsoDawni": "S-IsoDawn"
+      }
+    },
+    {
+      "id": "S-IsoDawna",
+      "title": "Number of Players. 2 or more.",
+      "text": "Number of Players. 2 or more.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawnb",
+      "title": "Modules",
+      "text": "Modules. Must be played with Modules 0, 1, & 2. Can be played with Modules 3 & 4.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawnc",
+      "title": "Setup",
+      "text": "Setup. As per Core (C) (plus the Modules used), with the following exceptions:\n• Seniority Disks (C1). Place 2, 3 or 4 Seniority Disks for a medium, long, or Futures game.\n• Stock Market. Place this placard in a public area on its \"Post-Monetization\" side.\n• Companies & Malfs. Place the companies placard in a public area, and place the 4 malf chits (5A5) into the spaces provided on this placard.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawnd",
+      "title": "Quick Start/Rapid Start (optional)",
+      "text": "Quick Start/Rapid Start (optional). To start with a Hand of cards, use a quick start (V1) or rapid start (5K), which, after performing the first Solar Cycle to acquire cards, expends the first Seniority Disk.\n• Setup (in addition to V1b, Kb). Roll 1d to determine the starting Factory Location for each Faction color according to row 3 in table Jj. Place a Claim and Factory of the faction color on the Site.\n• 1st solar cycle (change to V1c, Kc). During the first cycle, you can only take/auction from the 6 Core patent decks or take/auction one Crew card exclusively. If you take a Crew card, immediately complete your Faction setup by executing Jf - Jj.\n• 2nd solar cycle. Before starting this, players without a Faction complete their setup per Je - Jj.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawne",
+      "title": "Faction Selection",
+      "text": "Faction Selection. Randomly, or by some arrangement, assign each player to a Crew card of a Faction color. If playing rapid start (5K), gain a Crew card during an auction, skip this and continue with Jf.\n• Space Agency. Each player can secretly choose either side of their assigned Crew card.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawnf",
+      "title": "Starting Colonist",
+      "text": "Starting Colonist. Randomly, or by some arrangement, assign each player to an earthborn Colonist card (exclude Robots, see 4C).",
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawng",
+      "title": "Starting Delegates",
+      "text": "Each player starts with one cube in their Faction color in the political assembly, and a second cube in the ideology indicated by their Colonist.\nh.Vote Tally. Perform a vote tally (O3a) to set the Active Law star.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawnh",
+      "title": "[missing from source]",
+      "text": "",
+      "missing": true,
+      "type": "scenario"
+    },
+    {
+      "id": "S-IsoDawni",
+      "title": "Starting Implants",
+      "text": "Starting Implants ( TIP: Some faction privileges are obsolete in the postmonetization world. But still useful are Marketeer/\nScrum Troubleshooters (Player Gray), Skunkworks (Player Red), Dharma\nRefuel (Player White), Blink Telescope (Player Yellow),\nFelonious (Player Purple), & Powersat (Player Green).\n[Je]\nTIP: With just your Crew thruster, you can get out to any of the starting\nFactories. Using Solar Oberth or Venus flyby in season blue gets you even further. [Jj] j. Factions Setup. Consult rows 1 through 6 on the table below, according to your Faction Color (Row 1):\n• GW Thruster (Row 2). Receive the specified card into your Hand. Discard unused GW thrusters into their deck.\n• Starting Factory (Row 3). If playing quick/rapid start (Jd), this was done during setup. Otherwise, roll 1d for the Location of your starting Factory. Place a Claim and Factory of your color on this Site.\n• Starting Home Bernal (Row 4). Take a Bernal placard and place a Kalpana Bernal topped with a Colony dome in the Home Orbit specified. Your Crew Card and Colonist start in this Bernal.\n• Starting Shares (Row 5). Start with 2 free shares in the indicated company chit (5A2). The first share floats a company, and each additional share raises it one row (5C1). If multiple players have shares in a company, the highest clout (C8) is the chair. Place any unused companies into the Pool.\n• Starting Player & Speculator's Beads (Row 6). You start with no Aqua, but your isovault starts with the FM (blue beads) specified. The speculator's Isovault starts with a number of FM (blue beads) equal to the number of floated companies.\n• Determine Isobanker & Isobank. Randomly select one player to be the Isobanker, and place 1 Isotope (gold bead) in their vault. The Isobank starts at the Isobanker's Factory. Place the starship chit there.\n• Hedge Funds. Each player places two shares and two cubes into the upper right corner of the stock market marked HEDGE FUNDS and adds their remaining 3 shares into their Reserves.\n• Glory Chits & cleanup. Discard Glory chits from Heliocentric zones that have Bernals and industrialized Sites. Remove any unused colored tokens placed during Jd.\n1. Faction Gray (individuality) Red (freedom) White (honor) Yellow (unity) Purple (authority) Green (equality)\n2. Starting GW Thruster\nDense Plasma H-B Focus Fusion (D)\nSalt-Water Zubrin (S)\nSpheromak 3\nHe-D Magnetic Fusion (H)\nMini-Mag Orion Z-Pinch Fission (M)\nAmat-Catalyzed Fission-Fusion (S)\nLevitated Dipole 6\nLi-H Fusion (V)\n3. Die roll for Industrial- ized Site\n1/2 - C. Elst-Pizarro (10: K)\n3/4 - Comet Wild 2 (8: K)\n5/6 - Comet Borrelly (12: K)\n1/2 - Neckar (12: K)\n3/4 - Gaspra (10: K)\n5/6 - Eros (12: E)\n1/2 - Comet Halley (10: H)\n3/4 - Kreutz sungrazer (8: G)\n5/6 - Comet Phaethon (8: M)\n1/2 - Oljato (12: E)\n3/4 - Nysa (11: K)\n5/6 - Lutetia ( 8: K)\n1/2 - Belenus (9: E)\n3/4 - Karin a (12: K)\n5/6 - Didymos (12: E)\n1/2 - Remus moonlet (10: K)\n3/4 - Kollaa (12: K)\n5/6 - Nyx (3: E) 4. Starting\nHome Bernal\nLofstrom loop µgravity (monetizing Bernal in L3)\nTourism cycler (in cycler orbit)\nElevator Bernal (monetizing Bernal in GEO orbit) Diplomatic (in SSO orbit)\nAntimatter factory (in L4 orbit)\nSolar cell factory (in L5 orbit)\n5. Starting shares share in Patent Co., share in Boost Co. share in Loan Co., share in FINAO Co. share in Boost Co., share in Loan Co. share in Boost Co., share in FINAO Co. share in Patent Co., share in Loan Co. share in Patent Co., share in FINAO Co.\n6. Starting Isotopes. blue beads in gray isovault. blue beads in red isovault. blue beads in white isovault. blue beads in yellow isovault. blue beads in purple isovault. blue beads in green isovault.\nIndicates isobank location.\nTIP: If your Factory starts on a distant world, consider producing a GW thruster and Freighter there, and ship them to your Bernal to make it Operational. [Jj]\nEASILY MISSED: Iso Dawn starts you with a Hand of a single GW thruster card.\nPer 5E1, this sets your isostandard. [Jj]",
+      "type": "scenario"
     },
     {
       "id": "OPT-RapidStart",
-      "type": "optional_rule",
-      "title": "Rapid Start (Roger's Alternative Quick Start)",
-      "modules": [
-        "any"
-      ],
-      "players": "2+",
-      "author": "Roger Lund",
-      "text": "This \"faster quick start\" can be used for any game with any Modules. It is also recommended for Iso-Dawn (5J). Like the quick start found in the Core appendix (V1), it restricts the first solar cycle of a game to Hand card acquisition. However, instead of 12 Years of card drawing, there are 4 rounds of card auctions, starting and ending on season blue. Use the first Seniority Disk placed in a Season to track each round.\na. Number of Players & Length. 2 or more. Three to six Seniority Disks can be played.\nb. Setup. As per Core rulebook (C) (plus the Modules used), with the following exceptions:\n• Starting Aqua (C5). Players start with 9 Aqua each.\n• Module 5 & Iso Dawn Seniority Disks. Add one more Seniority Disk during setup (5A3e, 5Jc).\n• Sunspot Cube (C8b). To represent this cube, place the first Seniority Disk somewhere in the season blue area.\nc. Sequence of Play (1st Solar Cycle). Randomly choose a 1st Player. Starting with this player and going clockwise, each player makes a research auction (I2) of a patent card and its Supports. No other Operations, transactions, or events are performed. After all players have initiated an auction, the first round is over and the first Seniority Disk is advanced to the next season. Rapid start is over after the 4th (season blue) round.\n• Insight (4B2f). On your turn, you may perform an inspiration (K2a) on any one patent deck, before choosing any card for auction. This is called insight in Module 4 (4B2f).\n• Hand Limit. Faction privilege (B6a) and academia hand limit (I2a) are not enforced during this process. However, card limits for GW thrusters, Freighters and Bernals must be respected (1A4, 2A7c).\n• Iso Dawn (5J). If playing this scenario, the auctions include Crew cards. Then, at the end of the 4th and last round of rapid start, complete setup from faction selection onwards (5Je-j) for players who did not acquire a Crew card.\nd. Second Solar Cycle. After the 1st cycle (above), Discard the first Seniority Disk and continue as normal. Do not place this disk into the assembly (O6) or perform baton pass (O6a).\n• Iso Dawn (5J). If playing this scenario, add any remaining Aqua to your industrialized Site.\nQUICK START V1: If playing this variant (see Core appendix) with Iso Dawn (5J), additionally use the Iso Dawn rule found in 5Kd.\n[5Kd]\nEXAMPLE [5Kc] You setup the game with the starting Factory Locations (5Jd) to play Iso Dawn with Rapid Start. After winning a great S robonaut card on your first turn, you aim to start with the S Factory site on Neckar (randomly determined during setup).\nSo on your second turn you bid and win the red Faction Crew card. This entitles you to complete your Iso Dawn Faction setup (5Jf - 5Jj), and take colonists, place delegates, take the Salt-Water Zubrin GW into your hand, anchor the Tourism Cycler Bernal in cycler orbit, place a red share in the Loan Co. and another in the FINAO Co., and add 2 blue beads to the red isovault. MODULE 4:To play Taurus (next page), use the Sol\nPolitical Assembly Solitaire (placard) if available. See 4G3.\n[5La]\nINSIGHT (MODULE 4): This Ability (4B2f) allows you to choose a patent deck after announcing a research auction, and move its top card to the bottom. Then choose the top card of any deck to auction. [5Kc]"
+      "title": "Rapid Start",
+      "text": "This \"faster quick start\" can be used for any game with any Modules. It is also recommended for Iso-Dawn (5J). Like the quick start found in the Core a. Number of Players & Length. 2 or more. Three to six Seniority Disks can be played.",
+      "type": "variant",
+      "sub_ids": {
+        "OPT-RapidStartb": "OPT-RapidStart",
+        "OPT-RapidStartc": "OPT-RapidStart",
+        "OPT-RapidStartd": "OPT-RapidStart"
+      }
+    },
+    {
+      "id": "OPT-RapidStartb",
+      "title": "Setup",
+      "text": "Setup. As per Core rulebook (C) (plus the Modules used), with the following exceptions:\n• Starting Aqua (C5). Players start with 9 Aqua each.\n• • Sunspot Cube (C8b). To represent this cube, place the first Seniority Disk somewhere in the season blue area.",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-RapidStartc",
+      "title": "Rules",
+      "text": "Sequence of Play (1st Solar Cycle). Randomly choose a 1st Player. Starting with this player and going clockwise, each player makes a research auction (I2) of a patent card and its Supports. No other Operations, transactions, or events are performed. After all players have initiated an auction, the first round is over and the first Seniority Disk is advanced to the next season. Rapid start is over after the 4th (season blue) round.\n• Insight (4B2f). On your turn, you may perform an inspiration (K2a) on any one patent deck, before choosing any card for auction. This is called insight in • Hand Limit. Faction privilege (B6a) and academia hand limit (I2a) are not enforced during this process. However, card limits for GW thrusters, Freighters and Bernals must be respected (1A4, 2A7c).\n• Iso Dawn (5J). If playing this scenario, the auctions include Crew cards. Then, at the end of the 4th and last round of rapid start, complete setup from faction selection onwards (Je-j) for players who did not acquire a Crew card.",
+      "type": "variant"
+    },
+    {
+      "id": "OPT-RapidStartd",
+      "title": "Victory Conditions",
+      "text": "Second Solar Cycle. After the 1st cycle (above), Discard the first Seniority Disk and continue as normal. Do not place this disk into the assembly (O6) or perform baton pass (O6a).\n• Iso Dawn (5J). If playing this scenario, add any remaining Aqua to your industrialized Site.\nQUICK START V1: If playing this variant (see Core [Kd]\nEXAMPLE [Kc] You setup the game with the starting Factory Locations (Jd) to play Iso Dawn with Rapid Start. After winning a great S robonaut card on your first turn, you aim to start with the S Factory site on Neckar (randomly determined during setup).\nSo on your second turn you bid and win the red Faction Crew card. This entitles you to complete your Iso Dawn Faction setup (Jf - Jj), and take colonists, place delegates, take the Salt-Water Zubrin GW into your hand, anchor the Tourism Cycler Bernal in cycler orbit, place a red share in the Loan Co. and another in the FINAO Co., and add 2 blue beads to the red isovault. Political Assembly Solitaire (placard) if available. See 4G3.\n[La]\nINSIGHT (",
+      "type": "variant"
     },
     {
       "id": "S-Taurus",
+      "title": "Roger's Taurus",
+      "text": "This allows you to play a. Setup per 5A3. Seniority disks: 3 (medium game) or 4 (Futures game). Include all cards in each Patent deck.\n• Taurus Faction Color is the one directly opposite your ideology (e.g. if you are red, she is purple).\n• Delegates. Place 1 cube of your color in centrist, and another in your ideology. Put one cube of her color in her ideology (impacts vote tally & can be Discarded through martial law). Use a busted disk for the Sunspot Cube.\n• Taurus Hedge Funds. Set aside all her 7 shares and place 3 cubes of her color as hedge funds.",
       "type": "scenario",
-      "title": "Roger's Taurus (Module 5 Solitaire Variant)",
-      "modules": [
-        "M0",
-        "M5"
-      ],
-      "players": "1-2",
-      "author": "Roger Lund",
-      "text": "This allows you to play Module 5 with any solitaire HF4 game (e.g. CEO) and any Module (M0 mandatory). It is recommended for 2-player games using Module 5. The NPC (“Taurus”) strives to gain hedge funds as the chair of every company. She acts only during Board Meetings, taking actions based on the Event Roll. Inflation (5A4e) is triggered once she gets her first hedge fund. The game ends when the last Seniority disk is Discarded. Company VP scoring will depend if Taurus got all her hedge funds.\na. Setup per 5A3. Seniority disks: 3 (medium game) or 4 (Futures game). Include all cards in each Patent deck.\n• Taurus Faction Color is the one directly opposite your ideology (e.g. if you are red, she is purple).\n• Delegates. Place 1 cube of your color in centrist, and another in your ideology. Put one cube of her color in her ideology (impacts vote tally & can be Discarded through martial law). Use a busted disk for the Sunspot Cube.\n• Taurus Hedge Funds. Set aside all her 7 shares and place 3 cubes of her color as hedge funds.\nb. Lobby (O4). Pay 1 Aqua (free after market flip) to Discard a delegate in an inactive Ideology & use its Law or litigation.\nc. Your Research Auctions (I2). You pay one Aqua (or 1 bead after market flip) to initiate & win a research auction.\nd. Taurus Proxy Fights. Roll a die. She wins if the die roll matches the share value shown in the window, unless you defend your shares by Discarding one of your delegates in her ideology..\ne. Your Proxy Fights. As per 5C3a,b, except Taurus successfully defends by rolling a '1' on a 1d6.\nf. Litigations (5B7). May be used by you, but Taurus is limited to 5 trustee litigations (5B7).\ng. Insolvency. If you choose to not angel a company, then Taurus will do so at no cost if she has shares available.\nh. Taurus Board Decision. Depending on the Event Roll, she makes an action in one company (see table at right). i. Your Board Meetings. For each company that you chair (in order 5Da), after you make or skip your board decision, use the table (right) to see if she buys a vacant share (5C1), proxy fights (5C3), or litigates honor (5B7).\nj. Post Board Meetings. After all Board Meeting decisions have been performed, for her final action, Taurus will:\n• Float a White-Side company (of your choice) that is not currently floated (i.e. no duplicate companies).\n• Post-Monetization. Splinter a Black-Side company chit from a company that she chairs.\n• If there are no companies to float or splinter, she bumps up 1 row the lowest company she chairs (choose one if tied).\nk. Inflation (Module 2). If Taurus gets her first hedge fund, she anchors a monetizing Bernal in a home orbit (\"GEO Space Elevator\" if available, otherwise \"Lofstrom Loop\") triggering inflation (5A4e).\nl. Scoring. As per M2, including 4 VP per malf, and 4 extra VP if you are the isobanker. Furthermore:\n• Company VP per 5Ha,b. However, if Taurus gained all 3 hedge funds, you do not gain company VP.\n• Victory. Win if your score is 70+ VP (medium), or 100+ VP (Futures). Event\nRoll\nHer board decision in one company.\n1, 2 or 3\nShe reinvests her topmost company.*\n4, 5 or 6\nShe bumps her topmost company* up 1 row.\nTAURUS BOARD DECISION [5Lh]\n*Choose one if tied.\nCEO SOLITAIRE (Appendix V6):\nUse setup 5La and add one Seniority Disk to the demand pile. In addition to V6c, add a fatality disk to the demand pile every time you get the default chit. If Taurus gets a hedge fund, immediately add a Seniority Disk from the Pool to the demand pile. Calculate your KPI as per V6c. (For your first cycle your KPI will be at least 8, but it could raise to 18+ if Taurus gets one or more hedge funds). [5La]\nShe has an available share?\nDecision in each of your companies.\nYes\nShe buys share (if vacancy), or proxy fights otherwise.\nNo She litigates honor.\nYOUR BOARD MEETINGS [5Li]"
+      "sub_ids": {
+        "S-Taurusb": "S-Taurus",
+        "S-Taurusc": "S-Taurus",
+        "S-Taurusd": "S-Taurus",
+        "S-Tauruse": "S-Taurus",
+        "S-Taurusf": "S-Taurus",
+        "S-Taurusg": "S-Taurus",
+        "S-Taurush": "S-Taurus",
+        "S-Taurusi": "S-Taurus",
+        "S-Taurusj": "S-Taurus",
+        "S-Taurusk": "S-Taurus"
+      }
+    },
+    {
+      "id": "S-Taurusb",
+      "title": "Lobby (O4)",
+      "text": "Lobby (O4). Pay 1 Aqua (free after market flip) to Discard a delegate in an inactive Ideology & use its Law or litigation.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurusc",
+      "title": "Your Research Auctions (I2)",
+      "text": "Your Research Auctions (I2). You pay one Aqua (or 1 bead after market flip) to initiate & win a research auction.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurusd",
+      "title": "Taurus Proxy Fights",
+      "text": "Taurus Proxy Fights. Roll a die. She wins if the die roll matches the share value shown in the window, unless you defend your shares by Discarding one of your delegates in her ideology..",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Tauruse",
+      "title": "Your Proxy Fights",
+      "text": "Your Proxy Fights. As per 5C3a,b, except Taurus successfully defends by rolling a '1' on a 1d6.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurusf",
+      "title": "Litigations (5B7)",
+      "text": "Litigations (5B7). May be used by you, but Taurus is limited to 5 trustee litigations (5B7).",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurusg",
+      "title": "Insolvency",
+      "text": "Insolvency. If you choose to not angel a company, then Taurus will do so at no cost if she has shares available.",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurush",
+      "title": "Taurus Board Decision",
+      "text": "Taurus Board Decision. Depending on the Event Roll, she makes an action in one company (see table at right).",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurusi",
+      "title": "Your Board Meetings",
+      "text": "Your Board Meetings. For each company that you chair (in order Da), after you make or skip your board decision, use the table (right) to see if she buys a vacant share (5C1), proxy fights (5C3), or litigates honor (5B7).",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurusj",
+      "title": "Post Board Meetings",
+      "text": "Post Board Meetings. After all Board Meeting decisions have been performed, for her final action, Taurus will:\n• Float a White-Side company (of your choice) that is not currently floated (i.e. no duplicate companies).\n• Post-Monetization. Splinter a Black-Side company chit from a company that she chairs.\n• If there are no companies to float or splinter, she bumps up 1 row the lowest company she chairs (choose one if tied).",
+      "type": "scenario"
+    },
+    {
+      "id": "S-Taurusk",
+      "title": "Inflation",
+      "text": "Inflation ( l. Scoring. As per M2, including 4 VP per malf, and 4 extra VP if you are the isobanker. Furthermore:\n• Company VP per Ha,b. However, if Taurus gained all 3 hedge funds, you do not gain company VP.\n• Victory. Win if your score is 70+ VP (medium), or 100+ VP (Futures). Event\nRoll\nHer board decision in one company.\n1, 2 or 3\nShe reinvests her topmost company.*\n4, 5 or 6\nShe bumps her topmost company* up 1 row.\nTAURUS BOARD DECISION [Lh]\n*Choose one if tied.\nCEO SOLITAIRE ( Use setup La and add one Seniority Disk to the demand pile. In addition to V6c, add a fatality disk to the demand pile every time you get the default chit. If Taurus gets a hedge fund, immediately add a Seniority Disk from the Pool to the demand pile. Calculate your KPI as per V6c. (For your first cycle your KPI will be at least 8, but it could raise to 18+ if Taurus gets one or more hedge funds). [La]\nShe has an available share?\nDecision in each of your companies.\nYes\nShe buys share (if vacancy), or proxy fights otherwise.\nNo She litigates honor.\nYOUR BOARD MEETINGS [Li]",
+      "type": "scenario"
     }
   ]
 }
