@@ -1,6 +1,6 @@
-﻿{
+{
   "id": "m1_terawatt",
-  "title": "Module 1 â€“ Terawatt & Futures",
+  "title": "Module 1 Terawatt & Futures",
   "version": "1.0.0",
   "last_updated": "2026-02-19",
   "description": "",
@@ -9,167 +9,574 @@
     {
       "id": "1A",
       "title": "Module 1 Overview",
-      "text": "1A. Module 1 This terawatt module introduces two new patent decks: Freighters (1B) and GW/TW Thrusters (1C). Freighters are a new type of patent card allowing the transport of valuable factory goods back to LEO. GW/TW thrusters are more powerful and efficient versions of the MW thrusters of the core game, allowing your Spacecraft to reach the outer planets more easily. This module also optionally introduces Futures, special game goals to earn victory points."
+      "text": "This terawatt module introduces two new patent decks: Freighters (1B) and GW/TW Thrusters (1C). Freighters are a new type of patent card allowing the transport of valuable factory goods back to LEO. GW/TW thrusters are more powerful and efficient versions of the MW thrusters of the core game, allowing your Spacecraft to reach the outer planets more easily. This module also optionally introduces Futures, special game goals to earn victory points."
     },
     {
       "id": "1A1",
       "title": "Module 1 Components",
-      "text": "1A1. Module 1 Components Drawer Box Rules Booklet Playmat Extensions Big Wooden Cubes (12mm, in 5 player colors) for Freighters Gold Plastic Beads for Isotope FT Wooden Stars for Futures. Wooden Sticks for Space Elevators GW/TW Thruster Cards Freighter Fleets Cards Ziplock Bags"
+      "text": "Drawer Box Rules Booklet Playmat Extensions Big Wooden Cubes (12mm, in 5 player colors) for Freighters Gold Plastic Beads for Isotope FT Wooden Stars for Futures. Wooden Sticks for Space Elevators GW/TW Thruster Cards Freighter Fleets Cards Ziplock Bags"
     },
     {
       "id": "1A2",
       "title": "Module 1 Setup",
-      "text": "1A2. Module 1 Setup Setup is per core setup (C), except during patent decks setup (C4) include Freighter cards and GW/TW thruster cards as two extra patent decks with Black-Side faceup, and give each player their big wooden cube for their Freighter Figure.\na. Freighter Cards & GW/TW Thruster Cards are black on one side, and purple on the other. They form their own patent decks - the freighter deck and the GW/TW thruster deck - and are researched like all patent cards, but can only enter the map via ET production.\nb. Choose Game Length & Futures. During Seniority Disk placement (C1), place Seniority Disks according to desired game length: short (4 disks for a 48-year game, same as core), medium (5 disks for a 60-year game), or Futures (7 disks for a 84-year game, mandatory if you play with Futures 1D).\nc. Choose Quick Start. When playing with the 60-year game or longer, or if playing with more than 3 players, the Quick Start Variant (V1) is recommended.\nd. Extra Wet Mass Chits. Each player adds 1 gray/gold Wet Mass Chit to their Reserve (from the Core game)."
+      "text": "Setup is per core setup (C), except during patent decks setup (C4) include Freighter cards and GW/TW thruster cards as two extra patent decks with Black-Side faceup, and give each player their big wooden cube for their Freighter Figure.",
+      "sub_ids": {
+        "1A2a": "1A2",
+        "1A2b": "1A2",
+        "1A2c": "1A2",
+        "1A2d": "1A2"
+      }
+    },
+    {
+      "id": "1A2a",
+      "title": "Freighter & GW/TW Thruster Cards",
+      "text": "Freighter Cards & GW/TW Thruster Cards are black on one side, and purple on the other. They form their own patent decks - the freighter deck and the GW/TW thruster deck - and are researched like all patent cards, but can only enter the map via ET production."
+    },
+    {
+      "id": "1A2b",
+      "title": "Choose Game Length & Futures",
+      "text": "During Seniority Disk placement (C1), place Seniority Disks according to desired game length: short (4 disks for a 48-year game, same as core), medium (5 disks for a 60-year game), or Futures (7 disks for a 84-year game, mandatory if you play with Futures 1D)."
+    },
+    {
+      "id": "1A2c",
+      "title": "Choose Quick Start",
+      "text": "When playing with the 60-year game or longer, or if playing with more than 3 players, the Quick Start Variant (V1) is recommended."
+    },
+    {
+      "id": "1A2d",
+      "title": "Extra Wet Mass Chits",
+      "text": "Each player adds 1 gray/gold Wet Mass Chit to their Reserve (from the Core game)."
     },
     {
       "id": "1A3",
       "title": "Module 1 Sequence Of Play",
-      "text": "1A3. Module 1 Sequence Of Play This is unchanged from core (D). However, core allowed only one Spacecraft Stack - the Rocket. In Module 1, you can have up to two: your Rocket (which can be driven by MW thrusters or the new GW/TW thrusters), and a Freighter. Additionally, if you Promote your Freighter (1A5), all of your cubes become Spacecraft called Mobile Factories. You may move each of these Spacecraft once during your turn, in any order, along with your Operation (and any free actions).1"
+      "text": "This is unchanged from core (D). However, core allowed only one Spacecraft Stack - the Rocket. In Module 1, you can have up to two: your Rocket (which can be driven by MW thrusters or the new GW/TW thrusters), and a Freighter. Additionally, if you Promote your Freighter (1A5), all of your cubes become Spacecraft called Mobile Factories. You may move each of these Spacecraft once during your turn, in any order, along with your Operation (and any free actions).1\nEXAMPLE [1A3] It's your Turn. You can in any order perform your Operation, move your big cube freighter, perform free actions, move your Rocket and move a Mobile\nFactory (or Factories)."
     },
     {
       "id": "1A4",
       "title": "Freighter & GW/TW Thruster Card Limits",
-      "text": "1A4. Freighter & GW/TW Thruster Card Limits\nYou may only own one Freighter and one GW/TW thruster card. You may not initiate or participate in a research auction (I2) for a second Freighter or a second GW/TW thruster, if one exists already either in your Hand or in one of your Stacks.\nEXAMPLE [1A3] It's your Turn. You can in any order perform your Operation, move your big cube freighter, perform free actions, move your Rocket and move a Mobile\nFactory (or Factories).\nSPECTRAL COLONY [1A5a]\nEXAMPLE [1A4] You have a GW thruster (salt water zubrin), but wish to acquire a new GW thruster able to refuel at your Bernal at an H Site. So you Decommission the salt water zubrin and Discard it from your Hand (G6). Now you can bid on a new GW thruster."
+      "text": "You may only own one Freighter and one GW/TW thruster card. You may not initiate or participate in a research auction (I2) for a second Freighter or a second GW/TW thruster, if one exists already either in your Hand or in one of your Stacks.\nEXAMPLE [1A4] You have a GW thruster (salt water zubrin), but wish to acquire a new GW thruster able to refuel at your Bernal at an H Site. So you Decommission the salt water zubrin and Discard it from your Hand (G6). Now you can bid on a new GW thruster."
     },
     {
       "id": "1A5",
       "title": "Promotion",
-      "text": "1A5. Promotion (new Operation, also in Module 2)\nThis Operation, which flips a stack card to its improved Purple-Side, is common to Modules 1 and 2. Every card with a Purple-Side has a dome icon to the left of the Thrust triangle which indicates the type of Colony at which it may promote. To use the promote operation, an unpromoted card (Bernal, Colonist, Freighter, or GW thruster) must either be at a promotion colony specified by its dome icon, or at a Lab:\na. Promotion Colony is a Colony at a type of Site indicated by a cardâ€™s dome icon. There are 5 types: \nSpectral Colony if at the specified Spectral Type (D, H, S, etc.).\nSubmarine Colony (waves icon, see glossary). \nAstrobiology Colony (leaf icon, see glossary).\n Atmospheric Colony if at a Site with the cloud icon (see glossary). \n Push Colony marked with the push icon (in the Heliocentric Zones of Earth, Venus, or Mercury, plus Io).\nb. Lab Promotion Site (Module 2). A Promoted and Anchored Bernal is always a valid promotion colony for Colonist, Freighter, and GW thruster cards (2A3c).\nc. Negotiation. To promote, the Colony must either be your color or be an opponent's color as a negotiated on-site operation (N6).\nd. Decommissioning Promoted Cards. Except for Robot sales (2C2a) and Robot transfers (Nb), Purple-Side cards cannot be sold on the free market (I3b) or included in a stack transfer (N3). They can be involuntarily Decommissioned, but see (1B7) and (2C2). They can be voluntarily Decommissioned (Felony for Human Colonists) and then sold or transferred from your Hand (except Human Colonists). They return to play on their White-Side or Black-Side by being boosted (Bernals), exomigrated (Human Colonists), or ET Produced (Robots, Freighters, and GW Thrusters).\nEASILY MISSED: The PurpleSide contains Futures, which are ignored unless you are using 1D (1A5d).\nEXAMPLE [1A5a] You build a push colony on Mercury north pole. This is a promotion colony for your Freighter (HIIPER beam rider), so you use it to fly your Crew to Mercury, use your Crewâ€™s thrusters to bring the Freighter to the surface, and perform the promote operation to flip the freighter card to its Purple-Side (magnetic mirror beam rider)."
+      "text": "This Operation, which flips a stack card to its improved Purple-Side, is common to Modules 1 and 2. Every card with a Purple-Side has a dome icon to the left of the Thrust triangle which indicates the type of Colony at which it may promote. To use the promote operation, an unpromoted card (Bernal, Colonist, Freighter, or GW thruster) must either be at a promotion colony specified by its dome icon, or at a Lab:",
+      "sub_ids": {
+        "1A5a": "1A5",
+        "1A5b": "1A5",
+        "1A5c": "1A5",
+        "1A5d": "1A5"
+      }
+    },
+    {
+      "id": "1A5a",
+      "title": "Promotion Colony",
+      "text": "Promotion Colony is a Colony at a type of Site indicated by a cardâ€™s dome icon. There are 5 types: \nSpectral Colony if at the specified Spectral Type (D, H, S, etc.).\nSubmarine Colony (waves icon, see glossary). \nAstrobiology Colony (leaf icon, see glossary).\n Atmospheric Colony if at a Site with the cloud icon (see glossary). \n Push Colony marked with the push icon (in the Heliocentric Zones of Earth, Venus, or Mercury, plus Io)."
+    },
+    {
+      "id": "1A5b",
+      "title": "Lab Promotion Site (Module 2)",
+      "text": "A Promoted and Anchored Bernal is always a valid promotion colony for Colonist, Freighter, and GW thruster cards (2A3c)."
+    },
+    {
+      "id": "1A5c",
+      "title": "Negotiation",
+      "text": "To promote, the Colony must either be your color or be an opponent's color as a negotiated on-site operation (N6)."
+    },
+    {
+      "id": "1A5d",
+      "title": "Decommissioning Promoted Cards",
+      "text": "Except for Robot sales (2C2a) and Robot transfers (Nb), Purple-Side cards cannot be sold on the free market (I3b) or included in a stack transfer (N3). They can be involuntarily Decommissioned, but see (1B7) and (2C2). They can be voluntarily Decommissioned (Felony for Human Colonists) and then sold or transferred from your Hand (except Human Colonists). They return to play on their White-Side or Black-Side by being boosted (Bernals), exomigrated (Human Colonists), or ET Produced (Robots, Freighters, and GW Thrusters).\nEASILY MISSED: The PurpleSide contains Futures, which are ignored unless you are using 1D (1A5d).\nEXAMPLE [1A5a] You build a push colony on Mercury north pole. This is a promotion colony for your Freighter (HIIPER beam rider), so you use it to fly your Crew to Mercury, use your Crewâ€™s thrusters to bring the Freighter to the surface, and perform the promote operation to flip the freighter card to its Purple-Side (magnetic mirror beam rider)."
     },
     {
       "id": "1A6",
       "title": "Epic Hazard",
-      "text": "1A6. Epic Hazard (new Operation)\nIn order to build a Space Elevator (1B9) or accomplish any Future to gain a future star token (1D2a), a special unit needs to perform an epic hazard operation. In the case of a Space Elevator, the unit is a Factory, Freighter or Mobile Factory cube. In the case of a Future, the unit is a Crew or Colonist card.\na. Epic Hazard Roll. This operation requires a Hazard Roll. You can avoid this roll by paying FINAO. If you fail the roll by rolling a "1", the Space Elevator is not built or the orange star is not attained and the unit used to perform the Epic Hazard suffers involuntary Decommission.\nb. Successful Effects. See 1B9 (Space Elevator) or 1D2 (Futures)."
+      "text": "In order to build a Space Elevator (1B9) or accomplish any Future to gain a future star token (1D2a), a special unit needs to perform an epic hazard operation. In the case of a Space Elevator, the unit is a Factory, Freighter or Mobile Factory cube. In the case of a Future, the unit is a Crew or Colonist card.",
+      "sub_ids": {
+        "1A6a": "1A6",
+        "1A6b": "1A6"
+      }
+    },
+    {
+      "id": "1A6a",
+      "title": "Epic Hazard Roll",
+      "text": "This operation requires a Hazard Roll. You can avoid this roll by paying FINAO. If you fail the roll by rolling a '1', the Space Elevator is not built or the orange star is not attained and the unit used to perform the Epic Hazard suffers involuntary Decommission."
+    },
+    {
+      "id": "1A6b",
+      "title": "Successful Effects",
+      "text": "See 1B9 (Space Elevator) or 1D2 (Futures)."
     },
     {
       "id": "1A7",
       "title": "Nanofacture",
-      "text": "1A7. Nanofacture (new Operation, needs Module 2) Your Anchored Bernal can produce its own Mobile Factory. If you have a promoted Freighter, you may create this Mobile Factory (small cube) by performing a nanofacture operation at an Anchored Bernal (but not a Home Bernal). This Decommissions an operational robonaut, refinery, and their supports (including radiators), and places a Mobile Factory cube at the Bernal."
+      "text": "Your Anchored Bernal can produce its own Mobile Factory. If you have a promoted Freighter, you may create this Mobile Factory (small cube) by performing a nanofacture operation at an Anchored Bernal (but not a Home Bernal). This Decommissions an operational robonaut, refinery, and their supports (including radiators), and places a Mobile Factory cube at the Bernal.\nEXAMPLE [1A7] You have promoted your poodle freighter into a D-nanotube freighter, and moved a refinery and a robonaut, plus their supports (generator, reactor, and radiator), to your Bernal anchored in LMO (low mars orbit). You decommission all these cards, creating a small cube in LMO."
     },
     {
       "id": "1A8",
       "title": "Core Rule Addenda",
-      "text": "1A8. Core Rule Addenda\nThe delivery operation (I9), which abstracts freighter operations, cannot be used with this Module."
+      "text": "The delivery operation (I9), which abstracts freighter operations, cannot be used with this Module."
     },
     {
       "id": "1A9",
       "title": "Freighter & GW Thruster Card Data",
-      "text": "1A9. Freighter & GW Thruster Card Data\nFor technical details on Freighters and Gigawatt/Terawatt thrusters, see section 1Z in this rulebook.\nEASILY MISSED: If attempting a Future, a failed Epic Hazard Roll kills the Human who attempted it, but does not destroy the Purple-Side\nFutures card which is also in attendance. [1A6a]\nGW THRUSTER AND FREIGHTER CARD EXAMPLE [1A9]\nEXAMPLE [1A7] You have promoted your poodle freighter into a D-nanotube freighter, and moved a refinery and a robonaut, plus their supports (generator, reactor, and radiator), to your Bernal anchored in LMO (low mars orbit). You decommission all these cards, creating a small cube in LMO."
+      "text": "For technical details on Freighters and Gigawatt/Terawatt thrusters, see section 1Z in this rulebook.\nEASILY MISSED: If attempting a Future, a failed Epic Hazard Roll kills the Human who attempted it, but does not destroy the Purple-Side\nFutures card which is also in attendance. [1A6a]"
     },
     {
       "id": "1B",
       "title": "Freighters",
-      "text": "1B. Freighters\nA Freighter is a Spacecraft represented on the map by a Freighter Figure (big cube). Freighter cards form their own patent deck, and can be researched into your Hand by a research auction (I2). From there you can create it on its Black-Side by an ET production (I8), according to its Spectral Type.3 This can be added to any stack or used to form a Freighter Stack:\na. Create A Freighter Stack by cargo transfer (G1), ET production (I8), or stack swapping (G1e). Show its location on the map with your big (12mm) cube. Place the Freighter card into the slot for the Freighter Stack.\nb. Freighter Stacks do not track fuel and move 1 burn per Turn (plus flybys, pushes, and coasting). They have a minimum mass of 1 (F2a, relevant for e.g. rocketplane liftoffs (H6c)).\nc. Load Limit is the mass limit of the cards(s), FTs, and Mobile Factories the Freighter Stack can carry.\nd. Promotion. If you promote (1A5) your Freighter card, all of your Factory cubes become Mobile Factories, and the Freighterâ€™s Future becomes unlocked (1D).\ne. Mobile Factories. Once you Promote your Freighter card, all your cubes move with the same capacities as your Promoted Freighter card. Each becomes a Factory as soon as it lands on one of your Claims. On your Turn, you may move all of your cubes not under a colony dome, in any order."
+      "text": "A Freighter is a Spacecraft represented on the map by a Freighter Figure (big cube). Freighter cards form their own patent deck, and can be researched into your Hand by a research auction (I2). From there you can create it on its Black-Side by an ET production (I8), according to its Spectral Type.3 This can be added to any stack or used to form a Freighter Stack:",
+      "sub_ids": {
+        "1Ba": "1B",
+        "1Bb": "1B",
+        "1Bc": "1B",
+        "1Bd": "1B",
+        "1Be": "1B"
+      }
+    },
+    {
+      "id": "1Ba",
+      "title": "Create A Freighter Stack",
+      "text": "Create A Freighter Stack by cargo transfer (G1), ET production (I8), or stack swapping (G1e). Show its location on the map with your big (12mm) cube. Place the Freighter card into the slot for the Freighter Stack."
+    },
+    {
+      "id": "1Bb",
+      "title": "Freighter Stacks",
+      "text": "Freighter Stacks do not track fuel and move 1 burn per Turn (plus flybys, pushes, and coasting). They have a minimum mass of 1 (F2a, relevant for e.g. rocketplane liftoffs (H6c))."
+    },
+    {
+      "id": "1Bc",
+      "title": "Load Limit",
+      "text": "Load Limit is the mass limit of the cards(s), FTs, and Mobile Factories the Freighter Stack can carry."
+    },
+    {
+      "id": "1Bd",
+      "title": "Promotion",
+      "text": "If you promote (1A5) your Freighter card, all of your Factory cubes become Mobile Factories, and the Freighterâ€™s Future becomes unlocked (1D)."
+    },
+    {
+      "id": "1Be",
+      "title": "Mobile Factories",
+      "text": "Once you Promote your Freighter card, all your cubes move with the same capacities as your Promoted Freighter card. Each becomes a Factory as soon as it lands on one of your Claims. On your Turn, you may move all of your cubes not under a colony dome, in any order.\nEASILY MISSED: Load limit does not include the Mass of the Freighter itself. [1Bc]\nEASILY MISSED: A Mobile Factory not on a Claim is not a Factory, and counts token VP (M2a) but no stock VP. [1Be]"
     },
     {
       "id": "1B1",
       "title": "Freighter Acquisition & Production",
-      "text": "1B1. Freighter Acquisition & Production\nA Freighter can be acquired into your Hand by winning it in a research auction (I2). See 1A4 for card limits. \na. Production. Later, you can ET produce it at a Factory of the appropriate Spectral Type. If the Freighter has Spectral Type ANY, then it is a low tech Freighter that can be produced at any Factory, but per (I3b) cannot be sold on the free market. \nEASILY MISSED: Load limit does not include the Mass of the Freighter itself. [1Bc]\nEASILY MISSED: A Mobile Factory not on a Claim is not a Factory, and counts token VP (M2a) but no stock\nVP. [1Be]"
+      "text": "A Freighter can be acquired into your Hand by winning it in a research auction (I2). See 1A4 for card limits.",
+      "sub_ids": {
+        "1B1a": "1B1"
+      }
+    },
+    {
+      "id": "1B1a",
+      "title": "Production",
+      "text": "Later, you can ET produce it at a Factory of the appropriate Spectral Type. If the Freighter has Spectral Type ANY, then it is a low tech Freighter that can be produced at any Factory, but per (I3b) cannot be sold on the free market."
     },
     {
       "id": "1B2",
       "title": "Big Cube Freighter Figure",
-      "text": "1B2. Big Cube Freighter Figure One cube of your color is larger (12mm) than the rest. Use this cube to indicate the location of your Freighter Stack (1Ba), which must contain your Freighter card. This card specifies the cube's mass, rad-hardness, and Load Limit. Remove the cube if you don't want a Freighter Stack (because your Freighter card is Cargo or being used as a support, etc.). You can later use cargo transfer (G1) to create a Freighter Stack."
+      "text": "One cube of your color is larger (12mm) than the rest. Use this cube to indicate the location of your Freighter Stack (1Ba), which must contain your Freighter card. This card specifies the cube's mass, rad-hardness, and Load Limit. Remove the cube if you don't want a Freighter Stack (because your Freighter card is Cargo or being used as a support, etc.). You can later use cargo transfer (G1) to create a Freighter Stack."
     },
     {
       "id": "1B3",
       "title": "Freighter Stack Cargo",
-      "text": "1B3. Freighter Stack Cargo\nFreighter Stacks can transfer Cargo as a free action (G1). Note that Wet Mass Fuel, Dry Mass, and Wet Mass are not tracked in a Freighter. The following rules must be respected in regards to Cargo:\na. Load Limit. This number on the Freighter card indicates how much mass the Freighter Stack can carry, not counting the mass of the Freighter card itself.\nb. Factory Loading Only. A Freighter with text may only add cards to its stack at a Factory or Anchored Bernal that is not in its Home Orbit (due to the scarcity of water around Earth). Removing cards via cargo transfer (G1) is allowed anywhere, as normal."
+      "text": "Freighter Stacks can transfer Cargo as a free action (G1). Note that Wet Mass Fuel, Dry Mass, and Wet Mass are not tracked in a Freighter. The following rules must be respected in regards to Cargo:",
+      "sub_ids": {
+        "1B3a": "1B3",
+        "1B3b": "1B3"
+      }
+    },
+    {
+      "id": "1B3a",
+      "title": "Load Limit",
+      "text": "This number on the Freighter card indicates how much mass the Freighter Stack can carry, not counting the mass of the Freighter card itself."
+    },
+    {
+      "id": "1B3b",
+      "title": "Factory Loading Only",
+      "text": "A Freighter with text may only add cards to its stack at a Factory or Anchored Bernal that is not in its Home Orbit (due to the scarcity of water around Earth). Removing cards via cargo transfer (G1) is allowed anywhere, as normal."
     },
     {
       "id": "1B4",
       "title": "Freighter Stack Movement",
-      "text": "1B4. Freighter Stack Movement\nFuel is not burned or tracked on a Freighter Stack. Freighter movement doesnâ€™t use a Fuel Strip, and Section H is not used. Instead, the Stack can move 1 Burn Space, and then coasts. If pushed by a Powersat, it can move 2, which allows it to make one Pivot or 2 Burn Spaces. It is allowed Bonus Burns, e.g. from flybys (H8). A Freighter card cannot be used or activated to move anything other than a Freighter Stack, and the following are only applicable to a Freighter Stack:\na. Bonus Pivots. Some Freighters (i.e. z-pinch, fusion fragment and HIIPER beam-rider) receive a number of Bonus Pivots, as specified in the number of .\nEASILY MISSED: Bonus Pivots cannot be converted into\nBurns or Fuel. [1B4a]\nEASILY MISSED: Factory load only Freighters are not very useful on non-atmospheric\nSites of Size 6 or more. They can only liftoff by being carried as Cargo. [1B3b]\nb. Landing/Liftoff. A Freighter can always land or liftoff from Size 1 Sites. To land or liftoff from larger Sites, it can use factory-assist (H6c) (but not through lander burns) or if its net thrust is greater than the Site Size. It is also allowed aerobrake landings (H6b) and acetylene rocketplane liftoffs (H6c).\nc. Net Thrust. A Freighter Stack has a net thrust of 1. If pushed by a Powersat, it has a net thrust of 2. Its thrust can be also modified by certain Abilities. This is relevant in Radiation Belts and solar oberth (using base thrust\n= 1). Freighters are not affected by movement-modifying supports (J5d).\nd. No Double Move. See H1b.\ne. Entering Radiation Belts. See 1B6e.\nf. Entering Hazards. Freighters are affected by Hazards (H7)."
+      "text": "Fuel is not burned or tracked on a Freighter Stack. Freighter movement doesnâ€™t use a Fuel Strip, and Section H is not used. Instead, the Stack can move 1 Burn Space, and then coasts. If pushed by a Powersat, it can move 2, which allows it to make one Pivot or 2 Burn Spaces. It is allowed Bonus Burns, e.g. from flybys (H8). A Freighter card cannot be used or activated to move anything other than a Freighter Stack, and the following are only applicable to a Freighter Stack:",
+      "sub_ids": {
+        "1B4a": "1B4",
+        "1B4b": "1B4",
+        "1B4c": "1B4",
+        "1B4d": "1B4",
+        "1B4e": "1B4",
+        "1B4f": "1B4"
+      }
+    },
+    {
+      "id": "1B4a",
+      "title": "Bonus Pivots",
+      "text": "Some Freighters (i.e. z-pinch, fusion fragment and HIIPER beam-rider) receive a number of Bonus Pivots, as specified in the number of .\nEASILY MISSED: Bonus Pivots cannot be converted into Burns or Fuel. [1B4a]\nEASILY MISSED: Factory load only Freighters are not very useful on non-atmospheric\nSites of Size 6 or more. They can only liftoff by being carried as Cargo. [1B3b]"
+    },
+    {
+      "id": "1B4b",
+      "title": "Landing/Liftoff",
+      "text": "A Freighter can always land or liftoff from Size 1 Sites. To land or liftoff from larger Sites, it can use factory-assist (H6c) (but not through lander burns) or if its net thrust is greater than the Site Size. It is also allowed aerobrake landings (H6b) and acetylene rocketplane liftoffs (H6c)."
+    },
+    {
+      "id": "1B4c",
+      "title": "Net Thrust",
+      "text": "A Freighter Stack has a net thrust of 1. If pushed by a Powersat, it has a net thrust of 2. Its thrust can be also modified by certain Abilities. This is relevant in Radiation Belts and solar oberth (using base thrust\n= 1). Freighters are not affected by movement-modifying supports (J5d)."
+    },
+    {
+      "id": "1B4d",
+      "title": "No Double Move",
+      "text": "See H1b."
+    },
+    {
+      "id": "1B4e",
+      "title": "Entering Radiation Belts",
+      "text": "See 1B6e."
+    },
+    {
+      "id": "1B4f",
+      "title": "Entering Hazards",
+      "text": "Freighters are affected by Hazards (H7).\nEXAMPLE [1B4a]\nThe magnetic beam mirror freighter is allowed +3 Bonus Pivots. Its Freighter\nStack is at the termination shock point en route to Sedna. It moves through the next 3\nHohmanns for free (also past the heliopause and the Voyager Easter Egg) to stop at the fourth Pivot just beyond."
     },
     {
       "id": "1B5",
       "title": "On-Board Nuclear Supports",
-      "text": "1B5. On-Board Nuclear Supports Certain Freighter and Colonist Cards contain nuclear reactors and/or generators and thus may be used as part of a support chain (J1c) according to the icon of their subtype icon (J1a). They can also be Decommissioned to support industrialization (I7).\nEXAMPLE [1B4a]\nThe magnetic beam mirror freighter is allowed +3 Bonus Pivots. Its Freighter\nStack is at the termination shock point en route to Sedna. It moves through the next 3\nHohmanns for free (also past the heliopause and the Voyager Easter Egg) to stop at the fourth Pivot just beyond.\n10 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T"
+      "text": "Certain Freighter and Colonist Cards contain nuclear reactors and/or generators and thus may be used as part of a support chain (J1c) according to their subtype icon (J1a). They can also be Decommissioned to support industrialization (I7).\nEXAMPLE 1 [1B5]\n Your lunar factory produces a rotary dirt launcher freighter, which provides an electric \"e\" generator. Luna is too big for the Freighter to liftoff from, so you also produce a GW thruster (spheromak 3He-D magnetic fusion). The generator required by the GW thruster is provided by the Freighter. The GW thruster, carrying its supports (radiators and the Freighter), plus one tank of H isotope fuel, blasts-off and flies to LEO in one Turn.\nEXAMPLE 2 [1B5]\n In the previous example, the Freighter was used exclusively as an on-board nuclear support. But suppose the example had been at a distant H Site, say the Uranus aerostat. The GW thruster would be used just to get the Freighter and supports boosted through the three lander burns. Then it could be Decommissioned for use elsewhere, leaving the Freighter to bring a Black-Side support back to Earth to sell."
     },
     {
       "id": "1B6",
       "title": "Freighter Promotion & Mobile Factories",
-      "text": "1B6. Freighter Promotion & Mobile Factories To flip a built Freighter card to its Purple-Side, perform a promote operation (1A5). Promotion is permanent.\nOnce Promoted, your Freighter card becomes a â€œfreighter fleetâ€ that then â€™convertsâ€™ all of your map cubes (big and small) into Mobile Factories. As Mobile Factories, all your Factories (big & small cubes) can now move like your Freighter and create a Factory by landing on one of your Claims. This change occurs the instant the Freighter card is promoted.\na. Capacities. Your small cubes now have all the characteristics of the Freighter card, including Mass (relevant if the cube is being carried as Cargo), rad-hard, Bonus Pivots, and On-board Nuclear Supports. Your small cubes may not carry Cargo (load limit does not apply) or use your Freighterâ€™s Future.\nâ€¢ Stacks, A Mobile Factory can be added or subtracted to a Stack as Cargo using cargo transfer (G1).\nb. Mobile Factory Landing & Lift-Off. To land or lift off a Claim without a Factory, a Mobile Factory cube may use factory-assist (H6c), using itself as the Factory. The Claim can be either yours or an opponentâ€™s, and must be on a Site of Size 5 or less (because all Size 6+ Sites have Lander Burns). See rocketplane exception below.\nâ€¢ Landing On Unindustrialized Claim, place Mobile Factory cube on top of the Claim disk. â€¢ Landing On Industrialized Claim (or a foreign Claim), place Mobile Factory cube next to the Claim disk to indicate that it is not part of the current Claim, and canâ€™t be used for ET production, colony establishment, or factory stock prices.4 CLAIMS are much more than a flag and footprints, and include considerable mining infrastructure, plus landing and launch facilities capable of accommodating Mobile Factories.\nEXAMPLE 1 [1B5] Your lunar factory produces a rotary dirt launcher freighter, which provides an electric \"e\" generator. Luna is too big for the Freighter to liftoff from, so you also produce a GW thruster (spheromak 3He-D magnetic fusion). The generator required by the GW thruster is provided by the Freighter. The GW thruster, carrying its supports (radiators and the Freighter), plus one tank of H isotope fuel, blasts-off and flies to LEO in one Turn.\nEXAMPLE 2 [1B5] In the previous example, the Freighter was used exclusively as an on-board nuclear support. But suppose the example had been at a distant H Site, say the Uranus aerostat. The GW thruster would be used just to get the Freighter and supports boosted through the three lander burns. Then it could be Decommissioned for use elsewhere, leaving the Freighter to bring a Black-Side support back to Earth to sell.\nEASILY MISSED: If you promote your Freighter, each of your factory cubes can move just like your big cube. [1B6a]\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 11\nâ€¢ Acetylene Rocketplane. A Freighter or Mobile Factory on an Atmospheric Site with a Claim may use acetylene rocketplane liftoff (H6c) by spending the water cost indicated from FTs stored at the Site.\nc. Factory Establish or Abandon. Your Mobile Factory is a Factory only if it sits on top of your Claim disk. Moving a cube on or off of your own Claim immediately establishes or abandons a Factory, adjusting the relevant Exploitation Track (I7d). You cannot abandon a Dirtside Factory if this leaves a Bernal without a Dirtside.\nâ€¢ When the last Factory of a Spectral Type is abandoned, the stock price becomes 10.\nd. Colonies. Any Mobile Factory, big or small, can be colonized. Because Colonies are permanent (G6b), Mobile Factories may not liftoff or abandon a Claim or be voluntarily decommissioned if they are on a Claim disk that has a Colony.\ne. Flares & Radiation Belts. Each Mobile Factory cube has a rad-hardness equal to your Freighter card rad-hardness, making it vulnerable to flares (K2d) and Belt Rolls (H10). If a small cube fails the roll, it is discarded. If a big cube fails, see Freighter Decommission (1B7). If a card carried in a Freighter Stack fails, the entire stack suffers a Glitch instead of Decommission, and suffers nothing if it is already glitched.\nf. Pad Explosion. A Mobile Factory is immune to pad explosions/space debris (K2c). g. Mobile Factory Creation is by the industrialize or nanofacture operations (1A7)."
+      "text": "Once Promoted, your Freighter card becomes a â€œfreighter fleetâ€ that then â€™convertsâ€™ all of your map cubes (big and small) into Mobile Factories. As Mobile Factories, all your Factories (big & small cubes) can now move like your Freighter and create a Factory by landing on one of your Claims. This change occurs the instant the Freighter card is promoted.",
+      "sub_ids": {
+        "1B6a": "1B6",
+        "1B6b": "1B6",
+        "1B6c": "1B6",
+        "1B6d": "1B6",
+        "1B6e": "1B6",
+        "1B6f": "1B6",
+        "1B6g": "1B6"
+      }
+    },
+    {
+      "id": "1B6a",
+      "title": "Capacities",
+      "text": "Your small cubes now have all the characteristics of the Freighter card, including Mass (relevant if the cube is being carried as Cargo), rad-hard, Bonus Pivots, and On-board Nuclear Supports. Your small cubes may not carry Cargo (load limit does not apply) or use your Freighter's Future.\nStacks, A Mobile Factory can be added or subtracted to a Stack as Cargo using cargo transfer (G1)."
+    },
+    {
+      "id": "1B6b",
+      "title": "Mobile Factory Landing & Lift-Off",
+      "text": "To land or lift off a Claim without a Factory, a Mobile Factory cube may use factory-assist (H6c), using itself as the Factory. The Claim can be either yours or an opponentâ€™s, and must be on a Site of Size 5 or less (because all Size 6+ Sites have Lander Burns). See rocketplane exception below.\n Landing On Unindustrialized Claim, place Mobile Factory cube on top of the Claim disk. \n Landing On Industrialized Claim (or a foreign Claim), place Mobile Factory cube next to the Claim disk to indicate that it is not part of the current Claim, and can't be used for ET production, colony establishment, or factory stock prices.4 CLAIMS are much more than a flag and footprints, and include considerable mining infrastructure, plus landing and launch facilities capable of accommodating Mobile Factories.\nEASILY MISSED: If you promote your Freighter, each of your factory cubes can move just like your big cube. [1B6a]\n Acetylene Rocketplane. A Freighter or Mobile Factory on an Atmospheric Site with a Claim may use acetylene rocketplane liftoff (H6c) by spending the water cost indicated from FTs stored at the Site."
+    },
+    {
+      "id": "1B6c",
+      "title": "Factory Establish or Abandon",
+      "text": "Your Mobile Factory is a Factory only if it sits on top of your Claim disk. Moving a cube on or off of your own Claim immediately establishes or abandons a Factory, adjusting the relevant Exploitation Track (I7d). You cannot abandon a Dirtside Factory if this leaves a Bernal without a Dirtside.When the last Factory of a Spectral Type is abandoned, the stock price becomes 10."
+    },
+    {
+      "id": "1B6d",
+      "title": "Colonies",
+      "text": "Any Mobile Factory, big or small, can be colonized. Because Colonies are permanent (G6b), Mobile Factories may not liftoff or abandon a Claim or be voluntarily decommissioned if they are on a Claim disk that has a Colony."
+    },
+    {
+      "id": "1B6e",
+      "title": "Flares & Radiation Belts",
+      "text": "Each Mobile Factory cube has a rad-hardness equal to your Freighter card rad-hardness, making it vulnerable to flares (K2d) and Belt Rolls (H10). If a small cube fails the roll, it is discarded. If a big cube fails, see Freighter Decommission (1B7). If a card carried in a Freighter Stack fails, the entire stack suffers a Glitch instead of Decommission, and suffers nothing if it is already glitched."
+    },
+    {
+      "id": "1B6f",
+      "title": "Pad Explosion",
+      "text": "A Mobile Factory is immune to pad explosions/space debris (K2c)."
+    },
+    {
+      "id": "1B6g",
+      "title": "Mobile Factory Creation",
+      "text": "Mobile Factory Creation is by the industrialize or nanofacture operations (1A7).\nEXAMPLE [1B6c] You produce a C product at a Factory on eichsfeldia, and use a big cube swap (1B8) to convert it into a Freighter. The asteroid is size 4, so you use factory-assist to launch the Freighter card and its Cargo, which flies past the Burn Space next to Vesta. The Exploitation Track for C is reduced by one, since the Factory abandoned the C Claim. A lot happened in just one Turn!\nIf this new location is a Colony, your Freighter may not liftoff, since Colonies are permanent."
     },
     {
       "id": "1B7",
       "title": "Freighter Decommission",
-      "text": "1B7. Freighter Decommission If your Promoted Freighter gets Decommissioned (1B6e), Discard its Figure (big cube). Decommission any Cargo or convert it into an Outpost Stack (E6). Then follow these procedures:\na. Promoted Decommission. If your Promoted Freighter card gets Decommissioned, Discard all small cubes not on Claims except that you may replace one of your small cubes on the map with the big cube. This becomes the new location of your Freighter Stack, and the Promoted Freighter card remains in the freighter slot on your Playmat. Alternatively, you may leave your Freighter Figure in your Reserves and return the Freighter card to your Hand.\nâ€¢ If this new location is a Factory, the Exploitation Track remains unchanged.\nEXAMPLE [1B6c] You produce a C product at a Factory on eichsfeldia, and use a big cube swap (1B8) to convert it into a Freighter. The asteroid is size 4, so you use factory-assist to launch the Freighter card and its Cargo, which flies past the Burn Space next to Vesta. The Exploitation Track for C is reduced by one, since the Factory abandoned the C Claim. A lot happened in just one Turn!\n12 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T\nâ€¢ If this new location is a Colony, your Freighter may not liftoff, since Colonies are permanent.\nâ€¢ Futures. Decommission of a Freighter does not forfeit its futures star (1D2a) if earned. b. Unpromoted Decommission. If your Freighter is not yet Promoted, your Freighter Figure remains in your Reserves and you return the Freighter card to your Hand."
+      "text": "If your Promoted Freighter gets Decommissioned, Discard its Figure (big cube). Decommission any Cargo or convert it into an Outpost Stack (E6). Then follow these procedures:",
+      "sub_ids": {
+        "1B7a": "1B7",
+        "1B7b": "1B7"
+      }
+    },
+    {
+      "id": "1B7a",
+      "title": "Promoted Decommission",
+      "text": "If your Promoted Freighter card gets Decommissioned, Discard all small cubes not on Claims except that you may replace one of your small cubes on the map with the big cube. This becomes the new location of your Freighter Stack, and the Promoted Freighter card remains in the freighter slot on your Playmat. Alternatively, you may leave your Freighter Figure in your Reserves and return the Freighter card to your Hand.\n If this new location is a Factory, the Exploitation Track remains unchanged.\nIf this new location is a Colony, your Freighter may not liftoff, since Colonies are permanent.\nFutures. Decommission of a Freighter does not forfeit its futures star (1D2a) if earned."
+    },
+    {
+      "id": "1B7b",
+      "title": "Unpromoted Decommission",
+      "text": "If your Freighter is not yet Promoted, your Freighter Figure remains in your Reserves and you return the Freighter card to your Hand."
     },
     {
       "id": "1B8",
       "title": "Freighter Big Cube Swap",
-      "text": "1B8. Freighter Big Cube Swap (new free action)\nAs a free action (G), when your Promoted Freighter is not carrying any cards you can swap its big cube with any small cube on the map. This does not use up your Freighterâ€™s movement opportunity for the Turn.5"
+      "text": "As a free action (G), when your Promoted Freighter is not carrying any cards you can swap its big cube with any small cube on the map. This does not use up your Freighterâ€™s movement opportunity for the Turn.\nEASILY MISSED: A big cube swap is a free action that mimics what happens during a promoted Freighter Decommission. [1B8]"
     },
     {
       "id": "1B9",
       "title": "Space Elevators",
-      "text": "1B9. Space Elevators\nA Space Elevator6 is a cable which can be built between two map Spaces, as indicated on the map by the space elevator icon. To build a Space Elevator, one of the Spaces must be industrialized, and you must have a cube (Factory, Freighter, or Mobile Factory) at the other. Then you must perform an epic hazard operation (1A6), and if its roll is successful place a wooden elevator stick over the map icon. BIG CUBE SWAP represents using a 3D printer to reconfigure a Mobile Factory into a cargo-carrying freighter. Essentially its hull is reconfigured into a cargo bay, using existing material (since no mass is transferred in the swap). At the end of the â€œswapâ€, one should be left with two freighters with cargo-bays. But because of logistics limits, you can only have one freighter so the old one reverts to a Mobile Factory.\n6SPACE ELEVATOR is a tether held vertical by centrifugal force, from the equator of a world into deep space. It is tapered so as to support its own weight over its length. A variant is the spaceline, a tether dropped from a convenient tidally-locked moon, where the moon itself is a source of building materials and acts as a counterweight. A spaceline simply hangs into both gravity wells from the Lagrange L2 point, and sees much reduced tensions which means it need not be massive or superstrong. Because the moon orbits at a somewhat different speed than the surface, the dirtside end is a hook or scoop that travels through the atmosphere of the larger world, with appreciable drag and thermal load. The drag lowers the altitude of the moon by an insignificant amount. Robonautic climbers bring mined material from either world, after which it can be electromagnetically catapulted further.\nâ€“Penoyre & Sandford, The Spaceline, a practical space elevator alternative Achievable with Current Technology, (draft version).\nEASILY MISSED: A big cube swap is a free action that mimics what happens during a promoted Freighter\nDecommission. [1B8]\nEXAMPLE [1B7b] Your Freighter Stack moves to your Home Bernal and does a free market of its Cargo card. It is Spectral Type â€œANYâ€, so the Freighter is not worth anything on the free market, so you Decommission it. It is unpromoted, so it goes into your Hand.\nEXAMPLE [1B8] Your Promoted Freighter has just delivered product to LEO. You swap the big cube in LEO with your small cube on Ceres. This magic was performed with the power of 3D printing.\nEASILY MISSED: Using a Space Elevator is not a move, it's a cargo transfer free action (G1) in which stack cards transfer between two locations connected by an elevator. [1B9]\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 13 a. Locations are as indicated on the map at Luna (aristarchus plateau/ lagrange L1),7 Mars (arsia mons caves/ phobos), Saturn (aerostat/prometheus), Uranus (aerostat/cordelia),8 Neptune (aerostat/despina), Pluto/ barycenter, Charon/barycenter, and Haumea/barycenter.9 b. Claims. Building a Space Elevator automatically Claims any unclaimed Site it connects to, even if it is Busted (replace the red disk with one of your own). If a connected Site has a foreign Claim, that Claim remains unless\nClaim Jumping (G4) is possible.\nc. Benefits. As a free action, any player owning a connected Factory can cargo transfer (G1) Humans and Cargo between either of its connected Spaces. They can negotiate this privilege for others.\nd. Endgame Victory Points. If a Factory is connected by a Space Elevator, its factory stock price (M2b) is doubled, regardless of who built the Space Elevator. Building Space Elevators gives extra VP in the beanstalk future (1D4d, 1D5l).\ne. GEO Space Elevator. The Space Elevator at Earth can only be built by anchoring the GEO Elevator Bernal (Module 2, 2B4i) in the GEO Home Orbit. This anchoring does not need an Epic Hazard op/roll or other requirement.\nf. Destruction. A Space Elevator is destroyed if at the end a Turn neither of its ends are industrialized, with the exception that the elevator stick for the GEO Elevator is not removed if its Bernal is voluntarily unanchored. LUNAR BEANSTALK combines lunar space elevators with solar-powered robonaut climbers, a system for lunar resource recovery. The space elevator ribbon, made of existing high-strength composites, is balanced about the Earth-Luna L1 Lagrangian point on the near side of Luna, and connected dirtside with surface tramways linked to lunar mining sites. Estimated capacity is 584 tonnes (15 Mass) or lunar regolith into GEO per year.\nâ€“Pearson, Levin, Oldson, Wykes, Lunar Space Elevators for Cislunar Space Development, 2005. RINGED PLANET BEANSTALK. Ring material is a significant hazard to space elevators on planets such as Saturn or Uranus, where the most suitable moons lie just outside several ring systems. By building a truss tower on the north pole of prometheus (on Saturn) or cordelia (on Uranus), the elevator can hopefully avoid destructive impacts. A ribbon made of â€œcolossal carbon tubesâ€ would be 440 tonnes, or Mass 10. Delivery of the clean fusion fuel helium-3 to Earth is estimated at 20 tonnes per year. â€“A.M. Hein, Project Icarus: Architecture Development of Atmospheric\nHelium 3 Mining of the Outer Solar System Gas Planets for Space Exploration and Power Generation, 2010.\n9HAUMEA rotates every 3.9 hours, fast enough to distort its shape into a triaxial ellipsoid. A space elevator anchored to its twirling equator has little need for a counterweight. This spin seems to be a legacy of an impact which created the Haumea collisional family, as well as Haumeaâ€™s rings and moons.\nEXAMPLE [1B9c] You have industrialized the arsia mons caves of Mars, and moved a Mobile Factory to phobos. By performing the epic hazard operation, and paying the programmers FINAO there is no risk, you build the Mars Space Elevator. Place an elevator stick.\nSPACE ELEVATOR [1B9]\nTIP: Mars can be an \"ant lion\" trap, unless you build the Phobos Space Elevator!\nIt is often easy to build a mass zero \"any\" freighter on Mars, and send it to phobos via rocketplane. With a Factory on arsia mons caves, and a Freighter on phobos (even if phobos is busted), it only takes an epic hazard roll to build the elevator and set up your \"Martian Bottled\nWater Company\". [1B9]\n14 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T"
+      "text": "A Space Elevator is a cable which can be built between two map Spaces, as indicated on the map by the space elevator icon. To build a Space Elevator, one of the Spaces must be industrialized, and you must have a cube (Factory, Freighter, or Mobile Factory) at the other. Then you must perform an epic hazard operation (1A6), and if its roll is successful place a wooden elevator stick over the map icon.\nEASILY MISSED: Using a Space Elevator is not a move, it's a cargo transfer free action (G1) in which stack cards transfer between two locations connected by an elevator. [1B9]",
+      "sub_ids": {
+        "1B9a": "1B9",
+        "1B9b": "1B9",
+        "1B9c": "1B9",
+        "1B9d": "1B9",
+        "1B9e": "1B9",
+        "1B9f": "1B9"
+      }
+    },
+    {
+      "id": "1B9a",
+      "title": "Locations",
+      "text": "Locations are as indicated on the map at Luna (aristarchus plateau/ lagrange L1),7 Mars (arsia mons caves/ phobos), Saturn (aerostat/prometheus), Uranus (aerostat/cordelia),8 Neptune (aerostat/despina), Pluto/ barycenter, Charon/barycenter, and Haumea/barycenter."
+    },
+    {
+      "id": "1B9b",
+      "title": "Claims",
+      "text": "Building a Space Elevator automatically Claims any unclaimed Site it connects to, even if it is Busted (replace the red disk with one of your own). If a connected Site has a foreign Claim, that Claim remains unless Claim Jumping (G4) is possible."
+    },
+    {
+      "id": "1B9c",
+      "title": "Benefits",
+      "text": "As a free action, any player owning a connected Factory can cargo transfer (G1) Humans and Cargo between either of its connected Spaces. They can negotiate this privilege for others."
+    },
+    {
+      "id": "1B9d",
+      "title": "Endgame Victory Points",
+      "text": "If a Factory is connected by a Space Elevator, its factory stock price (M2b) is doubled, regardless of who built the Space Elevator. Building Space Elevators gives extra VP in the beanstalk future (1D4d, 1D5l)."
+    },
+    {
+      "id": "1B9e",
+      "title": "GEO Space Elevator",
+      "text": "The Space Elevator at Earth can only be built by anchoring the GEO Elevator Bernal (Module 2, 2B4i) in the GEO Home Orbit. This anchoring does not need an Epic Hazard op/roll or other requirement."
+    },
+    {
+      "id": "1B9f",
+      "title": "Destruction",
+      "text": "A Space Elevator is destroyed if at the end a Turn neither of its ends are industrialized, with the exception that the elevator stick for the GEO Elevator is not removed if its Bernal is voluntarily unanchored. \nEXAMPLE [1B9c] You have industrialized the arsia mons caves of Mars, and moved a Mobile Factory to phobos. By performing the epic hazard operation, and paying the programmers FINAO there is no risk, you build the Mars Space Elevator. Place an elevator stick.\nSPACE ELEVATOR [1B9]\nTIP: Mars can be an \"ant lion\" trap, unless you build the Phobos Space Elevator!\nIt is often easy to build a mass zero \"any\" freighter on Mars, and send it to phobos via rocketplane. With a Factory on arsia mons caves, and a Freighter on phobos (even if phobos is busted), it only takes an epic hazard roll to build the elevator and set up your \"Martian Bottled\nWater Company\". [1B9]"
     },
     {
       "id": "1C",
       "title": "GW/TW Thrusters",
-      "text": "1C. GW/TW Thrusters\nA Gigawatt (GW) or Terawatt (TW) thruster cannot fuel using Aquas or dirt; it may only factory refuel at a Site with a Spectral Type matching its fuel isotope or with your isotope FTs (yellow beads) obtained from such a Site. If used to afterburn, spend one fuel step to gain one Therm of cooling plus the thrust addition listed in the GW afterburn icon (1C2). Otherwise, they create Rocket Stacks, move, and burn fuel as the MW thrusters in the core game.10 a. Movement-Modifying Supports. If a GW/TW thruster is activated, movement is not affected by movement-modifying supports (J5d).\n11 b. Iso-Standard. Until you have researched and ET produced a GW Thruster (or otherwise have one in space), you cannot produce any isotope FTs. Thereafter, all isotope FTs you produce are considered to be of that Spectral Type (called your iso-standard), and can only be produced at the appropriate Factory Site. You may not research or ET produce a GW/TW Thruster if you already have one. Once you have established your iso-standard, it can be changed only if you buy or ET produce a new GW thruster after selling or losing your original GW/TW thruster.12\n10NUCLEAR ENERGY is unleashed either by fission (splitting huge â€œhigh Zâ€ atoms) or fusion (lumping together small â€œlow Zâ€ atoms). Fission atoms include uranium, thorium, and plutonium, while fusion atoms include isotopes of hydrogen, helium, lithium, and boron. The specific energy of nuclear fuels used in the game are: 6Li-H and H-B fusion = 73 TJ/kg, uranium fission = 82 TJ/kg, D-T, 3He-D, and D-D fusion = 345 TJ/kg.\nThe chemical fuels used in the game are a million-fold lower: metastable He = 477 MJ/kg and H2-O2 = 14 MJ/kg. The positive charge on fusion fuel nuclei creates an electrical repulsion that must be overcome by temperature and confinement time in order for them to fuse together. Therefore, input energy is required to obtain output energy, and the ratio of the thermal energy obtained from fusion/energy injected to sustain the reaction is called a reactorâ€™s Q factor. At ignition, Q goes to infinity. GIGAWATT REACTOR SUPPORTS. The reactors in the game produce a few hundred MW of thermal power, enough to power a MW thruster. But not enough to power a GW/TW thruster. In fact, the reactor supports for GW/TW thrusters in the game are not used as power sources, but rather as initiators for the primary nuclear power chain. For instance, it could represent a MW laser that initiates a GW fusion reaction. The ratio of fusion power produced to initiator power is called the Q factor. GIGAWATT THRUSTERS burn pure nuclear fuel with no added propellant or open-cycle coolant. Thus, the burned fuel becomes the propellant (in this they are like chemical rockets). The fusion or fission fuels are rare isotopes, which must be purified by isotope separation.\nThe game makes the following (speculative) assumptions on where to find these rare isotopes: The fusion fuel boron-11 on D worlds, fusion fuels tritium and helium-3 on H worlds, fission fuel curium-245 and lead (useful as antimatter thermalizer) on M worlds, fission fuel uranium-235 on S worlds, and the fusion fuel lithium-6 on V worlds.\nJONâ€™S LAW: â€œAny interesting interstellar drive is a weapon of mass destruction.â€\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 15"
+      "text": "A Gigawatt (GW) or Terawatt (TW) thruster cannot fuel using Aquas or dirt; it may only factory refuel at a Site with a Spectral Type matching its fuel isotope or with your isotope FTs (yellow beads) obtained from such a Site. If used to afterburn, spend one fuel step to gain one Therm of cooling plus the thrust addition listed in the GW afterburn icon (1C2). Otherwise, they create Rocket Stacks, move, and burn fuel as the MW thrusters in the core game.",
+      "sub_ids": {
+        "1Ca": "1C"
+      }
+    },
+    {
+      "id": "1Ca",
+      "title": "Movement-Modifying Supports",
+      "text": "If a GW/TW thruster is activated, movement is not affected by movement-modifying supports (J5d).\n b. Iso-Standard. Until you have researched and ET produced a GW Thruster (or otherwise have one in space), you cannot produce any isotope FTs. Thereafter, all isotope FTs you produce are considered to be of that Spectral Type (called your iso-standard), and can only be produced at the appropriate Factory Site. You may not research or ET produce a GW/TW Thruster if you already have one. Once you have established your iso-standard, it can be changed only if you buy or ET produce a new GW thruster after selling or losing your original GW/TW thruster."
     },
     {
       "id": "1C1",
       "title": "GW/TW Thruster Fuel",
-      "text": "1C1. GW/TW Thruster Fuel A Gigawatt thruster can only fuel by cargo transfer (G1b) using your isotope FTs, or using factory refueling (I5b).\nHowever the Spectral Type of the Factory must match that of the GW/TW thruster. Factory refueling can also take place at your Bernal, if it has a Dirtside Factory of yours that is the proper Spectral Type.\na. Isotope Fuel Site Refueling. During factory-refueling (I5b), the refueling rate for isotope fuel is limited to isotope tank (yellow bead) per factory refuel operation unless otherwise stated (Futures, Colonist Abilities, etc.).\nb. Wet Mass Chit. A GW/TW thruster uses a yellow Wet Mass Chit to show it runs on pure fuel isotopes. A Spacecraft using Isotope Fuel cannot use lower grade fuels, such as water (F4b), or isotope fuel that does not match the Spectral Type of its GW/TW thruster.\nc. Specifying Isotope Fuel Spectral Type. You may have only one GW/TW thruster either in your Hand or in a stack at a time, and the Spectral Type of this card specifies the Spectral Type of all the isotope fuel you can produce, carry, and warehouse as isotope FTs (I5b).\n13You may not store more than one type of isotope fuel.\nâ€¢ Free Market of GW/TW Thruster. If your GW/TW thruster returns to the patent deck, all of your isotope FTs (gold beads) remain. They convert into your new Spectral Type if you obtain a new GW/TW thruster.\n13FUSION FUELS are a balance between how many neutrons they produce (bad) and how low is their ignition temperature (good). See footnote 19 (Starship Fusion Fuels).\nEXAMPLE 1 [1C1c] A GW dense plasma focus rocket sits on a Factory at hydra, a D spectra moonlet of Pluto. A factory refuel op yields one tank of D isotope fuel.\nPlayer Green builds a spheromak GW thruster on the Uranus aerostat, an H spectra gas giant. He builds a Rocket with Dry Mass 6 (including its supports), and during 3 turns of factory refueling loads it with 3 tanks of H isotope fuel (helium-3).\nThe Rocket is now transport class, so even with +6 afterburning, the net thrust (12 - 1 = 11) is insufficient to lift-off Uranus (size 11). The Rocket cannot use standard factory-assist liftoff because it enters a lander burn (G3b). It could use the acetylene rocketplane, but that would cost 18 FTs (at Uranus Aerostat) and a Hazard Roll. Instead, it chooses to jettison one step of fuel, and afterburn another step to bring it to scout class and a net thrust of 12.\nEXAMPLE 2 [1C1c]\n16 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T"
+      "text": "A Gigawatt thruster can only fuel by cargo transfer (G1b) using your isotope FTs, or using factory refueling (I5b). However the Spectral Type of the Factory must match that of the GW/TW thruster. Factory refueling can also take place at your Bernal, if it has a Dirtside Factory of yours that is the proper Spectral Type.",
+      "sub_ids": {
+        "1C1a": "1C1",
+        "1C1b": "1C1",
+        "1C1c": "1C1"
+      }
+    },
+    {
+      "id": "1C1a",
+      "title": "Isotope Fuel Site Refueling",
+      "text": "During factory-refueling (I5b), the refueling rate for isotope fuel is limited to isotope tank (yellow bead) per factory refuel operation unless otherwise stated (Futures, Colonist Abilities, etc.)."
+    },
+    {
+      "id": "1C1b",
+      "title": "Wet Mass Chit",
+      "text": "A GW/TW thruster uses a yellow Wet Mass Chit to show it runs on pure fuel isotopes. A Spacecraft using Isotope Fuel cannot use lower grade fuels, such as water (F4b), or isotope fuel that does not match the Spectral Type of its GW/TW thruster. You may not store more than one type of isotope fuel."
+    },
+    {
+      "id": "1C1c",
+      "title": "Specifying Isotope Fuel Spectral Type",
+      "text": "You may have only one GW/TW thruster either in your Hand or in a stack at a time, and the Spectral Type of this card specifies the Spectral Type of all the isotope fuel you can produce, carry, and warehouse as isotope FTs (I5b).\n\n c.Free Market of GW/TW Thruster. If your GW/TW thruster returns to the patent deck, all of your isotope FTs (gold beads) remain. They convert into your new Spectral Type if you obtain a new GW/TW thruster.\nEXAMPLE 1 [1C1c]\n A GW dense plasma focus rocket sits on a Factory at hydra, a D spectra moonlet of Pluto. A factory refuel op yields one tank of D isotope fuel. \nEXAMPLE 2 [1C1c]\nPlayer Green builds a spheromak GW thruster on the Uranus aerostat, an H spectra gas giant. He builds a Rocket with Dry Mass 6 (including its supports), and during 3 turns of factory refueling loads it with 3 tanks of H isotope fuel (helium-3).\nThe Rocket is now transport class, so even with +6 afterburning, the net thrust (12 - 1 = 11) is insufficient to lift-off Uranus (size 11). The Rocket cannot use standard factory-assist liftoff because it enters a lander burn (G3b). It could use the acetylene rocketplane, but that would cost 18 FTs (at Uranus Aerostat) and a Hazard Roll. Instead, it chooses to jettison one step of fuel, and afterburn another step to bring it to scout class and a net thrust of 12."
     },
     {
       "id": "1C2",
       "title": "GW/TW Afterburning",
-      "text": "1C2. GW/TW Afterburning As indicated by the afterburn icon, certain GW/TW Thrusters can GW afterburn during activation (H2).\nThis expends one step of fuel and increases the net thrust by the value shown in the flame icon. This provides one Therm of cooling.14 15 a. MW vs. GW/TW Afterburning. The afterburn icon on a GW/TW thruster contains a â€œ+Xâ€, where X is the increase in net thrust, always by expending one step of isotope fuel. Note this is much different than afterburning using MW thrusters (H3a), which is limited to +1 net thrust.\nb. Open-Cycle Cooling. A GW/TW afterburn provides one Therm of cooling, exactly like MW afterburn (H3a).EXAMPLE [1C2b] A spheromak GW thruster has a 6 â€¢1/10 thrust triangle. It is transport class, so the Wet Mass modifier is -1 with a net thrust of 5. By expending one step of fuel for the +6 afterburner the net thrust is raised to 11, allowing it to land on Sites up to (and including) size 10. By expending one step of fuel, the Spacecraft can move through up to 10 Burn Spaces (or 5 Pivots), and by having expended a step of fuel for afterburning at the beginning of movement, it could land on a world the size of Luna or Ganymede.\nEXAMPLE [1C2]\nEXAMPLE [1C2b]\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 17"
+      "text": "This expends one step of fuel and increases the net thrust by the value shown in the flame icon. This provides one Therm of cooling.14 15",
+      "sub_ids": {
+        "1C2a": "1C2",
+        "1C2b": "1C2"
+      }
+    },
+    {
+      "id": "1C2a",
+      "title": "MW vs. GW/TW Afterburning",
+      "text": "GW/TW Afterburning. The afterburn icon on a GW/TW thruster contains a '+X', where X is the increase in net thrust, always by expending one step of isotope fuel. Note this is much different than afterburning using MW thrusters (H3a), which is limited to +1 net thrust."
+    },
+    {
+      "id": "1C2b",
+      "title": "Open-Cycle Cooling",
+      "text": "A GW/TW afterburn provides one Therm of cooling, exactly like MW afterburn (H3a).\nEXAMPLE [1C2b]\n A spheromak GW thruster has a 6 1/10 thrust triangle. It is transport class, so the Wet Mass modifier is -1 with a net thrust of 5. By expending one step of fuel for the +6 afterburner the net thrust is raised to 11, allowing it to land on Sites up to (and including) size 10. By expending one step of fuel, the Spacecraft can move through up to 10 Burn Spaces (or 5 Pivots), and by having expended a step of fuel for afterburning at the beginning of movement, it could land on a world the size of Luna or Ganymede."
     },
     {
       "id": "1C3",
       "title": "Terawatt Thruster",
-      "text": "1C3. Terawatt Thruster To flip a GW Thruster Card in a stack to its Purple-Side, bring it to a location capable of promoting cards and perform a promote operation (1A5).\na. Colliding FRC Fusion Thruster. This TW thruster requires a generator, plus two reactors as supports (because its Q is low and its initiator energy requirements17 are high).\nb. Synodic Comets. Exceptionally, a Rocket with an activated TW thruster can enter or exit a Synodic Comet during any season.18\n17INITIATORS are used to set off a nuclear reaction in the same way that the primer in the base of a pistol cartridge is used to ignite the gunpowder. Initiators can be lasers, high energy particle beams or pellets, or antimatter. From a modular design viewpoint, it is fortunate that the reactors in the game designed to power a MW rocket are of the right power (a few hundred MW thermal) to initiate the fusion reaction of a GW rocket a thousand times more powerful than a MW rocket. The ratio of nuclear power to initiator power is called the Q factor.\n18STARSHIP FUSION FUELS release energy as their light atoms (usually hydrogen and helium) are fused together. Here are the most commonly considered starship fusion fuels:\nâ€¢ D-T. The fusion of deuterium and tritium has the lowest ignition temperature (40 million degrees K, or 5.2 keV). However, 80% of its energy output is in highly energetic neutral particles (neutrons) that cannot be contained by magnetic fields or directed for thrust. The resulting waste heat means prohibitively large radiators.\nâ€¢ 3He-D. The fusion of helium-3 and deuterium is the preferred starship fuel. It has a higher ignition temperature (30 keV), but generates 77% of its energy in charged particles, resulting in a substantial reduction of shielding and radiator mass. Due to a troublesome D-D side reaction however, neutrons comprise a small part of its energy (4% at ion temperatures = 50 keV), and moreover the energy density is 10 times less than D-T.\nAnother disadvantage is that, although deuterium is abundant and cheap, helium-3 is so rare that 240,000 tonnes of SWIV regolith scavenging would be needed to obtain a kilogram of it. Alternatively, helium-3 can be scooped from the atmospheres of Saturn or Uranus.\nâ€¢ D-D. The fusion of deuterium to itself occurs at too high a temperature (45 keV) and has too many neutrons (60%) to be of interest. However, the neutron energy output can be reduced to 40% by catalyzing this reaction to affect a 100% burn-up of its tritium and 3He by-products with D.\nIn this fashion, a huge iceball can yield enough deuterium to power a beehive starship.\nâ€¢ H-11B.The fusion of 10% hydrogen to 90% boron-11 has an even higher ignition temperature (200 keV) than 3He-D, and its energy density is even smaller. Its advantage is that it suffers no side reactions and emits no neutrons, and hence the reactor components do not become radioactive.\nBoron-11 is the most common isotope of boron, obtained by processing seawater or borax. See example 1C3 for an H-B starship.\nâ€¢ 6Li-H. The fusion of lithium-6 to hydrogen is similarly aneutronic. However, both the H-B and 6Li-H reactions run hot, and thus ion-electron collisions in the plasma cause high bremsstrahlung x-ray losses to the reactor first wall. This can negate their low waste heat advantages.\nEXAMPLE [1C3] A Rocket Stack contains an 8â€¢0 thruster, with a â€œthrust +5â€ afterburn. If the net thrust is 8, this TW thruster can expend zero fuel and move 8 burns or one step and move 13 burns.\nEASILY MISSED: A TW thruster must use the same isotope fuel as its GW thruster did (flip the card over if you forgot which Spectral\nType this is). [1C3]\nEXAMPLE [1C3]\n18 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T"
+      "text": "To flip a GW Thruster Card in a stack to its Purple-Side, bring it to a location capable of promoting cards and perform a promote operation (1A5).",
+      "sub_ids": {
+        "1C3a": "1C3",
+        "1C3b": "1C3"
+      }
+    },
+    {
+      "id": "1C3a",
+      "title": "Colliding FRC Fusion Thruster",
+      "text": "This TW thruster requires a generator, plus two reactors as supports (because its Q is low and its initiator energy requirements17 are high)."
+    },
+    {
+      "id": "1C3b",
+      "title": "Synodic Comets",
+      "text": "Exceptionally, a Rocket with an activated TW thruster can enter or exit a Synodic Comet during any season.\nEXAMPLE [1C3]\n A Rocket Stack contains an 8â€¢0 thruster, with a â€œthrust +5â€ afterburn. If the net thrust is 8, this TW thruster can expend zero fuel and move 8 burns or one step and move 13 burns.\nEASILY MISSED: A TW thruster must use the same isotope fuel as its GW thruster did (flip the card over if you forgot which Spectral Type this is). [1C3]"
     },
     {
       "id": "1D",
       "title": "Futures",
-      "text": "1D. Futures (needs modules 0, 1, 2)\nFutures are epic achievements by humankind represented by in-game quests (1A2b) that you are given when you Promote a Colonist, GW thruster, or Freighter. These quests can only be completed once per game per quest.\nThe Purple-Side of these cards describes the requirements and (if successfully completed) the effects, including endgame VP. If you lose a Purple-Side card, its Future is no longer available to be earned until the card is rebuilt and re-promoted.19 a. Modules. Futures are only available if you play with Modules 0 (politics), 1 (terawatt), and 2 (colonization) simultaneously.\nb. Private Quest. Futures are only available to be completed by the player who owns the card. Each player may only complete a named Future once (e.g. uplift).\nc. Hazardous. All attempts require a Crew or Colonist to risk their lives (via an epic hazard operation 1A6).\nd. Long Game. Playing with Futures lengthens the game to 7 Solar Cycles."
+      "text": "Futures are epic achievements by humankind represented by in-game quests (1A2b) that you are given when you Promote a Colonist, GW thruster, or Freighter. These quests can only be completed once per game per quest.\nThe Purple-Side of these cards describes the requirements and (if successfully completed) the effects, including endgame VP. If you lose a Purple-Side card, its Future is no longer available to be earned until the card is rebuilt and re-promoted.19",
+      "sub_ids": {
+        "1Da": "1D",
+        "1Db": "1D",
+        "1Dc": "1D",
+        "1Dd": "1D"
+      }
+    },
+    {
+      "id": "1Da",
+      "title": "Modules",
+      "text": "Futures are only available if you play with Modules 0 (politics), 1 (terawatt), and 2 (colonization) simultaneously."
+    },
+    {
+      "id": "1Db",
+      "title": "Private Quest",
+      "text": "Futures are only available to be completed by the player who owns the card. Each player may only complete a named Future once (e.g. uplift)."
+    },
+    {
+      "id": "1Dc",
+      "title": "Hazardous",
+      "text": "All attempts require a Crew or Colonist to risk their lives (via an epic hazard operation 1A6)."
+    },
+    {
+      "id": "1Dd",
+      "title": "Long Game",
+      "text": "Playing with Futures lengthens the game to 7 Solar Cycles."
     },
     {
       "id": "1D1",
       "title": "Futures Requirements",
-      "text": "1D1. Futures Requirements\nEach Future has a set of requirements (â€œReqâ€) that, once satisfied, allow you to perform an epic hazard operation (1A6), which must be successful to complete the Future and get the orange star. These requirements include:\na. Futures Card In Attendance. In all Futures, both a Human (either Crew or Human Colonist) and the card listing the Future must be Operational and Colocated (at the specified Space if any). In the case of Colonist\nFutures, this can be the same card. FUSION PLASMA GEOMETRY. There are five general methods for confining fusion plasmas long enough and hot enough for achieving a positive Q:\nâ€¢ closed-field magnetic confinement (see D-T Fusion Tokamak), â€¢ open-field magnetic confinement (see 3He-D mirror),\nâ€¢ inertial confinement (see D-D inertial fusion), â€¢ electrostatic inertial confinement (see 6Li-H fusor),\nâ€¢ cold fusion (see H-B cat fusion).\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 19 b. Ad Astra Futures. These Futures require a Spacecraft with the ad astra future to exit the map on an interstellar mission. It must take one of these 3 exits, labeled Jupiter-Sol-Jupiter exit, Sol Exit Neptune, or Sol\nExit Oort, then Decommission the entire operational Stack.20\nâ€¢ Brave New World. This is neither Murder nor Felony because the humans are traveling to a new star system and will surely survive and prosper! Exporting Colonists triggers exomigration (2A6).\nc. Manifest Destiny. If a Future you own specifies a specific Site (e.g. Triton, Mercury, sedna, a Site named as a centaur, a Site in a trojan area) that an opponent has claimed, you may Claim Jump (G4) a foreign Claim even if you are not allowed Felonies."
+      "text": "Each Future has a set of requirements that, once satisfied, allow you to perform an epic hazard operation (1A6), which must be successful to complete the Future and get the orange star. These requirements include:",
+      "sub_ids": {
+        "1D1a": "1D1",
+        "1D1b": "1D1",
+        "1D1c": "1D1"
+      }
+    },
+    {
+      "id": "1D1a",
+      "title": "Futures Card In Attendance",
+      "text": "In all Futures, both a Human (either Crew or Human Colonist) and the card listing the Future must be Operational and Colocated (at the specified Space if any). In the case of Colonist Futures, this can be the same card."
+    },
+    {
+      "id": "1D1b",
+      "title": "Ad Astra Futures",
+      "text": "These Futures require a Spacecraft with the ad astra future to exit the map on an interstellar mission. It must take one of these 3 exits, labeled Jupiter-Sol-Jupiter exit, Sol Exit Neptune, or SolExit Oort, then Decommission the entire operational Stack.\n Brave New World. This is neither Murder nor Felony because the humans are traveling to a new star system and will surely survive and prosper! Exporting Colonists triggers exomigration (2A6)."
+    },
+    {
+      "id": "1D1c",
+      "title": "Manifest Destiny",
+      "text": "If a Future you own specifies a specific Site (e.g. Triton, Mercury, sedna, a Site named as a centaur, a Site in a trojan area) that an opponent has claimed, you may Claim Jump (G4) a foreign Claim even if you are not allowed Felonies. \nEXAMPLE [1D1C]\n You promote the mini-mag orion thruster. In order to generate the required M isotope fuel for its lithiated ammonia starship future, you establish a Factory on enceladus and spend 10 turns producing fuel."
     },
     {
       "id": "1D2",
       "title": "Futures Effects",
-      "text": "1D2. Futures Effects\nEach Future has a set of effects that are enabled for you once you succeed in its Epic Hazard Roll (1A6a). These effects are permanent, even if the card with the Future is later Decommissioned/ Discarded.\na. Future Star. If you succeed, you gain an orange star! In the endgame, each star scores the amount of VP listed on the Future (M2b). The VP for your star is permanent, with one exception in the next bullet.\nb. Endgame. Any effect labeled as â€™Endgameâ€™ must have their requirements checked before scoring (M2). These requirements include that the promoted card listing the Future must be Operational and Colocated with a Human. If these requirements are no longer fulfilled (e.g. by exit of a Mobile Factory or a Claim Jump), the Endgame effect is canceled, and the future star is returned to the supply.\nc. Casus Belli Futures. If successful, this sparks a War of Independence (see glossary) between Earth and her rebellious space colonies. If you claim the Futureâ€™s star you become an Independent, and the other players become Loyalists (until they also become Independent by claiming a Casus Belli, or unless playing Module 3). STARSHIP FUEL will likely take 10X longer to produce than the starship itself for a trip to Alpha Centauri.\nEXAMPLE [1D1C] You promote the mini-mag orion thruster. In order to generate the required M isotope fuel for its lithiated ammonia starship future, you establish a Factory on enceladus and spend 10 turns producing fuel.\nEXAMPLE [1D2b] You claim Sedna, which builds an EM sunlens telescope for claiming the exoplanet hunt future. As long as the claim remains intact by the end of the game (e.g. no Claim Jump), and the Freighter and a Human are present, you gain 14 VP.\n20 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T"
+      "text": "Each Future has a set of effects that are enabled for you once you succeed in its Epic Hazard Roll (1A6a). These effects are permanent, even if the card with the Future is later Decommissioned/ Discarded.",
+      "sub_ids": {
+        "1D2a": "1D2",
+        "1D2b": "1D2",
+        "1D2c": "1D2"
+      }
     },
     {
-      "id": "1D3",
-      "title": "List of TW Thruster Futures",
-      "text": "1D3. List of TW Thruster Futures a. Spacefaring Future: Req = A single Bernal with 8+ dirtside hydration.\nEffects = Allowed 1 extra Colonist, 7 VP.\nb. Mini-black Hole Future: Req = Industrialized centaur spending 10 isotope FTs there with the TW thruster. Centaurs labeled on the map include comet schwassmann-wachmann 1(F 9:00), chiron (F 12:00), elatus (F\n1:00), echeclus (G 10:30), okyrhoe & pholus (G 11:00), chariklo (H 9:00), and asbolus & hylonome (H 10:00).21\nEffects = double all isotope refuel, 10 VP.\nc. Mass Beam Future: Req = Promoted Bernal with Io or Triton Dirtside. Effects = Your Powersat adds +2 thrust instead of +1 thrust, and gives Freighters a net thrust of 3, 7 VP. 22 d. Fusion Candle Future: Req = Triton Colony & Promoted Bernal with Neptune Aerostat Dirtside., with a Human and the TW thruster colocated with one of them.\nEffects = double all isotope refuel, 14 VP. 23 e. Protium Fusion Future: Req = Promoted Bernal with H Dirtside.\nEffects = double all isotope refuel, 10 VP. 24 f. Enzmann Starship Future: Req = Ad astra exit with 2 promoted Colonists, a Mobile Factory, and the TW thruster.\nEffect = 12 VP.\ng. Lithiated Ammonia Ice Starship Future: Req = Ad astra exit with 10 isotope fuel and the TW thruster.\nEffect = 14 VP.\n21RED & BLUE CENTAURS are comet-like asteroids in the outer solar system with orbits destabilized by a recent close encounter with a gas giant. Their orbital velocity is slow, about three Burns, and if decelerated further with TW mass drivers would plummet toward Sol or Jupiter, with a gain in kinetic energy in the order of 1000 MJ/kg. An orchestrated collision would be useful to study black hole conditions.\n22MASS BEAM uses a column of neutral sodium atoms for propulsion, which gives far more â€œoomphâ€ than a beam of energy. FUSION CANDLE uses a gigantic TW â€œcandleâ€ thruster to push the gas giant itself out of the solar system, carrying its colonized moon Triton as an arkship. The candle burns continuously on both ends using the gas giantâ€™s own atmosphere as a giant fuel repository. The lower end of the candle, deep in Neptuneâ€™s atmosphere, burns for thrust to keep the candle aloft. The upper end burns for thrust to move Neptune to the stars.\nThis will take centuries to approach the heliosphere, so within the gameâ€™s timeframe it does not move perceptibly. PROTIUM FUSION is the fusion of hydrogen atoms, such as that believed to be occurring in Sol. In a game of celestial billiards, two asteroids can be bashed together at relativistic speeds, in hopes of creating protium fusion and possibly a mini-black hole.\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 21"
+      "id": "1D2a",
+      "title": "Future Star",
+      "text": "If you succeed, you gain an orange star! In the endgame, each star scores the amount of VP listed on the Future (M2b). The VP for your star is permanent, with one exception in the next bullet."
     },
     {
-      "id": "1D4",
-      "title": "List of Freighter Futures",
-      "text": "1D4. List of Freighter Futures a. Terraform Future: Req = Freighter at Promoted Bernal at a non-martian Atmospheric Dirtside. Effect = 8 VP. 25 b. Beehive Ark Future: Req = Freighter at Promoted Bernal anchored at a Synodic Comet. Effect = 7 VP. 26 c. Exoplanet Hunt Future: Req = Claim Sedna. Effect (Endgame) = 12 VP. 27 d. Beanstalk Future: Have 3+ Space Elevators built by any player, with your Human and Freighter colocated with one of them. Effect (Endgame) = +3 VP for each Factory (of any player) connected to a Space Elevator.\nOnly 1 player is allowed to complete this future.\ne. Golden Apples Future: Req = Industrialize kreutz sungrazer. Effects = Ignore solar flares, 14 VP. Note that the Mobile Factory and the Human on kreutz are allowed to escape before vaporization at the end of the yellow season. Before they leave, it is assumed to have produced instrumentation to measure Sol during its close pass.\nf. Antimatter Future: Req = Freighter at Promoted Bernal with S Dirtside. Effects = double isotope refuel, 10 VP. g. Star Wisp Future: Req = A Mobile Factory (Endgame) at either the neutrino sunlens (6 VP) or the EM sunlens (11 VP).28\n25CLIMATIC TERRAFORM can be accomplished with a swarm of robotic mirrors in a planetâ€™s L1 lagrange point, which lies between the planet and Sol. By changing the albedo by directing sunlight on or away from the planet, climate change is accomplished. However, an Earth or Venus sunshade a micron thick would have a High Frontier Mass of 2.5 million. For the planet to lie in the umbra rather than the penumbra of the shadow cast, the mass is 100X more.\n26BEEHIVE is a small hollowed world, which becomes rocket-powered by using the bulk of its mass as rocket propellant for its mass drivers. Since they accelerate so very slowly, the colonies within become a generation ship, in which the ultimate interstellar destination will not be attained for many generations.\n27SEDNA is a minor planet positioned to provide mass for construction of an EM (electromagnetic) sunlens telescope at a distance of 550 AU from Earth. This exoplanet-hunting telescope is distant enough to use Sol itself as a gravitational lens, able to survey distant systems with an optical gain of 113 dB. This is enough to zoom in on a landing site as far out as Epsilon Indi.\n28STAR WISPS are tiny robotic interstellar probes riding on microwave energy beamed from a huge powersat. A giant collimator in the outer solar system, here represented by a Factory, focuses the beam. The destinations for the star wisps are scouted by a telescope located at one of the 2 sunlens points in the game: EM (electromagnetic) and neutrino. These are at a distance from Sol where either light or neutrinos respectively are focused by Solâ€™s gravitational field, as if it were a gigantic lens. Neutrino focusing is better than photon focusing, since neutrinos zip straight through Sol.\nEXAMPLE [1D4g] You promote your HIIPER freighter, move a mobile factory cube to the neutrino sunlens point, and finally perform the epic hazard op to get an orange star for the Star Wisp Future, worth 6 VP in the endgame if any cube is still in position.\n22 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T"
+      "id": "1D2b",
+      "title": "Endgame",
+      "text": "Any effect labeled as Endgame must have their requirements checked before scoring (M2). These requirements include that the promoted card listing the Future must be Operational and Colocated with a Human. If these requirements are no longer fulfilled (e.g. by exit of a Mobile Factory or a Claim Jump), the Endgame effect is canceled, and the future star is returned to the supply."
     },
     {
-      "id": "1D5",
-      "title": "List of Colonist Futures",
-      "text": "1D5. List of Colonist Futures The Colonist listing the Future must be at the named location to complete the Future.\na. New Venus Future: Req = Decommission an operational thruster and its supports with net thrust 7+ on an Industrialized Synodic Comet of yours. This Busts the Site and removes its Claim and Factory.\nEffects = 12 VP. Note: No Tokens (e.g. the Factory) need to remain on Venus or comet to attain this Future. For thematic effect (it has no game effect unless play is continued beyond the endgame), place the Venus overlay card (V8b).\n29 b. Supreme Cult Future: Req = Active Law in authority. (Module 0) Effects = May lobby without removing the delegate used. All Seniority Disks (past and future) migrate to authority. (Endgame): 10 VP.\nc. Artificial Consciousness Future: Req = 2 promoted Colonists at an Astrobiology Dirtside. Ongoing Effects = May free market any number of cards, 10 VP.\nd. Seti Future: Req = Industrialize 2 jovian trojans, 1 each in the greek & trojan camps. Ongoing Effects = As a free action perform 1 inspiration then 1 homestead, 10 VP.\ne. Secession Future: Req = 2 Promoted Human Colonists at a promoted Anchored Bernal. Effects = Casus belli for War (1D2c), 7 VP.\nf. Footfall Future: Req = Decommission an operational thruster and its supports with net thrust 7+ on an Industrialized Synodic Comet of yours. This Busts the Site and removes its Claim and Factory.\nEffects = 10 VP + Casus belli for War (1D2c).\n30 g. ET Life Future: Req = Have 2 or more Astrobiological Colonies.\nEffects (Endgame) = +2 VP per Astrobiological Colony. PLANETARY ENGINEERING OF VENUS begins with installing mass drivers on a convenient comet to deorbit it. The collision should avoid blowing away more material than delivered. The cometary water condenses to somewhat below its critical point, greatly accelerating the weathering sequester of its CO2 atmosphere. Sunshades made of material from Mercury restrains the steam atmosphere from reaching runaway greenhouse conditions. â€“P. Birch, Terraforming Venus Quickly, 1991. FOOTFALL. In the SF classic by Larry Niven and Jerry Pournelle, Earth is threatened by â€œfootfallâ€, an dinosaur-killer class asteroid with an orbit altered by surface mass drivers installed by hostile aliens.\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 23 h. Aerostat Future: Req = Promoted Bernal with an Atmospheric Dirtside with an aerostat.\nOngoing Effects = As a permanent Ability, can homestead as a free action, 14 VP. 31 i. Pan Sapiens Future: Req = Have 3 Factories connected to Space Elevators.\nEffects = Casus belli for War (1D2c). Effect (Endgame): +2 VP for each glory chit owned.\nj. Dyson Bubble Future: Req = Both Sites of Mercury industrialized by any player. Effect = 5 VP per Factory (owned by any player) on Mercury.32 k. Submariner Future: Req = Build 3 Submarine Factories or Colonies.\nEffect = Doubles your dirtside hydration (not cumulative with other modifiers).\nl. Beanstalk Future: Req = 3+ Space Elevators built by any player. Effect (Endgame) = +3 VP for each Factory (of any player) connected to a Space Elevator.33 Only 1 player is allowed to complete a beanstalk future.\nm. TNO Future: Req = Industrialize 2 Sites in the Neptune Zone. Ongoing Effects = Can homestead (free action), 12 VP.34 n. Uplift Future: Req = Robots not emancipated (2A6b), Crew/Colonist at a promoted Bernal & spend 20\nAqua. Effects = Every Robot becomes emancipated, Casus belli for War (1D2c), 12 VP.\n31AEROSTAT. A factory floating in an atmosphere can liquefy valuable gases for propellants and fusion fuels. For instance, a hydrogen-balloon factory floating just beneath the clouds on Venus (see the Venus Site illustration on the map) extracts hydrogen, carbon, oxygen, nitrogen, sulfur, and possibly phosphorus from the â€œair de Venusâ€. Contrasted with the hellish surface, temperatures and pressures at such altitudes (50 km) are about Earth normal. Humans working outside the gondola wonâ€™t need spacesuits, only an oxygen tank and protection from the acid rain. On Saturn, a hot air balloon some 212 meters across would extract the rare isotope Helium 3 for use in clean fusion reactors back on Earth. Liquefaction of 2200 ton/yr of 3He-D fusion fuel, plus 4800 ton/yr of H2 propellant, requires 10 MWe, plus another 400 MWe for separation processes. These sites use windmills to take advantage of abundant winds (350 kph on Venus, 1440 kph on Saturn). They lie deep in the gravity wells, the escape delta-v is km/sec on Venus and 15 km/sec on Saturn. â€“Courtesy Peter Kokh, Moon Miners Manifesto, 2009.\n32DYSON BUBBLE is a swarm of sails that surround Sol in order to capture part of its power output. The sails are not in orbit but are instead statitesâ€“satellites suspended by radiation pressure to prevent them from falling into Sol. Construction of this megastructure uses material mined from Mercury, and would be an initial step towards a Kardashev Type II civilization that captures much of the power of the solar system.\n33MARTIAN SPACE ELEVATOR. Phobos is a favorable terminus for a space elevator for vessels bound for the martian surface, or outward for insertions to other planets or asteroids.\n34TNO stands for â€œTrans-Neptunian Object\", referring to worlds beyond the orbit of Neptune, particularly in the Kuiper belt, an asteroid belt lying 30 to 50 AU from Sol. Given the rather leisurely orbital velocities, around 4 km/sec, this is a â€œpoint and shootâ€ environment of vast distances and almost intuitive orbital mechanics. I have elected to model it with 4 burns to get up to speed (10 km/sec), and another 4 burns at the destination to decelerate for capture. Hohmanns in between represent the time to target. For the outermost part of the map, I allowed 10 burns to get up to 25 km/sec, then another 10 burns which could either be to accelerate to 50 km/sec for Solar System exit, or decelerate for capture at the EM sunlens.\n24 | HIGH FRONTIER 4 ALL | MODULE 1 - TERAWAT T"
+      "id": "1D2c",
+      "title": "Casus Belli Futures",
+      "text": "If successful, this sparks a War of Independence (see glossary) between Earth and her rebellious space colonies. If you claim the Future's star you become an Independent, and the other players become Loyalists (until they also become Independent by claiming a Casus Belli, or unless playing Module 3).\nEXAMPLE [1D2b]\n You claim Sedna, which builds an EM sunlens telescope for claiming the exoplanet hunt future. As long as the claim remains intact by the end of the game (e.g. no Claim Jump), and the Freighter and a Human are present, you gain 14 VP"
     },
     {
       "id": "1E1",
       "title": "Module 1 Endgame",
-      "text": "1E. Module 1 Endgame\n1E1. Module 1 Endgame The Game Ends when the final Seniority Disk is taken (D2b). This is after 48 yrs (short game), 60 yrs (medium game) or 84 yrs if playing with Futures (1D)."
+      "text": "The Game Ends when the final Seniority Disk is taken (D2b). This is after 48 yrs (short game), 60 yrs (medium game) or 84 yrs if playing with Futures (1D)."
     },
     {
       "id": "1E2",
       "title": "Module 1 Endgame Scoring",
-      "text": "1E2. Module 1 Endgame Scoring\nScore per M2, for all Modules used. Note that Mobile Factories (including Freighter Figure) count as Factory Cubes for scoring.\na. Module 2. See 2D2.\nb. Futures. Add futures scores (1D2a) for each orange star.\nMODULE 1 - TERAWAT T | HIGH FRONTIER 4 ALL | 25"
+      "text": "Score per M2, for all Modules used. Note that Mobile Factories (including Freighter Figure) count as Factory Cubes for scoring.",
+      "sub_ids": {
+        "1E2a": "1E2",
+        "1E2b": "1E2"
+      }
+    },
+    {
+      "id": "1E2a",
+      "title": "Module 2",
+      "text": "See 2D2."
+    },
+    {
+      "id": "1E2b",
+      "title": "Futures",
+      "text": "Add futures scores (1D2a) for each orange star."
     },
     {
       "id": "1F",
       "title": "Module 1 Solitaire: Werner's Star",
-      "text": "1F. Module 1 Solitaire: Wernerâ€™s Star (by Phil Eklund)\nLittle Werner dreams of becoming an astronaut (or cosmonaut, taikonaut, etc.) and traveling to another star. Can this dream come true? Werner is represented by your Crew card, and he wins if he attains a TW thruster future before he dies of old age. The game should take 2 hours. Use the entirety of Modules 1 & 2, including Futures. You may also add Module 0.\na. Setup. Play with 6 Seniority Disks for a 72-year game. b. Research. Instead of the research auction (I2), take the top card of a patent deck for your Operation, including bonus supports (I2g). This costs a number of Aquas equal to the number of cards taken.\nc. Tragedy. You lose the game if your Crew is involuntarily Decommissioned (Werner dies heroically). d. Wernerâ€™s Star Victory. Win if you attain a TW thruster future (1D3) before Werner becomes 84 years old.\nIf playing with Politics (Module 0), the Active Law must end in freedom. e. Interstellar Victory. If you have the Interstellar Module, send Werner off as a passenger in a starship. You win if his son reaches a habitable or living planet. You may integrate this into a continuing Interstellar game.\nFor compatibility with the 3rd edition Interstellar, see Appendix V7."
+      "text": "Little Werner dreams of becoming an astronaut (or cosmonaut, taikonaut, etc.) and traveling to another star. Can this dream come true? Werner is represented by your Crew card, and he wins if he attains a TW thruster future before he dies of old age. The game should take 2 hours. Use the entirety of Modules 1 & 2, including Futures. You may also add Module 0.",
+      "sub_ids": {
+        "1Fa": "1F",
+        "1Fb": "1F",
+        "1Fc": "1F",
+        "1Fd": "1F",
+        "1Fe": "1F"
+      }
+    },
+    {
+      "id": "1Fa",
+      "title": "Setup",
+      "text": "Play with 6 Seniority Disks for a 72-year game."
+    },
+    {
+      "id": "1Fb",
+      "title": "Research",
+      "text": "Instead of the research auction (I2), take the top card of a patent deck for your Operation, including bonus supports (I2g). This costs a number of Aquas equal to the number of cards taken."
+    },
+    {
+      "id": "1Fc",
+      "title": "Tragedy",
+      "text": "You lose the game if your Crew is involuntarily Decommissioned (Werner dies heroically)."
+    },
+    {
+      "id": "1Fd",
+      "title": "Wernerâ€™s Star Victory",
+      "text": "Win if you attain a TW thruster future (1D3) before Werner becomes 84 years old.\nIf playing with Politics (Module 0), the Active Law must end in freedom."
+    },
+    {
+      "id": "1Fe",
+      "title": "Interstellar Victory",
+      "text": "If you have the Interstellar Module, send Werner off as a passenger in a starship. You win if his son reaches a habitable or living planet. You may integrate this into a continuing Interstellar game.\nFor compatibility with the 3rd edition Interstellar, see Appendix V7."
     }
   ]
 }

@@ -13,12 +13,28 @@
     {
       "id": "A1",
       "title": "Core Overview",
-      "text": "Players, representing the spacefaring factions of Earth, bid for patents (space technology cards) and boost them into Low Earth Orbit (LEO) to be assembled into Rockets and their Cargos. Water in LEO is used both as commodity currency and as rocket propellant, and each water container there is called one Aqua. Once loaded with Fuel Tanks (FTs) of water, Rockets fly to promising industrial and science Sites (planets, asteroids, etc.). If prospecting succeeds, a Claim is made. A Claim can be upgraded to a Factory to produce useful new equipment. By extracting water from a Site, FTs are produced both for water propellant and as money (\"Aqua\") if shipped back to LEO.\na. Core Game Victory. At the end of 48 years (48 Turns per player), the winner is the player with the highest victory point (VP) total.\nb. Sunspot Cycles. Each Turn in High Frontier is one year, and the length of a game is measured in Sunspot Cycles of 12 years. Thus the standard Core Game described above is 4 Sunspot Cycles, Core Game plus Modules 1 and/or 2 is 5 Sunspot Cycles, and Core Game plus Modules 1, 2, and Futures is 7 Sunspot Cycles."
+      "text": "Players, representing the spacefaring factions of Earth, bid for patents (space technology cards) and boost them into Low Earth Orbit (LEO) to be assembled into Rockets and their Cargos. Water in LEO is used both as commodity currency and as rocket propellant, and each water container there is called one Aqua. Once loaded with Fuel Tanks (FTs) of water, Rockets fly to promising industrial and science Sites (planets, asteroids, etc.). If prospecting succeeds, a Claim is made. A Claim can be upgraded to a Factory to produce useful new equipment. By extracting water from a Site, FTs are produced both for water propellant and as money (\"Aqua\") if shipped back to LEO."
+    },
+    {
+      "id": "A1a",
+      "title": "Core Game Victory",
+      "text": "Core Game Victory. At the end of 48 years (48 Turns per player), the winner is the player with the highest victory point (VP) total."
+    },
+    {
+      "id": "A1b",
+      "title": "Sunspot Cycles",
+      "text": "Sunspot Cycles. Each Turn in High Frontier is one year, and the length of a game is measured in Sunspot Cycles of 12 years. Thus the standard Core Game described above is 4 Sunspot Cycles, Core Game plus Modules 1 and/or 2 is 5 Sunspot Cycles, and Core Game plus Modules 1, 2, and Futures is 7 Sunspot Cycles."
     },
     {
       "id": "A2",
       "title": "Metarules",
-      "text": "Terms being defined are listed in bold, or italicized if defined elsewhere. Capitalized terms are defined in the glossary. These terms are general ones that appear throughout the process-oriented rules (next bullet).\nb. Sequential Processes are presented in the order listed in the sequence of play, and are introduced by a simple overview followed by specific bullets.\nc. The Golden Rule. If the text on a card, scenario, tutorial, or variant contradicts these rules, that text prevails.\nd. The Modular Rule. Rules in blue font are modular rules that are ignored unless playing with the relevant Module. Rules marked indicate a rule not used in the Race for Glory game, and a marked rule indicates an alternate version of the rule is used in the Race for Glory game. Moreover, rules in the Modules supersede these core rules. If a conflict occurs between Modules, use the publication date as the final arbiter."
+      "text": "Terms being defined are listed in bold, or italicized if defined elsewhere. Capitalized terms are defined in the glossary. These terms are general ones that appear throughout the process-oriented rules (next bullet).\nb. Sequential Processes are presented in the order listed in the sequence of play, and are introduced by a simple overview followed by specific bullets.\nc. The Golden Rule. If the text on a card, scenario, tutorial, or variant contradicts these rules, that text prevails.\nd. The Modular Rule. Rules in blue font are modular rules that are ignored unless playing with the relevant Module. Rules marked indicate a rule not used in the Race for Glory game, and a marked rule indicates an alternate version of the rule is used in the Race for Glory game. Moreover, rules in the Modules supersede these core rules. If a conflict occurs between Modules, use the publication date as the final arbiter.",
+      "sub_ids": {
+        "A2a": "A2",
+        "A2b": "A2",
+        "A2c": "A2",
+        "A2d": "A2"
+      }
     },
     {
       "id": "A3",
@@ -38,7 +54,62 @@
     {
       "id": "B2",
       "title": "Patent Cards",
-      "text": "The 6 types of patent cards in core game are: thrusters (rocket engines), robonauts (remotely-powered mining machines), refineries (ore purifiers), generators (producers of pulsed or steady current), reactors (producers of 3 kinds of radiation energy), and radiators (providers of cooling Therms).\na. White & Black-Sides. The White-Side of a patent card shows a product built on Earth; the Black-Side shows an improved product built in space. Until you build your first Factory on a Site, you will only be using the White-Side of the patent cards.\nb. Mass. Listed in the upper left corner, chiefly used to determine its boost costs and its contribution to the Dry Mass on the Fuel Strip.\nc. Platform & ISRU. Cards that have an In Situ Resource Utilization (ISRU) rating inside a platform icon can be used to ISRU refuel (I5a) and prospect (I6).\nd. Thrust Triangle. Cards with a thrust triangle (H2) are capable of moving Stacks. The number on a thrust triangle's left side is its base thrust and the number on its right side is its fuel consumption. The color of the triangle indicates its fuel grade (F4b). If it has a flame icon at its apex, it can afterburn (H3a). If instead of a dot icon, it has a push icon in its lower center, it is pushable (H3d).\ne. Solar-Power indicates a modification to thrust based upon how far from Sol the Spacecraft is located (H3c). It is separate and independent from all other numbers and icons in the thrust triangle or on the thruster itself. These modifiers apply only if the card is part of the support chain (J1c) for an activated thrust triangle. A Solar-Powered Card becomes non-operational (J2) if in the Neptune J Heliocentric Zone or beyond (J3a).\nf. Spectral Type. The letter shown on the Black-Side of a patent (C, S, M, V, D, or H), and previewed on the front side, indicates what type of Factory can build it as an ET product (I8).\ng. Ability & Restrictions are printed in the colored band of the card (J2e). These apply if the card is Operational (J3).\nh. Support Cards Required to make the card Operational (J1) are listed here. The example data field shown requires one Therm of cooling (J1d).\ni. Wrench Icons indicate movement-modifying supports (J5). These modifiers apply only if the card is part of the support chain (J1c) for an activated thrust triangle.\nj. Rad-Hardness. Resistance to solar flares (K2d), and Radiation Belts (H10).\nk. Support Provided. Icons in the top left indicate which supports a card provides (J)."
+      "text": "The 6 types of patent cards in core game are: thrusters (rocket engines), robonauts (remotely-powered mining machines), refineries (ore purifiers), generators (producers of pulsed or steady current), reactors (producers of 3 kinds of radiation energy), and radiators (providers of cooling Therms)."
+    },
+    {
+      "id": "B2a",
+      "title": "White & Black-Sides",
+      "text": "White & Black-Sides. The White-Side of a patent card shows a product built on Earth; the Black-Side shows an improved product built in space. Until you build your first Factory on a Site, you will only be using the White-Side of the patent cards."
+    },
+    {
+      "id": "B2b",
+      "title": "Mass",
+      "text": "Mass. Listed in the upper left corner, chiefly used to determine its boost costs and its contribution to the Dry Mass on the Fuel Strip."
+    },
+    {
+      "id": "B2c",
+      "title": "Platform & ISRU",
+      "text": "Platform & ISRU. Cards that have an In Situ Resource Utilization (ISRU) rating inside a platform icon can be used to ISRU refuel (I5a) and prospect (I6)."
+    },
+    {
+      "id": "B2d",
+      "title": "Thrust Triangle",
+      "text": "Thrust Triangle. Cards with a thrust triangle (H2) are capable of moving Stacks. The number on a thrust triangle's left side is its base thrust and the number on its right side is its fuel consumption. The color of the triangle indicates its fuel grade (F4b). If it has a flame icon at its apex, it can afterburn (H3a). If instead of a dot icon, it has a push icon in its lower center, it is pushable (H3d)."
+    },
+    {
+      "id": "B2e",
+      "title": "Solar-Power",
+      "text": "Solar-Power indicates a modification to thrust based upon how far from Sol the Spacecraft is located (H3c). It is separate and independent from all other numbers and icons in the thrust triangle or on the thruster itself. These modifiers apply only if the card is part of the support chain (J1c) for an activated thrust triangle. A Solar-Powered Card becomes non-operational (J2) if in the Neptune J Heliocentric Zone or beyond (J3a)."
+    },
+    {
+      "id": "B2f",
+      "title": "Spectral Type",
+      "text": "Spectral Type. The letter shown on the Black-Side of a patent (C, S, M, V, D, or H), and previewed on the front side, indicates what type of Factory can build it as an ET product (I8)."
+    },
+    {
+      "id": "B2g",
+      "title": "Ability & Restrictions",
+      "text": "Ability & Restrictions are printed in the colored band of the card (J2e). These apply if the card is Operational (J3)."
+    },
+    {
+      "id": "B2h",
+      "title": "Support Cards Required",
+      "text": "Support Cards Required to make the card Operational (J1) are listed here. The example data field shown requires one Therm of cooling (J1d)."
+    },
+    {
+      "id": "B2i",
+      "title": "Wrench Icons",
+      "text": "Wrench Icons indicate movement-modifying supports (J5). These modifiers apply only if the card is part of the support chain (J1c) for an activated thrust triangle."
+    },
+    {
+      "id": "B2j",
+      "title": "Rad-Hardness",
+      "text": "Rad-Hardness. Resistance to solar flares (K2d), and Radiation Belts (H10)."
+    },
+    {
+      "id": "B2k",
+      "title": "Support Provided",
+      "text": "Support Provided. Icons in the top left indicate which supports a card provides (J)."
     },
     {
       "id": "B3",
@@ -58,12 +129,82 @@
     {
       "id": "B6",
       "title": "Crew Cards",
-      "text": "Your Crew has a player color, Mass, ISRU platform, rad-hardness, a thrust triangle, and a \"humans on board\" triangle. The latter means it is Human (see glossary). A Crew is useful to defend against Felonies or repair Glitches. All rules about Humans apply to stacks where the card is located. It cannot be traded, sold, or Discarded (but see N3d).\na. Faction Privilege. This Ability, listed below the rad-hardness, is active in the core game except during Anarchy (K2e). They include Blink Telescope, Dharma Refuel, Felonious, Launch Fees, Marketeer, Mooncable, Open Source FINAO, Powersat, Secretary-General, Scrum Troubleshooters, Skunkworks, and Taxes (see glossary). All faction privileges are assumed to be the result of space facilities in LEO. If Module 2 is used, these space facilities are Home Bernals, and faction privileges are disabled until this space station is Anchored in a Home Orbit.\nb. Faction Ideology. (Module 0). Used for placing delegates (O2c)."
+      "text": "Your Crew has a player color, Mass, ISRU platform, rad-hardness, a thrust triangle, and a \"humans on board\" triangle. The latter means it is Human (see glossary). A Crew is useful to defend against Felonies or repair Glitches. All rules about Humans apply to stacks where the card is located. It cannot be traded, sold, or Discarded (but see N3d)."
+    },
+    {
+      "id": "B6a",
+      "title": "Faction Privilege",
+      "text": "Faction Privilege. This Ability, listed below the rad-hardness, is active in the core game except during Anarchy (K2e). They include Blink Telescope, Dharma Refuel, Felonious, Launch Fees, Marketeer, Mooncable, Open Source FINAO, Powersat, Secretary-General, Scrum Troubleshooters, Skunkworks, and Taxes (see glossary). All faction privileges are assumed to be the result of space facilities in LEO. If Module 2 is used, these space facilities are Home Bernals, and faction privileges are disabled until this space station is Anchored in a Home Orbit."
+    },
+    {
+      "id": "B6b",
+      "title": "Faction Ideology",
+      "text": "Faction Ideology. (Module 0). Used for placing delegates (O2c)."
     },
     {
       "id": "B7",
       "title": "Solar System Map",
-      "text": "The map shows the Spaces (i.e. the orbits in the Solar System where a Rocket can \"halt\"), and the routes between the Spaces. Some of the most useful routes are colored and labeled with signposts (e.g. \"Earth-Mars\"). The various kinds of Spaces are described below:\na. Sites. Black hexes representing areas of planets, moons, and asteroids that can be landed on. Site features include:\n• Size is a number indicating the surface gravity — the larger the number the more likely prospecting will be successful but the more powerful your Rocket has to be to takeoff/land there.\n• Spectral Type (C, S, M, V, D, or H) indicates what can be mined and factory-produced there.\n• Atmospheric Site is indicated by the cloud icon in the Site hex.\n• Hydration (zero to four waterdrops) indicates how easy it is to obtain water there.\n• Astrobiology Site is indicated by the leaf icon.\n• Submarine Site is indicated by the blue wave icon. A Factory or Colony here is in a subsurface ocean.\n• Push Site is indicated by the push icon. A Factory here yields the Powersat Ability.\nb. Intersections. The intersection between two routes is a Space called a Hohmann if the two lines touch or form a corner unmarked by any icon or circle. This includes each corner in the zigzag routes such as those common in the outer solar system.\n• Lagrange & Lander Spaces. A Space is not a Hohmann if it is marked by any icon (e.g. a hollow or filled circle or lander icon).\n• Bridges. If the lines don't touch, they do not intersect and are therefore neither a Space nor a Hohmann intersection.\n• Changing direction during movement at a Hohmann requires a Pivot (H4c).\n• Home Orbits. The Home Orbits for Bernals are marked with a 7-pointed star icon.\nc. Burn Spaces. These Spaces are magenta-colored on the map. There are two types: Lagrange Burns and lander burns (H5e). Each time a Rocket enters a Burn Space, it must expend a number of fuel steps equal to its fuel consumption.\nd. Spaces may also be marked with Hazard (H7), flyby (H8), or Radiation Belt (H10) icons.\ne. Aerobrake Path is a route with a dashed brown line. Using this path, a Spacecraft can parachute to a Site by ignoring net thrust requirements and without using Fuel. Entering an Aerobrake Hazard requires either a Hazard Roll or FINAO payment (H7e). A Spacecraft can never move along this path against the arrow's direction.\nf. Buggy Road is a route with a dashed yellow line. It is used during buggy prospecting, but can also be used to move Crew (H9a).\ng. Heliocentric Zones divide the solar system into concentric circles to mark the decreasing solar energy as you move farther away from Sol. Each zone is named after a planet (from Mercury D to Neptune J). These zones modify the thrust of Solar-Powered Rockets and Sails (H3c). Solar-Powered Cards are not Operational in the outermost zone.\nh. Synodic Comet Site. A Site with a red, blue, or yellow border, which represents a comet whose extreme orbit causes it to become accessible only during the season of the Sunspot Cycle matching its border color. See glossary for details.\ni. Signposts & Colored Lines. These have no impact on gameplay and are merely informational. They highlight a possible route to the depicted location and list the number of Burn Spaces to the destination, assuming no Pivots (H4c) and using flybys (H8). The number of Burns, multiplied by your fuel consumption (B2d), equals the fuel steps you will need for a one-way trip.\nj. Glory Setup. Circles labeled \"glory\" or \"heroism\" start with a glory or heroism chit (C7).\nk. Map Text is merely descriptive except for some printed rules at the kreutz sungrazer (B7h), Venus flyby (H8c), solar oberth (H8e) and Luna (I6).\nl. Map Locator. A clockface is depicted around Sol as a Site locator, in conjunction with the Heliocentric astronomical icons. For instance, Earth/LEO is located at 3:30 M."
+      "text": "The map shows the Spaces (i.e. the orbits in the Solar System where a Rocket can \"halt\"), and the routes between the Spaces. Some of the most useful routes are colored and labeled with signposts (e.g. \"Earth-Mars\"). The various kinds of Spaces are described below:"
+    },
+    {
+      "id": "B7a",
+      "title": "Sites",
+      "text": "Sites. Black hexes representing areas of planets, moons, and asteroids that can be landed on. Site features include:\n• Size is a number indicating the surface gravity — the larger the number the more likely prospecting will be successful but the more powerful your Rocket has to be to takeoff/land there.\n• Spectral Type (C, S, M, V, D, or H) indicates what can be mined and factory-produced there.\n• Atmospheric Site is indicated by the cloud icon in the Site hex.\n• Hydration (zero to four waterdrops) indicates how easy it is to obtain water there.\n• Astrobiology Site is indicated by the leaf icon.\n• Submarine Site is indicated by the blue wave icon. A Factory or Colony here is in a subsurface ocean.\n• Push Site is indicated by the push icon. A Factory here yields the Powersat Ability."
+    },
+    {
+      "id": "B7b",
+      "title": "Intersections",
+      "text": "Intersections. The intersection between two routes is a Space called a Hohmann if the two lines touch or form a corner unmarked by any icon or circle. This includes each corner in the zigzag routes such as those common in the outer solar system.\n• Lagrange & Lander Spaces. A Space is not a Hohmann if it is marked by any icon (e.g. a hollow or filled circle or lander icon).\n• Bridges. If the lines don't touch, they do not intersect and are therefore neither a Space nor a Hohmann intersection.\n• Changing direction during movement at a Hohmann requires a Pivot (H4c).\n• Home Orbits. The Home Orbits for Bernals are marked with a 7-pointed star icon."
+    },
+    {
+      "id": "B7c",
+      "title": "Burn Spaces",
+      "text": "Burn Spaces. These Spaces are magenta-colored on the map. There are two types: Lagrange Burns and lander burns (H5e). Each time a Rocket enters a Burn Space, it must expend a number of fuel steps equal to its fuel consumption."
+    },
+    {
+      "id": "B7d",
+      "title": "Hazard, Flyby & Special Spaces",
+      "text": "Spaces may also be marked with Hazard (H7), flyby (H8), or Radiation Belt (H10) icons."
+    },
+    {
+      "id": "B7e",
+      "title": "Aerobrake Path",
+      "text": "Aerobrake Path is a route with a dashed brown line. Using this path, a Spacecraft can parachute to a Site by ignoring net thrust requirements and without using Fuel. Entering an Aerobrake Hazard requires either a Hazard Roll or FINAO payment (H7e). A Spacecraft can never move along this path against the arrow's direction."
+    },
+    {
+      "id": "B7f",
+      "title": "Buggy Road",
+      "text": "Buggy Road is a route with a dashed yellow line. It is used during buggy prospecting, but can also be used to move Crew (H9a)."
+    },
+    {
+      "id": "B7g",
+      "title": "Heliocentric Zones",
+      "text": "Heliocentric Zones divide the solar system into concentric circles to mark the decreasing solar energy as you move farther away from Sol. Each zone is named after a planet (from Mercury D to Neptune J). These zones modify the thrust of Solar-Powered Rockets and Sails (H3c). Solar-Powered Cards are not Operational in the outermost zone."
+    },
+    {
+      "id": "B7h",
+      "title": "Synodic Comet Site",
+      "text": "Synodic Comet Site. A Site with a red, blue, or yellow border, which represents a comet whose extreme orbit causes it to become accessible only during the season of the Sunspot Cycle matching its border color. See glossary for details."
+    },
+    {
+      "id": "B7i",
+      "title": "Signposts & Colored Lines",
+      "text": "Signposts & Colored Lines. These have no impact on gameplay and are merely informational. They highlight a possible route to the depicted location and list the number of Burn Spaces to the destination, assuming no Pivots (H4c) and using flybys (H8). The number of Burns, multiplied by your fuel consumption (B2d), equals the fuel steps you will need for a one-way trip."
+    },
+    {
+      "id": "B7j",
+      "title": "Glory Setup",
+      "text": "Glory Setup. Circles labeled \"glory\" or \"heroism\" start with a glory or heroism chit (C7)."
+    },
+    {
+      "id": "B7k",
+      "title": "Map Text",
+      "text": "Map Text is merely descriptive except for some printed rules at the kreutz sungrazer (B7h), Venus flyby (H8c), solar oberth (H8e) and Luna (I6)."
+    },
+    {
+      "id": "B7l",
+      "title": "Map Locator",
+      "text": "Map Locator. A clockface is depicted around Sol as a Site locator, in conjunction with the Heliocentric astronomical icons. For instance, Earth/LEO is located at 3:30 M."
     },
     {
       "id": "B8",
@@ -88,7 +229,37 @@
     {
       "id": "C3",
       "title": "Reserves Setup",
-      "text": "Each player takes a playmat and places their Crew into the slot labeled \"LEO\" with the chosen Faction faceup. Near their playmat, they place the following components in their player color in their Reserve:\na. 2 Rockets (one for map, one to indicate net thrust).\nb. 1 Dry Mass Chit and 1 blue/gray Wet Mass Chit for their fuel strip.\nc. 7 small cubes (for Factories).\nd. 7 domes (for Colonies).\ne. 9 disks (for Claims).\nf. 2 rectangular chits (for Outpost Stacks)."
+      "text": "Each player takes a playmat and places their Crew into the slot labeled \"LEO\" with the chosen Faction faceup. Near their playmat, they place the following components in their player color in their Reserve:"
+    },
+    {
+      "id": "C3a",
+      "title": "Rockets",
+      "text": "2 Rockets (one for map, one to indicate net thrust)."
+    },
+    {
+      "id": "C3b",
+      "title": "Dry Mass & Wet Mass Chits",
+      "text": "1 Dry Mass Chit and 1 blue/gray Wet Mass Chit for their fuel strip."
+    },
+    {
+      "id": "C3c",
+      "title": "Factory Cubes",
+      "text": "7 small cubes (for Factories)."
+    },
+    {
+      "id": "C3d",
+      "title": "Colony Domes",
+      "text": "7 domes (for Colonies)."
+    },
+    {
+      "id": "C3e",
+      "title": "Claim Disks",
+      "text": "9 disks (for Claims)."
+    },
+    {
+      "id": "C3f",
+      "title": "Outpost Chits",
+      "text": "2 rectangular chits (for Outpost Stacks)."
     },
     {
       "id": "C4",
@@ -113,22 +284,67 @@
     {
       "id": "C8",
       "title": "Clout, 1st Player, & Sunspot Cube",
-      "text": "Every Crew card has a rating from A to M, where \"A\" has the most clout (political influence).\na. 1st Player. The player with the most clout becomes the \"Sol secretary-general\" (1st Player).\nb. Sunspot Cube. The 1st Player places a cube of his color (the Sunspot Cube) on the \"start\" position of the Sunspot Cycle, and then starts the game by taking his Turn (D1)."
+      "text": "Every Crew card has a rating from A to M, where \"A\" has the most clout (political influence)."
+    },
+    {
+      "id": "C8a",
+      "title": "1st Player",
+      "text": "1st Player. The player with the most clout becomes the \"Sol secretary-general\" (1st Player)."
+    },
+    {
+      "id": "C8b",
+      "title": "Sunspot Cube",
+      "text": "Sunspot Cube. The 1st Player places a cube of his color (the Sunspot Cube) on the \"start\" position of the Sunspot Cycle, and then starts the game by taking his Turn (D1)."
     },
     {
       "id": "D",
       "title": "Yearly Play Sequence",
-      "text": "After Setup, High Frontier proceeds as a series of years. Each year consists of:\na. Player Turns. Starting with the 1st Player and going clockwise, each player takes one Turn (D1).\nb. Sunspot Cycle Advance. If a threshold is crossed, see (D2a,b)."
+      "text": "After Setup, High Frontier proceeds as a series of years. Each year consists of:"
+    },
+    {
+      "id": "Da",
+      "title": "Player Turns",
+      "text": "Player Turns. Starting with the 1st Player and going clockwise, each player takes one Turn (D1)."
+    },
+    {
+      "id": "Db",
+      "title": "Sunspot Cycle Advance",
+      "text": "Sunspot Cycle Advance. If a threshold is crossed, see (D2a,b)."
     },
     {
       "id": "D1",
       "title": "Player Turn Phase",
-      "text": "In this phase, each of the players takes a Turn. You may do either or both of the following on your Turn, in any order: move your Rocket and/or perform an Operation. Except during movement or an Operation, you may perform any number of free actions.\na. Movement (H). You may move your Rocket once per Turn. Some Modules allow multiple Spacecraft, and if so, you may move each of them once per Turn.\nb. Operation (I). You may perform one Operation per Turn.\nc. Free Actions (G). You may perform any number of free actions on your Turn, including the same free action multiple times."
+      "text": "In this phase, each of the players takes a Turn. You may do either or both of the following on your Turn, in any order: move your Rocket and/or perform an Operation. Except during movement or an Operation, you may perform any number of free actions."
+    },
+    {
+      "id": "D1a",
+      "title": "Movement (H)",
+      "text": "Movement (H). You may move your Rocket once per Turn. Some Modules allow multiple Spacecraft, and if so, you may move each of them once per Turn."
+    },
+    {
+      "id": "D1b",
+      "title": "Operation (I)",
+      "text": "Operation (I). You may perform one Operation per Turn."
+    },
+    {
+      "id": "D1c",
+      "title": "Free Actions (G)",
+      "text": "Free Actions (G). You may perform any number of free actions on your Turn, including the same free action multiple times."
     },
     {
       "id": "D2",
       "title": "Advance Sunspot Cycle Phase",
-      "text": "The 1st Player (C8) advances the Sunspot Cube clockwise, which may trigger a threshold:\na. Event Threshold. If the cube crosses an \"event\" threshold, make an Event Roll (K2) and resolve the event (which is applied to all players, starting with the 1st Player).\nb. Seniority Threshold. If the cube crosses the \"SENIORITY\" threshold, remove a Seniority Disk. If no disks remain, the game immediately ends with scoring per M2. Player order can change if using Module 0 (O6b)."
+      "text": "The 1st Player (C8) advances the Sunspot Cube clockwise, which may trigger a threshold:"
+    },
+    {
+      "id": "D2a",
+      "title": "Event Threshold",
+      "text": "Event Threshold. If the cube crosses an \"event\" threshold, make an Event Roll (K2) and resolve the event (which is applied to all players, starting with the 1st Player)."
+    },
+    {
+      "id": "D2b",
+      "title": "Seniority Threshold",
+      "text": "Seniority Threshold. If the cube crosses the \"SENIORITY\" threshold, remove a Seniority Disk. If no disks remain, the game immediately ends with scoring per M2. Player order can change if using Module 0 (O6b)."
     },
     {
       "id": "E",
@@ -138,62 +354,282 @@
     {
       "id": "E1",
       "title": "Hand Cards",
-      "text": "Store your Hand cards to the right of your playmat.\na. No Hand Limit. Your Hand can contain any number of cards. However academia hand limits apply (I2a).\nb. Open Hands. Your FTs, Hand cards, and Stacks are free for anyone to examine."
+      "text": "Store your Hand cards to the right of your playmat."
+    },
+    {
+      "id": "E1a",
+      "title": "No Hand Limit",
+      "text": "No Hand Limit. Your Hand can contain any number of cards. However academia hand limits apply (I2a)."
+    },
+    {
+      "id": "E1b",
+      "title": "Open Hands",
+      "text": "Open Hands. Your FTs, Hand cards, and Stacks are free for anyone to examine."
     },
     {
       "id": "E2",
       "title": "Stacks",
-      "text": "A Stack is a collection of cards and/or FTs, placed in a designated slot on your playmat. In the core game, you can have up to 4 Stacks: LEO, Rocket, Outpost #1, and Outpost #2. Store these in the named slots on your playmat. Each has a location on the map as indicated by the location of its Figure.\na. No Card Limits. Your Stacks can contain any number of cards or FTs. However, you may not move a Rocket if its Wet Mass is greater than 32 or its Dry Mass is greater than 23.\nb. Stack Figures. If a Stack is created (except for LEO), place a Figure/outpost chit on the map to indicate its location (E5, E6). Except for LEO, you cannot create a Stack if you do not have a Figure/outpost chit for it.\nc. Stack Creation. Stacks are created by cargo transfer (G1), boosting (I4), site refuel (I5), or ET production (I8).\nd. Stack Swapping & Negotiated Transfer. See G1e and N3.\ne. Empty Stacks. If no cards or FTs remain in a Stack, Discard its Figure or outpost chit from the map. Also Discard any Glitches."
+      "text": "A Stack is a collection of cards and/or FTs, placed in a designated slot on your playmat. In the core game, you can have up to 4 Stacks: LEO, Rocket, Outpost #1, and Outpost #2. Store these in the named slots on your playmat. Each has a location on the map as indicated by the location of its Figure."
+    },
+    {
+      "id": "E2a",
+      "title": "No Card Limits",
+      "text": "No Card Limits. Your Stacks can contain any number of cards or FTs. However, you may not move a Rocket if its Wet Mass is greater than 32 or its Dry Mass is greater than 23."
+    },
+    {
+      "id": "E2b",
+      "title": "Stack Figures",
+      "text": "Stack Figures. If a Stack is created (except for LEO), place a Figure/outpost chit on the map to indicate its location (E5, E6). Except for LEO, you cannot create a Stack if you do not have a Figure/outpost chit for it."
+    },
+    {
+      "id": "E2c",
+      "title": "Stack Creation",
+      "text": "Stack Creation. Stacks are created by cargo transfer (G1), boosting (I4), site refuel (I5), or ET production (I8)."
+    },
+    {
+      "id": "E2d",
+      "title": "Stack Swapping & Negotiated Transfer",
+      "text": "Stack Swapping & Negotiated Transfer. See G1e and N3."
+    },
+    {
+      "id": "E2e",
+      "title": "Empty Stacks",
+      "text": "Empty Stacks. If no cards or FTs remain in a Stack, Discard its Figure or outpost chit from the map. Also Discard any Glitches."
     },
     {
       "id": "E3",
       "title": "Number of Stacks Permitted",
-      "text": "To represent the limits of mission control and spacesuited Humans, you are strictly limited to one each of the following Stacks at the end of your Turn:\na. Rocket Stack — represented on the map by your Rocket Figure.\nb. LEO Stack — is always at the Space on the map marked LEO, and is not represented by a Figure.\nc. Outpost Stack 1 — represented on the map by your #1 Outpost Chit.\nd. Outpost Stack 2 — represented on the map by your #2 Outpost Chit. During your Turn you may create as many Outpost Stacks as you wish, but by the end of your Turn you must have no more than two of them.\ne. Freighter Stack (Module 1) — represented on the map by your big cube.\nf. Kalpana Bernal Stack (Module 2) — represented on the map by a finned sphere figure of your player color.\ng. Stanford Bernal Stack (Module 2) — represented on the map by a torus figure of your player color."
+      "text": "To represent the limits of mission control and spacesuited Humans, you are strictly limited to one each of the following Stacks at the end of your Turn:"
+    },
+    {
+      "id": "E3a",
+      "title": "Rocket Stack",
+      "text": "Rocket Stack — represented on the map by your Rocket Figure."
+    },
+    {
+      "id": "E3b",
+      "title": "LEO Stack",
+      "text": "LEO Stack — is always at the Space on the map marked LEO, and is not represented by a Figure."
+    },
+    {
+      "id": "E3c",
+      "title": "Outpost Stack 1",
+      "text": "Outpost Stack 1 — represented on the map by your #1 Outpost Chit."
+    },
+    {
+      "id": "E3d",
+      "title": "Outpost Stack 2",
+      "text": "Outpost Stack 2 — represented on the map by your #2 Outpost Chit. During your Turn you may create as many Outpost Stacks as you wish, but by the end of your Turn you must have no more than two of them."
+    },
+    {
+      "id": "E3e",
+      "title": "Freighter Stack",
+      "text": "Freighter Stack (Module 1) — represented on the map by your big cube."
+    },
+    {
+      "id": "E3f",
+      "title": "Kalpana Bernal Stack",
+      "text": "Kalpana Bernal Stack (Module 2) — represented on the map by a finned sphere figure of your player color."
+    },
+    {
+      "id": "E3g",
+      "title": "Stanford Bernal Stack",
+      "text": "Stanford Bernal Stack (Module 2) — represented on the map by a torus figure of your player color."
     },
     {
       "id": "E4",
       "title": "LEO Stack Creation",
-      "text": "Your LEO Stack is like an outpost that is permanently located in Low Earth Orbit (marked \"LEO\" on the map). Its cards and Aquas reside in the \"LEO Stack\" slot on your playmat. Unlike other Stacks, this Stack does not have its own Figure.\na. Creation. See E2c. The boost operation will normally be used to create your first LEO Stack."
+      "text": "Your LEO Stack is like an outpost that is permanently located in Low Earth Orbit (marked \"LEO\" on the map). Its cards and Aquas reside in the \"LEO Stack\" slot on your playmat. Unlike other Stacks, this Stack does not have its own Figure."
+    },
+    {
+      "id": "E4a",
+      "title": "Creation",
+      "text": "Creation. See E2c. The boost operation will normally be used to create your first LEO Stack."
     },
     {
       "id": "E5",
       "title": "Rocket Stack Creation",
-      "text": "Designate a Stack as a Rocket Stack by placing its cards and/or FTs in the designated Rocket slot on your playmat. It must include an activated thruster to move (H2), but a Crew is not required and any Stack can be designated a Rocket Stack. Indicate its location on the map using a Rocket Figure. Place a Dry Mass Chit on your playmat's Fuel Strip according to the Rocket's Mass.\na. Creation. See E2c. The cargo transfer free action will normally be used to create your first Rocket Stack in LEO by transferring cards from your LEO Stack to your Rocket Stack.\nb. Rocket Stack Limit. You may only have one Rocket Stack at a time. If you already have a Rocket Stack, before another is created you must first either Decommission your existing Rocket Stack (free action per G6) or turn it into an Outpost Stack (free action per E6).\nc. Place Dry Mass Chit. Your Dry Mass is the sum of each card's Mass (B2b) plus 1 for each FT in the Rocket Stack. Place your Dry Mass Chit for your Rocket in the spot on your Fuel Strip with this number (F2b).\nd. Fueling & Wet Mass Chit. When first created, a Rocket's tanks are empty. Indicate this by selecting a Wet Mass Chit of the same color (F4b) as the Spacecraft's thrust triangle and placing it on top of your Dry Mass Chit. If you wish to immediately add Fuel to your Rocket, either by cargo transfer (G1) or site refuel (I5), move the Wet Mass Chit to the right per (F3b)."
+      "text": "Designate a Stack as a Rocket Stack by placing its cards and/or FTs in the designated Rocket slot on your playmat. It must include an activated thruster to move (H2), but a Crew is not required and any Stack can be designated a Rocket Stack. Indicate its location on the map using a Rocket Figure. Place a Dry Mass Chit on your playmat's Fuel Strip according to the Rocket's Mass."
+    },
+    {
+      "id": "E5a",
+      "title": "Creation",
+      "text": "Creation. See E2c. The cargo transfer free action will normally be used to create your first Rocket Stack in LEO by transferring cards from your LEO Stack to your Rocket Stack."
+    },
+    {
+      "id": "E5b",
+      "title": "Rocket Stack Limit",
+      "text": "Rocket Stack Limit. You may only have one Rocket Stack at a time. If you already have a Rocket Stack, before another is created you must first either Decommission your existing Rocket Stack (free action per G6) or turn it into an Outpost Stack (free action per E6)."
+    },
+    {
+      "id": "E5c",
+      "title": "Place Dry Mass Chit",
+      "text": "Place Dry Mass Chit. Your Dry Mass is the sum of each card's Mass (B2b) plus 1 for each FT in the Rocket Stack. Place your Dry Mass Chit for your Rocket in the spot on your Fuel Strip with this number (F2b)."
+    },
+    {
+      "id": "E5d",
+      "title": "Fueling & Wet Mass Chit",
+      "text": "Fueling & Wet Mass Chit. When first created, a Rocket's tanks are empty. Indicate this by selecting a Wet Mass Chit of the same color (F4b) as the Spacecraft's thrust triangle and placing it on top of your Dry Mass Chit. If you wish to immediately add Fuel to your Rocket, either by cargo transfer (G1) or site refuel (I5), move the Wet Mass Chit to the right per (F3b)."
     },
     {
       "id": "E6",
       "title": "Outpost Stack Creation",
-      "text": "As a free action (G1d,e), you can create or convert a Stack into Outpost #1 or Outpost #2 by placing the #1 or #2 outpost chit of your color. You are limited to 2 outposts by the end of your Turn.\na. Creation Methods. See E2c.\nb. Location. You can create outposts anywhere, e.g. at a Site where your Rocket is Decommissioned after dropping off Cargo, at a Factory performing ET production, or at a Hohmann transfer where your Rocket has been disabled by a Glitch.\nc. Fuel Outpost. You can create an Outpost Stack by producing FTs at a Factory (I5b).\nd. Swapping Outposts. Because of the 2 outpost limit, if you create a third, you must Decommission or redesignate (G1e) one by the end of your Turn."
+      "text": "As a free action (G1d,e), you can create or convert a Stack into Outpost #1 or Outpost #2 by placing the #1 or #2 outpost chit of your color. You are limited to 2 outposts by the end of your Turn."
+    },
+    {
+      "id": "E6a",
+      "title": "Creation Methods",
+      "text": "Creation Methods. See E2c."
+    },
+    {
+      "id": "E6b",
+      "title": "Location",
+      "text": "Location. You can create outposts anywhere, e.g. at a Site where your Rocket is Decommissioned after dropping off Cargo, at a Factory performing ET production, or at a Hohmann transfer where your Rocket has been disabled by a Glitch."
+    },
+    {
+      "id": "E6c",
+      "title": "Fuel Outpost",
+      "text": "Fuel Outpost. You can create an Outpost Stack by producing FTs at a Factory (I5b)."
+    },
+    {
+      "id": "E6d",
+      "title": "Swapping Outposts",
+      "text": "Swapping Outposts. Because of the 2 outpost limit, if you create a third, you must Decommission or redesignate (G1e) one by the end of your Turn."
     },
     {
       "id": "E7",
       "title": "Decommissions",
-      "text": "A Decommission returns a card to your Hand. Decommissions can either be voluntary: jettison cargo (G1g), Phileas Fogg (G2c), build colony (G3), voluntary decommission (G6), and industrialize (I7), or involuntary: e.g. Glitch Rolls, Hazard Rolls (H7), Belt Rolls, CME Rolls, or pad explosions (K2c).\na. Rocket Fuel. If a Spacecraft Stack loses its last card with a thrust triangle (B2d) to involuntary Decommission, remove its Dry and Wet Mass Chits.\nb. FTs. If the last card in a Stack is involuntarily Decommissioned, Discard its FTs to the Pool.\nc. Humans. If your Crew suffers voluntary or involuntary decommission, move them to your LEO Stack/Bank. You may not voluntarily decommission Humans (including Crew) except in certain circumstances (see \"Crew\" and \"Murder/Suicide\" in the glossary).\nd. Radiator Ablation. A radiator card played in its heavy Orientation (see glossary) rotates to its light Orientation instead of being involuntarily decommissioned upon failing Glitch Rolls, Hazard Rolls (H7), or Belt Rolls (H10). Ablation can also occur in jettison (G1g) or Phileas Fogg (G2c). Any other involuntary Decommission will entirely Decommission the radiator card."
+      "text": "A Decommission returns a card to your Hand. Decommissions can either be voluntary: jettison cargo (G1g), Phileas Fogg (G2c), build colony (G3), voluntary decommission (G6), and industrialize (I7), or involuntary: e.g. Glitch Rolls, Hazard Rolls (H7), Belt Rolls, CME Rolls, or pad explosions (K2c)."
+    },
+    {
+      "id": "E7a",
+      "title": "Rocket Fuel",
+      "text": "Rocket Fuel. If a Spacecraft Stack loses its last card with a thrust triangle (B2d) to involuntary Decommission, remove its Dry and Wet Mass Chits."
+    },
+    {
+      "id": "E7b",
+      "title": "FTs",
+      "text": "FTs. If the last card in a Stack is involuntarily Decommissioned, Discard its FTs to the Pool."
+    },
+    {
+      "id": "E7c",
+      "title": "Humans",
+      "text": "Humans. If your Crew suffers voluntary or involuntary decommission, move them to your LEO Stack/Bank. You may not voluntarily decommission Humans (including Crew) except in certain circumstances (see \"Crew\" and \"Murder/Suicide\" in the glossary)."
+    },
+    {
+      "id": "E7d",
+      "title": "Radiator Ablation",
+      "text": "Radiator Ablation. A radiator card played in its heavy Orientation (see glossary) rotates to its light Orientation instead of being involuntarily decommissioned upon failing Glitch Rolls, Hazard Rolls (H7), or Belt Rolls (H10). Ablation can also occur in jettison (G1g) or Phileas Fogg (G2c). Any other involuntary Decommission will entirely Decommission the radiator card."
     },
     {
       "id": "F",
       "title": "Spacecraft Mass & Fuel Management",
-      "text": "Each player has a Fuel Strip printed on their playmat for tracking the Fuel Mass steps of their Spacecraft.\na. Dry Mass is your Spacecraft's Mass assuming its tanks are \"dry\" (empty). Thus it includes just the Mass of its FTs and cards.\nb. Wet Mass is your Spacecraft's Dry Mass plus the Mass of the Fuel onboard.\nc. Indicators. Each Fuel Strip has a Dry Mass Chit in the player's color and a blue or gray Wet Mass Chit."
+      "text": "Each player has a Fuel Strip printed on their playmat for tracking the Fuel Mass steps of their Spacecraft."
+    },
+    {
+      "id": "Fa",
+      "title": "Dry Mass",
+      "text": "Dry Mass is your Spacecraft's Mass assuming its tanks are \"dry\" (empty). Thus it includes just the Mass of its FTs and cards."
+    },
+    {
+      "id": "Fb",
+      "title": "Wet Mass",
+      "text": "Wet Mass is your Spacecraft's Dry Mass plus the Mass of the Fuel onboard."
+    },
+    {
+      "id": "Fc",
+      "title": "Indicators",
+      "text": "Indicators. Each Fuel Strip has a Dry Mass Chit in the player's color and a blue or gray Wet Mass Chit."
     },
     {
       "id": "F1",
       "title": "Wet Mass Fuel, FTs, & Aquas",
-      "text": "Fuel can be stored on a Spacecraft in two ways: as Wet Mass Fuel (tracked on the Fuel Strip) or as Cargo (fuel tanks or FTs). Players can internally change between these tankage forms as a free action (G2).\na. Wet Mass Fuel. The amount of Fuel is indicated by the number of steps on the black line of the Fuel Strip between the Dry Mass Chit and the gray/blue Wet Mass Chit.\nb. Dry Mass FTs. Each FT bead placed on your Spacecraft Stack is considered Cargo. Each Cargo FT has a Mass of 1. Adding FTs as Cargo will adjust both Wet and Dry Mass (F2b).\nc. Aquas. These blue beads in your LEO Stack serve as the game's currency, and are used for boost operations (I4), research auction operations (I2), negotiation (N) and paying for FINAO to avoid Hazards (H7). They also function simultaneously as Water FTs to be used for fueling and carried as Cargo."
+      "text": "Fuel can be stored on a Spacecraft in two ways: as Wet Mass Fuel (tracked on the Fuel Strip) or as Cargo (fuel tanks or FTs). Players can internally change between these tankage forms as a free action (G2)."
+    },
+    {
+      "id": "F1a",
+      "title": "Wet Mass Fuel",
+      "text": "Wet Mass Fuel. The amount of Fuel is indicated by the number of steps on the black line of the Fuel Strip between the Dry Mass Chit and the gray/blue Wet Mass Chit."
+    },
+    {
+      "id": "F1b",
+      "title": "Dry Mass FTs",
+      "text": "Dry Mass FTs. Each FT bead placed on your Spacecraft Stack is considered Cargo. Each Cargo FT has a Mass of 1. Adding FTs as Cargo will adjust both Wet and Dry Mass (F2b)."
+    },
+    {
+      "id": "F1c",
+      "title": "Aquas",
+      "text": "Aquas. These blue beads in your LEO Stack serve as the game's currency, and are used for boost operations (I4), research auction operations (I2), negotiation (N) and paying for FINAO to avoid Hazards (H7). They also function simultaneously as Water FTs to be used for fueling and carried as Cargo."
     },
     {
       "id": "F2",
       "title": "Dry Mass Adjustment",
-      "text": "A Spacecraft's Dry Mass Chit on the Fuel Strip indicates the Spacecraft's Mass ignoring Fuel. This includes the Mass of its cards and its FTs (note that FTs are regarded as Cargo and not Fuel). Adjust a Spacecraft's Dry Mass before its Movement (H).\na. Max & Min Dry Mass. In order for a Spacecraft to move, its Dry Mass Chit must somehow be reduced to '23' or below, as indicated on the Fuel Strip. A Spacecraft with a Dry Mass of '0' is considered to have a Dry Mass of '1'.\nb. Wet/Dry Mass Adjustment. For each unit of Dry Mass (cards or Cargo FTs) gained/lost, move the Dry Mass Chit one step to the right/left along the dashed red lines. Then, move the Wet Mass Chit an equal number of steps again along red lines in the same direction. If given a choice of paths, never go against the arrowhead.\nc. FT Dry Mass Adjustment. When changing internal tankage, either changing FTs into Fuel (G2a), or changing Fuel into FTs (G2b), move only the Dry Mass Chit in the same way as the previous bullet."
+      "text": "A Spacecraft's Dry Mass Chit on the Fuel Strip indicates the Spacecraft's Mass ignoring Fuel. This includes the Mass of its cards and its FTs (note that FTs are regarded as Cargo and not Fuel). Adjust a Spacecraft's Dry Mass before its Movement (H)."
+    },
+    {
+      "id": "F2a",
+      "title": "Max & Min Dry Mass",
+      "text": "Max & Min Dry Mass. In order for a Spacecraft to move, its Dry Mass Chit must somehow be reduced to '23' or below, as indicated on the Fuel Strip. A Spacecraft with a Dry Mass of '0' is considered to have a Dry Mass of '1'."
+    },
+    {
+      "id": "F2b",
+      "title": "Wet/Dry Mass Adjustment",
+      "text": "Wet/Dry Mass Adjustment. For each unit of Dry Mass (cards or Cargo FTs) gained/lost, move the Dry Mass Chit one step to the right/left along the dashed red lines. Then, move the Wet Mass Chit an equal number of steps again along red lines in the same direction. If given a choice of paths, never go against the arrowhead."
+    },
+    {
+      "id": "F2c",
+      "title": "FT Dry Mass Adjustment",
+      "text": "FT Dry Mass Adjustment. When changing internal tankage, either changing FTs into Fuel (G2a), or changing Fuel into FTs (G2b), move only the Dry Mass Chit in the same way as the previous bullet."
     },
     {
       "id": "F3",
       "title": "Wet Mass Adjustment",
-      "text": "A Spacecraft's Wet Mass Chit indicates the Spacecraft's total Mass, and can never be less than its Dry Mass. Like the Dry Mass adjustment (F2), make this adjustment for a Spacecraft at the beginning of that Spacecraft's Movement (H).\na. Max Wet Mass. Before a Spacecraft can move, its Wet Mass Chit must be reduced to '32' or below, by e.g. jettison (G1f,g).\nb. External Wet Mass Adjustment. If Fuel is added from an external source (refueling or cargo transfer), move the Wet Mass Chit one step to the right along the dashed red lines for each tank of Fuel added (G1b).\nc. Internal Wet Mass Adjustment. When changing the internal tankage (G2), the Wet Mass Chit does not change, since an internal transfer does not change the total Spacecraft Mass (F2c).\nd. Burning Fuel. Move the Wet Mass Chit to the left along the black lines during a Burn (H5), afterburn (H3a), or when jettisoning fuel (G1f).\n• No Negative Propellant. The Wet Mass Chit must never cross the Dry Mass Chit."
+      "text": "A Spacecraft's Wet Mass Chit indicates the Spacecraft's total Mass, and can never be less than its Dry Mass. Like the Dry Mass adjustment (F2), make this adjustment for a Spacecraft at the beginning of that Spacecraft's Movement (H)."
+    },
+    {
+      "id": "F3a",
+      "title": "Max Wet Mass",
+      "text": "Max Wet Mass. Before a Spacecraft can move, its Wet Mass Chit must be reduced to '32' or below, by e.g. jettison (G1f,g)."
+    },
+    {
+      "id": "F3b",
+      "title": "External Wet Mass Adjustment",
+      "text": "External Wet Mass Adjustment. If Fuel is added from an external source (refueling or cargo transfer), move the Wet Mass Chit one step to the right along the dashed red lines for each tank of Fuel added (G1b)."
+    },
+    {
+      "id": "F3c",
+      "title": "Internal Wet Mass Adjustment",
+      "text": "Internal Wet Mass Adjustment. When changing the internal tankage (G2), the Wet Mass Chit does not change, since an internal transfer does not change the total Spacecraft Mass (F2c)."
+    },
+    {
+      "id": "F3d",
+      "title": "Burning Fuel",
+      "text": "Burning Fuel. Move the Wet Mass Chit to the left along the black lines during a Burn (H5), afterburn (H3a), or when jettisoning fuel (G1f).\n• No Negative Propellant. The Wet Mass Chit must never cross the Dry Mass Chit."
     },
     {
       "id": "F4",
       "title": "Fuel Grades & Mixing Fuel",
-      "text": "Fuel and FTs come in three grades: dirt (gray), water (blue) or isotope (gold). This is represented by an appropriately colored Wet Mass Chit for Fuel and blue and gold beads representing water and isotope FTs respectively.\na. Wet Mass Chit must be gray, blue, or gold, representing loading dirt, water propellant, or isotope fuel, respectively.\nb. Fuel Grades. From lowest to highest, the fuel grades are: dirt (gray), water (blue), and isotope (gold). This is relevant for activation (H2), fuel mixing (F4d), and the rate of refuel (G1c, I5). A Spacecraft can only have a single grade of Wet Mass Fuel (F4d).\nc. Thruster Fuel Compatibility. A Spacecraft may be fueled with any type of Fuel, but it cannot expend Fuel in a Burn or use an afterburner (H3a) if the color of the activated thrust triangle is of a higher grade than the color of the Wet Mass Chit.\n• Assuming a Spacecraft must expend Fuel, a dirt thruster can be activated with any color Wet Mass Chit, a Water Thruster can be activated with a blue or gold Wet Mass Chit, and an Isotope Thruster can only activate with a gold Wet Mass Chit.\nEXAMPLE [F4c] You cargo transfer 2 blue FTs to your mass driver (a dirt rocket), moving its gray Wet Mass Chit from 20 to 22. Per G2b, dirt fuel cannot subsequently be converted into FTs, as the water has been \"lost\".\nd. Fuel Mixing. If a Spacecraft adds Fuel of a different grade than the color of its Wet Mass Chit, all of its Fuel becomes the lower of the two grades (swap its Wet Mass Chit to the correct color, if necessary).\n• Fuel can be jettisoned (G1f) or changed to FTs (G2b) before mixing if you wish to avoid this.\n• A Spacecraft with no Fuel does not cause Fuel mixing (swap its Wet Mass Chit to whatever you load it with).\n• A Spacecraft can carry both blue and gold grades of FTs."
+      "text": "Fuel and FTs come in three grades: dirt (gray), water (blue) or isotope (gold). This is represented by an appropriately colored Wet Mass Chit for Fuel and blue and gold beads representing water and isotope FTs respectively."
+    },
+    {
+      "id": "F4a",
+      "title": "Wet Mass Chit",
+      "text": "Wet Mass Chit must be gray, blue, or gold, representing loading dirt, water propellant, or isotope fuel, respectively."
+    },
+    {
+      "id": "F4b",
+      "title": "Fuel Grades",
+      "text": "Fuel Grades. From lowest to highest, the fuel grades are: dirt (gray), water (blue), and isotope (gold). This is relevant for activation (H2), fuel mixing (F4d), and the rate of refuel (G1c, I5). A Spacecraft can only have a single grade of Wet Mass Fuel (F4d)."
+    },
+    {
+      "id": "F4c",
+      "title": "Thruster Fuel Compatibility",
+      "text": "Thruster Fuel Compatibility. A Spacecraft may be fueled with any type of Fuel, but it cannot expend Fuel in a Burn or use an afterburner (H3a) if the color of the activated thrust triangle is of a higher grade than the color of the Wet Mass Chit.\n• Assuming a Spacecraft must expend Fuel, a dirt thruster can be activated with any color Wet Mass Chit, a Water Thruster can be activated with a blue or gold Wet Mass Chit, and an Isotope Thruster can only activate with a gold Wet Mass Chit.\nEXAMPLE [F4c] You cargo transfer 2 blue FTs to your mass driver (a dirt rocket), moving its gray Wet Mass Chit from 20 to 22. Per G2b, dirt fuel cannot subsequently be converted into FTs, as the water has been \"lost\"."
+    },
+    {
+      "id": "F4d",
+      "title": "Fuel Mixing",
+      "text": "Fuel Mixing. If a Spacecraft adds Fuel of a different grade than the color of its Wet Mass Chit, all of its Fuel becomes the lower of the two grades (swap its Wet Mass Chit to the correct color, if necessary).\n• Fuel can be jettisoned (G1f) or changed to FTs (G2b) before mixing if you wish to avoid this.\n• A Spacecraft with no Fuel does not cause Fuel mixing (swap its Wet Mass Chit to whatever you load it with).\n• A Spacecraft can carry both blue and gold grades of FTs."
     },
     {
       "id": "G",
@@ -203,22 +639,107 @@
     {
       "id": "G1",
       "title": "Cargo Transfer",
-      "text": "This free action transfers any number of cards, Fuel, or FTs from one Stack to a Colocated Stack.\na. Dry Mass Cargo. Perform a dry and wet mass adjustment (F2) if your Spacecraft Stack had gains or losses of Mass, (e.g. loading or unloading Cards or FTs). Each FT has Mass 1 and is considered Cargo when loaded. Place the FT marker on the Stack.\nb. Fueling Rocket. FTs can be loaded directly as Fuel onto the Fuel Strip. For every FT discarded into the Pool from a Colocated Stack, move the Wet Mass Chit 1 spot to the right along the dashed red lines (F3b). If mixing fuel grades, either consider the higher fuel grade loaded being downgraded into the color indicated by the Wet Mass Chit (F4b), or swap the Wet Mass Chit per (F4d).\nEXAMPLE [G1b] You create a Rocket Stack in LEO with Dry Mass of 6. You cargo transfer 4 Aquas, placing a blue Wet Mass Chit on the \"10\".\nc. Dirt Refueling. If your Spacecraft with an activated dirt thruster is on a Site and has (or changes to) a gray Wet Mass Chit, and you have either a Factory, or any card present (robonaut or Human) with an Operational ISRU platform, you can cargo transfer dirt fuel. This is regardless of the ISRU rating of the card or the Site's Hydration (regolith is easy to find). Adjust your Wet Mass (F3b) to any desired value (for non-crew dirt thrusters), or (as once-per-turn free action) by one fuel tank (Crew dirt thrusters).\nd. Create Rocket/Outpost Stack (E5, E6). You may also use cargo transfer to create a new Stack (e.g. Rocket or Outpost) composed of cards or FTs (restricted as per E3d).\ne. Swapping Outpost/Rocket. You may exchange any of your Rocket or Outpost Stacks on the map with another of your Rocket or Outpost Stacks. Swap their Figures/outpost chits on the map and swap the Stacks (including cards, Glitches, and FTs) to the appropriate new slots on your playmat.\n• Flush Fuel. Any Fuel on the Fuel Strip in the original Rocket is lost unless changed into FTs before swapping per G2b.\n• Convert Outpost Into Rocket. Set the Dry and Wet Mass Chits to be equal to the Mass of the original outpost (F2).\nf. Jettison Fuel. Move your Wet Mass Chit any number of steps to the left (following the black line). The Fuel is considered lost to space.\ng. Jettison Cargo or FTs. Decommission the desired cards and FT beads from any Stack. If it is a Spacecraft Stack, move both the Wet and Dry Mass Chits a number of steps to the left (along dashed red lines, taking the lower path if you have a choice) equal to the Mass removed. Radiators can be partially jettisoned, see Orientation (glossary) or example G2c.\nh. Infectious Glitch. If transferring Cargo and either the giving or receiving stacks are Glitched, performing a cargo transfer is a Glitch Trigger (see glossary) for both Stacks and both Stacks end up with a Glitch."
+      "text": "This free action transfers any number of cards, Fuel, or FTs from one Stack to a Colocated Stack."
+    },
+    {
+      "id": "G1a",
+      "title": "Dry Mass Cargo",
+      "text": "Dry Mass Cargo. Perform a dry and wet mass adjustment (F2) if your Spacecraft Stack had gains or losses of Mass, (e.g. loading or unloading Cards or FTs). Each FT has Mass 1 and is considered Cargo when loaded. Place the FT marker on the Stack."
+    },
+    {
+      "id": "G1b",
+      "title": "Fueling Rocket",
+      "text": "Fueling Rocket. FTs can be loaded directly as Fuel onto the Fuel Strip. For every FT discarded into the Pool from a Colocated Stack, move the Wet Mass Chit 1 spot to the right along the dashed red lines (F3b). If mixing fuel grades, either consider the higher fuel grade loaded being downgraded into the color indicated by the Wet Mass Chit (F4b), or swap the Wet Mass Chit per (F4d).\nEXAMPLE [G1b] You create a Rocket Stack in LEO with Dry Mass of 6. You cargo transfer 4 Aquas, placing a blue Wet Mass Chit on the \"10\"."
+    },
+    {
+      "id": "G1c",
+      "title": "Dirt Refueling",
+      "text": "Dirt Refueling. If your Spacecraft with an activated dirt thruster is on a Site and has (or changes to) a gray Wet Mass Chit, and you have either a Factory, or any card present (robonaut or Human) with an Operational ISRU platform, you can cargo transfer dirt fuel. This is regardless of the ISRU rating of the card or the Site's Hydration (regolith is easy to find). Adjust your Wet Mass (F3b) to any desired value (for non-crew dirt thrusters), or (as once-per-turn free action) by one fuel tank (Crew dirt thrusters)."
+    },
+    {
+      "id": "G1d",
+      "title": "Create Rocket/Outpost Stack (E5, E6)",
+      "text": "Create Rocket/Outpost Stack (E5, E6). You may also use cargo transfer to create a new Stack (e.g. Rocket or Outpost) composed of cards or FTs (restricted as per E3d)."
+    },
+    {
+      "id": "G1e",
+      "title": "Swapping Outpost/Rocket",
+      "text": "Swapping Outpost/Rocket. You may exchange any of your Rocket or Outpost Stacks on the map with another of your Rocket or Outpost Stacks. Swap their Figures/outpost chits on the map and swap the Stacks (including cards, Glitches, and FTs) to the appropriate new slots on your playmat.\n• Flush Fuel. Any Fuel on the Fuel Strip in the original Rocket is lost unless changed into FTs before swapping per G2b.\n• Convert Outpost Into Rocket. Set the Dry and Wet Mass Chits to be equal to the Mass of the original outpost (F2)."
+    },
+    {
+      "id": "G1f",
+      "title": "Jettison Fuel",
+      "text": "Jettison Fuel. Move your Wet Mass Chit any number of steps to the left (following the black line). The Fuel is considered lost to space."
+    },
+    {
+      "id": "G1g",
+      "title": "Jettison Cargo or FTs",
+      "text": "Jettison Cargo or FTs. Decommission the desired cards and FT beads from any Stack. If it is a Spacecraft Stack, move both the Wet and Dry Mass Chits a number of steps to the left (along dashed red lines, taking the lower path if you have a choice) equal to the Mass removed. Radiators can be partially jettisoned, see Orientation (glossary) or example G2c."
+    },
+    {
+      "id": "G1h",
+      "title": "Infectious Glitch",
+      "text": "Infectious Glitch. If transferring Cargo and either the giving or receiving stacks are Glitched, performing a cargo transfer is a Glitch Trigger (see glossary) for both Stacks and both Stacks end up with a Glitch."
     },
     {
       "id": "G2",
       "title": "Internal Tankage",
-      "text": "Fuel can be on your Spacecraft stack either as Wet Mass Fuel (G1b) or Cargo (G1a). The following free actions allow you to change your tankage between these two forms within your Spacecraft (F3c):\na. FT to Fuel. Move the Dry Mass Chit any number of steps to the left (following the dashed red line) and lose that many FT of the same color as your Wet Mass Chit.\n• Wet Mass Chit is left unmoved, as the total Mass of the Stack remains the same.\n• Fuel Grade. See fuel mixing (F4d) if the color of the FTs does not match that of the Wet Mass Chit.\n• Reminder. A Spacecraft's Wet Mass must never be less than its Dry Mass.\nb. Fuel to FT. Move the Dry Mass Chit any number of steps to the right (following the dashed red line) and gain that many FT of the same color as your Wet Mass Chit. This cannot be performed if your Wet Mass Chit is gray, since there are no gray FTs.\nc. Phileas Fogg. Voluntarily decommission any number of non-Bernal cards from your Rocket Stack to move its Dry Mass Chit one step to the left (following dashed red line) per unit of mass Decommissioned (as if changing FTs to fuel (G2a)). Because it simulates machinery ground up and fed into the engine hopper, this is considered to be adding dirt grade fuel (for fuel mixing, F4d).\n• Fogg's Heavy Radiators. If you have a gray Wet Mass Chit and rotate your heavy radiator to its \"light\" Orientation (see glossary), move the Dry Mass Chit to the left (following the dashed red line, taking the lower path at intersections) a number of tanks equal to the difference between the masses of the Heavy and Light Orientations."
+      "text": "Fuel can be on your Spacecraft stack either as Wet Mass Fuel (G1b) or Cargo (G1a). The following free actions allow you to change your tankage between these two forms within your Spacecraft (F3c):"
+    },
+    {
+      "id": "G2a",
+      "title": "FT to Fuel",
+      "text": "FT to Fuel. Move the Dry Mass Chit any number of steps to the left (following the dashed red line) and lose that many FT of the same color as your Wet Mass Chit.\n• Wet Mass Chit is left unmoved, as the total Mass of the Stack remains the same.\n• Fuel Grade. See fuel mixing (F4d) if the color of the FTs does not match that of the Wet Mass Chit.\n• Reminder. A Spacecraft's Wet Mass must never be less than its Dry Mass."
+    },
+    {
+      "id": "G2b",
+      "title": "Fuel to FT",
+      "text": "Fuel to FT. Move the Dry Mass Chit any number of steps to the right (following the dashed red line) and gain that many FT of the same color as your Wet Mass Chit. This cannot be performed if your Wet Mass Chit is gray, since there are no gray FTs."
+    },
+    {
+      "id": "G2c",
+      "title": "Phileas Fogg",
+      "text": "Phileas Fogg. Voluntarily decommission any number of non-Bernal cards from your Rocket Stack to move its Dry Mass Chit one step to the left (following dashed red line) per unit of mass Decommissioned (as if changing FTs to fuel (G2a)). Because it simulates machinery ground up and fed into the engine hopper, this is considered to be adding dirt grade fuel (for fuel mixing, F4d).\n• Fogg's Heavy Radiators. If you have a gray Wet Mass Chit and rotate your heavy radiator to its \"light\" Orientation (see glossary), move the Dry Mass Chit to the left (following the dashed red line, taking the lower path at intersections) a number of tanks equal to the difference between the masses of the Heavy and Light Orientations."
     },
     {
       "id": "G3",
       "title": "Build Colony",
-      "text": "Build a Colony by Decommissioning a Human Colocated with one of your Factories that does not already have a Colony and placing a Colony dome on it. Follow these steps:\na. Workforce. Decommission one Colocated Human card (Crew or Colonist). They have become settlers, so this is neither a Felony nor Murder. However, it is a Felony to colonize the kreutz sungrazer.\nb. Colony Figure. Take a dome from your Reserve and set it on top of the Factory.\nc. Delegate (Module 0). You may assign a cube from your Reserve as a delegate (O2a). The Ideology must match the Ideology stated on the Crew/Colonist. This causes a vote tally (O3a).\nd. Exomigration (Module 2). If a Colony consumes a Colonist, perform exomigration (2A6a)."
+      "text": "Build a Colony by Decommissioning a Human Colocated with one of your Factories that does not already have a Colony and placing a Colony dome on it. Follow these steps:"
+    },
+    {
+      "id": "G3a",
+      "title": "Workforce",
+      "text": "Workforce. Decommission one Colocated Human card (Crew or Colonist). They have become settlers, so this is neither a Felony nor Murder. However, it is a Felony to colonize the kreutz sungrazer."
+    },
+    {
+      "id": "G3b",
+      "title": "Colony Figure",
+      "text": "Colony Figure. Take a dome from your Reserve and set it on top of the Factory."
+    },
+    {
+      "id": "G3c",
+      "title": "Delegate (Module 0)",
+      "text": "Delegate (Module 0). You may assign a cube from your Reserve as a delegate (O2a). The Ideology must match the Ideology stated on the Crew/Colonist. This causes a vote tally (O3a)."
+    },
+    {
+      "id": "G3d",
+      "title": "Exomigration (Module 2)",
+      "text": "Exomigration (Module 2). If a Colony consumes a Colonist, perform exomigration (2A6a)."
     },
     {
       "id": "G4",
       "title": "Claim Jump",
-      "text": "If you can commit a Felony (which requires Humans, see glossary), replace an opponent's Claim with one of your own unless it is Colocated with a Factory (I7) or a Human opposed to this Claim Jump.\na. Disk Limit. Your Reserve of Claims is limited. If you have no more Claim disks, then you may remove from another of your unindustrialized claimed Sites.\nb. Territoriality. As long as no opposed Humans are present, Claim Jump allows you to claim Luna without the permission of the 1st Player (I6.1).\nEXAMPLE [G4b] Both NASA and Taikonauts have Rockets on encke's comet. NASA prospects successfully, placing a white Claim. On their Turn, the manned Chinese Rocket feloniously claims the Site, replacing the NASA disk with a purple disk."
+      "text": "If you can commit a Felony (which requires Humans, see glossary), replace an opponent's Claim with one of your own unless it is Colocated with a Factory (I7) or a Human opposed to this Claim Jump."
+    },
+    {
+      "id": "G4a",
+      "title": "Disk Limit",
+      "text": "Disk Limit. Your Reserve of Claims is limited. If you have no more Claim disks, then you may remove from another of your unindustrialized claimed Sites."
+    },
+    {
+      "id": "G4b",
+      "title": "Territoriality",
+      "text": "Territoriality. As long as no opposed Humans are present, Claim Jump allows you to claim Luna without the permission of the 1st Player (I6.1).\nEXAMPLE [G4b] Both NASA and Taikonauts have Rockets on encke's comet. NASA prospects successfully, placing a white Claim. On their Turn, the manned Chinese Rocket feloniously claims the Site, replacing the NASA disk with a purple disk."
     },
     {
       "id": "G5",
@@ -228,7 +749,17 @@
     {
       "id": "G6",
       "title": "Voluntary Discard of Cards & Tokens",
-      "text": "During your Turn, you may either Discard or Decommission (E7) cards from your Hand or Stacks. Discarding sends cards to the bottom of the appropriate patent deck which can be helpful to participate in auctions (I2a). If a Stack contains no more cards or FTs, Discard its Figure/outpost chit from the map into your Reserve. Other tokens can be Discarded into your Reserve with the following limitations:\na. Factories are made of two tokens: a cube sitting on a disk (Claim), and both must be the same color, unless negotiated during industrialization (N3 or N6). Discarding a cube makes the Claim available to be re-industrialized (I7), and Discarding a Claim makes the Site available to be re-prospected (I6).\nb. Colony Permanence. A Colony dome is a Human, and neither it nor its Colocated Factory and Claim can be voluntarily Discarded, even if allowed Felonies."
+      "text": "During your Turn, you may either Discard or Decommission (E7) cards from your Hand or Stacks. Discarding sends cards to the bottom of the appropriate patent deck which can be helpful to participate in auctions (I2a). If a Stack contains no more cards or FTs, Discard its Figure/outpost chit from the map into your Reserve. Other tokens can be Discarded into your Reserve with the following limitations:"
+    },
+    {
+      "id": "G6a",
+      "title": "Factories",
+      "text": "Factories are made of two tokens: a cube sitting on a disk (Claim), and both must be the same color, unless negotiated during industrialization (N3 or N6). Discarding a cube makes the Claim available to be re-industrialized (I7), and Discarding a Claim makes the Site available to be re-prospected (I6)."
+    },
+    {
+      "id": "G6b",
+      "title": "Colony Permanence",
+      "text": "Colony Permanence. A Colony dome is a Human, and neither it nor its Colocated Factory and Claim can be voluntarily Discarded, even if allowed Felonies."
     },
     {
       "id": "G7",
@@ -243,52 +774,266 @@
     {
       "id": "H1",
       "title": "Movement Restrictions",
-      "text": "a. Space Is Really Big. There is no limit to the amount of Figures that can be on any given Space, except each Site can only have one Claim, Factory, and Colony.\nb. No Double Moves. No component (Figure, card, Fuel Tank) may move (using the Spacecraft movement rules) more than once per Turn. Any component that moves at least one Space via the movement rules cannot be moved again (by any player) until the start of your next Turn.\n• For FTs, this applies even if it is changed to Wet Mass Fuel and back.\n• Boosting (I4) is not considered movement. Thus you can boost a Rocket and move it.\nEXAMPLE [H1b] Your Freighter (Module 1) delivers FTs into an outpost, which you convert into a new Rocket fueled with the FTs. This Rocket cannot move until next Turn, because the FTs would have moved twice.\nc. No Interruptions. Free actions (G) and Operations (I) can only be performed before or after each Spacecraft movement."
+      "text": "a. Space Is Really Big. There is no limit to the amount of Figures that can be on any given Space, except each Site can only have one Claim, Factory, and Colony.\nb. No Double Moves. No component (Figure, card, Fuel Tank) may move (using the Spacecraft movement rules) more than once per Turn. Any component that moves at least one Space via the movement rules cannot be moved again (by any player) until the start of your next Turn.\n• For FTs, this applies even if it is changed to Wet Mass Fuel and back.\n• Boosting (I4) is not considered movement. Thus you can boost a Rocket and move it.\nEXAMPLE [H1b] Your Freighter (Module 1) delivers FTs into an outpost, which you convert into a new Rocket fueled with the FTs. This Rocket cannot move until next Turn, because the FTs would have moved twice.\nc. No Interruptions. Free actions (G) and Operations (I) can only be performed before or after each Spacecraft movement.",
+      "sub_ids": {
+        "H1a": "H1",
+        "H1b": "H1",
+        "H1c": "H1"
+      }
     },
     {
       "id": "H2",
       "title": "Thrust Triangle Activation",
-      "text": "One card in the Spacecraft's Stack with a thrust triangle (B2d) must be chosen for activation at the start of each movement. The activated thruster must be Operational (J3). The specific cards in that thruster's support chain, (J1c) must also be decided at this time. The thruster and its support chain cannot be changed mid-movement.\na. Activation & Movement. A thruster may be activated even if it does not have Fuel. The moment the activated thruster is lost or ceases to be Operational, the Spacecraft must immediately halt or coast (see next bullet). You may perform a dirt cargo transfer as a free action (G1c), then activate a dirt thruster and liftoff.\nb. Coasting. Provided it does not enter any Burns (H5) or make any Pivots (H4c), a Spacecraft that started its move with an activated thruster is allowed to keep moving, even if it started with less than 1 thrust, ran out of Fuel, or has reached its burn limit (H5c).\n• Coasting Examples. As long as no Burns are used, a coasting Spacecraft can enter or land with aerobrake paths (H6b), use factory-assisted landings (H6c), use accumulated Bonus Pivots or Bonus Burns (even if the thruster subsequently became non-operational), or (if Operational) pick up additional Bonus Burns (H8b) by entering flybys."
+      "text": "One card in the Spacecraft's Stack with a thrust triangle (B2d) must be chosen for activation at the start of each movement. The activated thruster must be Operational (J3). The specific cards in that thruster's support chain, (J1c) must also be decided at this time. The thruster and its support chain cannot be changed mid-movement."
+    },
+    {
+      "id": "H2a",
+      "title": "Activation & Movement",
+      "text": "Activation & Movement. A thruster may be activated even if it does not have Fuel. The moment the activated thruster is lost or ceases to be Operational, the Spacecraft must immediately halt or coast (see next bullet). You may perform a dirt cargo transfer as a free action (G1c), then activate a dirt thruster and liftoff."
+    },
+    {
+      "id": "H2b",
+      "title": "Coasting",
+      "text": "Coasting. Provided it does not enter any Burns (H5) or make any Pivots (H4c), a Spacecraft that started its move with an activated thruster is allowed to keep moving, even if it started with less than 1 thrust, ran out of Fuel, or has reached its burn limit (H5c).\n• Coasting Examples. As long as no Burns are used, a coasting Spacecraft can enter or land with aerobrake paths (H6b), use factory-assisted landings (H6c), use accumulated Bonus Pivots or Bonus Burns (even if the thruster subsequently became non-operational), or (if Operational) pick up additional Bonus Burns (H8b) by entering flybys."
     },
     {
       "id": "H3",
       "title": "Calculating Net Thrust",
-      "text": "The left number on the thrust triangle is the base thrust. Various modifiers may add or subtract from this number to obtain the net thrust, which is the number of Burns you are allowed to perform during your Turn, and also must be larger than a Site's Size in order to make powered landings/liftoffs. The net thrust is calculated before each movement, and applied for the entire move of the Spacecraft that Turn. If you activate a thruster that brings your net thrust to zero or less, you may only coast (H2b). Use a Rocket Figure to mark the base thrust along the top of your playmat and then sequentially apply modifiers in the following order to obtain your net thrust:\na. Megawatt (MW) Afterburn. If the thrust triangle has an afterburn icon and the thruster is Operational, you may expend (F3b) the indicated number of fuel steps to increase net thrust by one. This can only be done once per movement. Afterburning increases net thrust by one no matter how many steps are expended.\n• Open-Cycle Cooling. Afterburns also generate one Therm of cooling (J4d) that applies for cards that were in the thruster's support chain (J1c) at the time of the afterburn.\nb. Weight Class Modifier. Increase or decrease net thrust by the amount shown in the colored band above your Spacecraft's Wet Mass Chit. These weight classes are named wisp (+2), probe (+1), scout (+0), transport (-1), and tug (-2).\n• Timing. This is calculated after any Fuel is spent to afterburn (previous bullet).\nEXAMPLE [H3b] A Rocket with a Dry Mass of 7 and a Wet Mass of 8½ is transport class (Wet Mass thrust modifier of -1). If its thruster has a base thrust of 1, its net thrust is 1 - 1 = 0. It can only coast with zero thrust, so it jettisons one step of Fuel to bring it to scout class (Wet Mass 8). This class has a Wet Mass modifier of 0, allowing it to move.\nc. Solar-Power Modifier. If the thruster or any card in its support chain has the solar-powered icon (J5b), increase or decrease the net thrust depending on which Heliocentric Zone it's in (-5 to +2, as indicated on the map).\n• Multiple Solar Modifiers. This modifier only applies once regardless of the amount of solar icons in the support chain.\n• Neptune Solar. Solar-Powered Cards are non-operational in the Neptune J Heliocentric Zone (B7g), unless they get a push (next bullet). If so, thrust has a -6 modifier.\nEXAMPLE [H3c] Your Rocket has a mass driver (4•3) activated, which is powered by a solar-powered generator (flywheel compulsator). Around Mercury, the thrust is boosted to 6, but around Ceres, it drops to 2. Around Pluto, it stops altogether.\nd. Beamed-Power Modifier. If your activated thrust triangle has the \"push\" icon, either you or any negotiation partner (N4a) with the Powersat Ability/faction privilege, or with a Factory on a Site with the push icon, can add a +1 modifier. The Powersat modifier works at any range.\n• No Double Push. This modifier only applies once regardless of the number of Powersats.\ne. Thrust-Modifying Supports. If the support chain (J1c) of the thrust triangle contains any thrust modifiers, then adjust the thrust accordingly (J5a & J5d). Fuel consumption may also be affected.\nEXAMPLE [H3e] You create an electric rocket using a thrust-modifying support to generate its electricity. The base thrust of its hall effect thruster is 3, but its radioisotope stirling generator subtracts 2, for a net thrust of 1."
+      "text": "The left number on the thrust triangle is the base thrust. Various modifiers may add or subtract from this number to obtain the net thrust, which is the number of Burns you are allowed to perform during your Turn, and also must be larger than a Site's Size in order to make powered landings/liftoffs. The net thrust is calculated before each movement, and applied for the entire move of the Spacecraft that Turn. If you activate a thruster that brings your net thrust to zero or less, you may only coast (H2b). Use a Rocket Figure to mark the base thrust along the top of your playmat and then sequentially apply modifiers in the following order to obtain your net thrust:"
+    },
+    {
+      "id": "H3a",
+      "title": "Megawatt (MW) Afterburn",
+      "text": "Megawatt (MW) Afterburn. If the thrust triangle has an afterburn icon and the thruster is Operational, you may expend (F3b) the indicated number of fuel steps to increase net thrust by one. This can only be done once per movement. Afterburning increases net thrust by one no matter how many steps are expended.\n• Open-Cycle Cooling. Afterburns also generate one Therm of cooling (J4d) that applies for cards that were in the thruster's support chain (J1c) at the time of the afterburn."
+    },
+    {
+      "id": "H3b",
+      "title": "Weight Class Modifier",
+      "text": "Weight Class Modifier. Increase or decrease net thrust by the amount shown in the colored band above your Spacecraft's Wet Mass Chit. These weight classes are named wisp (+2), probe (+1), scout (+0), transport (-1), and tug (-2).\n• Timing. This is calculated after any Fuel is spent to afterburn (previous bullet).\nEXAMPLE [H3b] A Rocket with a Dry Mass of 7 and a Wet Mass of 8½ is transport class (Wet Mass thrust modifier of -1). If its thruster has a base thrust of 1, its net thrust is 1 - 1 = 0. It can only coast with zero thrust, so it jettisons one step of Fuel to bring it to scout class (Wet Mass 8). This class has a Wet Mass modifier of 0, allowing it to move."
+    },
+    {
+      "id": "H3c",
+      "title": "Solar-Power Modifier",
+      "text": "Solar-Power Modifier. If the thruster or any card in its support chain has the solar-powered icon (J5b), increase or decrease the net thrust depending on which Heliocentric Zone it's in (-5 to +2, as indicated on the map).\n• Multiple Solar Modifiers. This modifier only applies once regardless of the amount of solar icons in the support chain.\n• Neptune Solar. Solar-Powered Cards are non-operational in the Neptune J Heliocentric Zone (B7g), unless they get a push (next bullet). If so, thrust has a -6 modifier.\nEXAMPLE [H3c] Your Rocket has a mass driver (4•3) activated, which is powered by a solar-powered generator (flywheel compulsator). Around Mercury, the thrust is boosted to 6, but around Ceres, it drops to 2. Around Pluto, it stops altogether."
+    },
+    {
+      "id": "H3d",
+      "title": "Beamed-Power Modifier",
+      "text": "Beamed-Power Modifier. If your activated thrust triangle has the \"push\" icon, either you or any negotiation partner (N4a) with the Powersat Ability/faction privilege, or with a Factory on a Site with the push icon, can add a +1 modifier. The Powersat modifier works at any range.\n• No Double Push. This modifier only applies once regardless of the number of Powersats."
+    },
+    {
+      "id": "H3e",
+      "title": "Thrust-Modifying Supports",
+      "text": "Thrust-Modifying Supports. If the support chain (J1c) of the thrust triangle contains any thrust modifiers, then adjust the thrust accordingly (J5a & J5d). Fuel consumption may also be affected.\nEXAMPLE [H3e] You create an electric rocket using a thrust-modifying support to generate its electricity. The base thrust of its hall effect thruster is 3, but its radioisotope stirling generator subtracts 2, for a net thrust of 1."
     },
     {
       "id": "H4",
       "title": "Movement Procedure",
-      "text": "A Spacecraft may move any distance along the lines of the map, restrained only by a maximum number of Burns (H5c) equal to its net thrust (H3), and by its Fuel. Spend Fuel equal to fuel consumption for each Burn Space entered (H5a).\na. Directional Freedom. If the Space started in has multiple exits, the Spacecraft may choose any of them.\nb. Stopping. Except for lander burns (H5e), a Spacecraft may stop on any Space (B7). Moving into a Site triggers a landing (H6) and ends movement.\nc. Pivot. A change in direction during a move at a Hohmann (B7b) is called a Pivot. If a Spacecraft performs a Pivot, it must perform two Burns.\n• Loiter. However, if a Rocket instead stops on the intersection, and waits until the next Turn to move in the new direction, it is not a Pivot and does not expend Fuel (H4a).\n• Unwavering. Moving straight through a Hohmann without turning does not require a Pivot.\n• Ballerina Icon indicates a Bonus Pivot (see glossary).\nd. Free Turns. You may change direction during a move at any intersection marked with an icon, e.g. a lander (or half-lander), Lagrange Points, Burns, any Hazard, etc.\ne. No U-Turn. Upon entering a Space, a Spacecraft cannot immediately exit that Space using the route it entered by. However, if you halt on a Space, you may move in any direction on your next Turn (loitering, H4c).\nf. Aerobrake Arrow. You can follow any route, except for an aerobrake path (B7e) against its arrowhead.\ng. Coasting. This can extend your movement per H2b."
+      "text": "A Spacecraft may move any distance along the lines of the map, restrained only by a maximum number of Burns (H5c) equal to its net thrust (H3), and by its Fuel. Spend Fuel equal to fuel consumption for each Burn Space entered (H5a)."
+    },
+    {
+      "id": "H4a",
+      "title": "Directional Freedom",
+      "text": "Directional Freedom. If the Space started in has multiple exits, the Spacecraft may choose any of them."
+    },
+    {
+      "id": "H4b",
+      "title": "Stopping",
+      "text": "Stopping. Except for lander burns (H5e), a Spacecraft may stop on any Space (B7). Moving into a Site triggers a landing (H6) and ends movement."
+    },
+    {
+      "id": "H4c",
+      "title": "Pivot",
+      "text": "Pivot. A change in direction during a move at a Hohmann (B7b) is called a Pivot. If a Spacecraft performs a Pivot, it must perform two Burns.\n• Loiter. However, if a Rocket instead stops on the intersection, and waits until the next Turn to move in the new direction, it is not a Pivot and does not expend Fuel (H4a).\n• Unwavering. Moving straight through a Hohmann without turning does not require a Pivot.\n• Ballerina Icon indicates a Bonus Pivot (see glossary)."
+    },
+    {
+      "id": "H4d",
+      "title": "Free Turns",
+      "text": "Free Turns. You may change direction during a move at any intersection marked with an icon, e.g. a lander (or half-lander), Lagrange Points, Burns, any Hazard, etc."
+    },
+    {
+      "id": "H4e",
+      "title": "No U-Turn",
+      "text": "No U-Turn. Upon entering a Space, a Spacecraft cannot immediately exit that Space using the route it entered by. However, if you halt on a Space, you may move in any direction on your next Turn (loitering, H4c)."
+    },
+    {
+      "id": "H4f",
+      "title": "Aerobrake Arrow",
+      "text": "Aerobrake Arrow. You can follow any route, except for an aerobrake path (B7e) against its arrowhead."
+    },
+    {
+      "id": "H4g",
+      "title": "Coasting",
+      "text": "Coasting. This can extend your movement per H2b."
     },
     {
       "id": "H5",
       "title": "Burns",
-      "text": "Performing a Burn expends a number of fuel steps (not tanks) equal to the fuel consumption (B2d) of the activated thrust triangle. A Spacecraft performs a Burn in two instances: when it enters a Burn Space, either Lagrange or lander, or wishes to Pivot at a Hohmann (H4c) and continue moving. For each Burn Space entered, the Spacecraft must expend Fuel for one Burn; for each Pivot made (H4c), the Spacecraft must perform two Burns.\nEXAMPLE [H5] Your mission is to take a Mass 3 refinery from LEO to Mercury. You use a 12•8 crew thruster, a 0•0 sail card, and 4 tanks of water as lander Fuel to make a Rocket Stack with a Dry Mass of 4 and a Wet Mass of 8. But this is transport class, so your sailing net thrust is less than 1 and you can't move other than coasting. So you add 11 more tanks of water, bringing the Wet Mass to 19. During movement, first activate the 12•8 thruster to get through the first 2 Burn Spaces in the orange signpost route. This lowers the Wet Mass Chit 16 steps to 7, and the Rocket is now in the Mercury Heliocentric Zone, which gives a +2 thrust to Sails. The Rocket is scout class, and after activating the Sail has a net thrust of 2. The sailing net thrust is 2, enough to move. Now you can switch your thruster to the Sail, and over the next 2 years sail to L1 just outside the lander burn of Mercury. Finally switch to your Crew thruster again, and expend your last 8 steps of Fuel to land.\na. Expend Fuel/Adjust Wet Mass. For each Burn performed, move the Spacecraft's Wet Mass Chit a number of steps left along the Fuel Strip (following the black line) equal to the fuel consumption of the activated thrust triangle (H2), possibly modified by supports (H3e).\nb. Fractional Fuel Use. Some thrusters consume a fractional amount of fuel steps per Burn. Move the Wet Mass Chit partially along the black line to show this. As you progress through Burns, you may place the chit between two spots to indicate partial fuel expenditure. At the end of movement, the total number of steps used is rounded up (move the marker left along the black line to the next numbered spot).\nc. Burn Limit. The total amount of Burns you may use during a movement (not including Bonus Burns H8b) may not exceed the Spacecraft's net thrust, as calculated at the start of each movement (H3).\nd. Insufficient Fuel. A Spacecraft may not enter a Burn if it does not have enough Fuel to pay for it (the Wet Mass Chit may never pass the Dry Mass Chit).\ne. Lander Burns are a special type of Burn Space abstracting the delta-v required for a Spacecraft to land or takeoff from a Site. They have the following special rules:\n• No Stopping. You may not end movement on a lander burn. You may not enter a lander burn if you cannot continue moving through it, including enough thrust and Fuel for any Burns or Site landings later in the same move.\n• Bonus Burns (H8b) cannot be used to enter lander burns.\n• Factory-Assisted Landings/Liftoffs (H6c) cannot be used to enter lander burns (exceptions for Atmospheric Sites (H6c) and some Abilities).\n• Half-Burns. Some lander burn spaces depict only half of a lander vehicle. These still count as one full Burn (for all purposes, including burn limits H5c) but only use half as many fuel steps (do not round until movement ends).\nf. Fuel Grade Requirement. Thrust triangles are color-coded with a fuel grade (F4b). The Fuel expended when a Burn is used must be the same grade of Fuel or better (e.g., a dirt thruster can use any type of Fuel whilst a water Rocket may only use water or isotope Fuel).\ng. Fuel-Modifying Supports. Fuel consumption can be modified per (J5c)."
+      "text": "Performing a Burn expends a number of fuel steps (not tanks) equal to the fuel consumption (B2d) of the activated thrust triangle. A Spacecraft performs a Burn in two instances: when it enters a Burn Space, either Lagrange or lander, or wishes to Pivot at a Hohmann (H4c) and continue moving. For each Burn Space entered, the Spacecraft must expend Fuel for one Burn; for each Pivot made (H4c), the Spacecraft must perform two Burns.\nEXAMPLE [H5] Your mission is to take a Mass 3 refinery from LEO to Mercury. You use a 12•8 crew thruster, a 0•0 sail card, and 4 tanks of water as lander Fuel to make a Rocket Stack with a Dry Mass of 4 and a Wet Mass of 8. But this is transport class, so your sailing net thrust is less than 1 and you can't move other than coasting. So you add 11 more tanks of water, bringing the Wet Mass to 19. During movement, first activate the 12•8 thruster to get through the first 2 Burn Spaces in the orange signpost route. This lowers the Wet Mass Chit 16 steps to 7, and the Rocket is now in the Mercury Heliocentric Zone, which gives a +2 thrust to Sails. The Rocket is scout class, and after activating the Sail has a net thrust of 2. The sailing net thrust is 2, enough to move. Now you can switch your thruster to the Sail, and over the next 2 years sail to L1 just outside the lander burn of Mercury. Finally switch to your Crew thruster again, and expend your last 8 steps of Fuel to land."
+    },
+    {
+      "id": "H5a",
+      "title": "Expend Fuel/Adjust Wet Mass",
+      "text": "Expend Fuel/Adjust Wet Mass. For each Burn performed, move the Spacecraft's Wet Mass Chit a number of steps left along the Fuel Strip (following the black line) equal to the fuel consumption of the activated thrust triangle (H2), possibly modified by supports (H3e)."
+    },
+    {
+      "id": "H5b",
+      "title": "Fractional Fuel Use",
+      "text": "Fractional Fuel Use. Some thrusters consume a fractional amount of fuel steps per Burn. Move the Wet Mass Chit partially along the black line to show this. As you progress through Burns, you may place the chit between two spots to indicate partial fuel expenditure. At the end of movement, the total number of steps used is rounded up (move the marker left along the black line to the next numbered spot)."
+    },
+    {
+      "id": "H5c",
+      "title": "Burn Limit",
+      "text": "Burn Limit. The total amount of Burns you may use during a movement (not including Bonus Burns H8b) may not exceed the Spacecraft's net thrust, as calculated at the start of each movement (H3)."
+    },
+    {
+      "id": "H5d",
+      "title": "Insufficient Fuel",
+      "text": "Insufficient Fuel. A Spacecraft may not enter a Burn if it does not have enough Fuel to pay for it (the Wet Mass Chit may never pass the Dry Mass Chit)."
+    },
+    {
+      "id": "H5e",
+      "title": "Lander Burns",
+      "text": "Lander Burns are a special type of Burn Space abstracting the delta-v required for a Spacecraft to land or takeoff from a Site. They have the following special rules:\n• No Stopping. You may not end movement on a lander burn. You may not enter a lander burn if you cannot continue moving through it, including enough thrust and Fuel for any Burns or Site landings later in the same move.\n• Bonus Burns (H8b) cannot be used to enter lander burns.\n• Factory-Assisted Landings/Liftoffs (H6c) cannot be used to enter lander burns (exceptions for Atmospheric Sites (H6c) and some Abilities).\n• Half-Burns. Some lander burn spaces depict only half of a lander vehicle. These still count as one full Burn (for all purposes, including burn limits H5c) but only use half as many fuel steps (do not round until movement ends)."
+    },
+    {
+      "id": "H5f",
+      "title": "Fuel Grade Requirement",
+      "text": "Fuel Grade Requirement. Thrust triangles are color-coded with a fuel grade (F4b). The Fuel expended when a Burn is used must be the same grade of Fuel or better (e.g., a dirt thruster can use any type of Fuel whilst a water Rocket may only use water or isotope Fuel)."
+    },
+    {
+      "id": "H5g",
+      "title": "Fuel-Modifying Supports",
+      "text": "Fuel-Modifying Supports. Fuel consumption can be modified per (J5c)."
     },
     {
       "id": "H6",
       "title": "Site Landing & Liftoff",
-      "text": "Landing on a Site (hexagonal Space) ends a Spacecraft's movement; liftoff does not. You must follow one of three methods (powered, aerobrake, or factory-assist) in order to land or liftoff from a Site:\na. Powered Landing/Liftoff. To use this method, the activated thruster must have a net thrust (H3) greater than the Site Size (large number on Site) in order to enter or leave it. This does not expend Fuel.\n• Synodic Comets have limited accessibility (B7h).\nb. Aerobrake Landing. Entering a Site by following an aerobrake path (B7e) allows a Spacecraft to land there without any requirements for thrust, Fuel, or activated thrust triangle (you don't need a thruster to fall down). Entering an Aerobrake Hazard forces a Hazard Roll (H7).\n• Aerobrake Burnup. Decommission Sail cards immediately upon entering an Aerobrake Hazard, regardless if activated or not.\nc. Factory-Assist Landing/Liftoff. If a Site has a Factory, a Spacecraft with an activated Operational thruster may enter or exit that Site without needing a thrust greater than the Site Size.\n• Crash Hazard. If the Space first moved into with a factory-assist liftoff is a Hazard, ignore the Hazard. Using factory-assist incurs a Hazard Roll (H7) unless it is colonized or you have Powersat.\n• Factory Permission. You may use an opponent's Factory for factory-assist with their permission.\n• Factory Hijack. If you can commit a Felony (which requires that the Space contains your Humans but no defending Humans, see glossary), factory-assist may be performed without permission.\n• High Gravity Limit. A Spacecraft may not use factory-assist to move into or out of a lander burn space (H5e) with the exception of acetylene rocketplanes (next bullet).\n• Acetylene Rocketplane Liftoff. A Spacecraft may use factory-assist to enter one lander burn (paying the lander burn cost) from an Atmospheric Site without needing a thrust greater than the Site Size by expending a special water cost using FTs at the Site. This water cost, which is expended without adding to the Spacecraft's Wet or Dry Mass, is equal to a number of blue FTs equal to twice the initial Wet Mass of the Spacecraft. Then continue movement, treating lander burns as burns that you cannot halt on. This represents winged boosters using fuels manufactured directly from the atmosphere."
+      "text": "Landing on a Site (hexagonal Space) ends a Spacecraft's movement; liftoff does not. You must follow one of three methods (powered, aerobrake, or factory-assist) in order to land or liftoff from a Site:"
+    },
+    {
+      "id": "H6a",
+      "title": "Powered Landing/Liftoff",
+      "text": "Powered Landing/Liftoff. To use this method, the activated thruster must have a net thrust (H3) greater than the Site Size (large number on Site) in order to enter or leave it. This does not expend Fuel.\n• Synodic Comets have limited accessibility (B7h)."
+    },
+    {
+      "id": "H6b",
+      "title": "Aerobrake Landing",
+      "text": "Aerobrake Landing. Entering a Site by following an aerobrake path (B7e) allows a Spacecraft to land there without any requirements for thrust, Fuel, or activated thrust triangle (you don't need a thruster to fall down). Entering an Aerobrake Hazard forces a Hazard Roll (H7).\n• Aerobrake Burnup. Decommission Sail cards immediately upon entering an Aerobrake Hazard, regardless if activated or not."
+    },
+    {
+      "id": "H6c",
+      "title": "Factory-Assist Landing/Liftoff",
+      "text": "Factory-Assist Landing/Liftoff. If a Site has a Factory, a Spacecraft with an activated Operational thruster may enter or exit that Site without needing a thrust greater than the Site Size.\n• Crash Hazard. If the Space first moved into with a factory-assist liftoff is a Hazard, ignore the Hazard. Using factory-assist incurs a Hazard Roll (H7) unless it is colonized or you have Powersat.\n• Factory Permission. You may use an opponent's Factory for factory-assist with their permission.\n• Factory Hijack. If you can commit a Felony (which requires that the Space contains your Humans but no defending Humans, see glossary), factory-assist may be performed without permission.\n• High Gravity Limit. A Spacecraft may not use factory-assist to move into or out of a lander burn space (H5e) with the exception of acetylene rocketplanes (next bullet).\n• Acetylene Rocketplane Liftoff. A Spacecraft may use factory-assist to enter one lander burn (paying the lander burn cost) from an Atmospheric Site without needing a thrust greater than the Site Size by expending a special water cost using FTs at the Site. This water cost, which is expended without adding to the Spacecraft's Wet or Dry Mass, is equal to a number of blue FTs equal to twice the initial Wet Mass of the Spacecraft. Then continue movement, treating lander burns as burns that you cannot halt on. This represents winged boosters using fuels manufactured directly from the atmosphere."
     },
     {
       "id": "H7",
       "title": "Hazard Rolls",
-      "text": "Certain Spaces are hazardous and if your Spacecraft enters one, immediately roll one die (1d6). If you roll a '1', each card and FT in its Stack suffers involuntary Decommission/Discard. A Hazard Roll is made for the following:\na. Crash Hazard (B7d). See glossary.\nb. Aerobrake Hazard (B7e). See glossary.\nc. Factory-assist. A Hazard Roll is also made if you make this sort of liftoff or landing (H6c).\nd. Epic Hazard. See 1A6a.\ne. FINAO Exception. Before rolling, you may spend 4 Aquas for \"Failure Is Not An Option\" to avoid this roll. This represents paying Earth-based programmers for a fail-safe operation."
+      "text": "Certain Spaces are hazardous and if your Spacecraft enters one, immediately roll one die (1d6). If you roll a '1', each card and FT in its Stack suffers involuntary Decommission/Discard. A Hazard Roll is made for the following:"
+    },
+    {
+      "id": "H7a",
+      "title": "Crash Hazard (B7d)",
+      "text": "Crash Hazard (B7d). See glossary."
+    },
+    {
+      "id": "H7b",
+      "title": "Aerobrake Hazard (B7e)",
+      "text": "Aerobrake Hazard (B7e). See glossary."
+    },
+    {
+      "id": "H7c",
+      "title": "Factory-assist",
+      "text": "Factory-assist. A Hazard Roll is also made if you make this sort of liftoff or landing (H6c)."
+    },
+    {
+      "id": "H7d",
+      "title": "Epic Hazard",
+      "text": "Epic Hazard. See 1A6a."
+    },
+    {
+      "id": "H7e",
+      "title": "FINAO Exception",
+      "text": "FINAO Exception. Before rolling, you may spend 4 Aquas for \"Failure Is Not An Option\" to avoid this roll. This represents paying Earth-based programmers for a fail-safe operation."
     },
     {
       "id": "H8",
       "title": "Flybys",
-      "text": "Entering a Space with a flyby grants the Spacecraft a number of Bonus Burns equal to the number printed on the flyby.\na. Operational Thruster. The Spacecraft is granted these Bonus Burns if it has an Operational and activated thrust triangle (J3), including coasting.\nb. Bonus Burns. They do not count towards your burn limit (H5c), require no Fuel, and can be spent any time you'd normally require a Burn other than lander burns (H5e).\nc. Venus Flyby. The flyby bonus on the planet Venus can be used only if the Sunspot Cube is season blue.\nd. Multiple Flybys. A Spacecraft may benefit from multiple flybys during a movement.\ne. Solar Oberth Flyby (D Heliocentric Zone) grants a number of Bonus Burns equal to the base thrust (not net thrust) of the Spacecraft's activated thrust triangle (B2d).\n• No Repeats. As an exception to H8d, a Spacecraft gains Bonus Burns from the solar oberth only the first time in a move it enters it.\n• The Lander Burn Space is the flyby. Pay its Fuel cost and make its Hazard Roll upon entry before gaining its Bonus Burns.\n• Afterburn. If a Spacecraft performs an afterburn (H3a) on the solar oberth flyby, it gains one extra Bonus Burn. For a GW/TW rocket (Module 1), afterburning gains a number of Bonus Burns equal to the thruster's afterburn bonus (1C2).\nf. Mag Sail. If this thruster is activated, then each radiation belt (H10) entered confers Bonus Burns (H8b) in the same manner as a flyby. Like the solar oberth flyby (previous bullet), these Bonus Burns are gained only the first time a Spacecraft enters a particular radiation belt in a move.\ng. Glitch Trigger. Entering a flyby is a Glitch Trigger."
+      "text": "Entering a Space with a flyby grants the Spacecraft a number of Bonus Burns equal to the number printed on the flyby."
+    },
+    {
+      "id": "H8a",
+      "title": "Operational Thruster",
+      "text": "Operational Thruster. The Spacecraft is granted these Bonus Burns if it has an Operational and activated thrust triangle (J3), including coasting."
+    },
+    {
+      "id": "H8b",
+      "title": "Bonus Burns",
+      "text": "Bonus Burns. They do not count towards your burn limit (H5c), require no Fuel, and can be spent any time you'd normally require a Burn other than lander burns (H5e)."
+    },
+    {
+      "id": "H8c",
+      "title": "Venus Flyby",
+      "text": "Venus Flyby. The flyby bonus on the planet Venus can be used only if the Sunspot Cube is season blue."
+    },
+    {
+      "id": "H8d",
+      "title": "Multiple Flybys",
+      "text": "Multiple Flybys. A Spacecraft may benefit from multiple flybys during a movement."
+    },
+    {
+      "id": "H8e",
+      "title": "Solar Oberth Flyby",
+      "text": "Solar Oberth Flyby (D Heliocentric Zone) grants a number of Bonus Burns equal to the base thrust (not net thrust) of the Spacecraft's activated thrust triangle (B2d).\n• No Repeats. As an exception to H8d, a Spacecraft gains Bonus Burns from the solar oberth only the first time in a move it enters it.\n• The Lander Burn Space is the flyby. Pay its Fuel cost and make its Hazard Roll upon entry before gaining its Bonus Burns.\n• Afterburn. If a Spacecraft performs an afterburn (H3a) on the solar oberth flyby, it gains one extra Bonus Burn. For a GW/TW rocket (Module 1), afterburning gains a number of Bonus Burns equal to the thruster's afterburn bonus (1C2)."
+    },
+    {
+      "id": "H8f",
+      "title": "Mag Sail",
+      "text": "Mag Sail. If this thruster is activated, then each radiation belt (H10) entered confers Bonus Burns (H8b) in the same manner as a flyby. Like the solar oberth flyby (previous bullet), these Bonus Burns are gained only the first time a Spacecraft enters a particular radiation belt in a move."
+    },
+    {
+      "id": "H8g",
+      "title": "Glitch Trigger",
+      "text": "Glitch Trigger. Entering a flyby is a Glitch Trigger."
     },
     {
       "id": "H9",
       "title": "Buggy Roads",
-      "text": "a. Buggy Roads are relevant for prospecting (I6) and Adjacency (see glossary).\nb. The Martian. With an Operational card with a buggy platform (I6b), as a once-per-turn free action you can move your Crew or Colonist to a new Site along any buggy road, creating an Outpost. The buggy itself does not move, except that Crew or Colonists with a buggy platform can alternatively transport themselves."
+      "text": "a. Buggy Roads are relevant for prospecting (I6) and Adjacency (see glossary).\nb. The Martian. With an Operational card with a buggy platform (I6b), as a once-per-turn free action you can move your Crew or Colonist to a new Site along any buggy road, creating an Outpost. The buggy itself does not move, except that Crew or Colonists with a buggy platform can alternatively transport themselves.",
+      "sub_ids": {
+        "H9a": "H9",
+        "H9b": "H9"
+      }
     },
     {
       "id": "H10",
       "title": "Radiation Belts & Belt Rolls",
-      "text": "Entering a Radiation Belt (space with a radiation icon) incurs a Belt Roll: roll one die (1d6) and subtract your Spacecraft's net thrust (H3). Do not subtract a negative net thrust. Compare the result to the rad-hardness of each card in the Spacecraft's Stack (listed in the upper-left). Any card with a rad-hardness less than the result is involuntarily decommissioned.\na. Failure Is An Option. You may not pay Aquas to avoid a Belt Roll.\nb. Season Red Radiation. If the Sunspot Cube is season red (K1), then all Belt Rolls are made with a +2 penalty.\nc. Heavy Radiators. If a heavy radiator fails its Belt Roll, rotate it to its light Orientation.\nd. Solar Flare Protection. A Stack on a non-Sol Radiation Belt is shielded against solar flare events (K2d).\ne. Mag Sails. If a mag sail thruster enters a Radiation Belt, see H8f."
+      "text": "Entering a Radiation Belt (space with a radiation icon) incurs a Belt Roll: roll one die (1d6) and subtract your Spacecraft's net thrust (H3). Do not subtract a negative net thrust. Compare the result to the rad-hardness of each card in the Spacecraft's Stack (listed in the upper-left). Any card with a rad-hardness less than the result is involuntarily decommissioned."
+    },
+    {
+      "id": "H10a",
+      "title": "Failure Is An Option",
+      "text": "Failure Is An Option. You may not pay Aquas to avoid a Belt Roll."
+    },
+    {
+      "id": "H10b",
+      "title": "Season Red Radiation",
+      "text": "Season Red Radiation. If the Sunspot Cube is season red (K1), then all Belt Rolls are made with a +2 penalty."
+    },
+    {
+      "id": "H10c",
+      "title": "Heavy Radiators",
+      "text": "Heavy Radiators. If a heavy radiator fails its Belt Roll, rotate it to its light Orientation."
+    },
+    {
+      "id": "H10d",
+      "title": "Solar Flare Protection",
+      "text": "Solar Flare Protection. A Stack on a non-Sol Radiation Belt is shielded against solar flare events (K2d)."
+    },
+    {
+      "id": "H10e",
+      "title": "Mag Sails",
+      "text": "Mag Sails. If a mag sail thruster enters a Radiation Belt, see H8f."
     },
     {
       "id": "I",
@@ -303,42 +1048,197 @@
     {
       "id": "I2",
       "title": "Research Auction Operation",
-      "text": "Choose one of the patent decks (B2) and auction off the top card.\na. Academia Hand Limit. A player with four or more cards in Hand may not initiate or bid in an auction.\nb. Auction Procedure. As the initiator, you must make the first bid (minimum of 0). Then, in any order, other players (who do not exceed the academia hand limit) may bid. Continue until no player wishes to raise their bid.\nc. Bid Currency. Bids are made in Aquas (FTs in other locations can never be used as money).\nd. Win Procedure. If you win, as the initiator, you pay your bid to the Pool. If somebody else wins an auction you initiate, then they pay their bid to you. The winner adds the card to their Hand.\ne. Ties. As the initiator, you win a tied bid you are involved in. If you are not involved, you choose which of the tied players wins.\nEXAMPLE [I2e] You initiate an auction, with a bid of zero. Another player bids one, and you match their bid. That player then bids two, and a third player also bids two. You are unwilling to bid higher, so you choose one of these players to be the winner of the auction. The winner adds the card to their Hand and pays two Aquas to you.\nf. Information. The front side of the top card of each deck is visible and open to inspection at all times. As soon as you announce that a card is up for auction, any player may pick it up to examine its backside. This reveals the front side of the next card in the deck.\ng. Bonus Supports. If the card requires supports (J), the auction winner also takes the top card of the corresponding patent deck for each required support into their Hand.\n• You do not get additional cards to support the bonus supports, only for the initially auctioned card.\n• You get the top support of the required type (reactor, generator, or radiator), regardless if it is the correct subtype to support the card purchased (J1a).\n• Extra supports are not moved from their deck until the auction is won."
+      "text": "Choose one of the patent decks (B2) and auction off the top card."
+    },
+    {
+      "id": "I2a",
+      "title": "Academia Hand Limit",
+      "text": "Academia Hand Limit. A player with four or more cards in Hand may not initiate or bid in an auction."
+    },
+    {
+      "id": "I2b",
+      "title": "Auction Procedure",
+      "text": "Auction Procedure. As the initiator, you must make the first bid (minimum of 0). Then, in any order, other players (who do not exceed the academia hand limit) may bid. Continue until no player wishes to raise their bid."
+    },
+    {
+      "id": "I2c",
+      "title": "Bid Currency",
+      "text": "Bid Currency. Bids are made in Aquas (FTs in other locations can never be used as money)."
+    },
+    {
+      "id": "I2d",
+      "title": "Win Procedure",
+      "text": "Win Procedure. If you win, as the initiator, you pay your bid to the Pool. If somebody else wins an auction you initiate, then they pay their bid to you. The winner adds the card to their Hand."
+    },
+    {
+      "id": "I2e",
+      "title": "Ties",
+      "text": "Ties. As the initiator, you win a tied bid you are involved in. If you are not involved, you choose which of the tied players wins.\nEXAMPLE [I2e] You initiate an auction, with a bid of zero. Another player bids one, and you match their bid. That player then bids two, and a third player also bids two. You are unwilling to bid higher, so you choose one of these players to be the winner of the auction. The winner adds the card to their Hand and pays two Aquas to you."
+    },
+    {
+      "id": "I2f",
+      "title": "Information",
+      "text": "Information. The front side of the top card of each deck is visible and open to inspection at all times. As soon as you announce that a card is up for auction, any player may pick it up to examine its backside. This reveals the front side of the next card in the deck."
+    },
+    {
+      "id": "I2g",
+      "title": "Bonus Supports",
+      "text": "Bonus Supports. If the card requires supports (J), the auction winner also takes the top card of the corresponding patent deck for each required support into their Hand.\n• You do not get additional cards to support the bonus supports, only for the initially auctioned card.\n• You get the top support of the required type (reactor, generator, or radiator), regardless if it is the correct subtype to support the card purchased (J1a).\n• Extra supports are not moved from their deck until the auction is won."
     },
     {
       "id": "I3",
       "title": "Free Market Operation",
-      "text": "Obtain Aquas by selling one card that is either (a) a Hand card or (b) a Black-Side card in a Stack in your Bank:\na. Selling Hand Card. Return a card from your Hand to the bottom of its corresponding patent deck. Receive 3 Aquas from the Pool.\nEXAMPLE [I3a] Your LEO stack has 3 cards. But all 3 are on their white-side, so you cannot sell them per I3b. But you can Decommission one into your Hand (free action), and then perform a free market to sell it for 3 Aquas.\nb. Selling Black-Side Card From LEO Stack. Discard a Black-Side card located in your Bank (see glossary) to your Hand. Receive Aquas equal to the factory stock price listed on the Exploitation Track (B5) for that card's Spectral Type (letter on the card: C, S, M, V, D, or H). Thus, a Black-Side card could be worth 4, 5, or 8 Aquas. If there are no Factories of a Spectral Type (e.g. the last cube is retired per I7f), then it is worth 10 Aquas.\n• Radiators are sold for the same price regardless of Orientation (see glossary).\n• Any. Cards that are of Spectral Type \"ANY\" can be ET produced at any Factory but cannot be sold.\nEXAMPLE [I3b] You have ET produced a Black-Side card of Spectral Type C. You can move it to LEO and sell it to your Hand for 4 to 8 Aquas, or you can Decommission it and sell it from your Hand for 3 Aquas. Since Spectral Type C is currently at value 8, you choose to move it and sell it at LEO."
+      "text": "Obtain Aquas by selling one card that is either (a) a Hand card or (b) a Black-Side card in a Stack in your Bank:"
+    },
+    {
+      "id": "I3a",
+      "title": "Selling Hand Card",
+      "text": "Selling Hand Card. Return a card from your Hand to the bottom of its corresponding patent deck. Receive 3 Aquas from the Pool.\nEXAMPLE [I3a] Your LEO stack has 3 cards. But all 3 are on their white-side, so you cannot sell them per I3b. But you can Decommission one into your Hand (free action), and then perform a free market to sell it for 3 Aquas."
+    },
+    {
+      "id": "I3b",
+      "title": "Selling Black-Side Card From LEO Stack",
+      "text": "Selling Black-Side Card From LEO Stack. Discard a Black-Side card located in your Bank (see glossary) to your Hand. Receive Aquas equal to the factory stock price listed on the Exploitation Track (B5) for that card's Spectral Type (letter on the card: C, S, M, V, D, or H). Thus, a Black-Side card could be worth 4, 5, or 8 Aquas. If there are no Factories of a Spectral Type (e.g. the last cube is retired per I7f), then it is worth 10 Aquas.\n• Radiators are sold for the same price regardless of Orientation (see glossary).\n• Any. Cards that are of Spectral Type \"ANY\" can be ET produced at any Factory but cannot be sold.\nEXAMPLE [I3b] You have ET produced a Black-Side card of Spectral Type C. You can move it to LEO and sell it to your Hand for 4 to 8 Aquas, or you can Decommission it and sell it from your Hand for 3 Aquas. Since Spectral Type C is currently at value 8, you choose to move it and sell it at LEO."
     },
     {
       "id": "I4",
       "title": "Boost Operation",
-      "text": "Bring one or more Hand cards into the LEO Stack/Home Orbit by spending Aquas equal to the combined Mass of the card(s).\na. White-Side Only. You can never boost cards on their Black-Side, since Black-Side cards are only produced in space by the ET production operation (I8).\nb. No Movement Restriction. A card may move in the same Turn it enters LEO.\nc. Radiator Orientation. Radiators (J1d) have both a heavy and light Orientation. Choose the card's Orientation as it is boosted (and pay the appropriate amount of Aquas for its mass)."
+      "text": "Bring one or more Hand cards into the LEO Stack/Home Orbit by spending Aquas equal to the combined Mass of the card(s)."
+    },
+    {
+      "id": "I4a",
+      "title": "White-Side Only",
+      "text": "White-Side Only. You can never boost cards on their Black-Side, since Black-Side cards are only produced in space by the ET production operation (I8)."
+    },
+    {
+      "id": "I4b",
+      "title": "No Movement Restriction",
+      "text": "No Movement Restriction. A card may move in the same Turn it enters LEO."
+    },
+    {
+      "id": "I4c",
+      "title": "Radiator Orientation",
+      "text": "Radiator Orientation. Radiators (J1d) have both a heavy and light Orientation. Choose the card's Orientation as it is boosted (and pay the appropriate amount of Aquas for its mass)."
     },
     {
       "id": "I5",
       "title": "Site Refuel Operations",
-      "text": "The following three operations produce FTs at a Site, and each one is a Glitch Trigger:\na. ISRU Refuel Op. An Operational card with an ISRU platform produces a number of water FTs equal to one plus the Site's Hydration minus the card's ISRU rating. Place these FTs in a Colocated Stack, or create an outpost (E6c).\n• Busted Sites. A Site with a red disk (I6.5) can still be used to ISRU refuel.\n• Foreign Factories & ISRU. The presence of an opponent's Claim, Factory or Bernal on a Site has no effect on ISRU refueling.\n• Dirt Refueling. Except for Crew dirt thrusters, this is a free action, see G1c.\nb. Factory-Refuel Op. A Factory on a Site can produce either 7 blue FTs (water fuel) or 1 gold FT (isotope fuel). Place these FTs in a Colocated Stack, or create an outpost (E6c).\n• Using Opponents' Factories. You may use an opponent's Factory with their permission. You do not need their permission to land or ISRU refuel there.\n• Factory Hijack. This can also be done without permission if you can commit a Felony (see glossary).\nc. Air-Eater Refuel Op. At the end of its movement, a Spacecraft on an Aerobrake Hazard may gain fuel by \"scooping\" the planet's atmosphere. This moves its gray or blue Wet Mass Chit (following the dashed red line) a number of tanks equal to 5 minus its activated fuel consumption (B2d), dropping fractions from fuel consumption before subtracting. To gain Fuel this way requires the following:\n• Pac-Man. The Stack must contain an Operational card with the air-eater icon and an Activated thruster. This card may (but does not have to) share supports with the thruster support chain (J1c).\n• Diver Orbit. The Spacecraft may remain on an Aerobrake Hazard to refuel several Turns. Each Turn you remain and refuel counts as a Hazard requiring either a Hazard Roll or FINAO."
+      "text": "The following three operations produce FTs at a Site, and each one is a Glitch Trigger:"
+    },
+    {
+      "id": "I5a",
+      "title": "ISRU Refuel Op",
+      "text": "ISRU Refuel Op. An Operational card with an ISRU platform produces a number of water FTs equal to one plus the Site's Hydration minus the card's ISRU rating. Place these FTs in a Colocated Stack, or create an outpost (E6c).\n• Busted Sites. A Site with a red disk (I6.5) can still be used to ISRU refuel.\n• Foreign Factories & ISRU. The presence of an opponent's Claim, Factory or Bernal on a Site has no effect on ISRU refueling.\n• Dirt Refueling. Except for Crew dirt thrusters, this is a free action, see G1c."
+    },
+    {
+      "id": "I5b",
+      "title": "Factory-Refuel Op",
+      "text": "Factory-Refuel Op. A Factory on a Site can produce either 7 blue FTs (water fuel) or 1 gold FT (isotope fuel). Place these FTs in a Colocated Stack, or create an outpost (E6c).\n• Using Opponents' Factories. You may use an opponent's Factory with their permission. You do not need their permission to land or ISRU refuel there.\n• Factory Hijack. This can also be done without permission if you can commit a Felony (see glossary)."
+    },
+    {
+      "id": "I5c",
+      "title": "Air-Eater Refuel Op",
+      "text": "Air-Eater Refuel Op. At the end of its movement, a Spacecraft on an Aerobrake Hazard may gain fuel by \"scooping\" the planet's atmosphere. This moves its gray or blue Wet Mass Chit (following the dashed red line) a number of tanks equal to 5 minus its activated fuel consumption (B2d), dropping fractions from fuel consumption before subtracting. To gain Fuel this way requires the following:\n• Pac-Man. The Stack must contain an Operational card with the air-eater icon and an Activated thruster. This card may (but does not have to) share supports with the thruster support chain (J1c).\n• Diver Orbit. The Spacecraft may remain on an Aerobrake Hazard to refuel several Turns. Each Turn you remain and refuel counts as a Hazard requiring either a Hazard Roll or FINAO."
     },
     {
       "id": "I6",
       "title": "Prospect Operation",
-      "text": "A successful prospect operation allows you to place a Claim of your color on a Site that is unclaimed and not Busted. Performing a prospect is a Glitch Trigger. Attempting to prospect a Site is a five-step process:\n1. Operational Requirement. You must have a Stack containing an Operational card with an ISRU rating on the Site (with certain exceptions for rayguns and buggy roads).\n• Assaying Smelters. If Colocated and Operational, some Abilities (e.g. Von Neumann Santa Claus Machine and, if pushed, Magbeam) modify the ISRU rating of the card used to prospect. However, an ISRU rating can never go negative.\n• Multiple Platforms. If a Stack or card has multiple ISRU platforms, choose one of them to use as the prospecting ISRU.\n• Luna. Unless you Claim Jump, prospecting either Site of Luna requires the permission of the 1st Player (N4e).\n2. Hydration Requirement. That card's ISRU rating must be equal to or less than the Site's Hydration (number of water droplets).\n3. Size Roll. Roll a die (1d6). A result equal to or less than the Site Size (large number on site) is successful.\n• Fully Baked. Prospecting the kreutz sungrazer is always successful (see Glossary, Synodic Comet).\nEXAMPLE [I63] You land on Ceres (Size 6) and prospect. A size roll is unnecessary, since at this Size it will be automatically successful.\n4. If Successful: place a Claim on the Site. If you have no more disks, then you may remove one from one of your unindustrialized claimed Sites.\n• The vacated Site may be prospected again by any player.\n5. If Unsuccessful: place a translucent red disk on the Site, which means it is Busted (contains nothing of interest). It cannot be prospected again by any player, but can still be landed on and used to ISRU refuel (I5a).\nThere are 3 Types of prospecting, depending upon the card's platform icon (B2c):\na. Raygun Prospecting. If the card used has a raygun icon with its ISRU rating it may prospect multiple Sites with a single Operation and may prospect at range. Choose any number of Sites with high enough Hydration located at and/or Adjacent (see glossary) to the card's Stack. Resolve each roll separately in the order of your choice.\n• Before Rolling. All desired Sites must be chosen before making any size rolls (I6.3).\n• Opaque Atmospheres. A raygun may not prospect at a range greater than zero at an Atmospheric Site (see glossary).\n• One Re-roll per prospect operation is allowed if using the Ability listed on the Lorentz-propelled microprobe raygun. Make all desired rolls first, then choose a single failure to reroll.\nb. Buggy Prospecting. If the card used to prospect has a buggy icon next to its ISRU rating, if you fail your size roll (I6.3) for a prospecting attempt, you are allowed a single re-roll.\nEXAMPLE [I6b] A buggy prospects dresda. The size roll is a 3, which fails because dresda is Size 2. But the second roll of 2 succeeds and places a Claim.\n• Buggy Roads. By prospecting one Site, a buggy simultaneously prospects all other Sites with a high enough Hydration (I6.2) connected by a buggy road (yellow dashed line) with a single Operation.\nc. Missile Prospecting. This has no special rules."
+      "text": "A successful prospect operation allows you to place a Claim of your color on a Site that is unclaimed and not Busted. Performing a prospect is a Glitch Trigger. Attempting to prospect a Site is a five-step process:\n1. Operational Requirement. You must have a Stack containing an Operational card with an ISRU rating on the Site (with certain exceptions for rayguns and buggy roads).\n• Assaying Smelters. If Colocated and Operational, some Abilities (e.g. Von Neumann Santa Claus Machine and, if pushed, Magbeam) modify the ISRU rating of the card used to prospect. However, an ISRU rating can never go negative.\n• Multiple Platforms. If a Stack or card has multiple ISRU platforms, choose one of them to use as the prospecting ISRU.\n• Luna. Unless you Claim Jump, prospecting either Site of Luna requires the permission of the 1st Player (N4e).\n2. Hydration Requirement. That card's ISRU rating must be equal to or less than the Site's Hydration (number of water droplets).\n3. Size Roll. Roll a die (1d6). A result equal to or less than the Site Size (large number on site) is successful.\n• Fully Baked. Prospecting the kreutz sungrazer is always successful (see Glossary, Synodic Comet).\nEXAMPLE [I63] You land on Ceres (Size 6) and prospect. A size roll is unnecessary, since at this Size it will be automatically successful.\n4. If Successful: place a Claim on the Site. If you have no more disks, then you may remove one from one of your unindustrialized claimed Sites.\n• The vacated Site may be prospected again by any player.\n5. If Unsuccessful: place a translucent red disk on the Site, which means it is Busted (contains nothing of interest). It cannot be prospected again by any player, but can still be landed on and used to ISRU refuel (I5a).\nThere are 3 Types of prospecting, depending upon the card's platform icon (B2c):"
+    },
+    {
+      "id": "I6a",
+      "title": "Raygun Prospecting",
+      "text": "Raygun Prospecting. If the card used has a raygun icon with its ISRU rating it may prospect multiple Sites with a single Operation and may prospect at range. Choose any number of Sites with high enough Hydration located at and/or Adjacent (see glossary) to the card's Stack. Resolve each roll separately in the order of your choice.\n• Before Rolling. All desired Sites must be chosen before making any size rolls (I6.3).\n• Opaque Atmospheres. A raygun may not prospect at a range greater than zero at an Atmospheric Site (see glossary).\n• One Re-roll per prospect operation is allowed if using the Ability listed on the Lorentz-propelled microprobe raygun. Make all desired rolls first, then choose a single failure to reroll."
+    },
+    {
+      "id": "I6b",
+      "title": "Buggy Prospecting",
+      "text": "Buggy Prospecting. If the card used to prospect has a buggy icon next to its ISRU rating, if you fail your size roll (I6.3) for a prospecting attempt, you are allowed a single re-roll.\nEXAMPLE [I6b] A buggy prospects dresda. The size roll is a 3, which fails because dresda is Size 2. But the second roll of 2 succeeds and places a Claim.\n• Buggy Roads. By prospecting one Site, a buggy simultaneously prospects all other Sites with a high enough Hydration (I6.2) connected by a buggy road (yellow dashed line) with a single Operation."
+    },
+    {
+      "id": "I6c",
+      "title": "Missile Prospecting",
+      "text": "Missile Prospecting. This has no special rules."
     },
     {
       "id": "I7",
       "title": "Industrialize Operation",
-      "text": "This Operation allows you to build a Factory at a Site where you already have an unindustrialized Claim. Decommission an Operational robonaut and refinery card, along with their required support chains (J1c). This places a small cube on top of the Claim, and this combination is your new Factory. Performing this operation is a Glitch Trigger. A Factory on a Site with the push icon yields the Powersat Ability.\na. Overlapping Support Chains. The cards that are Decommissioned can share a support (see J1b, J1c).\nb. Stacking Limit. There may only be one Factory on each Site.\nc. Spectral Type. The Spectral Type (letter) of a Factory becomes the Spectral Type of the Site it is on, and determines which cards it can ET produce (I8). The Spectral Type of the cards Decommissioned do not matter.\nd. Exploitation Track. Adjust the blue bead on the Exploitation Track as necessary to keep track of the total number of Factories in play for each Spectral Type. This will be used for stock prices during free market sales and final scoring. If there are 3 or more Factories of a Spectral Type, the bead stays in the lowermost row.\ne. Colonies. A Colony can be built on a Factory as a free action (G3). Colonies are permanent (G6b).\nf. Cube Limit. Your Reserve of cubes is limited to 7. To place a Factory, Sunspot Cube, or delegate when you have no remaining cubes, you may Discard another cube as a free action (G6). You cannot Discard a Sunspot Cube, colonized Factory, or a Dirtside (2Ba). You cannot become the 1st Player (O6b) if you have no discardable cube to use for the Sunspot Cube.\ng. Radiator & Cooling Exception. It is not required to Decommission or even have a radiator support (J4) in order to industrialize. Any card that requires cooling has its requirements met for this purpose (because the nightside of the world provides all the cooling you need for industrialization).\n• Industrial Use Only. This does not apply to other operations."
+      "text": "This Operation allows you to build a Factory at a Site where you already have an unindustrialized Claim. Decommission an Operational robonaut and refinery card, along with their required support chains (J1c). This places a small cube on top of the Claim, and this combination is your new Factory. Performing this operation is a Glitch Trigger. A Factory on a Site with the push icon yields the Powersat Ability."
+    },
+    {
+      "id": "I7a",
+      "title": "Overlapping Support Chains",
+      "text": "Overlapping Support Chains. The cards that are Decommissioned can share a support (see J1b, J1c)."
+    },
+    {
+      "id": "I7b",
+      "title": "Stacking Limit",
+      "text": "Stacking Limit. There may only be one Factory on each Site."
+    },
+    {
+      "id": "I7c",
+      "title": "Spectral Type",
+      "text": "Spectral Type. The Spectral Type (letter) of a Factory becomes the Spectral Type of the Site it is on, and determines which cards it can ET produce (I8). The Spectral Type of the cards Decommissioned do not matter."
+    },
+    {
+      "id": "I7d",
+      "title": "Exploitation Track",
+      "text": "Exploitation Track. Adjust the blue bead on the Exploitation Track as necessary to keep track of the total number of Factories in play for each Spectral Type. This will be used for stock prices during free market sales and final scoring. If there are 3 or more Factories of a Spectral Type, the bead stays in the lowermost row."
+    },
+    {
+      "id": "I7e",
+      "title": "Colonies",
+      "text": "Colonies. A Colony can be built on a Factory as a free action (G3). Colonies are permanent (G6b)."
+    },
+    {
+      "id": "I7f",
+      "title": "Cube Limit",
+      "text": "Cube Limit. Your Reserve of cubes is limited to 7. To place a Factory, Sunspot Cube, or delegate when you have no remaining cubes, you may Discard another cube as a free action (G6). You cannot Discard a Sunspot Cube, colonized Factory, or a Dirtside (2Ba). You cannot become the 1st Player (O6b) if you have no discardable cube to use for the Sunspot Cube."
+    },
+    {
+      "id": "I7g",
+      "title": "Radiator & Cooling Exception",
+      "text": "Radiator & Cooling Exception. It is not required to Decommission or even have a radiator support (J4) in order to industrialize. Any card that requires cooling has its requirements met for this purpose (because the nightside of the world provides all the cooling you need for industrialization).\n• Industrial Use Only. This does not apply to other operations."
     },
     {
       "id": "I8",
       "title": "ET Production Operation",
-      "text": "Bring a single card from your Hand into play, Black-Side up, at one of your Factories. Place the card in an Outpost Stack (G1d) at the location.\na. Spectral Type. The Spectral Type (letter) of the card must match the Spectral Type (letter) of the Factory Site (I7c).\nb. Black Cards Only. An ET production operation can only produce cards on their Black-Side. A card without a Black-Side (e.g. Crew) cannot be ET produced.\nc. Movement Timing. A card may move in the same Turn it enters play.\nd. Martial Law. You may negotiate (N6) or use a Felony (N6a) to use an opponent's Factory for ET production.\ne. Radiator Orientation. Choose the Orientation (see glossary) of any radiators produced."
+      "text": "Bring a single card from your Hand into play, Black-Side up, at one of your Factories. Place the card in an Outpost Stack (G1d) at the location."
+    },
+    {
+      "id": "I8a",
+      "title": "Spectral Type",
+      "text": "Spectral Type. The Spectral Type (letter) of the card must match the Spectral Type (letter) of the Factory Site (I7c)."
+    },
+    {
+      "id": "I8b",
+      "title": "Black Cards Only",
+      "text": "Black Cards Only. An ET production operation can only produce cards on their Black-Side. A card without a Black-Side (e.g. Crew) cannot be ET produced."
+    },
+    {
+      "id": "I8c",
+      "title": "Movement Timing",
+      "text": "Movement Timing. A card may move in the same Turn it enters play."
+    },
+    {
+      "id": "I8d",
+      "title": "Martial Law",
+      "text": "Martial Law. You may negotiate (N6) or use a Felony (N6a) to use an opponent's Factory for ET production."
+    },
+    {
+      "id": "I8e",
+      "title": "Radiator Orientation",
+      "text": "Radiator Orientation. Choose the Orientation (see glossary) of any radiators produced."
     },
     {
       "id": "I9",
       "title": "Delivery Operation",
-      "text": "If you have a Stack at a Factory that contains both a Black-Side card and the specified FTs, you may move the card to LEO by expending FTs from that Stack equal to twice the number of Heliocentric Zones the Factory is from LEO, plus 1 FT if the Size of the Site is 7 or more. This operation is a Glitch Trigger.\na. Freighters. This Operation is not available if using Module 1."
+      "text": "If you have a Stack at a Factory that contains both a Black-Side card and the specified FTs, you may move the card to LEO by expending FTs from that Stack equal to twice the number of Heliocentric Zones the Factory is from LEO, plus 1 FT if the Size of the Site is 7 or more. This operation is a Glitch Trigger."
+    },
+    {
+      "id": "I9a",
+      "title": "Freighters",
+      "text": "Freighters. This Operation is not available if using Module 1."
     },
     {
       "id": "J",
@@ -348,27 +1248,147 @@
     {
       "id": "J1",
       "title": "Using Supports",
-      "text": "If a card lists supports in its white field to the left (B2h), in order to be Operational (J3), it needs the indicated type and subtype of support card to be Operational and in the same stack.\na. Support Subtypes. The generator and reactor support types are subdivided into subtypes. Cards that need generator or reactor supports list the particular subtype they need to be Operational. The icons for the subtypes are:\n• 2 Generator Subtypes\n• 3 Reactor Subtypes\nb. Sharing Supports. A single support can be used to satisfy all other cards in its stack that require that type of support. However you must choose no more than one support card for each requirement. Radiators and their cooling therms behave slightly differently (J1d, J4).\nEXAMPLE [J1b] In your Rocket, you have two cards requiring generators and three generators. In your Turn, you can designate one generator to service both cards, or designate each card to have its own generator. You cannot designate a card to be serviced by 2 generators when it only requires one. This is relevant if both generators are movement-modifying supports (J5).\nc. Support Chains. The card itself, the supports required by the card, the supports of those supports, etc. are all part of the card's support chain. You must specify the entire support chain used for movement (H2).\nd. Radiators provide all or part of their Therms as part of the support chain (J4). A card's cooling requirements can come from multiple radiators.\ne. Pulsed Generators can simultaneously act to support, and be supported by, a reactor. This is because its function includes capacitive energy storage, serving both as the reactor's initiator and outputting reactor power as pulsed electricity."
+      "text": "If a card lists supports in its white field to the left (B2h), in order to be Operational (J3), it needs the indicated type and subtype of support card to be Operational and in the same stack."
+    },
+    {
+      "id": "J1a",
+      "title": "Support Subtypes",
+      "text": "Support Subtypes. The generator and reactor support types are subdivided into subtypes. Cards that need generator or reactor supports list the particular subtype they need to be Operational. The icons for the subtypes are:\n• 2 Generator Subtypes\n• 3 Reactor Subtypes"
+    },
+    {
+      "id": "J1b",
+      "title": "Sharing Supports",
+      "text": "Sharing Supports. A single support can be used to satisfy all other cards in its stack that require that type of support. However you must choose no more than one support card for each requirement. Radiators and their cooling therms behave slightly differently (J1d, J4).\nEXAMPLE [J1b] In your Rocket, you have two cards requiring generators and three generators. In your Turn, you can designate one generator to service both cards, or designate each card to have its own generator. You cannot designate a card to be serviced by 2 generators when it only requires one. This is relevant if both generators are movement-modifying supports (J5)."
+    },
+    {
+      "id": "J1c",
+      "title": "Support Chains",
+      "text": "Support Chains. The card itself, the supports required by the card, the supports of those supports, etc. are all part of the card's support chain. You must specify the entire support chain used for movement (H2)."
+    },
+    {
+      "id": "J1d",
+      "title": "Radiators",
+      "text": "Radiators provide all or part of their Therms as part of the support chain (J4). A card's cooling requirements can come from multiple radiators."
+    },
+    {
+      "id": "J1e",
+      "title": "Pulsed Generators",
+      "text": "Pulsed Generators can simultaneously act to support, and be supported by, a reactor. This is because its function includes capacitive energy storage, serving both as the reactor's initiator and outputting reactor power as pulsed electricity."
     },
     {
       "id": "J2",
       "title": "Non-Operational Consequences",
-      "text": "A card needs to be Operational (J3) to be activated for thrust, prospecting, refueling, and industrializing, or for any printed Ability whilst the card is in a stack. This does not apply to hand cards, cards that are free-marketed, or otherwise not in a stack.\na. Thrust Triangle Activation. A non-operational thrust triangle cannot be activated to move a Spacecraft stack.\nb. ISRU Refueling & Prospecting. Except for factory dirt refuel (G1c), a stack cannot perform these operations (I5a, I6) without an Operational card with an ISRU value.\nc. Air-Eater. This refuel cannot be performed without an Operational card with the pac-man icon (I5c).\nd. Industrialize. Both a robonaut and a refinery needs to have all its support requirements met, other than Therm requirements (I7g), or else they cannot be industrialized into a Factory.\ne. Abilities & Restrictions become inactive if its card is not Operational (B2g). With the exception of movement modifying supports (J5), a card does not need to be part of the support chain for its Ability to be active (e.g. magnetoshell or air-eater)."
+      "text": "A card needs to be Operational (J3) to be activated for thrust, prospecting, refueling, and industrializing, or for any printed Ability whilst the card is in a stack. This does not apply to hand cards, cards that are free-marketed, or otherwise not in a stack."
+    },
+    {
+      "id": "J2a",
+      "title": "Thrust Triangle Activation",
+      "text": "Thrust Triangle Activation. A non-operational thrust triangle cannot be activated to move a Spacecraft stack."
+    },
+    {
+      "id": "J2b",
+      "title": "ISRU Refueling & Prospecting",
+      "text": "ISRU Refueling & Prospecting. Except for factory dirt refuel (G1c), a stack cannot perform these operations (I5a, I6) without an Operational card with an ISRU value."
+    },
+    {
+      "id": "J2c",
+      "title": "Air-Eater",
+      "text": "Air-Eater. This refuel cannot be performed without an Operational card with the pac-man icon (I5c)."
+    },
+    {
+      "id": "J2d",
+      "title": "Industrialize",
+      "text": "Industrialize. Both a robonaut and a refinery needs to have all its support requirements met, other than Therm requirements (I7g), or else they cannot be industrialized into a Factory."
+    },
+    {
+      "id": "J2e",
+      "title": "Abilities & Restrictions",
+      "text": "Abilities & Restrictions become inactive if its card is not Operational (B2g). With the exception of movement modifying supports (J5), a card does not need to be part of the support chain for its Ability to be active (e.g. magnetoshell or air-eater)."
     },
     {
       "id": "J3",
       "title": "Operational Cards",
-      "text": "A card becomes non-operational (J2) the moment one of these requirements is violated:\na. Solar-Power. If the card has a sunburst icon then it is non-operational in the Neptune J Heliocentric Zone (labeled \"no solar power\"), unless given a push by a Powersat.\nEXAMPLE [J3a] Your Rocket with a Solar-powered support moves into the Neptune Heliocentric Zone. From here on, it is allowed coasting for the rest of that Turn (H2b) but cannot perform Burns or use flyby bonuses.\nb. Supported. All of its required supports are in its stack.\nc. Support Chain Operational. All of its required supports are Operational (J1c).\nd. Cooling. The card's stack contains enough Therms to meet its cooling needs (J4).\ne. Option. You may choose to make a card non-operational."
+      "text": "A card becomes non-operational (J2) the moment one of these requirements is violated:"
+    },
+    {
+      "id": "J3a",
+      "title": "Solar-Power",
+      "text": "Solar-Power. If the card has a sunburst icon then it is non-operational in the Neptune J Heliocentric Zone (labeled \"no solar power\"), unless given a push by a Powersat.\nEXAMPLE [J3a] Your Rocket with a Solar-powered support moves into the Neptune Heliocentric Zone. From here on, it is allowed coasting for the rest of that Turn (H2b) but cannot perform Burns or use flyby bonuses."
+    },
+    {
+      "id": "J3b",
+      "title": "Supported",
+      "text": "Supported. All of its required supports are in its stack."
+    },
+    {
+      "id": "J3c",
+      "title": "Support Chain Operational",
+      "text": "Support Chain Operational. All of its required supports are Operational (J1c)."
+    },
+    {
+      "id": "J3d",
+      "title": "Cooling",
+      "text": "Cooling. The card's stack contains enough Therms to meet its cooling needs (J4)."
+    },
+    {
+      "id": "J3e",
+      "title": "Option",
+      "text": "Option. You may choose to make a card non-operational."
     },
     {
       "id": "J4",
       "title": "Cooling Therms",
-      "text": "All cards that list one or more icons in its support field require a number of \"Therms\" of cooling equal to the number of icons. To be Operational, these Therms must be supplied by radiators and/or afterburn cooling.\na. Therm Production. Each Therm can be supplied to a single Colocated card in a movement or Operation.\nb. Therm Assignment. Each time a card that requires cooling is used (J3), there must be sufficient Therms available for the card and its entire support chain. For example:\n• A robonaut or refinery (and its supports) must satisfy their combined Therm requirements each time it is used during an Operation other than industrialization (J2d).\n• Activation Prerequisite. A thruster (and its supports) must satisfy its Therm requirements to be activated (H2).\n• Ability Prerequisite. A card's Ability (B2g) is locked unless the Therm requirements of itself and its supports are satisfied.\n• Circular Support Chains. If a radiator needs a support (e.g. magnetocaloric refrigerator), its Therms can be used to cool its own supports.\nc. Therms Reuse. The total Therms produced are not exhausted by any individual Movement, Operation or Action that Turn. Therms produced in a stack may be reused to cool any or all support chains (J1c) needed during a single Turn. Reuse applies only to Therms produced by radiators, not afterburning (J4d).\nEXAMPLE [J4c] A thruster used for movement needs 3 Therms, and a robonaut in the same Stack used to prospect needs 2 Therms, then 3 Therms total are needed that Turn. If the robonaut is used both for movement and prospecting, 2 Therms total are needed.\nd. Afterburn Cooling. If the activated thrust triangle afterburns (H3a) during movement, it produces one Therm of cooling as if it were a radiator.\n• Timing. This Therm only lasts during the current movement, and must be used to cool the activated thruster and its support chain.\n• Non-Operational Cooling. A non-operational thruster may afterburn if the single Therm provided is enough to make it Operational (i.e., it is only one Therm short of being Operational).\ne. Radiator Orientation. The mass and number of Therms of a radiator depends upon its Orientation, see glossary."
+      "text": "All cards that list one or more icons in its support field require a number of \"Therms\" of cooling equal to the number of icons. To be Operational, these Therms must be supplied by radiators and/or afterburn cooling."
+    },
+    {
+      "id": "J4a",
+      "title": "Therm Production",
+      "text": "Therm Production. Each Therm can be supplied to a single Colocated card in a movement or Operation."
+    },
+    {
+      "id": "J4b",
+      "title": "Therm Assignment",
+      "text": "Therm Assignment. Each time a card that requires cooling is used (J3), there must be sufficient Therms available for the card and its entire support chain. For example:\n• A robonaut or refinery (and its supports) must satisfy their combined Therm requirements each time it is used during an Operation other than industrialization (J2d).\n• Activation Prerequisite. A thruster (and its supports) must satisfy its Therm requirements to be activated (H2).\n• Ability Prerequisite. A card's Ability (B2g) is locked unless the Therm requirements of itself and its supports are satisfied.\n• Circular Support Chains. If a radiator needs a support (e.g. magnetocaloric refrigerator), its Therms can be used to cool its own supports."
+    },
+    {
+      "id": "J4c",
+      "title": "Therms Reuse",
+      "text": "Therms Reuse. The total Therms produced are not exhausted by any individual Movement, Operation or Action that Turn. Therms produced in a stack may be reused to cool any or all support chains (J1c) needed during a single Turn. Reuse applies only to Therms produced by radiators, not afterburning (J4d).\nEXAMPLE [J4c] A thruster used for movement needs 3 Therms, and a robonaut in the same Stack used to prospect needs 2 Therms, then 3 Therms total are needed that Turn. If the robonaut is used both for movement and prospecting, 2 Therms total are needed."
+    },
+    {
+      "id": "J4d",
+      "title": "Afterburn Cooling",
+      "text": "Afterburn Cooling. If the activated thrust triangle afterburns (H3a) during movement, it produces one Therm of cooling as if it were a radiator.\n• Timing. This Therm only lasts during the current movement, and must be used to cool the activated thruster and its support chain.\n• Non-Operational Cooling. A non-operational thruster may afterburn if the single Therm provided is enough to make it Operational (i.e., it is only one Therm short of being Operational)."
+    },
+    {
+      "id": "J4e",
+      "title": "Radiator Orientation",
+      "text": "Radiator Orientation. The mass and number of Therms of a radiator depends upon its Orientation, see glossary."
     },
     {
       "id": "J5",
       "title": "Movement-Modifying Supports",
-      "text": "A movement-modifying support, as indicated by a black triangle with the wrench icon (B2i), will (if Operational) increase or decrease the net thrust and/or fuel consumption (B2d) of its Spacecraft. This gain or loss only occurs if the movement-modifying support is chosen to be in the support chain (J1c) of its activated thrust triangle, as determined during thrust triangle activation (H2).\nFollow the standard order of operations for these modifiers: multiplication and division, then addition and subtraction, and rounding fractions up at the end of the move (H5b). There are 3 types:\na. Thrust-Modifying Support contains a positive or negative thrust modifier in its black triangle. When calculating a Spacecraft's net thrust (H3e), add or subtract this number.\nb. Solar Thrust-Modifying Support contains the Solar-Powered icon (B2e) in its black triangle. If there is at least one Solar-Powered support in a thruster's support chain, modify its thrust by the amount of the Spacecraft's Heliocentric Zone (-5 to +2). This is only applied once, not once per Solar-Powered support.\nc. Fuel-Modifying Support is indicated by a black triangle and the wrench icon. When a Spacecraft performs a Burn (H5a), multiply its fuel consumption (right number in the thrust triangle) by this amount. To indicate a fractional fuel consumption after a Burn, you may place the Wet Mass Chit between two spots. At the end of movement, round any fractional fuel consumption up to the next highest integer. If it indicates \"1/1\", this means the fuel consumption is unchanged.\nd. Exceptions. Ignore all movement-modifiers for supports needed only for radiators, reactors, Freighters, or GW thrusters. Solar-Power supports can never be used in the Neptune J Heliocentric Zone unless getting a push from a Powersat (-6 thrust). Movement-modifiers do not affect afterburning (H3a, 1C2)."
+      "text": "A movement-modifying support, as indicated by a black triangle with the wrench icon (B2i), will (if Operational) increase or decrease the net thrust and/or fuel consumption (B2d) of its Spacecraft. This gain or loss only occurs if the movement-modifying support is chosen to be in the support chain (J1c) of its activated thrust triangle, as determined during thrust triangle activation (H2).\nFollow the standard order of operations for these modifiers: multiplication and division, then addition and subtraction, and rounding fractions up at the end of the move (H5b). There are 3 types:"
+    },
+    {
+      "id": "J5a",
+      "title": "Thrust-Modifying Support",
+      "text": "Thrust-Modifying Support contains a positive or negative thrust modifier in its black triangle. When calculating a Spacecraft's net thrust (H3e), add or subtract this number."
+    },
+    {
+      "id": "J5b",
+      "title": "Solar Thrust-Modifying Support",
+      "text": "Solar Thrust-Modifying Support contains the Solar-Powered icon (B2e) in its black triangle. If there is at least one Solar-Powered support in a thruster's support chain, modify its thrust by the amount of the Spacecraft's Heliocentric Zone (-5 to +2). This is only applied once, not once per Solar-Powered support."
+    },
+    {
+      "id": "J5c",
+      "title": "Fuel-Modifying Support",
+      "text": "Fuel-Modifying Support is indicated by a black triangle and the wrench icon. When a Spacecraft performs a Burn (H5a), multiply its fuel consumption (right number in the thrust triangle) by this amount. To indicate a fractional fuel consumption after a Burn, you may place the Wet Mass Chit between two spots. At the end of movement, round any fractional fuel consumption up to the next highest integer. If it indicates \"1/1\", this means the fuel consumption is unchanged."
+    },
+    {
+      "id": "J5d",
+      "title": "Exceptions",
+      "text": "Exceptions. Ignore all movement-modifiers for supports needed only for radiators, reactors, Freighters, or GW thrusters. Solar-Power supports can never be used in the Neptune J Heliocentric Zone unless getting a push from a Powersat (-6 thrust). Movement-modifiers do not affect afterburning (H3a, 1C2)."
     },
     {
       "id": "K",
@@ -383,12 +1403,62 @@
     {
       "id": "K2",
       "title": "Event Roll",
-      "text": "When the Sunspot Cube passes an \"event\" threshold on the Sunspot Cycle diagram, immediately roll one dice (1d6) and resolve the event: 1 or 2 = Inspiration, 3 = Glitch, 4 = pad explosion/space debris, 5 or 6 = a season-dependent event.\na. Inspiration Event ('1' or '2'). Put the topmost card of each patent deck and the Colonist queue on the bottom of that deck.\nb. Glitch Event ('3'). Each player places a Glitch (red disk) on their stack with the most cards that have neither a Glitch nor Colocated Humans. Choose if stacks are tied.\n• Glitch Roll. If later in the game a glitched stack performs a Glitch Trigger (see glossary), a Glitch Roll is made.\n• Glitch Repair. A Glitch is harmlessly removed by a free action using a Human (G7).\nEXAMPLE [K2b] Your Rocket has 5 cards, with rad-hardnesses 1, 3, 3, 5, and 6. It suffers a Glitch. Years later, your Rocket enters a Glitch Trigger (flyby) and you roll a \"3\" in your Glitch Roll. Both cards with rad-hardness 3 are Decommissioned.\nc. Pad Explosion/Space Debris Event ('4'). Each player Decommissions their card with the highest Mass in LEO, choosing one if tied. However, Crew, Black-Side, Purple-Side, Colonist, and Bernal cards are immune.\nd. Solar Flare Event ('5' or '6', Sunspot Cube in season red). Make a CME Roll to determine overall flare severity: roll one die (1d6) and apply the result to every card in all non-LEO stacks (but see shieldings below). For each card, first add or subtract the modifier printed next to the Heliocentric Zone its located in (-5 to +2) from the die result, then compare the result to the rad-hardness (B2j) of that card. Any card with a rad-hardness less than the result suffers involuntarily decommission unless shielded:\n• Van Allen Shielding. Cards located in the LEO or cycler Space are immune to this event.\n• Magnetic Field Shielding. Cards located on a Radiation Belt (H10), with the exception of the 14 belts surrounding Sol, are immune to this event.\n• Bunker Shielding. Cards on Sites are immune to this event.\nEXAMPLE [K2d] The event roll is a 6 during season red, so a CME Roll is made: severity = \"3\". An outpost in the Jupiter zone is safe because its modifier brings the severity to zero. A Rocket in the Earth zone has a thruster with a rad-hardness of 1, and this is Decommissioned.\ne. Anarchy Event ('5' or '6', Sunspot Cube in season blue). Until the Sunspot Cube exits season blue, each player's listed faction privilege (B6a) is replaced by an Ability equivalent to the Felonious faction privilege.\n• Lawlessness (Module 0). Additionally, the Law indicated by the Active Law is inactivated but it can still move and all Laws may still be lobbied.\n• Purge Roll (Module 0). Additionally, roll a dice and consult the dice numbers printed on the assembly. Discard (if possible) one delegate of each player color in this Ideology. If so, this generates a vote tally (O3a).\nf. Budget Cuts Event ('5' or '6', Sunspot Cube in season yellow). Each player Discards a card of their choice from their Hand (if they have any) to the bottom of the corresponding patent deck.\ng. Event Order. If an event instructs multiple players to do something, they resolve it beginning with the 1st Player and going clockwise."
+      "text": "When the Sunspot Cube passes an \"event\" threshold on the Sunspot Cycle diagram, immediately roll one dice (1d6) and resolve the event: 1 or 2 = Inspiration, 3 = Glitch, 4 = pad explosion/space debris, 5 or 6 = a season-dependent event."
+    },
+    {
+      "id": "K2a",
+      "title": "Inspiration Event ('1' or '2')",
+      "text": "Inspiration Event ('1' or '2'). Put the topmost card of each patent deck and the Colonist queue on the bottom of that deck."
+    },
+    {
+      "id": "K2b",
+      "title": "Glitch Event ('3')",
+      "text": "Glitch Event ('3'). Each player places a Glitch (red disk) on their stack with the most cards that have neither a Glitch nor Colocated Humans. Choose if stacks are tied.\n• Glitch Roll. If later in the game a glitched stack performs a Glitch Trigger (see glossary), a Glitch Roll is made.\n• Glitch Repair. A Glitch is harmlessly removed by a free action using a Human (G7).\nEXAMPLE [K2b] Your Rocket has 5 cards, with rad-hardnesses 1, 3, 3, 5, and 6. It suffers a Glitch. Years later, your Rocket enters a Glitch Trigger (flyby) and you roll a \"3\" in your Glitch Roll. Both cards with rad-hardness 3 are Decommissioned."
+    },
+    {
+      "id": "K2c",
+      "title": "Pad Explosion/Space Debris Event ('4')",
+      "text": "Pad Explosion/Space Debris Event ('4'). Each player Decommissions their card with the highest Mass in LEO, choosing one if tied. However, Crew, Black-Side, Purple-Side, Colonist, and Bernal cards are immune."
+    },
+    {
+      "id": "K2d",
+      "title": "Solar Flare Event ('5' or '6', Sunspot Cube in season red)",
+      "text": "Solar Flare Event ('5' or '6', Sunspot Cube in season red). Make a CME Roll to determine overall flare severity: roll one die (1d6) and apply the result to every card in all non-LEO stacks (but see shieldings below). For each card, first add or subtract the modifier printed next to the Heliocentric Zone its located in (-5 to +2) from the die result, then compare the result to the rad-hardness (B2j) of that card. Any card with a rad-hardness less than the result suffers involuntarily decommission unless shielded:\n• Van Allen Shielding. Cards located in the LEO or cycler Space are immune to this event.\n• Magnetic Field Shielding. Cards located on a Radiation Belt (H10), with the exception of the 14 belts surrounding Sol, are immune to this event.\n• Bunker Shielding. Cards on Sites are immune to this event.\nEXAMPLE [K2d] The event roll is a 6 during season red, so a CME Roll is made: severity = \"3\". An outpost in the Jupiter zone is safe because its modifier brings the severity to zero. A Rocket in the Earth zone has a thruster with a rad-hardness of 1, and this is Decommissioned."
+    },
+    {
+      "id": "K2e",
+      "title": "Anarchy Event ('5' or '6', Sunspot Cube in season blue)",
+      "text": "Anarchy Event ('5' or '6', Sunspot Cube in season blue). Until the Sunspot Cube exits season blue, each player's listed faction privilege (B6a) is replaced by an Ability equivalent to the Felonious faction privilege.\n• Lawlessness (Module 0). Additionally, the Law indicated by the Active Law is inactivated but it can still move and all Laws may still be lobbied.\n• Purge Roll (Module 0). Additionally, roll a dice and consult the dice numbers printed on the assembly. Discard (if possible) one delegate of each player color in this Ideology. If so, this generates a vote tally (O3a)."
+    },
+    {
+      "id": "K2f",
+      "title": "Budget Cuts Event ('5' or '6', Sunspot Cube in season yellow)",
+      "text": "Budget Cuts Event ('5' or '6', Sunspot Cube in season yellow). Each player Discards a card of their choice from their Hand (if they have any) to the bottom of the corresponding patent deck."
+    },
+    {
+      "id": "K2g",
+      "title": "Event Order",
+      "text": "Event Order. If an event instructs multiple players to do something, they resolve it beginning with the 1st Player and going clockwise."
     },
     {
       "id": "L",
       "title": "Glories",
-      "text": "The glory chits start in the Heliocentric Zone indicators on the map (B3, C7). When you land a Human onto any Site in a zone with its glory chit not yet taken, you may take it and place it on the Human's card with the chit's lowest VP side up. Each Crew or Colonist can carry a maximum of one glory chit. However, no glory can be obtained from a Site that a Human has previously landed on.\na. Ticker Tape Parade! If a Human returns back to your Bank with a glory chit on its card, this chit goes into your playmat (in the space labeled \"Glory\"), with its highest VP side up.\nb. Tragedy. If a Human has a glory chit on its card when it is Decommissioned (e.g. death or colonization), this chit goes into the Glory space on your playmat, but remains on its lowest VP side up.\nc. Heroism. These 4 chits start on the map's heroism spots (C7). They are only used in games with 3 or more players. The map contains a description of what accomplishment each heroism chit can be awarded for. At any time before the last year of the game, any player can nominate another player, or himself, to be awarded this victory chit. Players vote beginning with the 1st player, and the chit is permanently awarded if the majority agrees (with the 1st Player breaking ties)."
+      "text": "The glory chits start in the Heliocentric Zone indicators on the map (B3, C7). When you land a Human onto any Site in a zone with its glory chit not yet taken, you may take it and place it on the Human's card with the chit's lowest VP side up. Each Crew or Colonist can carry a maximum of one glory chit. However, no glory can be obtained from a Site that a Human has previously landed on."
+    },
+    {
+      "id": "La",
+      "title": "Ticker Tape Parade",
+      "text": "Ticker Tape Parade! If a Human returns back to your Bank with a glory chit on its card, this chit goes into your playmat (in the space labeled \"Glory\"), with its highest VP side up."
+    },
+    {
+      "id": "Lb",
+      "title": "Tragedy",
+      "text": "Tragedy. If a Human has a glory chit on its card when it is Decommissioned (e.g. death or colonization), this chit goes into the Glory space on your playmat, but remains on its lowest VP side up."
+    },
+    {
+      "id": "Lc",
+      "title": "Heroism",
+      "text": "Heroism. These 4 chits start on the map's heroism spots (C7). They are only used in games with 3 or more players. The map contains a description of what accomplishment each heroism chit can be awarded for. At any time before the last year of the game, any player can nominate another player, or himself, to be awarded this victory chit. Players vote beginning with the 1st player, and the chit is permanently awarded if the majority agrees (with the 1st Player breaking ties)."
     },
     {
       "id": "M",
@@ -398,17 +1468,52 @@
     {
       "id": "M1",
       "title": "Core Endgame",
-      "text": "The end of the game is triggered when 48 years (four solar cycles) have been completed. This happens when the Sunspot Cube crosses the seniority threshold, as the last Seniority Disk is removed.\na. Endgame with Modules 1 and/or 2 is 5 solar cycles, and with Futures is 7 solar cycles."
+      "text": "The end of the game is triggered when 48 years (four solar cycles) have been completed. This happens when the Sunspot Cube crosses the seniority threshold, as the last Seniority Disk is removed."
+    },
+    {
+      "id": "M1a",
+      "title": "Endgame with Modules",
+      "text": "Endgame with Modules 1 and/or 2 is 5 solar cycles, and with Futures is 7 solar cycles."
     },
     {
       "id": "M2",
       "title": "Scoring",
-      "text": "The player with the most victory points (VP) at the end of the game is the winner. Resolve ties by most Aqua. If still tied, share the victory or position. VP are awarded for each Token of their color, plus bonus and politics VP:\na. Token VP. 1 VP for each wooden or plastic Token (e.g. Rockets, Claims, Factories) in a player color on the map and (Module 0) on the Assembly.\nb. Bonus VP (depending on the location of the token):\n• Factory Stock Price. +8 / +5 / +4 VP per Factory according to its Exploitation Track (2VP regardless of track if game ends in War), (doubled if linked to a Space Elevator).\n• Colony Dome Location. +1 VP (Astrobiology) / +2 VP (Submarine, Bernal).\n• Glory & Heroism Chits. As listed on its faceup side.\n• Dirtside Hydration (Module 2). VP = Dirtside Hydration (Home Bernal = 6 VP).\n• Future Stars (Modules 0, 1, & 2). VP as listed on each completed Future.\nc. Politics VP (Module 0). Increase the Token VP for all players according to final position of Active Law (skip if Anarchy/War):\nFreedom = +1 VP per Factory cube.\nHonor = +1 VP per glory chit.\nUnity = +1 VP for each Ideology you have a delegate in.\nAuthority = +1 VP per Claim disk.\nEquality = +1 VP per Colony dome (including on Bernals).\nIndividuality = +1 VP per wood/plastic Token on Sites with Hazardous lander burns.\nd. Bernal VP (Module 2):\nPromoted Cancer Hospital Bernal = +1 VP per Colony dome.\nPromoted Climate Control Bernal = +2 VP per Dirtside for this Bernal.\nSSO Diplomatic Bernal (Module 0) = Your delegates in the Ideology of your player color are +1 VP each.\nPromoted Diplomatic Bernal (Module 0) = Your delegates in the assembly are +1 VP each.\nTourism Cycler = +2 VP per Dirtside for this Bernal."
+      "text": "The player with the most victory points (VP) at the end of the game is the winner. Resolve ties by most Aqua. If still tied, share the victory or position. VP are awarded for each Token of their color, plus bonus and politics VP:"
+    },
+    {
+      "id": "M2a",
+      "title": "Token VP",
+      "text": "Token VP. 1 VP for each wooden or plastic Token (e.g. Rockets, Claims, Factories) in a player color on the map and (Module 0) on the Assembly."
+    },
+    {
+      "id": "M2b",
+      "title": "Bonus VP",
+      "text": "Bonus VP (depending on the location of the token):\n• Factory Stock Price. +8 / +5 / +4 VP per Factory according to its Exploitation Track (2VP regardless of track if game ends in War), (doubled if linked to a Space Elevator).\n• Colony Dome Location. +1 VP (Astrobiology) / +2 VP (Submarine, Bernal).\n• Glory & Heroism Chits. As listed on its faceup side.\n• Dirtside Hydration (Module 2). VP = Dirtside Hydration (Home Bernal = 6 VP).\n• Future Stars (Modules 0, 1, & 2). VP as listed on each completed Future."
+    },
+    {
+      "id": "M2c",
+      "title": "Politics VP (Module 0)",
+      "text": "Politics VP (Module 0). Increase the Token VP for all players according to final position of Active Law (skip if Anarchy/War):\nFreedom = +1 VP per Factory cube.\nHonor = +1 VP per glory chit.\nUnity = +1 VP for each Ideology you have a delegate in.\nAuthority = +1 VP per Claim disk.\nEquality = +1 VP per Colony dome (including on Bernals).\nIndividuality = +1 VP per wood/plastic Token on Sites with Hazardous lander burns."
+    },
+    {
+      "id": "M2d",
+      "title": "Bernal VP",
+      "text": "Bernal VP (Module 2):\nPromoted Cancer Hospital Bernal = +1 VP per Colony dome.\nPromoted Climate Control Bernal = +2 VP per Dirtside for this Bernal.\nSSO Diplomatic Bernal (Module 0) = Your delegates in the Ideology of your player color are +1 VP each.\nPromoted Diplomatic Bernal (Module 0) = Your delegates in the assembly are +1 VP each.\nTourism Cycler = +2 VP per Dirtside for this Bernal."
     },
     {
       "id": "N",
       "title": "Negotiation",
-      "text": "At any time, even on an opponent's Turn, you may negotiate mutually-desirable deals with the other players. A deal can involve promises and/or the transfer of certain items (see below), but any deals that cannot be carried out in the Turn the deal is made are non-binding.\na. Timing. Deals can be made at any time and on any player's Turn, but transfer of items (cards, FT other than Aquas, Figures) cannot be done during movement, an Operation, or a free action.\nb. Transferable Items & Services. See N1 - N8 for a list of what is transferable. In particular, you cannot transfer glories, Futures, Anchored Bernals, or any promoted card (except unemancipated Robots may be transferred)."
+      "text": "At any time, even on an opponent's Turn, you may negotiate mutually-desirable deals with the other players. A deal can involve promises and/or the transfer of certain items (see below), but any deals that cannot be carried out in the Turn the deal is made are non-binding."
+    },
+    {
+      "id": "Na",
+      "title": "Timing",
+      "text": "Timing. Deals can be made at any time and on any player's Turn, but transfer of items (cards, FT other than Aquas, Figures) cannot be done during movement, an Operation, or a free action."
+    },
+    {
+      "id": "Nb",
+      "title": "Transferable Items & Services",
+      "text": "Transferable Items & Services. See N1 - N8 for a list of what is transferable. In particular, you cannot transfer glories, Futures, Anchored Bernals, or any promoted card (except unemancipated Robots may be transferred)."
     },
     {
       "id": "N1",
@@ -418,27 +1523,74 @@
     {
       "id": "N2",
       "title": "Negotiated Transfer of Hand Cards",
-      "text": "A player may transfer cards from his Hand to other players' Hands.\na. Academia Restriction. A card that has been traded from a Hand cannot be traded from its new Hand again until the start of its original owner's next Turn."
+      "text": "A player may transfer cards from his Hand to other players' Hands."
+    },
+    {
+      "id": "N2a",
+      "title": "Academia Restriction",
+      "text": "Academia Restriction. A card that has been traded from a Hand cannot be traded from its new Hand again until the start of its original owner's next Turn."
     },
     {
       "id": "N3",
       "title": "Negotiated Transfer of Stacks & Figures",
-      "text": "If a Stack, Claim, Factory, or Colony changes ownership, one player removes its Figure from the map and the other replaces it with a corresponding one of their own. If you trade Stack cards to an opponent, transfer the cards and FTs to his playmat. He is allowed to create an outpost or other Stack to accommodate them.\na. Stacked Tokens. See G6a.\nb. Component Limits. Keep in mind limits for Stacks (E3), disks (G4a), and cubes (I7f).\nEXAMPLE [N3b] If you acquire a third outpost, you must be down to your limit of two outposts by the end of your Turn.\nc. Free Actions. Only the active player may perform free actions (G) on their Turn (e.g, their opponents may not withdraw components to comply with the previous two bullets).\nd. Crew. Your Crew/Colonist may be moved into an opponent's Stack (e.g. in a rescue mission) but it is still under your control and provides no benefits to the opponent other than being Human (e.g. glitch repair G7) and thrust triangle activation (H2). Either player may Jettison (G1g) the Crew/Colonist as a free action (this can be a Felony) and it is returned to your LEO Stack (or Bank) if Decommissioned."
+      "text": "If a Stack, Claim, Factory, or Colony changes ownership, one player removes its Figure from the map and the other replaces it with a corresponding one of their own. If you trade Stack cards to an opponent, transfer the cards and FTs to his playmat. He is allowed to create an outpost or other Stack to accommodate them."
+    },
+    {
+      "id": "N3a",
+      "title": "Stacked Tokens",
+      "text": "Stacked Tokens. See G6a."
+    },
+    {
+      "id": "N3b",
+      "title": "Component Limits",
+      "text": "Component Limits. Keep in mind limits for Stacks (E3), disks (G4a), and cubes (I7f).\nEXAMPLE [N3b] If you acquire a third outpost, you must be down to your limit of two outposts by the end of your Turn."
+    },
+    {
+      "id": "N3c",
+      "title": "Free Actions",
+      "text": "Free Actions. Only the active player may perform free actions (G) on their Turn (e.g, their opponents may not withdraw components to comply with the previous two bullets)."
+    },
+    {
+      "id": "N3d",
+      "title": "Crew",
+      "text": "Crew. Your Crew/Colonist may be moved into an opponent's Stack (e.g. in a rescue mission) but it is still under your control and provides no benefits to the opponent other than being Human (e.g. glitch repair G7) and thrust triangle activation (H2). Either player may Jettison (G1g) the Crew/Colonist as a free action (this can be a Felony) and it is returned to your LEO Stack (or Bank) if Decommissioned."
     },
     {
       "id": "N4",
       "title": "Negotiated Faction Privileges",
-      "text": "a. Powersat. With this Ability/faction privilege (see glossary) you may negotiate in order to add to the thrust of any pushable Spacecraft (marked with the push icon) (H3d).\nb. Felonious. With this Faction privilege, you may allow an opponent to commit Felonies on his Turn (thematically using corrupt bureaucrats or double agents).\nc. Mooncable. You may, as a once-per-turn free action, dirt refuel another player's Rocket at LEO/Home Orbit, either 1 tank (if it is a Crew), or 7 tanks (if it is non-crew).\nd. Scrum Troubleshooters. You may negotiate Glitch repair of any Stack, which cannot be after the Glitch Roll.\ne. 1st Player. You may negotiate prospecting Luna (I6.1). You may negotiate placement of the seniority disks as legacy votes (Module 0, O6)."
+      "text": "a. Powersat. With this Ability/faction privilege (see glossary) you may negotiate in order to add to the thrust of any pushable Spacecraft (marked with the push icon) (H3d).\nb. Felonious. With this Faction privilege, you may allow an opponent to commit Felonies on his Turn (thematically using corrupt bureaucrats or double agents).\nc. Mooncable. You may, as a once-per-turn free action, dirt refuel another player's Rocket at LEO/Home Orbit, either 1 tank (if it is a Crew), or 7 tanks (if it is non-crew).\nd. Scrum Troubleshooters. You may negotiate Glitch repair of any Stack, which cannot be after the Glitch Roll.\ne. 1st Player. You may negotiate prospecting Luna (I6.1). You may negotiate placement of the seniority disks as legacy votes (Module 0, O6).",
+      "sub_ids": {
+        "N4a": "N4",
+        "N4b": "N4",
+        "N4c": "N4",
+        "N4d": "N4",
+        "N4e": "N4"
+      }
     },
     {
       "id": "N5",
       "title": "Negotiated Factory-Assist",
-      "text": "You may perform a factory-assisted landing/liftoff using a consenting opponent's Factory (H6c).\na. Felonious. This can also be done without consent if you can commit a Felony (see glossary)."
+      "text": "You may perform a factory-assisted landing/liftoff using a consenting opponent's Factory (H6c)."
+    },
+    {
+      "id": "N5a",
+      "title": "Felonious",
+      "text": "Felonious. This can also be done without consent if you can commit a Felony (see glossary)."
     },
     {
       "id": "N6",
       "title": "Negotiated On-Site Operation",
-      "text": "You may use an opponent's Claim, Factory, Crew, Colony, Bernal, or Colonist to perform an On-Site Operation (e.g. site refuel, prospect, industrialize, and ET production).\na. Felonious. If you have Humans present and your opponent does not, these can also be done without consent if you can commit a Felony (see glossary).\nb. Lunar Mines. If you are the 1st Player (C8a), you may negotiate permission to prospect Luna."
+      "text": "You may use an opponent's Claim, Factory, Crew, Colony, Bernal, or Colonist to perform an On-Site Operation (e.g. site refuel, prospect, industrialize, and ET production)."
+    },
+    {
+      "id": "N6a",
+      "title": "Felonious",
+      "text": "Felonious. If you have Humans present and your opponent does not, these can also be done without consent if you can commit a Felony (see glossary)."
+    },
+    {
+      "id": "N6b",
+      "title": "Lunar Mines",
+      "text": "Lunar Mines. If you are the 1st Player (C8a), you may negotiate permission to prospect Luna."
     },
     {
       "id": "N7",
@@ -453,42 +1605,192 @@
     {
       "id": "O",
       "title": "Module 0 — Politics",
-      "text": "Welcome to your first Module, a body of rules which you can add to your High Frontier experience. In this Module, Factions elect representatives from their population as delegates into 7 different Ideologies, each with its own Law.\na. The Assembly is the hexagonal area on the placard where Factions use elected delegates to manipulate policy and gain advantages in the political arena through Laws.\nb. Ideologies include the freedom, honor, unity, authority, equality, individuality, and (in the center) centrist areas of the assembly.\nc. Economic vs. Political Pull. You gain delegate cubes by fundraising, building Colonies, or exomigration (2A6). You are limited to 7 cubes, which can be used either as Factories or as delegates. Thus, the more you use for Factories means the fewer you can use for delegates. If you run out of cubes for delegates, you may remove a Factory per I7f and vice-versa.\nd. Active Law. A gold star on the assembly indicates which Law is active.\ne. Anarchy. Delegates can be killed by the anarchy event (K2e)."
+      "text": "Welcome to your first Module, a body of rules which you can add to your High Frontier experience. In this Module, Factions elect representatives from their population as delegates into 7 different Ideologies, each with its own Law."
+    },
+    {
+      "id": "Oa",
+      "title": "The Assembly",
+      "text": "The Assembly is the hexagonal area on the placard where Factions use elected delegates to manipulate policy and gain advantages in the political arena through Laws."
+    },
+    {
+      "id": "Ob",
+      "title": "Ideologies",
+      "text": "Ideologies include the freedom, honor, unity, authority, equality, individuality, and (in the center) centrist areas of the assembly."
+    },
+    {
+      "id": "Oc",
+      "title": "Economic vs. Political Laws",
+      "text": "Economic vs. Political Pull. You gain delegate cubes by fundraising, building Colonies, or exomigration (2A6). You are limited to 7 cubes, which can be used either as Factories or as delegates. Thus, the more you use for Factories means the fewer you can use for delegates. If you run out of cubes for delegates, you may remove a Factory per I7f and vice-versa."
+    },
+    {
+      "id": "Od",
+      "title": "Active Law",
+      "text": "Active Law. A gold star on the assembly indicates which Law is active."
+    },
+    {
+      "id": "Oe",
+      "title": "Anarchy",
+      "text": "Anarchy. Delegates can be killed by the anarchy event (K2e)."
     },
     {
       "id": "O1",
       "title": "Political Assembly Setup",
-      "text": "In addition to core setup (C), find the assembly placard and set up the assembly as follows:\na. Active Law (gold star) is placed into the starting centrist ideology.\nb. Starting Delegate. Each player adds one cube into the Ideology of their player color."
+      "text": "In addition to core setup (C), find the assembly placard and set up the assembly as follows:"
+    },
+    {
+      "id": "O1a",
+      "title": "Active Law Placement",
+      "text": "Active Law (gold star) is placed into the starting centrist ideology."
+    },
+    {
+      "id": "O1b",
+      "title": "Starting Delegate",
+      "text": "Starting Delegate. Each player adds one cube into the Ideology of their player color."
     },
     {
       "id": "O2",
       "title": "Delegates & Fundraise Operation",
-      "text": "The new fundraise operation gives you 1 Aqua, adds 1 cube into the assembly, and moves one cube in the assembly.\na. Delegates are any cube of a player color in the assembly. You are component-limited to 7 cubes (I7f). You cannot use your big cube as a delegate (Module 1).\nb. Fundraise Operation replaces the income operation (I1). It is performed in 3 steps:\n• Receive 1 Aqua as income.\n• You may elect (add) a delegate from your Reserve into your faction ideology (B6b) or an Ideology where you already have a delegate.\n• You may move any one of your delegates to an adjacent Ideology.\nc. Representation. If you build a Colony (G3c) or exomigrate (2A6c), you may immediately place one of your cubes as a delegate into the Ideology as indicated by the politics of the Crew or Colonist used. See I7f if your Reserves are empty."
+      "text": "The new fundraise operation gives you 1 Aqua, adds 1 cube into the assembly, and moves one cube in the assembly."
+    },
+    {
+      "id": "O2a",
+      "title": "Delegates",
+      "text": "Delegates are any cube of a player color in the assembly. You are component-limited to 7 cubes (I7f). You cannot use your big cube as a delegate (Module 1)."
+    },
+    {
+      "id": "O2b",
+      "title": "Fundraise Operation",
+      "text": "Fundraise Operation replaces the income operation (I1). It is performed in 3 steps:\n• Receive 1 Aqua as income.\n• You may elect (add) a delegate from your Reserve into your faction ideology (B6b) or an Ideology where you already have a delegate.\n• You may move any one of your delegates to an adjacent Ideology."
+    },
+    {
+      "id": "O2c",
+      "title": "Representation",
+      "text": "Representation. If you build a Colony (G3c) or exomigrate (2A6c), you may immediately place one of your cubes as a delegate into the Ideology as indicated by the politics of the Crew or Colonist used. See I7f if your Reserves are empty."
     },
     {
       "id": "O3",
       "title": "Law Activation",
-      "text": "After an Operation, free action, or other game effect that places, removes, or moves a delegate is finished, perform a vote tally then activation:\na. Vote Tally. Check to see if any Ideologies have equal to or more delegates than the Active Law (the active player chooses if tied). If so, the active player must move the Active Law into an Ideology with the most delegates. If tied with the current Ideology, the Active Law may stay.\nb. Activation. Immediately following the vote tally that moves the Active Law into a new Ideology, the Law associated with that Ideology becomes active and may be used by any Faction on their Turn."
+      "text": "After an Operation, free action, or other game effect that places, removes, or moves a delegate is finished, perform a vote tally then activation:"
+    },
+    {
+      "id": "O3a",
+      "title": "Vote Tally",
+      "text": "Vote Tally. Check to see if any Ideologies have equal to or more delegates than the Active Law (the active player chooses if tied). If so, the active player must move the Active Law into an Ideology with the most delegates. If tied with the current Ideology, the Active Law may stay."
+    },
+    {
+      "id": "O3b",
+      "title": "Activation",
+      "text": "Activation. Immediately following the vote tally that moves the Active Law into a new Ideology, the Law associated with that Ideology becomes active and may be used by any Faction on their Turn."
     },
     {
       "id": "O4",
       "title": "Lobby (new free action)",
-      "text": "As a once-per-turn free action, pay 1 Aqua and Decommission 1 of your delegates in an inactive Ideology to use its Law throughout your Turn.\na. Centrist Law (O5g) is exceptional in that it may be lobbied only during the pad explosion/space debris event (K2c).\nb. Anarchy/War. Laws may be lobbied during Anarchy (K2e) or War. Payment is waived during War."
+      "text": "As a once-per-turn free action, pay 1 Aqua and Decommission 1 of your delegates in an inactive Ideology to use its Law throughout your Turn."
+    },
+    {
+      "id": "O4a",
+      "title": "Centrist Law Exception",
+      "text": "Centrist Law (O5g) is exceptional in that it may be lobbied only during the pad explosion/space debris event (K2c)."
+    },
+    {
+      "id": "O4b",
+      "title": "Anarchy/War",
+      "text": "Anarchy/War. Laws may be lobbied during Anarchy (K2e) or War. Payment is waived during War."
     },
     {
       "id": "O5",
       "title": "Laws",
-      "text": "Every Ideology has an associated Law, which if activated (O3) modifies rules for all players:\na. Free Trade Act (freedom). You may sell two cards for 5 Aqua total with a free market operation (I3).\nb. Paleoconservative Directive (honor). During a fundraise operation, your income (O2b) gained is equal to the number of glory chits that you hold anywhere.\nc. UN General Assembly (unity). Every other Ideology with 2+ delegates also has its Law activated (O3b), but no player may lobby any Laws.\nd. Martial Law (authority). Once per Turn right after completing the vote tally (O3a) of a fundraise operation, you may additionally Discard an opponent's delegate. Thus, the player moving the Active Law into authority via a fundraise can remove one delegate that same Turn. Martial law prevents changing the 1st Player at the end of each cycle (O6b).\ne. Research Grants (equality). When initiating a research auction operation (I2), you must skip the auction and instead pay 1 Aqua to take the top card of any patent deck without bonus supports (I2g) or academia hand limit (I2a).\nf. Freedom To Roam Treaty (individuality). You may treat an opponent's Factory or Bernal as your own for the purposes of On-Site Operations, factory-assist, Promotions, or Space Elevators without needing the owner's permission. Other uses of a Factory or Bernal, such as Powersat, are unchanged by this treaty.\nEXAMPLE [O5f] Freedom to roam is the Active Law and there is no Anarchy/War. You ET produce your thruster M Hand Card at an opponent's M Factory and use factory-assist to move it.\ng. Mishap Insurance (centrist). During a pad explosion/space debris event (K2c), any Faction with a delegate here gains Aquas equal to the Mass of his decommissioned card. A player may lobby this to gain the insurance (outside of his Turn beginning with 1st Player) after the Event Roll (K2).\nEXAMPLE [O5g] Mishap insurance is the Active Law and there is no Anarchy or War. You suffer a pad explosion event, and although there are 2 delegates in centrist, neither of them are yours so you are unfortunately not insured."
+      "text": "Every Ideology has an associated Law, which if activated (O3) modifies rules for all players:"
+    },
+    {
+      "id": "O5a",
+      "title": "Free Trade Act (freedom)",
+      "text": "Free Trade Act (freedom). You may sell two cards for 5 Aqua total with a free market operation (I3)."
+    },
+    {
+      "id": "O5b",
+      "title": "Paleoconservative Directive (honor)",
+      "text": "Paleoconservative Directive (honor). During a fundraise operation, your income (O2b) gained is equal to the number of glory chits that you hold anywhere."
+    },
+    {
+      "id": "O5c",
+      "title": "UN General Assembly (unity)",
+      "text": "UN General Assembly (unity). Every other Ideology with 2+ delegates also has its Law activated (O3b), but no player may lobby any Laws."
+    },
+    {
+      "id": "O5d",
+      "title": "Martial Law (authority)",
+      "text": "Martial Law (authority). Once per Turn right after completing the vote tally (O3a) of a fundraise operation, you may additionally Discard an opponent's delegate. Thus, the player moving the Active Law into authority via a fundraise can remove one delegate that same Turn. Martial law prevents changing the 1st Player at the end of each cycle (O6b)."
+    },
+    {
+      "id": "O5e",
+      "title": "Research Grants (equality)",
+      "text": "Research Grants (equality). When initiating a research auction operation (I2), you must skip the auction and instead pay 1 Aqua to take the top card of any patent deck without bonus supports (I2g) or academia hand limit (I2a)."
+    },
+    {
+      "id": "O5f",
+      "title": "Freedom To Roam Treaty (individuality)",
+      "text": "Freedom To Roam Treaty (individuality). You may treat an opponent's Factory or Bernal as your own for the purposes of On-Site Operations, factory-assist, Promotions, or Space Elevators without needing the owner's permission. Other uses of a Factory or Bernal, such as Powersat, are unchanged by this treaty.\nEXAMPLE [O5f] Freedom to roam is the Active Law and there is no Anarchy/War. You ET produce your thruster M Hand Card at an opponent's M Factory and use factory-assist to move it."
+    },
+    {
+      "id": "O5g",
+      "title": "Mishap Insurance (centrist)",
+      "text": "Mishap Insurance (centrist). During a pad explosion/space debris event (K2c), any Faction with a delegate here gains Aquas equal to the Mass of his decommissioned card. A player may lobby this to gain the insurance (outside of his Turn beginning with 1st Player) after the Event Roll (K2).\nEXAMPLE [O5g] Mishap insurance is the Active Law and there is no Anarchy or War. You suffer a pad explosion event, and although there are 2 delegates in centrist, neither of them are yours so you are unfortunately not insured."
     },
     {
       "id": "O6",
       "title": "12-Year Legacy",
-      "text": "Whenever a seniority disk is removed, the 1st Player adds it to an Ideology of their choice in the circular spot. This will count as a legacy vote only during the final vote and has no other purpose. They cannot be moved or removed.\na. Final Vote. Placing the final seniority disk into the assembly ends the game. The final 1st Player performs a vote tally (O3a), counting both delegates and legacy votes. The final Active Law affects scoring per O7.\nb. Term Limits Baton Pass. Except during active martial law (O5d), and assuming the game has not ended per the previous bullet, the 1st Player must then assign another player to be the 1st Player.\n• Cube Swap. A new 1st Player with no available cubes (I7f) must discard a valid cube immediately. If this is not possible that player cannot be chosen as 1st Player.\n• Big Cube. You cannot use your big cube for the Sunspot Cube (Module 1)."
+      "text": "Whenever a seniority disk is removed, the 1st Player adds it to an Ideology of their choice in the circular spot. This will count as a legacy vote only during the final vote and has no other purpose. They cannot be moved or removed."
+    },
+    {
+      "id": "O6a",
+      "title": "Final Vote",
+      "text": "Final Vote. Placing the final seniority disk into the assembly ends the game. The final 1st Player performs a vote tally (O3a), counting both delegates and legacy votes. The final Active Law affects scoring per O7."
+    },
+    {
+      "id": "O6b",
+      "title": "Term Limits Baton Pass",
+      "text": "Term Limits Baton Pass. Except during active martial law (O5d), and assuming the game has not ended per the previous bullet, the 1st Player must then assign another player to be the 1st Player.\n• Cube Swap. A new 1st Player with no available cubes (I7f) must discard a valid cube immediately. If this is not possible that player cannot be chosen as 1st Player.\n• Big Cube. You cannot use your big cube for the Sunspot Cube (Module 1)."
     },
     {
       "id": "O7",
       "title": "Political Scoring",
-      "text": "After the final vote (O6a), if there is no current Anarchy/War calculate endgame scoring (M2c) as follows:\na. Freedom. +1 VP per Factory cube.\nb. Honor. +1 VP per glory chit (in your Spacecraft Stack or playmat).\nc. Unity. +1 VP for each Ideology you have a delegate in.\nd. Authority. +1 VP per Claim disk.\ne. Equality. +1 VP per Colony dome (including on Bernals).\nf. Individuality. +1 VP per wood/plastic Token on Sites with Hazardous lander burns.\ng. Centrist. No VP changes."
+      "text": "After the final vote (O6a), if there is no current Anarchy/War calculate endgame scoring (M2c) as follows:"
+    },
+    {
+      "id": "O7a",
+      "title": "Freedom",
+      "text": "Freedom. +1 VP per Factory cube."
+    },
+    {
+      "id": "O7b",
+      "title": "Honor",
+      "text": "Honor. +1 VP per glory chit (in your Spacecraft Stack or playmat)."
+    },
+    {
+      "id": "O7c",
+      "title": "Unity",
+      "text": "Unity. +1 VP for each Ideology you have a delegate in."
+    },
+    {
+      "id": "O7d",
+      "title": "Authority",
+      "text": "Authority. +1 VP per Claim disk."
+    },
+    {
+      "id": "O7e",
+      "title": "Equality",
+      "text": "Equality. +1 VP per Colony dome (including on Bernals)."
+    },
+    {
+      "id": "O7f",
+      "title": "Individuality",
+      "text": "Individuality. +1 VP per wood/plastic Token on Sites with Hazardous lander burns."
+    },
+    {
+      "id": "O7g",
+      "title": "Centrist",
+      "text": "Centrist. No VP changes."
     }
   ]
 }
