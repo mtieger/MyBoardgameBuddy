@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prospecting Chart</title>
+  <style>
+    :root {
+      --bg-0: #0B0D10;
+      --bg-1: #14171C;
+      --bg-2: #1B2028;
+      --text-0: #F2F2F2;
+      --text-1: #B8C0CC;
+      --text-2: #7E8794;
+      --line-0: #1F242C;
+      --line-1: #2B313B;
+      --accent-blue: #0B3D91;
+      --accent-blue-bright: #1a52c4;
+      --ok: #2FBF71;
+      --no: #FC3D21;
+      --caution: #F2C94C;
+      --font-ui: Inter, system-ui, -apple-system, sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg-0);
+      color: var(--text-0);
+      font-family: var(--font-ui);
+      font-size: 14px;
+      min-height: 100vh;
+      padding: 32px 16px 60px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .screen { max-width: 600px; margin: 0 auto; }
+
+    /* HEADER */
+    .page-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-blue-bright);
+      font-family: var(--font-mono);
+      margin-bottom: 6px;
+    }
+    .page-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .page-sub {
+      font-size: 12px;
+      color: var(--text-2);
+      margin-bottom: 28px;
+    }
+
+    /* STEPS */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: var(--bg-1);
+      border: 1px solid var(--line-0);
+      border-radius: 6px;
+      padding: 12px 14px;
+    }
+    .step-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-blue-bright);
+      background: rgba(11,61,145,0.2);
+      border: 1px solid rgba(11,61,145,0.4);
+      border-radius: 2px;
+      padding: 2px 7px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text {
+      font-size: 13px;
+      color: var(--text-1);
+      line-height: 1.5;
+    }
+    .step-text strong {
+      color: var(--text-0);
+      font-weight: 600;
+    }
+
+    /* TABLE WRAPPER */
+    .table-section-label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      font-family: var(--font-mono);
+      margin-bottom: 10px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 6px;
+      border: 1px solid var(--line-0);
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 420px;
+    }
+
+    /* COLUMN HEADERS (Hydration) */
+    .col-header-row th {
+      padding: 10px 8px 8px;
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      font-family: var(--font-mono);
+      font-weight: 600;
+      background: var(--bg-2);
+      border-bottom: 1px solid var(--line-0);
+    }
+    .col-header-row th:first-child {
+      text-align: left;
+      padding-left: 14px;
+    }
+
+    /* HYDRATION ICONS - placeholder spans, easy to swap for <img> */
+    .hydration-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      flex-wrap: wrap;
+    }
+    /* 
+      TO INTEGRATE YOUR ICONS:
+      Replace <span class="drop-icon">💧</span> with:
+      <img src="images/icons/waterdrop.png" class="drop-icon" alt="💧"/>
+      and set .drop-icon { width: 14px; height: 14px; }
+    */
+    .drop-icon {
+      font-size: 12px;
+      line-height: 1;
+      /* swap to: width: 14px; height: 14px; when using real icons */
+    }
+
+    /* ROW HEADERS (ISRU) */
+    .isru-label {
+      padding: 0 10px 0 14px;
+      white-space: nowrap;
+    }
+    .isru-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--caution);
+      background: rgba(242,201,76,0.12);
+      border: 1px solid rgba(242,201,76,0.3);
+      border-radius: 2px;
+      padding: 2px 8px;
+    }
+
+    /* CELLS */
+    td {
+      padding: 10px 8px;
+      text-align: center;
+      border-top: 1px solid var(--line-0);
+      font-size: 12px;
+      vertical-align: middle;
+    }
+    td:first-child {
+      border-right: 1px solid var(--line-0);
+      background: var(--bg-2);
+    }
+
+    /* CELL STATES */
+    .cell-yes {
+      background: rgba(47,191,113,0.08);
+    }
+    .cell-no {
+      background: transparent;
+    }
+
+    .can-prospect {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .prospect-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ok);
+    }
+    .refuel-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-2);
+      background: var(--bg-0);
+      border: 1px solid var(--line-1);
+      border-radius: 2px;
+      padding: 1px 6px;
+    }
+    .refuel-badge span {
+      color: var(--accent-blue-bright);
+      font-weight: 700;
+    }
+    .dice-row, .drops-row {
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    /*
+      DICE ICON SWAP POINT:
+      Current: Unicode die faces ⚀⚁⚂⚃⚄⚅
+      To swap in your icons, replace each:
+        <span class="drop-icon">💧</span><!-- ICON SWAP: <img src="images/icons/waterdrop.png" class="drop-icon" alt="drop"/> -->
+      with:
+        <img src="images/icons/dice_1.png" class="die-face" alt="1"/>
+      (adjust filename to match yours)
+      then change .die-face font-size to: width: 22px; height: 22px;
+    */
+    .die-face {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .no-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--no);
+      opacity: 0.5;
+    }
+
+    /* REFUEL NOTE */
+    .refuel-note {
+      background: var(--bg-1);
+      border: 1px solid var(--line-0);
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 12px;
+      color: var(--text-1);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .refuel-note strong { color: var(--text-0); }
+
+    /* SIZE ROLL */
+    .size-roll-card {
+      background: var(--bg-1);
+      border: 1px solid var(--line-0);
+      border-radius: 6px;
+      padding: 16px 14px;
+      margin-bottom: 8px;
+    }
+    .size-roll-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-blue-bright);
+      font-family: var(--font-mono);
+      margin-bottom: 10px;
+    }
+    .size-roll-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-1);
+      line-height: 1.5;
+    }
+    .die-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .size-roll-row strong { color: var(--text-0); }
+    .auto-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--ok);
+      padding-top: 10px;
+      border-top: 1px solid var(--line-0);
+    }
+    .auto-note strong { color: var(--ok); }
+  </style>
+</head>
+<body>
+<div class="screen">
+
+  <div class="page-eyebrow">Player Aid</div>
+  <div class="page-title">Prospecting & Site Refueling Operations</div>
+
+  <!-- PROSPECTING -->
+  <div class="size-roll-card">
+    <div class="size-roll-title">Prospecting</div>
+    <div class="size-roll-row">
+      <span class="die-icon">🎲</span>
+      <div>Roll <strong>1d6</strong>. Result must be <strong>≤ Site Size</strong> to establish a Claim.<br><span style="color:var(--no);font-size:12px;">Failure places a Busted disk.</span></div>
+    </div>
+    <div class="auto-note">
+      <strong>Auto-success:</strong> Site Size greater than 5 — no roll needed.
+    </div>
+  </div>
+
+  <!-- SITE REFUELING -->
+  <div class="size-roll-card">
+    <div class="size-roll-title">Site Refueling</div>
+    <div class="size-roll-row">
+      <div>Table shows Site Refuel possibilities and FT gained.<br>Water FTs refueled = <strong>Site Hydration − ISRU Rating + 1</strong>.</div>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+    <table>
+      <thead>
+        <tr class="col-header-row">
+          <th>ISRU</th>
+          <!-- Hydration 4 — highest, leftmost -->
+          <th>
+            <div class="hydration-icons">
+              <span class="drop-icon">💧</span>
+              <span class="drop-icon">💧</span>
+              <span class="drop-icon">💧</span>
+              <span class="drop-icon">💧</span>
+              <!-- ICON SWAP POINT: replace each drop-icon span with <img src="images/icons/waterdrop.png" class="drop-icon" alt="drop"/> -->
+            </div>
+          </th>
+          <!-- Hydration 3 -->
+          <th>
+            <div class="hydration-icons">
+              <span class="drop-icon">💧</span>
+              <span class="drop-icon">💧</span>
+              <span class="drop-icon">💧</span>
+            </div>
+          </th>
+          <!-- Hydration 2 -->
+          <th>
+            <div class="hydration-icons">
+              <span class="drop-icon">💧</span>
+              <span class="drop-icon">💧</span>
+            </div>
+          </th>
+          <!-- Hydration 1 -->
+          <th>
+            <div class="hydration-icons">
+              <span class="drop-icon">💧</span>
+            </div>
+          </th>
+          <!-- Hydration 0 — rightmost -->
+          <th>
+            <div style="font-size:10px;color:var(--text-2);">No</div>
+            <div style="font-size:10px;color:var(--text-2);">Hydration</div>
+          </th>
+        </tr>
+      </thead>
+            <tbody>
+
+        <!-- ISRU 4 -->
+        <tr>
+          <td class="isru-label"><span class="isru-badge">ISRU 4</span></td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>1</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+        </tr>
+
+        <!-- ISRU 3 -->
+        <tr>
+          <td class="isru-label"><span class="isru-badge">ISRU 3</span></td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>2</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>1</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+        </tr>
+
+        <!-- ISRU 2 -->
+        <tr>
+          <td class="isru-label"><span class="isru-badge">ISRU 2</span></td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>3</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>2</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>1</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+        </tr>
+
+        <!-- ISRU 1 -->
+        <tr>
+          <td class="isru-label"><span class="isru-badge">ISRU 1</span></td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>4</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>3</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>2</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>1</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-no"><span class="no-label">✕ No</span></td>
+        </tr>
+
+        <!-- ISRU 0 -->
+        <tr>
+          <td class="isru-label"><span class="isru-badge">ISRU 0</span></td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>5</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>4</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>3</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>2</span> FT</span>
+            </div>
+          </td>
+          <td class="cell-yes">
+            <div class="can-prospect">
+              <span class="prospect-label">✓ Yes</span>
+              <span class="refuel-badge">Refuel <span>1</span> FT</span>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>

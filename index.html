@@ -1654,17 +1654,49 @@
     function openFullRulebook() {
       _rulebookCameFrom = 'home';
       document.getElementById('screen-home').classList.add('hidden');
-      _showRulebookScreen(
-        buildSessionRulebook({ modules: [0,1,2,3,4,5], scenario: '', variants: [] }),
-        () => {
-          document.getElementById('rulebook-banner').innerHTML =
-            '<div class="rulebook-banner-title">COMPLETE RULEBOOK</div>' +
-            '<div class="rulebook-banner-tags">' +
-              '<span class="rulebook-tag">All Modules</span>' +
-              '<span class="rulebook-tag">All Scenarios</span>' +
-            '</div>';
-        }
-      );
+
+      // Show screen immediately with a loading state
+      document.getElementById('rulebook-banner').innerHTML =
+        '<div class="rulebook-banner-title">COMPLETE RULEBOOK</div>' +
+        '<div class="rulebook-banner-tags">' +
+          '<span class="rulebook-tag">All Modules</span>' +
+          '<span class="rulebook-tag">All Scenarios</span>' +
+        '</div>';
+      document.getElementById('rulebook-search').value = '';
+      document.getElementById('rulebook-list').innerHTML = '<p class="rulebook-empty">Loading…</p>';
+      const screen = document.getElementById('screen-rulebook');
+      screen.classList.remove('hidden', 'anim-forward', 'anim-back');
+      void screen.offsetWidth;
+      screen.classList.add('anim-forward');
+
+      const FILES = [
+        { file: 'rules/core_rules.json',      label: 'Core Rules' },
+        { file: 'rules/m1_terawatt.json',     label: 'Module 1 — Terawatt & Futures' },
+        { file: 'rules/m2_colonization.json', label: 'Module 2 — Colonization' },
+        { file: 'rules/m3_conflict.json',     label: 'Module 3 — Conflict' },
+        { file: 'rules/m4_exodus.json',       label: 'Module 4 — Exodus' },
+        { file: 'rules/m5_economy.json',      label: 'Module 5 — Economy' },
+        { file: 'rules/glossary.json',        label: 'Glossary' },
+        { file: 'rules/appendix.json',        label: 'Appendix' },
+      ];
+
+      Promise.all(FILES.map(f =>
+        fetch(f.file).then(r => r.json()).then(data => ({ label: f.label, data }))
+      )).then(results => {
+        const allRules = [];
+        results.forEach(({ label, data }) => {
+          if (Array.isArray(data.sections)) {
+            data.sections.forEach(s => allRules.push({ id: s.id, title: s.title, text: s.text, _group: label }));
+          } else if (Array.isArray(data.entries)) {
+            data.entries.forEach(e => allRules.push({ id: e.term[0].toUpperCase(), title: e.term, text: e.definition, _group: label }));
+          }
+        });
+        _rulebookRules = allRules;
+        renderRulebookList(_rulebookRules);
+      }).catch(() => {
+        document.getElementById('rulebook-list').innerHTML =
+          '<p class="rulebook-empty">Failed to load rules. Ensure the app is served over HTTP.</p>';
+      });
     }
 
     function openRulebookFromGame() {
@@ -1731,7 +1763,7 @@
       const sections = [];
       const groups   = new Map();
       rules.forEach(r => {
-        const key = r.modules.length === 0 ? 'Core Rules' : 'Module ' + r.modules[0];
+        const key = r._group || (r.modules && r.modules.length > 0 ? 'Module ' + r.modules[0] : 'Core Rules');
         if (!groups.has(key)) { groups.set(key, []); sections.push(key); }
         groups.get(key).push(r);
       });
